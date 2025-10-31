@@ -163,13 +163,13 @@ nav:
     - 연구 신뢰성 체크리스트: 부록_D_연구_신뢰성_체크리스트.md
   - 문서:
     - 시스템 문서: 
-      - 개요: docs/architecture/overview.md
-      - Agent 시스템: docs/architecture/agent-system.md
-      - 백엔드 아키텍처: docs/architecture/backend-architecture.md
-      - 프론트엔드 아키텍처: docs/architecture/frontend-architecture.md
+      - 개요: architecture/overview.md
+      - Agent 시스템: architecture/agent-system.md
+      - 백엔드 아키텍처: architecture/backend-architecture.md
+      - 프론트엔드 아키텍처: architecture/frontend-architecture.md
     - API 문서:
-      - MAICE API: docs/api/maice-api.md
-      - 인증: docs/api/authentication.md
+      - MAICE API: api/maice-api.md
+      - 인증: api/authentication.md
   - 설문 자료:
     - 사후 설문지: MAICE_사후설문지.md
     - 학생 설문조사지: 학생_설문조사지.md
