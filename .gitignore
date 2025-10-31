@@ -6,7 +6,7 @@ venv_mkdocs/
 venv/
 env/
 ENV/
-
+.code
 # Python 캐시
 *.pyc
 __pycache__/
@@ -14,7 +14,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
-
+analysis/
 # 로그 파일
 *.log
 

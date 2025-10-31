@@ -137,33 +137,37 @@
 
 ```json
 {
-  "question_score": 0-5,
-  "answer_score": 1-5,
-  "context_score": 1-5,
-  "total_15": 2-15,
-  "evidence": {
-    "question": [
-      {
-        "quote": "가장 우수한 질문 인용",
-        "reason": "점수 부여 이유"
-      }
-    ],
-    "answer": [
-      {
-        "quote": "AI 답변 대표 예시",
-        "reason": "4가지 문제 해결 여부"
-      }
-    ],
-    "context": [
-      {
-        "quote": "학습 지원 과정",
-        "reason": "명료화/검증 효과"
-      }
-    ]
+  "question_score": 0,
+  "answer_score": 0,
+  "context_score": 0,
+  "total_15": 0,
+  "checklist": {
+    "question": {"context": false, "clarity": false, "appropriateness": false, "math_related": false, "met_count": 0},
+    "answer":   {"context_understanding": false, "level_alignment": false, "standard_terms": false, "right_amount": false, "met_count": 0},
+    "support":  {"clarification": false, "level_goal_check": false, "stepwise_scaffold": false, "cognitive_expansion": false, "met_count": 0}
   },
-  "reasoning": "종합 평가 이유"
+  "process_metrics": {
+    "clarifying_question_count": 0,
+    "clarification_turn_ratio": 0.0,
+    "answer_before_clarify_flag": false,
+    "previous_turn_reference_count": 0
+  },
+  "evidence": {
+    "question": [{"quote": "...", "message_index": 0, "reason": "..."}],
+    "answer":   [{"quote": "...", "message_index": 0, "reason": "..."}],
+    "context":  [{"quote": "...", "message_index": 0, "reason": "..."}]
+  },
+  "reasoning": "최종 질문 품질, AI 답변 품질, 학습 지원 품질을 종합한 평가"
 }
 ```
+
+### 6.4 출력 제약 및 채점 원칙
+
+- **최종 품질 중심 평가**: `question_score`는 세션 전체에서 가장 우수한 질문의 품질로 평가하며, 개선도 여부가 아니라 최종 결과물의 우수성에 기반함.
+- **점수 하한**: `question_score`는 0~5점, `answer_score`와 `context_score`는 1~5점 범위를 기본으로 하나, 세션이 수학 학습 목적이 아니거나 무의미한 경우 세 영역 모두 0점으로 설정하며 `total_15=0`으로 산정.
+- **증거 배열 길이 제약**: `evidence.question`, `evidence.answer`, `evidence.context`의 배열 길이는 각각 정확히 1이어야 함.
+- **인덱스 규칙**: `message_index`는 세션 대화의 0-기반 인덱스를 사용함.
+- **체크리스트 및 과정 지표**: `checklist`는 각 영역 기준 충족 여부와 `met_count`를 포함하며, `process_metrics`는 명료화 시도, 명료화 비율, 명료화 이전 즉답 여부, 이전 턴 참조 횟수를 포함함.
 
 ---
 

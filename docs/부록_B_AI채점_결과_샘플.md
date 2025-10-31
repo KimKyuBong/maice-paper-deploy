@@ -6,6 +6,34 @@
 
 ---
 
+### 1.1 최신 출력 스키마 예시
+
+```json
+{
+  "question_score": 5,
+  "answer_score": 4,
+  "context_score": 4,
+  "total_15": 13,
+  "checklist": {
+    "question": {"context": true, "clarity": true, "appropriateness": true, "math_related": true, "met_count": 4},
+    "answer":   {"context_understanding": true, "level_alignment": true, "standard_terms": true, "right_amount": false, "met_count": 3},
+    "support":  {"clarification": true, "level_goal_check": true, "stepwise_scaffold": true, "cognitive_expansion": false, "met_count": 3}
+  },
+  "process_metrics": {
+    "clarifying_question_count": 2,
+    "clarification_turn_ratio": 0.33,
+    "answer_before_clarify_flag": false,
+    "previous_turn_reference_count": 3
+  },
+  "evidence": {
+    "question": [{"quote": "n^2 < 2^n 증명에서 n=k+1 단계가 막혔어요. 2^k+2k+1 < 2^(k+1) 보이는 법?", "message_index": 6, "reason": "맥락·명확성·적절성·수학 관련성 모두 충족"}],
+    "answer":   [{"quote": "n=k+1에서 좌변을 (1+3+...+(2k-1))+(2k+1)로 분리해봅시다.", "message_index": 7, "reason": "수준 일치·표준 용어·적절 정보량"}],
+    "context":  [{"quote": "어느 부분이 어려운가요? → [학생 구체화] → 단계적 안내", "message_index": 5, "reason": "명료화·단계적 비계설정 수행"}]
+  },
+  "reasoning": "최종 질문 품질이 우수하고, 답변은 수준·용어 적절, 학습 지원은 명료화와 단계화가 이루어짐"
+}
+```
+
 ## 2. Agent 모드 우수 사례 (총점 15점)
 
 ### 샘플 A-1: 명료화 후 질문 개선 성공
