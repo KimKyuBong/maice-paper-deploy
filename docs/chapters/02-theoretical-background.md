@@ -63,7 +63,7 @@ Wooldridge와 Jennings(1995)는 agent의 주요 특성으로 자율성(autonomy)
 
 ## 2.6 블룸의 지식 분류(K1–K4)
 
-블룸의 개정 분류에서 지식 차원(Knowledge Dimension)은 다음 네 범주로 구성된다. 본 연구에서는 질문 명료화의 목표를 학습자의 지식 차원에 정렬하여, 질문 품질과 학습 효과를 동시에 개선한다.
+블룸의 개정 분류에서 지식 차원(Knowledge Dimension)은 다음 네 범주로 구성된다.[^anderson2001] [^krathwohl2002] 본 연구에서는 질문 명료화의 목표를 학습자의 지식 차원에 정렬하여, 질문 품질과 학습 효과를 동시에 개선한다.
 
 | 지식 차원 | 정의 | 수학적 귀납법 맥락의 예시 질문 |
 | --- | --- | --- |
@@ -78,3 +78,7 @@ Wooldridge와 Jennings(1995)는 agent의 주요 특성으로 자율성(autonomy)
     - K4: 스스로의 오류·전략을 메타인지적으로 진단하도록 반문 유도
 
 본 연구의 agent는 질문 분류 단계에서 학습자의 발화를 K1–K4 신호로 탐지하고, 각 차원에 정렬된 명료화 프롬프트를 제공하여(예: K1 용어 정리 → K2 관계 설명 → K3 절차 안내 → K4 자기 점검) 질문의 질적 향상과 문제 해결 과정을 지원한다.
+
+[^anderson2001]: Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives. New York, NY: Longman.
+
+[^krathwohl2002]: Krathwohl, D. R. (2002). A Revision of Bloom's Taxonomy: An Overview. Theory into Practice, 41(4), 212–218. https://doi.org/10.1207/s15430421tip4104_2
