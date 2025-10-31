@@ -93,6 +93,55 @@ flowchart LR
   - Redis를 통한 agent 간 통신
   - 비동기 메시지 처리
 
+### 3.2.4 상호작용 시퀀스(질문→분류→명료화→답변)
+```mermaid
+sequenceDiagram
+  participant U as 학생
+  participant FE as 프론트엔드
+  participant BE as 백엔드(API)
+  participant QS as 질문 분류(Agent)
+  participant QI as 명료화(Agent)
+  participant AN as 답변 생성(Agent)
+
+  U->>FE: 질문 입력
+  FE->>BE: HTTP 요청(질문, 맥락)
+  BE->>QS: Streams: classify_question
+  QS-->>BE: Streams: classification_start/progress
+  QS-->>BE: Streams: classification_complete(K1–K4, quality, missing_fields)
+  alt quality == needs_clarify
+    QS->>QI: Pub/Sub: need_clarification(분류결과, 맥락)
+    QI-->>BE: Streams: clarification_prompt(추가 질문)
+    BE-->>FE: SSE: 명료화 질문 스트리밍
+    U->>FE: 추가 응답
+    FE->>BE: HTTP: 명료화 응답
+    QI-->>QS: Pub/Sub: reclassify or generate_answer 신호
+  end
+  QS->>AN: Pub/Sub: ready_for_answer(최종 분류/질문)
+  AN-->>BE: Streams: answer_chunk 스트리밍
+  BE-->>FE: SSE: 실시간 답변 전송
+```
+
+### 3.2.5 통신 채널과 메시지 모델
+- **백엔드↔에이전트(신뢰성)**: Redis Streams 사용
+  - 요청: classify_question, clarification_prompt 등
+  - 진행/완료 이벤트: classification_start/progress/complete, answer_chunk 등
+  - 특성: 지속성·순서·재처리 보장(ACK 기반)
+- **에이전트↔에이전트(오케스트레이션)**: Redis Pub/Sub 사용
+  - 이벤트: need_clarification, ready_for_answer, generate_answer 등
+  - 특성: 낮은 지연, 느슨한 결합, 다대다 브로드캐스트
+- **프론트엔드↔백엔드**: HTTP 입력 + SSE 출력(실시간 스트리밍)
+
+### 3.2.6 신뢰성·보안·검증 전략
+- **입력 정제와 유효성 검사**: 위험 패턴 차단, 내용 정제, 세션 잠금으로 중복 처리 방지
+- **출력 형식 강제**: JSON-only 응답과 필수 필드 검증으로 일관성 확보(knowledge_code, quality, missing_fields 등)
+- **보안 구분자**: 프롬프트 경계 구분자와 해시 검증으로 임베딩·주입 공격에 대응
+- **실패 복구**: 파싱 실패/빈 응답 시 즉시 오류 이벤트 전송 및 안전한 롤백·재시도
+
+### 3.2.7 관측(Observability)과 운영
+- **메트릭**: 요청/오류 카운터, 활성 세션 게이지, 처리 시간 분포 수집
+- **로그**: 단계별 진행 로그(분류 시작/진행/완료, 명료화 라운드, 답변 청크)
+- **확장성**: 각 에이전트는 독립 프로세스로 실행·감시되며 비정상 종료 시 재시작
+
 ## 3.3 멀티 에이전트 아키텍처
 
 MAICE 시스템의 핵심은 5개의 독립적인 AI agent가 협업하는 멀티 에이전트 아키텍처이다.
