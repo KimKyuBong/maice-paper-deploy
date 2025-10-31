@@ -63,11 +63,14 @@ flowchart LR
     nginx[(Nginx Reverse Proxy)]
   end
 
-  BE <--> db
-  AG <--> redis
+  BE --> db
+  db --> BE
+  AG --> redis
+  redis --> AG
   FE --- nginx
   BE --- nginx
-  AG -. 스트리밍 .-> BE -. SSE .-> FE
+  AG -->|streaming| BE
+  BE -->|SSE| FE
 ```
 
 ### 3.2.1 프론트엔드 (Frontend)
