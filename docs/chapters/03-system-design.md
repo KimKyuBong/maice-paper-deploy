@@ -70,21 +70,9 @@ flowchart LR
     agHub --- ag5
   end
 
-  %% Infrastructure
-  subgraph INF["Infrastructure"]
-    db[PostgreSQL]
-    redis[Redis Streams/Pub/Sub]
-    docker[Docker]
-    nginx[Nginx Reverse Proxy]
-  end
-
   %% Interactions
   feHub --> beHub
   beHub --> agHub
-  beHub --> db
-  agHub --> redis
-  feHub --- nginx
-  beHub --- nginx
   agHub -->|streaming| beHub
   beHub -->|SSE| feHub
 ```
