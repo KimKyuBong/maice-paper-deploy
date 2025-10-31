@@ -9,25 +9,21 @@ keywords: [MAICE, 멀티에이전트, 아키텍처, 질문분류]
 
 ## 3.1 시스템 설계 원리
 
-MAICE agent 시스템은 다음과 같은 설계 원리에 기반한다:
+본 시스템은 “실제 작동하는 코드”를 기준으로 다음 철학과 원칙에 따라 구현되었다.
 
-### 1) 질문 중심 접근 (Question-Centered Approach)
-답변 생성 이전에 질문의 질적 개선에 우선 집중하여, 학생이 자신의 이해도를 정확히 파악하고 구체적인 질문을 형성하도록 지원한다.
+- **질문 우선, 분류 선행**: 답변보다 먼저 블룸 K1–K4 기반 질문 분류를 수행한다. `QuestionClassifierAgent`가 K1–K4와 게이팅(예: `answerable`, `needs_clarify`)을 판정하여 다운스트림을 결정한다.
+- **명료화는 듀이 이론으로**: `needs_clarify`인 경우에만 듀이의 5단계 반성적 사고를 적용해 추가 정보를 수집하고 질문을 개선한다(`QuestionImprovementAgent`).
+- **프롬프트-설정 분리, YAML 주도**: 역할/룰/출력 형식은 `prompts/config.yaml`에 선언하고, 런타임에는 `PromptConfigLoader`+`PromptBuilder`로 동적 생성한다. 코드 변경 없이 정책을 교체·튜닝 가능.
+- **보안과 정합성 우선**: 모든 LLM 입·출력은 `sanitize_text`/검증 패턴/구분자 해시로 방어하고, 출력은 JSON-only + `validate_json_structure`로 필수 필드 검증 후 처리한다.
+- **스트림 우선, 느슨한 결합**: 백엔드↔에이전트는 Redis Streams, 에이전트↔에이전트는 Pub/Sub로 연결한다. 느슨한 결합과 재처리·확장성 확보(`AgentWorker`는 멀티프로세스 실행/감시).
+- **관측 가능성과 회귀 내성**: 공통 `BaseAgent`에서 메트릭/로그/세션 락을 제공하고, 실패 시 안전한 롤백·재시도 흐름을 표준화한다.
 
-### 2) 반복적 개선 루프 (Iterative Improvement Loop)
-평가 결과에 따른 구체적 피드백 제공과 질문 수정 과정을 반복하여 질문 품질을 단계적으로 향상시킨다.
-
-### 3) 교사 평가 기준 반영 (Teacher Evaluation Alignment)
-AI 평가 결과가 실제 교사 평가와 높은 상관관계(r=0.66, p<0.001)를 보이도록 설계하여 신뢰성을 확보한다.
-
-### 4) 멀티 에이전트 협업 (Multi-Agent Collaboration)
-5개 독립 agent가 각자의 전문 역할을 수행하면서 Redis Streams와 Pub/Sub를 통해 협업하여 지능적인 학습 지원을 제공한다.
-
-### 5) 단원별 맞춤 설계 (Unit-Specific Design)
-수학적 귀납법의 학습 특성을 고려하여 단원별로 맞춤화된 평가 기준과 명료화 전략을 적용한다.
-
-### 6) 반성적 사고 지원 (Reflective Thinking Support)
-듀이의 반성적 사고 이론을 기반으로 학생들이 자신의 사고 과정을 반성하고 구조화할 수 있도록 명료화 질문을 설계한다. 문제 상황 인식부터 결론 도출까지의 5단계 반성적 사고 과정을 지원한다.
+### 3.1.1 구현 개요(코드 매핑)
+- **분류(선행)**: `.code/agent/agents/question_classifier/agent.py` → K1–K4 변수 주입, JSON 검증, 게이팅 후 라우팅
+- **명료화(조건부)**: `.code/agent/agents/question_improvement/agent.py` → 듀이 5단계 템플릿 기반 질의·평가·반복
+- **답변 생성**: `.code/agent/agents/answer_generator/agent.py` → 유형별 구조화 답변, 스트리밍 전송
+- **관찰/요약**: `.code/agent/agents/observer/agent.py` → 세션 분석/요약
+- **실행/확장**: `.code/agent/worker.py` → 에이전트 멀티프로세스 실행·모니터링
 
 ## 3.2 전체 시스템 구조
 
