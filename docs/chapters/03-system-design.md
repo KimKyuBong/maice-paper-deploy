@@ -29,28 +29,45 @@ keywords: [MAICE, 멀티에이전트, 아키텍처, 질문분류]
 
 MAICE 시스템은 프론트엔드(Frontend), 백엔드(Backend), 에이전트 시스템(Agent System)의 3계층 구조로 설계되었다.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        MAICE System                            │
-├─────────────────┬─────────────────┬─────────────────────────────┤
-│   Frontend      │    Backend      │        Agent System         │
-│   (SvelteKit)   │   (FastAPI)     │        (Python)             │
-├─────────────────┼─────────────────┼─────────────────────────────┤
-│ • 채팅 UI        │ • API 서버      │ • Question Classifier       │
-│ • 수식 입력      │ • 인증/세션     │ • Question Improvement     │
-│ • 테마 지원      │ • 메시지 큐     │ • Answer Generator          │
-│ • 실시간 스트리밍│ • 데이터 관리   │ • Observer Agent            │
-│                 │                 │ • FreeTalker Agent          │
-└─────────────────┴─────────────────┴─────────────────────────────┘
-                                │
-                    ┌───────────┴───────────┐
-                    │    Infrastructure     │
-                    ├─────────────────────────┤
-                    │ • PostgreSQL Database  │
-                    │ • Redis Streams/Pub/Sub│
-                    │ • Docker Containers    │
-                    │ • Nginx Reverse Proxy  │
-                    └─────────────────────────┘
+```mermaid
+flowchart LR
+  subgraph FE[Frontend (SvelteKit)]
+    fe1[채팅 UI]
+    fe2[수식 입력]
+    fe3[테마 지원]
+    fe4[실시간 스트리밍(SSE)]
+  end
+
+  subgraph BE[Backend (FastAPI)]
+    be1[API 서버]
+    be2[인증/세션]
+    be3[메시지 큐]
+    be4[데이터 관리]
+  end
+
+  subgraph AG[Agent System (Python)]
+    ag1[Question Classifier]
+    ag2[Question Improvement]
+    ag3[Answer Generator]
+    ag4[Observer Agent]
+    ag5[FreeTalker Agent]
+  end
+
+  FE --> BE
+  BE --> AG
+
+  subgraph INF[Infrastructure]
+    db[(PostgreSQL)]
+    redis[(Redis Streams/Pub/Sub)]
+    docker[(Docker)]
+    nginx[(Nginx Reverse Proxy)]
+  end
+
+  BE <--> db
+  AG <--> redis
+  FE --- nginx
+  BE --- nginx
+  AG -. 스트리밍 .-> BE -. SSE .-> FE
 ```
 
 ### 3.2.1 프론트엔드 (Frontend)
