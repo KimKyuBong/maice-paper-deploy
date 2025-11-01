@@ -12,6 +12,13 @@
 - Wooldridge, M., & Jennings, N. R. (1995). Intelligent agents: Theory and practice. *The Knowledge Engineering Review*, 10(2), 115-152.
 - Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. *Theory Into Practice*, 41(2), 64-70.
 
+### 최근 3년 핵심 문헌 (추가 예정)
+
+- Dewey/반성적 사고 최신 재해석(2023–2025): [항목 추가]
+- 질문 생성·질문 명료화/질문 개선 이론(2023–2025): [항목 추가]
+- AI 교육 도구/LLM 튜터 실증 연구(2023–2025): [항목 추가]
+- 통계 방법 참고: Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, 6(2), 65–70.
+
 ---
 
 **2025년 10월**  

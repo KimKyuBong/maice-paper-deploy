@@ -11,11 +11,12 @@
 | `01-introduction.md` | 1장: 서론 | 연구 필요성, 목적, 문제, 용어 정의 |
 | `02-theoretical-background.md` | 2장: 이론적 배경 | 질문 생성 이론, AI 피드백, 듀이의 반성적 사고, 멀티 에이전트 시스템 |
 | `03-system-design.md` | 3장: MAICE 교육 시스템 아키텍처 | 설계 철학, 3계층 구조, 5개 에이전트 역할과 협업, 명료화 프로세스 |
-| `04-mathematical-induction-application.md` | 4장: 수학적 귀납법 단원 적용 | 단원별 맞춤 설계, 실제 적용 시나리오 |
-| `05-research-methods.md` | 5장: 연구 방법 | 연구 설계, 대상, 도구, 자료 수집/분석 |
-| `06-results.md` | 6장: 결과 | 시스템 구현, 상관분석, 질문 품질 변화, 학습 효과 |
-| `07-discussion-conclusion.md` | 7장: 논의 및 결론 | 연구 결과 요약, 시사점, 제한점, 후속 연구 |
-| `08-references.md` | 8장: 참고문헌 | 인용 문헌 목록 |
+| `04-system-implementation.md` | 4장: MAICE 시스템 구현 | 기술 스택, 프롬프트 엔지니어링, 통신 메커니즘, 배포 전략 |
+| `05-mathematical-induction-application.md` | 5장: 수학적 귀납법 단원 적용 | 단원별 맞춤 설계, 실제 적용 시나리오 |
+| `06-research-methods.md` | 6장: 연구 방법 | 연구 설계, 대상, 도구, 자료 수집/분석 |
+| `07-results.md` | 7장: 결과 | 시스템 구현, 상관분석, 질문 품질 변화, 학습 효과 |
+| `08-discussion-conclusion.md` | 8장: 논의 및 결론 | 연구 결과 요약, 시사점, 제한점, 후속 연구 |
+| `09-references.md` | 9장: 참고문헌 | 인용 문헌 목록 |
 
 ## ✏️ 편집 방법
 

@@ -152,12 +152,12 @@ nav:
     - 1장. 서론: chapters/01-introduction.md
     - 2장. 이론적 배경: chapters/02-theoretical-background.md
     - 3장. MAICE 교육 시스템 아키텍처: chapters/03-system-design.md
-    - 4장. 수학적 귀납법 적용: chapters/04-mathematical-induction-application.md
-    - 5장. 연구 방법: chapters/05-research-methods.md
-    - 6장. 실증 분석: chapters/06-empirical-evidence.md
-    - 6장. 결과: chapters/06-results.md
-    - 7장. 논의 및 결론: chapters/07-discussion-conclusion.md
-    - 8장. 참고문헌: chapters/08-references.md
+    - 4장. MAICE 시스템 구현: chapters/04-system-implementation.md
+    - 5장. 수학적 귀납법 적용: chapters/05-mathematical-induction-application.md
+    - 6장. 연구 방법: chapters/06-research-methods.md
+    - 7장. 결과: chapters/07-results.md
+    - 8장. 논의 및 결론: chapters/08-discussion-conclusion.md
+    - 9장. 참고문헌: chapters/09-references.md
   - 부록:
     - 루브릭 상세설명서: 부록_A_루브릭_상세설명서.md
     - AI채점 결과 샘플: 부록_B_AI채점_결과_샘플.md

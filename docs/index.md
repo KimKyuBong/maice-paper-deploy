@@ -62,7 +62,15 @@
     
     주요 내용: 명료화 중심 학습, Dewey/Bloom 이론 구현, A/B 테스트 설계
 
-- :material-calculator: **[4장. 수학적 귀납법 적용](chapters/04-mathematical-induction-application.md)**
+- :material-code-braces: **[4장. MAICE 시스템 구현](chapters/04-system-implementation.md)**
+
+    ---
+    
+    기술 스택, 프롬프트 엔지니어링, 통신 메커니즘, 배포 전략
+    
+    주요 내용: Gemini API 연동, Redis Streams, Docker 배포
+
+- :material-calculator: **[5장. 수학적 귀납법 적용](chapters/05-mathematical-induction-application.md)**
 
     ---
     
@@ -70,7 +78,7 @@
     
     주요 내용: 명료화 프로세스 실제 적용 사례
 
-- :material-flask: **[5장. 연구 방법](chapters/05-research-methods.md)**
+- :material-flask: **[6장. 연구 방법](chapters/06-research-methods.md)**
 
     ---
     
@@ -78,7 +86,7 @@
     
     주요 내용: 59명 학생 실험 설계, 루브릭 개발
 
-- :material-chart-line: **[6장. 결과](chapters/06-results.md)**
+- :material-chart-line: **[7장. 결과](chapters/07-results.md)**
 
     ---
     
@@ -86,7 +94,7 @@
     
     주요 내용: 누적 학습 효과, 차별적 효과성
 
-- :material-comment-text: **[7장. 논의 및 결론](chapters/07-discussion-conclusion.md)**
+- :material-comment-text: **[8장. 논의 및 결론](chapters/08-discussion-conclusion.md)**
 
     ---
     
@@ -94,7 +102,7 @@
     
     주요 내용: Dewey 이론 실증, 교육적 함의
 
-- :material-book: **[8장. 참고문헌](chapters/08-references.md)**
+- :material-book: **[9장. 참고문헌](chapters/09-references.md)**
 
     ---
     
