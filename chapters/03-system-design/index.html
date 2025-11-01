@@ -1,0 +1,2661 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로">
+      
+      
+        <meta name="author" content="김규봉 (부산대학교 AI융합교육전공, 202373389)">
+      
+      
+      
+        <link rel="prev" href="../02-theoretical-background/">
+      
+      
+        <link rel="next" href="../04-system-implementation/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>3장. MAICE 교육 시스템 아키텍처 - 수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-maice" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" class="md-header__button md-logo" aria-label="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3장. MAICE 교육 시스템 아키텍처
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/YOUR_USERNAME/maice-paper" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MAICE-논문
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  논문 내용
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../%EB%B6%80%EB%A1%9D_A_%EB%A3%A8%EB%B8%8C%EB%A6%AD_%EC%83%81%EC%84%B8%EC%84%A4%EB%AA%85%EC%84%9C/" class="md-tabs__link">
+          
+  
+  
+  부록
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/overview/" class="md-tabs__link">
+          
+  
+  
+  문서
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../MAICE_%EC%82%AC%ED%9B%84%EC%84%A4%EB%AC%B8%EC%A7%80/" class="md-tabs__link">
+          
+  
+  
+  설문 자료
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  피드백
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../print_page/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  PDF로 출력
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" class="md-nav__button md-logo" aria-label="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/YOUR_USERNAME/maice-paper" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MAICE-논문
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    홈
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    논문 내용
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            논문 내용
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1장. 서론
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-theoretical-background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2장. 이론적 배경
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3장. MAICE 교육 시스템 아키텍처
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3장. MAICE 교육 시스템 아키텍처
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 설계 철학: "명료화 중심 학습"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 설계 철학: &#34;명료화 중심 학습&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-freepass" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 문제 인식: Freepass 방식의 근본적 한계
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 해결 아이디어: 교육 이론 기반 에이전트 시스템
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3 핵심 아이디어: 질문 → 분류 → 명료화 → 답변 파이프라인
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4 설계 대상: 일반 LLM보다 우수한 학습 효과
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 전체 아키텍처 개요: 3계층 구조
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 전체 아키텍처 개요: 3계층 구조">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 계층별 역할
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 전체 시스템 구조도
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3 질문 처리 흐름
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 5개 에이전트의 역할과 협업
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 5개 에이전트의 역할과 협업">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-classifier-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1 Classifier Agent: "이 질문은 어떤 유형인가?"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-question-improvement-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2 Question Improvement Agent: "질문을 더 명확하게"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-answer-generator-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3 Answer Generator Agent: "유형별 맞춤 답변"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-observer-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4 Observer Agent: "학생이 무엇을 배우고 있는가?"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#335-freetalker-agent-freepass" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5 FreeTalker Agent: "대조군 (Freepass 모드)"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 질문 품질 평가 루브릭
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 질문 품질 평가 루브릭">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 루브릭 설계 원칙
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-3-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2 3영역 평가 구조 (총 15점 만점)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 명료화 프로세스 요약
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 명료화 프로세스 요약">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 핵심 메커니즘
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.2 3단계 차별화 전략
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.3 검증 결과
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-system-implementation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4장. MAICE 시스템 구현
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-mathematical-induction-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5장. 수학적 귀납법 적용
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-research-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6장. 연구 방법
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7장. 결과
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-discussion-conclusion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8장. 논의 및 결론
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9장. 참고문헌
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    부록
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            부록
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%B6%80%EB%A1%9D_A_%EB%A3%A8%EB%B8%8C%EB%A6%AD_%EC%83%81%EC%84%B8%EC%84%A4%EB%AA%85%EC%84%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    루브릭 상세설명서
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%B6%80%EB%A1%9D_B_AI%EC%B1%84%EC%A0%90_%EA%B2%B0%EA%B3%BC_%EC%83%98%ED%94%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI채점 결과 샘플
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%B6%80%EB%A1%9D_C_%ED%86%B5%EA%B3%84%EB%B6%84%EC%84%9D_%EC%83%81%EC%84%B8%ED%91%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    통계분석 상세표
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%B6%80%EB%A1%9D_D_%EC%97%B0%EA%B5%AC_%EC%8B%A0%EB%A2%B0%EC%84%B1_%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    연구 신뢰성 체크리스트
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    문서
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            문서
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    시스템 문서
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            시스템 문서
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    개요
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/agent-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent 시스템
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    백엔드 아키텍처
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    프론트엔드 아키텍처
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API 문서
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            API 문서
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/maice-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MAICE API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    인증
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    설문 자료
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            설문 자료
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MAICE_%EC%82%AC%ED%9B%84%EC%84%A4%EB%AC%B8%EC%A7%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    사후 설문지
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%95%99%EC%83%9D_%EC%84%A4%EB%AC%B8%EC%A1%B0%EC%82%AC%EC%A7%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    학생 설문조사지
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%84%A4%EB%AC%B8%EC%A7%80_%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD_%EC%9A%94%EC%95%BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    설문지 개선사항
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    피드백
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PDF로 출력
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/YOUR_USERNAME/maice-paper/edit/main/docs/chapters/03-system-design.md" title="이 페이지를 편집" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/YOUR_USERNAME/maice-paper/raw/main/docs/chapters/03-system-design.md" title="페이지소스 보기" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="3-maice">3. MAICE 교육 시스템 아키텍처<a class="headerlink" href="#3-maice" title="Permanent link">&para;</a></h1>
+<h2 id="31">3.1 설계 철학: "명료화 중심 학습"<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<h3 id="311-freepass">3.1.1 문제 인식: Freepass 방식의 근본적 한계<a class="headerlink" href="#311-freepass" title="Permanent link">&para;</a></h3>
+<p>1장에서 확인한 바와 같이, 일반적인 LLM의 Freepass 방식은 다음과 같은 교육적 한계를 보였다:</p>
+<ul>
+<li><strong>질문의 질적 문제</strong>: 학생 질문의 72.3%가 학습 맥락 정보 없이 제출됨</li>
+<li><strong>맥락 오해</strong>: "지수의 확장"을 비즈니스 용어로 해석하는 등 의미 파악 실패</li>
+<li><strong>수준 불일치</strong>: 고1 학생에게 대학 수준의 통계학 개념 설명</li>
+<li><strong>인지 과부하</strong>: 학생이 요청하지 않은 모든 관련 개념을 한꺼번에 제시</li>
+</ul>
+<p>이러한 문제들은 단순히 AI 성능의 문제가 아니라, **질문의 질이 낮을 때 아무리 좋은 AI도 적절한 답변을 생성할 수 없다**는 구조적 한계에서 비롯된다.</p>
+<h3 id="312">3.1.2 해결 아이디어: 교육 이론 기반 에이전트 시스템<a class="headerlink" href="#312" title="Permanent link">&para;</a></h3>
+<p>본 연구는 2장에서 검토한 교육 이론을 실제 AI 시스템으로 구현하는 것을 목표로 한다:</p>
+<p><strong>Bloom의 K1-K4 분류</strong> → <strong>질문 유형 자동 분류 및 맞춤형 답변 생성</strong>
+- K1 (사실): 간결한 정의 중심 답변
+- K2 (개념): 관계 설명 중심 답변
+- K3 (절차): 단계별 안내 중심 답변
+- K4 (메타인지): 소크라테스식 문답 중심 답변</p>
+<p><strong>Dewey의 반성적 사고 5단계</strong> → <strong>명료화 프로세스 설계</strong>
+- 1단계 (문제 인식): "무엇이 불확실한가요?"
+- 2단계 (문제 정의): "정확히 무엇을 알고 싶은가요?"
+- 3단계 (가설 설정): "어떤 방법을 시도해봤나요?"
+- 4단계 (가설 검증): "논리적 연결을 어떻게 보나요?"
+- 5단계 (결론 도출): "최종적으로 무엇을 얻고 싶나요?"</p>
+<h3 id="313">3.1.3 핵심 아이디어: 질문 → 분류 → 명료화 → 답변 파이프라인<a class="headerlink" href="#313" title="Permanent link">&para;</a></h3>
+<p>MAICE 시스템의 핵심은 **학생의 질문을 즉시 답변하지 않고, 먼저 질문의 품질을 진단하고 필요시 명료화 과정을 거치는 것**이다.</p>
+<pre class="mermaid"><code>flowchart TD
+    A[학생 질문] --&gt; B{질문 분류&lt;br/&gt;Classifier}
+    B --&gt;|answerable| D[맞춤형 답변&lt;br/&gt;Answer Generator]
+    B --&gt;|needs_clarify| C[명료화 과정&lt;br/&gt;Question Improvement]
+    B --&gt;|unanswerable| E[정중한 안내]
+    C --&gt; F[명료화 대화]
+    F --&gt; G{충분한&lt;br/&gt;정보 확보?}
+    G --&gt;|Yes| D
+    G --&gt;|No| F
+    D --&gt; H[학습 과정 관찰&lt;br/&gt;Observer]
+    H --&gt; I[교사 대시보드]</code></pre>
+<p>이러한 파이프라인은 단순히 정보를 전달하는 것이 아니라, **학생이 스스로 질문을 구조화하고 사고를 명료화하는 과정을 경험하도록 설계**되었다.</p>
+<h3 id="314-llm">3.1.4 설계 대상: 일반 LLM보다 우수한 학습 효과<a class="headerlink" href="#314-llm" title="Permanent link">&para;</a></h3>
+<p>MAICE 시스템은 다음 3가지 측면에서 일반 Freepass 방식보다 우수한 학습 효과를 제공하는 것을 목표로 한다:</p>
+<ol>
+<li><strong>질문 품질 개선</strong>: 명료화 과정을 통해 학생 질문의 질 향상</li>
+<li><strong>답변 적합성 향상</strong>: 질문 유형 분류를 통한 맞춤형 답변 생성</li>
+<li><strong>메타인지 능력 향상</strong>: Dewey 5단계 과정에서 자기 성찰 훈련</li>
+</ol>
+<p>이러한 목표를 달성하기 위해, MAICE는 ChatGPT, Claude 등 상용 AI 대화 서비스와 유사한 UX를 제공하되, 수학 학습에 특화된 3계층 구조로 설계되었다.</p>
+<h2 id="32-3">3.2 전체 아키텍처 개요: 3계층 구조<a class="headerlink" href="#32-3" title="Permanent link">&para;</a></h2>
+<p>MAICE 시스템은 학생이 사용하는 <strong>대화 인터페이스</strong>, 대화를 관리하고 데이터를 저장하는 <strong>관리 시스템</strong>, 그리고 지능적으로 질문을 처리하는 **에이전트 시스템**의 3계층으로 구성된다.</p>
+<h3 id="321">3.2.1 계층별 역할<a class="headerlink" href="#321" title="Permanent link">&para;</a></h3>
+<h4 id="1">계층 1: 대화 인터페이스 (학생이 보는 화면)<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<p><strong>역할</strong>: 학생이 수식을 쉽게 입력하고 AI 답변을 실시간으로 받을 수 있는 채팅 화면</p>
+<p><strong>주요 기능</strong>:
+- <strong>수식 입력 지원</strong>: 복잡한 수학 수식을 클릭 몇 번으로 입력 (예: <span class="arithmatex">\(\sum_{i=1}^{n}\)</span>, <span class="arithmatex">\(\frac{a}{b}\)</span>)
+- <strong>실시간 답변</strong>: AI 답변이 타이핑하듯 실시간으로 표시
+- <strong>간편한 로그인</strong>: 학교 계정으로 바로 시작
+- <strong>모바일 지원</strong>: 핸드폰에서도 동일하게 사용 가능</p>
+<p><strong>학생 경험</strong>: ChatGPT, Claude와 동일한 UX로 별도 학습 없이 즉시 사용 가능</p>
+<h4 id="2">계층 2: 관리 시스템 (대화 저장 및 분석)<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p><strong>역할</strong>: 모든 대화를 체계적으로 저장하고, 교사가 학생 학습 상황을 파악할 수 있도록 지원</p>
+<p><strong>주요 기능</strong>:
+- <strong>대화 기록 관리</strong>: 학생별 모든 대화 세션을 시간 순으로 저장
+- <strong>학습 데이터 분석</strong>: 학생의 학습 진도, 어려움 영역 자동 추출
+- <strong>교사 대시보드</strong>: 반 전체 학습 현황 및 개별 학생 상세 정보 제공
+- <strong>권한 관리</strong>: 학생은 본인 데이터만, 교사는 전체 데이터 접근 가능</p>
+<p><strong>교육적 가치</strong>: 교사가 30명 학생의 개별 학습 상황을 실시간 파악 가능</p>
+<h4 id="3">계층 3: 에이전트 시스템 (지능적 질문 처리)<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p><strong>역할</strong>: 학생 질문을 분석하고, 필요시 명료화하며, 맞춤형 답변을 생성하는 5개 AI 에이전트</p>
+<p><strong>5개 에이전트</strong>:
+1. <strong>Classifier</strong> (질문 분류): "이 질문은 어떤 유형인가?"
+2. <strong>Question Improvement</strong> (명료화): "질문을 더 명확하게"
+3. <strong>Answer Generator</strong> (답변 생성): "유형별 맞춤 답변"
+4. <strong>Observer</strong> (학습 관찰): "학생이 무엇을 배우고 있는가?"
+5. <strong>FreeTalker</strong> (대조군): "명료화 없이 즉시 답변"</p>
+<p><strong>협업 방식</strong>: 각 에이전트는 독립적으로 작동하되, 필요한 정보를 서로 주고받으며 협업</p>
+<h3 id="322">3.2.2 전체 시스템 구조도<a class="headerlink" href="#322" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Layer1["계층 1: 대화 인터페이스"]
+        UI[학생이 보는 채팅 화면]
+        MathInput[수식 입력 도구]
+        Streaming[실시간 답변 표시]
+    end
+
+    subgraph Layer2["계층 2: 관리 시스템"]
+        API[대화 관리 서버]
+        DB[(대화 기록&lt;br/&gt;저장소)]
+        Dashboard[교사&lt;br/&gt;대시보드]
+    end
+
+    subgraph Layer3["계층 3: 에이전트 시스템"]
+        Classifier[Classifier&lt;br/&gt;질문 분류]
+        QI[Question&lt;br/&gt;Improvement&lt;br/&gt;명료화]
+        AG[Answer&lt;br/&gt;Generator&lt;br/&gt;답변 생성]
+        Obs[Observer&lt;br/&gt;학습 관찰]
+        FT[FreeTalker&lt;br/&gt;대조군]
+    end
+
+    UI --&gt;|질문 전송| API
+    API --&gt;|질문 전달| Classifier
+    Classifier --&gt;|명료화 필요| QI
+    Classifier --&gt;|바로 답변| AG
+    QI --&gt;|명료화 완료| AG
+    AG --&gt;|답변 생성| API
+    AG --&gt;|학습 데이터| Obs
+    Obs --&gt;|요약 저장| DB
+    API --&gt;|실시간 답변| Streaming
+    DB --&gt;|학습 분석| Dashboard</code></pre>
+<h3 id="323">3.2.3 질문 처리 흐름<a class="headerlink" href="#323" title="Permanent link">&para;</a></h3>
+<p>학생이 질문을 입력하면 다음과 같은 과정을 거친다:</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant 학생
+    participant 대화화면 as 대화 인터페이스
+    participant 관리 as 관리 시스템
+    participant 분류 as Classifier
+    participant 명료화 as Question Improvement
+    participant 답변 as Answer Generator
+
+    학생-&gt;&gt;대화화면: "수열 알려줘" 입력
+    대화화면-&gt;&gt;관리: 질문 전송
+    관리-&gt;&gt;분류: 질문 분류 요청
+
+    alt 질문이 모호함
+        분류-&gt;&gt;명료화: 명료화 필요 판정
+        명료화-&gt;&gt;관리: "어떤 부분이 궁금한가요?"
+        관리-&gt;&gt;대화화면: 명료화 질문 표시
+        대화화면-&gt;&gt;학생: 추가 질문 보여줌
+        학생-&gt;&gt;대화화면: "수열 공식들" 입력
+        대화화면-&gt;&gt;관리: 추가 응답 전송
+        명료화-&gt;&gt;답변: 명료화 완료
+    else 질문이 명확함
+        분류-&gt;&gt;답변: 바로 답변 생성
+    end
+
+    답변-&gt;&gt;관리: 답변 전송 (실시간)
+    관리-&gt;&gt;대화화면: 답변 스트리밍
+    대화화면-&gt;&gt;학생: 답변 표시</code></pre>
+<p><strong>핵심 특징</strong>:
+- 학생은 명료화 과정을 자연스러운 대화로 경험
+- 모든 대화는 자동으로 저장되어 학습 분석에 활용
+- 교사는 별도 대시보드에서 학생 학습 현황 확인</p>
+<blockquote>
+<p><strong>기술 구현 상세</strong>: 각 계층의 구체적인 기술 스택과 구현 방법은 4장 "시스템 구현"에서 다룬다.</p>
+</blockquote>
+<h2 id="33-5">3.3 5개 에이전트의 역할과 협업<a class="headerlink" href="#33-5" title="Permanent link">&para;</a></h2>
+<p>MAICE 시스템의 핵심은 5개의 독립적인 AI 에이전트가 협업하여 질문을 처리하는 것이다. 각 에이전트는 특정한 교육적 목적을 가지고 설계되었다.</p>
+<h3 id="331-classifier-agent">3.3.1 Classifier Agent: "이 질문은 어떤 유형인가?"<a class="headerlink" href="#331-classifier-agent" title="Permanent link">&para;</a></h3>
+<h4 id="_1">교육적 필요성<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>1장에서 확인했듯이, 학생 질문의 72.3%가 학습 맥락 정보 없이 제출되었다. "지수의 확장을 알려줘"라는 질문이 수학의 '지수(exponent)'인지, 비즈니스 '지점 확장'인지 AI는 판단할 수 없었다.</p>
+<p>더 심각한 문제는, **질문의 인지적 수준에 따라 답변 방식이 달라야 한다**는 것이다. "수학적 귀납법이 뭐에요?"(K1-사실)와 "귀납 단계에서 제가 뭘 잘못 이해한 건가요?"(K4-메타인지)는 완전히 다른 답변을 요구한다.</p>
+<p><strong>해결 아이디어</strong>: Bloom의 K1-K4 분류를 자동화하여, 질문의 인지적 수준과 명료화 필요성을 사전에 판단한다.</p>
+<h4 id="3_1">에이전트의 3가지 판단<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<p>Classifier는 학생 질문을 받아 다음 3가지 판단을 내린다:</p>
+<p><strong>1) 질문 유형 분류 (Bloom의 K1-K4)</strong></p>
+<table>
+<thead>
+<tr>
+<th>유형</th>
+<th>질문 예시</th>
+<th>답변 전략</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>K1 (사실)</strong></td>
+<td>"수학적 귀납법의 정의가 뭐에요?"</td>
+<td>→ 간결한 정의 제공</td>
+</tr>
+<tr>
+<td><strong>K2 (개념)</strong></td>
+<td>"귀납 가정은 왜 필요한가요?"</td>
+<td>→ 개념 간 관계 설명</td>
+</tr>
+<tr>
+<td><strong>K3 (절차)</strong></td>
+<td>"이 등식을 어떻게 증명하나요?"</td>
+<td>→ 단계별 절차 안내</td>
+</tr>
+<tr>
+<td><strong>K4 (메타인지)</strong></td>
+<td>"제가 뭘 잘못 이해한 건가요?"</td>
+<td>→ 소크라테스식 문답</td>
+</tr>
+</tbody>
+</table>
+<p><strong>교육적 효과</strong>: 같은 "수학적 귀납법" 주제라도, K1 질문에는 간결한 정의를, K4 질문에는 학생의 사고 과정을 드러내는 질문으로 응답한다.</p>
+<p><strong>2) 명료화 필요성 판단 (3단계 게이팅)</strong></p>
+<pre class="mermaid"><code>flowchart TD
+    Q[학생 질문] --&gt; C{Classifier 분석}
+    C --&gt;|answerable&lt;br/&gt;바로 답변 가능| A[Answer Generator로 전달]
+    C --&gt;|needs_clarify&lt;br/&gt;명료화 필요| I[Question Improvement로 전달]
+    C --&gt;|unanswerable&lt;br/&gt;답변 불가| U[정중한 안내 메시지]
+
+    style A fill:#90EE90
+    style I fill:#FFD700
+    style U fill:#FFB6C1</code></pre>
+<p><strong>판단 기준</strong>:
+- <strong>answerable</strong>: 질문이 명확하고, 답변에 필요한 정보가 충분함
+  - 예: "n=1일 때 기본 단계를 증명하는 방법을 알려주세요"
+- <strong>needs_clarify</strong>: 질문이 모호하거나, 맥락 정보가 부족함
+  - 예: "수열 알려줘" → 정의? 공식? 문제 풀이?
+- <strong>unanswerable</strong>: 수학 외 영역이거나, 교육적으로 부적절함
+  - 예: "로블록스", "오늘 날씨 어때?"</p>
+<p><strong>3) 명료화 질문 제안 (needs_clarify인 경우)</strong></p>
+<p>Classifier는 단순히 "명료화 필요"라고만 판정하지 않고, **Dewey의 5단계에 기반한 구체적인 명료화 질문까지 제안**한다.</p>
+<p><strong>예시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>학생 질문: &quot;수열 알려줘&quot;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Classifier 판단:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>- 유형: K1 (사실)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>- 게이팅: needs_clarify (범위가 너무 넓음)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>- 제안 질문: &quot;수열에 대해 알고 싶구나! 😊
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>              어떤 부분이 궁금한지 알려줄래?
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>              1️⃣ 수열이 뭔지 (정의)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>              2️⃣ 수열 공식들
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>              3️⃣ 수열 문제 푸는 방법&quot;
+</span></code></pre></div></p>
+<p>이 제안은 Question Improvement Agent로 전달되어, 실제 명료화 대화에 활용된다.</p>
+<h4 id="_2">입력과 출력<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    Input["입력&lt;br/&gt;━━━━━&lt;br/&gt;• 학생 질문&lt;br/&gt;• 대화 맥락&lt;br/&gt;• 이전 세션 정보"] 
+    --&gt; Classifier["Classifier Agent&lt;br/&gt;━━━━━━━&lt;br/&gt;1️⃣ K1-K4 분류&lt;br/&gt;2️⃣ 게이팅 판정&lt;br/&gt;3️⃣ 명료화 질문 제안"]
+    Classifier --&gt; Output["출력&lt;br/&gt;━━━━━&lt;br/&gt;• 질문 유형 (K1-K4)&lt;br/&gt;• 게이팅 판정&lt;br/&gt;• 명료화 질문 (필요시)"]
+
+    Output --&gt;|answerable| AG[Answer&lt;br/&gt;Generator]
+    Output --&gt;|needs_clarify| QI[Question&lt;br/&gt;Improvement]
+    Output --&gt;|unanswerable| MSG[안내&lt;br/&gt;메시지]
+
+    style Classifier fill:#4A90E2,color:#FFF</code></pre>
+<h4 id="_3">교육적 효과<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>실험 결과, Classifier의 자동 분류는 다음과 같은 교육적 효과를 보였다:</p>
+<ol>
+<li><strong>질문 품질 향상</strong>: 명료화 과정을 거친 질문의 평균 점수 3.2점 → 4.7점</li>
+<li><strong>답변 적합성 증가</strong>: K1-K4 유형별 맞춤 답변으로 학생 만족도 4.&#8536;점</li>
+<li><strong>시간 효율성</strong>: answerable 질문(58%)은 명료화 생략으로 즉시 답변</li>
+</ol>
+<p><strong>실제 사례</strong>:
+- 모호한 질문 "귀납법 어려워요" → needs_clarify 판정 → "어떤 부분이 어려운가요?" → "귀납 단계에서 식 전개" → K3 유형으로 단계별 안내
+- 명확한 질문 "n=k+1 단계에서 귀납 가정을 어떻게 사용하나요?" → answerable 판정 → 즉시 K3 답변 생성</p>
+<blockquote>
+<p><strong>구현 상세</strong>: Classifier의 프롬프트 설계 및 코드 구조는 4.2절 "에이전트 시스템 구현"에서 다룬다.</p>
+</blockquote>
+<h3 id="332-question-improvement-agent">3.3.2 Question Improvement Agent: "질문을 더 명확하게"<a class="headerlink" href="#332-question-improvement-agent" title="Permanent link">&para;</a></h3>
+<h4 id="_4">교육적 필요성<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>Classifier가 "명료화 필요" 판정을 내렸다면, 이는 **학생 스스로 질문을 구체화할 기회**를 의미한다. 1장에서 본 "수열이 뭐야?"와 같은 질문은 즉시 답변을 제공해도 학생에게 도움이 되지 않는다. 정의를 원하는가, 공식을 원하는가, 문제 풀이를 원하는가에 따라 완전히 다른 설명이 필요하기 때문이다.</p>
+<p>더 중요한 것은, **명료화 과정 자체가 학습**이라는 것이다. 듀이의 반성적 사고 이론에 따르면, 학생이 자신의 어려움을 명확히 인식하고 표현하는 과정에서 메타인지 능력이 향상된다.</p>
+<p><strong>해결 아이디어</strong>: Dewey의 반성적 사고 5단계를 대화형 명료화 질문으로 구현하여, 학생이 스스로 질문을 구조화하도록 돕는다.</p>
+<h4 id="dewey-5">명료화 프로세스: Dewey 5단계의 구현<a class="headerlink" href="#dewey-5" title="Permanent link">&para;</a></h4>
+<p>Question Improvement Agent는 Dewey의 5단계를 실제 대화로 변환한다:</p>
+<table>
+<thead>
+<tr>
+<th>Dewey 단계</th>
+<th>명료화 질문 예시</th>
+<th>학생 경험</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1단계: 문제 인식</strong></td>
+<td>"무엇이 불확실한가요? 🤔"</td>
+<td>막연한 어려움 → 구체적 문제 인식</td>
+</tr>
+<tr>
+<td><strong>2단계: 문제 정의</strong></td>
+<td>"정확히 무엇을 알고 싶은가요?"</td>
+<td>"어려워요" → "귀납 단계가 어려워요"</td>
+</tr>
+<tr>
+<td><strong>3단계: 가설 설정</strong></td>
+<td>"어떤 방법을 시도해봤나요?"</td>
+<td>학생의 시도와 이해 수준 파악</td>
+</tr>
+<tr>
+<td><strong>4단계: 가설 검증</strong></td>
+<td>"왜 그렇게 생각했나요?"</td>
+<td>학생의 사고 과정 드러내기</td>
+</tr>
+<tr>
+<td><strong>5단계: 결론 도출</strong></td>
+<td>"최종적으로 무엇을 얻고 싶나요?"</td>
+<td>학습 목표 명확화</td>
+</tr>
+</tbody>
+</table>
+<p><strong>실제 대화 예시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>학생: &quot;수학적 귀납법 어려워요&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>AI (1단계): &quot;귀납법 중에서 어떤 부분이 가장 어렵거나 궁금하신가요? 🤔&quot;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>학생: &quot;귀납 단계요&quot;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>AI (2단계): &quot;귀납 단계의 어느 부분이 어려운가요?
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            귀납 가정을 사용하는 방법인가요, 
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            아니면 식을 전개하는 과정인가요?&quot;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>학생: &quot;식을 전개하는 과정이요&quot;
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>AI (3단계): &quot;지금까지 어떻게 시도해보셨나요?&quot;
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>학생: &quot;n=k+1을 대입했는데 그 다음을 모르겠어요&quot;
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>AI: (충분한 정보 확보 → Answer Generator로 전달)
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    &quot;n=k+1 대입 후 식 전개 과정을 단계별로 설명해드릴게요! 📚&quot;
+</span></code></pre></div></p>
+<h4 id="3_2">명료화 전략: 3단계 차별화<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h4>
+<p>모든 질문에 5단계를 다 거치면 시간이 오래 걸린다. Question Improvement는 질문의 모호성 수준에 따라 전략을 조절한다:</p>
+<p><strong>Stage 1: Quick Scope</strong> (초단순 질문, 1-2단어)
+- <strong>대상</strong>: "수열", "함수" 수준
+- <strong>방식</strong>: 선택지 제공으로 빠르게 범위 좁히기
+- <strong>예시</strong>:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>학생: &quot;수열 알려줘&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>AI: &quot;수열에 대해 알고 싶구나! 😊
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>     어떤 부분이 궁금한지 알려줄래?
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>     1️⃣ 수열이 뭔지 (정의)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>     2️⃣ 수열 공식들
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>     3️⃣ 수열 문제 푸는 방법&quot;
+</span></code></pre></div>
+  → 1회 명료화로 완료</p>
+<p><strong>Stage 2: Specific Clarify</strong> (약간 모호한 질문, 3-5단어)
+- <strong>대상</strong>: "수학적 귀납법의 귀납단계가 어려워요"
+- <strong>방식</strong>: 세부 정보 1-2개만 추가 질문
+- <strong>예시</strong>:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>학생: &quot;귀납 단계가 어려워요&quot;
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>AI: &quot;귀납 단계 중에서 어떤 부분이 어려운가요?
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>     귀납 가정을 사용하는 방법인가요,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>     아니면 식을 전개하는 과정인가요?&quot;
+</span></code></pre></div>
+  → 1-2회 명료화로 완료</p>
+<p><strong>Stage 3: Deep Inquiry</strong> (구체적이나 의도 불명확)
+- <strong>대상</strong>: 맥락은 있으나 학습 목표가 불명확한 질문
+- <strong>방식</strong>: Dewey 5단계 적용, 메타인지 자극
+- <strong>예시</strong>:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>학생: &quot;이 증명이 맞는지 모르겠어요&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>AI: &quot;함께 생각해보자! 🤔
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>     어떤 부분에서 확신이 안 서나요?
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>     어디까지 이해했고, 어디서부터 막혔는지 알려줄래?
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>     (네가 뭘 모르는지 아는 게 학습의 시작이야!)&quot;
+</span></code></pre></div>
+  → 2-3회 명료화, 학생의 사고 과정 드러내기</p>
+<h4 id="_5">명료화 완료 판단<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>Question Improvement는 학생의 각 응답을 평가하여, 충분한 정보가 모였는지 판단한다:</p>
+<pre class="mermaid"><code>flowchart TD
+    C[Classifier에서&lt;br/&gt;needs_clarify 전달] --&gt; Q1[명료화 질문 1]
+    Q1 --&gt; S1[학생 응답]
+    S1 --&gt; E1{충분한&lt;br/&gt;정보?}
+    E1 --&gt;|PASS| F[최종 질문 생성]
+    E1 --&gt;|NEED_MORE| Q2[명료화 질문 2]
+    Q2 --&gt; S2[학생 응답]
+    S2 --&gt; E2{충분한&lt;br/&gt;정보?}
+    E2 --&gt;|PASS| F
+    E2 --&gt;|NEED_MORE| Q3[명료화 질문 3]
+    Q3 --&gt; S3[학생 응답]
+    S3 --&gt; F
+    F --&gt; AG[Answer Generator로 전달]
+
+    style E1 fill:#FFD700
+    style E2 fill:#FFD700
+    style AG fill:#90EE90</code></pre>
+<p><strong>판단 기준</strong>:
+- <strong>PASS</strong>: 원본 질문의 의도가 명확해지고, 답변 생성에 필요한 정보 확보
+- <strong>NEED_MORE</strong>: 원본 질문의 의도가 여전히 불분명하거나, 추가 정보 필요
+- <strong>최대 3회 제한</strong>: 3회 명료화 후에도 불충분하면 현재 정보로 답변 생성</p>
+<h4 id="_6">교육적 의도 명시화<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>기존 LLM은 "왜 명료화 질문을 하는지" 설명하지 않아 학생이 불편함을 느꼈다. Question Improvement는 명료화의 교육적 이유를 부드럽게 설명한다:</p>
+<p><strong>기본 프레이밍</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&quot;질문을 조금만 더 구체적으로 만들어주면,
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a> 딱 맞는 설명을 해드릴 수 있어요! 😊&quot;
+</span></code></pre></div></p>
+<p><strong>교육적 프레이밍</strong> (K4 수준 학생):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&quot;함께 질문을 구체화해볼까요? 🎯
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a> 네가 정확히 무엇을 모르는지 찾아가는 과정이
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a> 진짜 학습의 시작이에요!&quot;
+</span></code></pre></div></p>
+<h4 id="_7">질문 유형 재분류<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>명료화 과정에서 학생의 실제 어려움이 드러나면, 질문 유형이 변경될 수 있다:</p>
+<p><strong>예시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>원본 질문: &quot;수열 알려줘&quot; (K1으로 분류)
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  ↓
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>명료화: &quot;어떤 부분이 궁금한가요?&quot;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  ↓
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>학생: &quot;등차수열과 등비수열의 차이를 모르겠어요&quot;
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  ↓
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>재분류: K2 (개념적 이해) → K2 답변 전략 적용
+</span></code></pre></div></p>
+<h4 id="_8">교육적 효과<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>실험 결과, Question Improvement의 명료화 과정은 다음과 같은 효과를 보였다:</p>
+<ol>
+<li><strong>질문 품질 향상</strong>: 명료화 후 질문 점수 평균 3.2점 → 4.7점 (46% 증가)</li>
+<li><strong>학생 만족도</strong>: 명료화 과정의 교육적 가치 4.&#8536;점</li>
+<li><strong>메타인지 발달</strong>: "내가 무엇을 모르는지 스스로 규정할 수 있게 되었다" (학생 증언)</li>
+<li><strong>시간 효율성</strong>: 평균 1.8회 명료화로 완료 (3회 제한 내)</li>
+</ol>
+<p><strong>학생 증언</strong>:</p>
+<blockquote>
+<p>"명료화 과정이 최종 정답보다 더 큰 배움을 줬다. 문제를 조건·정의·목표로 분리해 재정의하는 연습이 됐다."</p>
+</blockquote>
+<p><strong>실제 사례</strong>:
+- 모호한 질문 "귀납법 어려워요" → 1회 명료화 → "귀납 단계에서 식 전개" → K3 답변 (단계별 풀이)
+- 초단순 질문 "수열" → 선택지 제공 → "수열 공식들" → K1 답변 (공식 정리)</p>
+<blockquote>
+<p><strong>구현 상세</strong>: Question Improvement의 명료화 평가 로직 및 프롬프트는 4.2절 "에이전트 시스템 구현"에서 다룬다.</p>
+</blockquote>
+<h3 id="333-answer-generator-agent">3.3.3 Answer Generator Agent: "유형별 맞춤 답변"<a class="headerlink" href="#333-answer-generator-agent" title="Permanent link">&para;</a></h3>
+<h4 id="_9">교육적 필요성<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>1장에서 확인한 AI 답변의 문제는 **"모든 학생에게 동일한 방식으로 설명한다"**는 것이었다. "수학적 귀납법이 뭐에요?"라고 묻는 K1 수준 학생에게도, "귀납 단계에서 제가 뭘 잘못 이해한 건가요?"라고 묻는 K4 수준 학생에게도 똑같은 장문의 설명을 제공했다.</p>
+<p>더 심각한 문제는 **인지 과부하**였다. 학생이 간단한 정의만 원하는데, AI가 유한수열, 무한수열, 등차수열, 등비수열, 일반항, 점화식을 한꺼번에 설명하면 학생은 어디서부터 이해해야 할지 모른다.</p>
+<p><strong>해결 아이디어</strong>: Bloom의 K1-K4 분류를 **실제 답변 구조와 교수법**으로 차별화하여, 학생의 인지적 수준에 맞는 설명을 제공한다.</p>
+<h4 id="bloom-k1-k4">Bloom K1-K4 답변 전략의 실제 구현<a class="headerlink" href="#bloom-k1-k4" title="Permanent link">&para;</a></h4>
+<p>Answer Generator는 Classifier가 판정한 질문 유형에 따라, **완전히 다른 답변 전략**을 적용한다:</p>
+<table>
+<thead>
+<tr>
+<th>유형</th>
+<th>답변 구조</th>
+<th>교수법 특징</th>
+<th>예시 질문</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>K1 (사실)</strong></td>
+<td>정의 → 핵심 예시 → 보충</td>
+<td>간결함, 정확성 우선</td>
+<td>"귀납법의 정의가 뭐에요?"</td>
+</tr>
+<tr>
+<td><strong>K2 (개념)</strong></td>
+<td>개념 관계 → 비교/대조 → 시각화</td>
+<td>"왜?" 중심 설명</td>
+<td>"귀납 가정은 왜 필요한가요?"</td>
+</tr>
+<tr>
+<td><strong>K3 (절차)</strong></td>
+<td>전체 개요 → 단계별 안내 → 실수 방지</td>
+<td>선택권 제공, 대화형</td>
+<td>"이 등식을 어떻게 증명하나요?"</td>
+</tr>
+<tr>
+<td><strong>K4 (메타인지)</strong></td>
+<td>문제 분석 → 자기 점검 → 대안 탐색</td>
+<td>소크라테스식 문답</td>
+<td>"제가 뭘 잘못 이해한 건가요?"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="k1">K1 답변: 간결함과 정확성<a class="headerlink" href="#k1" title="Permanent link">&para;</a></h4>
+<p><strong>학생 질문</strong>: "수학적 귀납법의 정의가 뭐에요?"</p>
+<p><strong>AI 답변</strong> (K1 전략):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>수학적 귀납법은 자연수에 관한 명제를 증명하는 방법입니다.
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>**핵심 구조**:
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>1. 기초 단계: n=1일 때 성립 확인
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2. 귀납 단계: n=k 성립 → n=k+1 성립 증명
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>💡 비유: 도미노가 차례로 넘어지듯, 
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>   첫 번째가 넘어지고 (기초 단계)
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>   하나가 넘어지면 다음도 넘어지면 (귀납 단계)
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>   모든 도미노가 넘어집니다.
+</span></code></pre></div></p>
+<p><strong>특징</strong>:
+- 불필요한 정보 배제 (유한귀납법, 강한귀납법 등 언급 안 함)
+- 3-5문장으로 간결하게 정리
+- 학생이 요청하지 않은 관련 개념 추가 설명 안 함</p>
+<h4 id="k2">K2 답변: "왜?" 중심 설명<a class="headerlink" href="#k2" title="Permanent link">&para;</a></h4>
+<p><strong>학생 질문</strong>: "귀납 가정은 왜 필요한가요?"</p>
+<p><strong>AI 답변</strong> (K2 전략):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>귀납 가정의 역할을 이해하려면, 증명 구조를 살펴봐야 해요. 🔍
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>**증명 흐름**:
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>n=k 성립 (가정) → n=k+1 성립 (증명 목표)
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>              ↓
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>     k를 k+1로 연결하는 다리
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>**왜 필요한가?**
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>귀납 가정이 없으면 k+1 단계를 증명할 근거가 없어집니다.
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>💡 비유: 사다리를 올라갈 때
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>   아래 발판(귀납 가정)이 있어야 
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>   위 발판(k+1)으로 올라갈 수 있어요.
+</span></code></pre></div></p>
+<p><strong>특징</strong>:
+- 개념 간 **논리적 연결**을 시각화 (화살표, 다이어그램)
+- "왜 그런가?"에 대한 명확한 답
+- 학생이 직관적으로 이해할 수 있는 비유 사용</p>
+<h4 id="k3">K3 답변: 학생 선택권 제공<a class="headerlink" href="#k3" title="Permanent link">&para;</a></h4>
+<p><strong>학생 질문</strong>: "등차수열 일반항 공식을 귀납법으로 어떻게 증명하나요?"</p>
+<p><strong>AI 답변</strong> (K3 전략):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>등차수열 일반항 공식 증명을 알려줄게! 📚
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>어떻게 배우고 싶어?
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>1️⃣ 단계별로 함께 풀어보기 (추천! 💡)
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>   - 각 단계를 함께 생각하며 진행
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>   - 스스로 답을 찾아가는 연습
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>   - 막히면 힌트 제공
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>2️⃣ 전체 증명 과정 한번에 보기
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>   - 처음부터 끝까지 상세한 풀이
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>   - 각 단계의 근거 설명
+</span></code></pre></div></p>
+<p><strong>학생이 1번 선택 시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>좋아! 함께 생각해보자 🤝
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>**Step 1: 기초 단계**
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>n=1일 때 성립함을 보여야 해.
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>첫째항은 a₁ = a (공식으로 a₁ = a + (1-1)d = a)
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>이 부분은 이해했어? (네/아니요)
+</span></code></pre></div></p>
+<p><strong>특징</strong>:
+- <strong>학생에게 학습 방식 선택권</strong> 부여 (대화형 vs 일괄 제공)
+- 단계별로 학생의 이해도를 확인하며 진행
+- 막히면 즉시 힌트 또는 상세 설명으로 전환</p>
+<h4 id="k4">K4 답변: 메타인지 훈련 ⭐<a class="headerlink" href="#k4" title="Permanent link">&para;</a></h4>
+<p><strong>학생 질문</strong>: "귀납 단계에서 제가 뭘 잘못 이해한 건가요?"</p>
+<p><strong>AI 답변</strong> (K4 전략):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>함께 차근차근 생각해보자! 🤔
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>**스스로 점검해보기**:
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>1️⃣ 귀납 가정을 어디에 사용했나요?
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>   → 네 풀이에서 찾아보기: [ ]
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>2️⃣ n=k와 n=k+1의 식이 어떻게 다른가요?
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>   → 차이점 적어보기: _________
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>3️⃣ 그 차이를 귀납 가정으로 메울 수 있나요?
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>   → 연결 고리: _________
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>막히는 부분을 알려주면, 함께 해결 방법을 찾아볼게! 💬
+</span></code></pre></div></p>
+<p><strong>학생 응답</strong>: "2번에서 막혀요. 차이를 어떻게 찾아야 할지 모르겠어요."</p>
+<p><strong>AI 후속 답변</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>좋은 질문이야! 차이를 찾는 방법을 알려줄게 🎯
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>**Step by Step**:
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>1. n=k일 때 식을 써보기
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>2. n=k+1로 바꾸면 어떻게 달라지는지 비교
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>예를 들어, 등식 1+2+...+k = k(k+1)/2 에서
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>- n=k:   1+2+...+k = k(k+1)/2
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>- n=k+1: 1+2+...+k+(k+1) = (k+1)(k+2)/2
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>차이 = (k+1)이 추가됨 ← 이게 핵심!
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>이제 네 문제에서 차이를 찾아볼 수 있겠어? 🔍
+</span></code></pre></div></p>
+<p><strong>특징</strong>:
+- <strong>답을 직접 주지 않음</strong> → 학생이 스스로 찾도록 유도
+- <strong>메타인지 질문</strong>: "어떻게 생각했나요?", "어디서 막혔나요?"
+- <strong>점진적 힌트</strong>: 학생이 막히면 단계적으로 힌트 제공
+- <strong>사고 과정 드러내기</strong>: 학생의 이해 과정을 명시적으로 표현</p>
+<p><strong>교육적 효과</strong>: K4 답변은 단순 정답 제공이 아닌, **학생이 스스로 오류를 발견하고 해결 전략을 탐색**하도록 유도하여 깊이 있는 학습과 문제해결 능력을 동시에 향상시킨다.</p>
+<h4 id="_10">교육과정 표준 준수<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>Answer Generator는 대한민국 교육과정의 표준 용어를 엄격히 준수한다:</p>
+<table>
+<thead>
+<tr>
+<th>표준 용어 (✓)</th>
+<th>비표준 용어 (✗)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>부등식</td>
+<td>불등식</td>
+</tr>
+<tr>
+<td>일반항</td>
+<td>명시적 공식 (Explicit Formula)</td>
+</tr>
+<tr>
+<td>함수</td>
+<td>함수식</td>
+</tr>
+<tr>
+<td>미분, 도함수</td>
+<td>Derivative</td>
+</tr>
+</tbody>
+</table>
+<p><strong>LaTeX 수식 작성 규칙</strong>:
+- 인라인 수식: <code>$수식$</code>
+- 블록 수식: <code>$$수식$$</code>
+- <strong>수식 구분자 안에는 절대로 한글 포함 금지</strong>
+- ✅ 올바른 예시: <code>$P(k)$가 참이면 $P(k+1)$도 참</code>
+- ❌ 잘못된 예시: <code>$$P(k)가 참 \Rightarrow P(k+1)도 참$$</code></p>
+<h4 id="_11">실시간 스트리밍과 학생 경험<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>Answer Generator는 답변을 **타이핑하듯 실시간으로 전송**한다:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>[학생 화면]
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>&quot;귀납 가정의 역할을 이해하려면,&quot; (0.5초)
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>&quot;증명 구조를 살펴봐야 해요.&quot; (0.5초)
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>&quot;🔍&quot; (즉시)
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>[수식 렌더링]
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>&quot;n=k 성립 (가정) → n=k+1 성립 (증명 목표)&quot; (1초)
+</span></code></pre></div>
+<p><strong>효과</strong>:
+- 학생이 AI가 "생각하며 답변하는" 느낌을 받음
+- 긴 답변도 지루하지 않게 받아들임
+- ChatGPT, Claude와 동일한 UX</p>
+<h4 id="_12">교육적 효과<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>실험 결과, Answer Generator의 유형별 차별화 답변은 다음과 같은 효과를 보였다:</p>
+<ol>
+<li><strong>답변 적합성</strong>: AI 답변의 학습 수준 일치도 87% (1장의 48.9%에서 대폭 개선)</li>
+<li><strong>학생 만족도</strong>: 답변 품질 만족도 4.&#8536;점</li>
+<li><strong>학습 효율성</strong>: K1 질문은 30초 내, K3 질문은 5분 내 해결</li>
+<li><strong>메타인지 향상</strong>: K4 답변 경험 학생의 자기주도학습 능력 향상 (Cohen's d = 0.42)</li>
+</ol>
+<p><strong>실제 사례</strong>:
+- K1 질문 "귀납법 정의" → 3문장 간결 답변 → 학생 "딱 궁금한 것만 알려줘서 좋아요"
+- K3 질문 "등식 증명 방법" → 선택권 제공 → 학생 "단계별로 함께 풀기" 선택 → 10분 내 완료
+- K4 질문 "내 오류가 뭐죠?" → 소크라테스식 문답 → 학생 "스스로 오류를 찾았어요!"</p>
+<blockquote>
+<p><strong>구현 상세</strong>: Answer Generator의 유형별 프롬프트 템플릿과 스트리밍 로직은 4.2절에서 다룬다.</p>
+</blockquote>
+<h3 id="334-observer-agent">3.3.4 Observer Agent: "학생이 무엇을 배우고 있는가?"<a class="headerlink" href="#334-observer-agent" title="Permanent link">&para;</a></h3>
+<h4 id="_13">교육적 필요성<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>교사가 30명 학생을 동시에 가르칠 때 가장 어려운 점은 **개별 학생의 학습 상황을 실시간으로 파악하는 것**이다. 누가 어떤 개념에서 막혔는지, 누가 빠르게 진행 중인지, 누가 반복적으로 같은 실수를 하는지 알기 어렵다.</p>
+<p>기존 AI 대화 시스템은 대화 내용을 단순히 저장만 하고, 교육적 분석을 제공하지 않았다. 교사가 177개의 대화 로그를 일일이 읽어야 했다.</p>
+<p><strong>해결 아이디어</strong>: Observer Agent가 **교사처럼 학생을 관찰**하여, 학습 진도, 어려움 영역, 메타인지 발달을 자동으로 추출하고 교사 대시보드에 제공한다.</p>
+<h4 id="4">자동 추출하는 4가지 정보<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<p>Observer는 매 세션마다 다음 정보를 자동으로 추출한다:</p>
+<table>
+<thead>
+<tr>
+<th>추출 정보</th>
+<th>구체적 내용</th>
+<th>활용 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. 학습 진도</strong></td>
+<td>• 학습 중인 개념<br/>• 완료한 단원<br/>• 학습 깊이 (K1→K3 진행)</td>
+<td>학생별 진도 추적</td>
+</tr>
+<tr>
+<td><strong>2. 어려움 영역</strong></td>
+<td>• 반복 질문 패턴<br/>• 오개념 징후<br/>• 막힌 지점</td>
+<td>교사 개입 타이밍 제안</td>
+</tr>
+<tr>
+<td><strong>3. 메타인지 발달</strong></td>
+<td>• 자기 점검 질문 빈도<br/>• 전략 변경 시도<br/>• 질문 구체화 개선도</td>
+<td>학습 능력 평가</td>
+</tr>
+<tr>
+<td><strong>4. 학습 맥락</strong></td>
+<td>• 선수 학습 수준<br/>• 학습 목표 명시성<br/>• 어려움 표현 능력</td>
+<td>개별 맞춤 지원</td>
+</tr>
+</tbody>
+</table>
+<p><strong>실제 추출 예시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>세션 ID: 42
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>학생: 김철수
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>[Observer 자동 요약]
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>- 진도: 귀납법 귀납 단계 학습 중 (K3 수준)
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>- 어려움: &quot;귀납 가정 적용&quot;에서 3회 반복 질문
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>- 메타인지: K4 질문 2회 (평균보다 높음, 긍정적)
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>- 특이사항: &quot;식 전개 과정&quot;에서 일관되게 막힘
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>- 교사 코멘트: 귀납 가정 활용법에 대한 개별 지도 권장
+</span></code></pre></div></p>
+<h4 id="3_3">교사 대시보드: 3가지 뷰<a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h4>
+<p><strong>1) 학생별 상세 뷰</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>[학생 A]
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>• 총 세션: 5회
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>• 학습 진도: K1 (정의) ✓ → K2 (개념) ✓ → K3 (적용 중)
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>• 어려움 영역: 귀납 가정 적용 ★★★
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>• 메타인지 점수: 0.68 (평균 0.54보다 높음)
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>• 추세: Improving ↗️
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>• 다음 개입: K3 귀납 단계 집중 지도
+</span></code></pre></div></p>
+<p><strong>2) 반 전체 트렌드 뷰</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>[공통 어려움 Top 3]
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>1. 귀납 가정 적용 (68% 학생) ← 교사 집중 설명 필요
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>2. 귀납 단계 식 전개 (52%)
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>3. 기초 단계와 귀납 단계 연결 (41%)
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>[긍정적 신호]
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>• 평균 명료화 횟수: 1.8회 → 적절
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>• K4 질문 비율: 23% → 메타인지 활성화
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>• 세션당 평균 진행: K1 → K2.4 → 빠름
+</span></code></pre></div></p>
+<p><strong>3) 개입 알림 뷰</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>[즉시 개입 필요] (3명)
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>• 학생 B: 귀납 가정에서 3회 막힘
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>• 학생 D: 오개념 징후 (귀납 가정을 결론에 사용)
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>[관찰 필요] (5명)
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>• 학생 E: 진도 느림, but 꾸준함
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>• 학생 F: K1만 반복 질문 (K2로 유도 필요)
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>[자기주도학습 가능] (22명)
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>• 순조롭게 진행 중, 교사 개입 불필요
+</span></code></pre></div></p>
+<h4 id="_14">교육적 가치<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p>Observer Agent는 교사의 **개별화 교육 능력**을 획기적으로 향상시킨다:</p>
+<ol>
+<li><strong>시간 절약</strong>: 177개 대화 로그 읽기 (4시간) → 요약 확인 (10분)</li>
+<li><strong>조기 발견</strong>: 반복적 어려움을 3회 내에 자동 감지</li>
+<li><strong>효율적 개입</strong>: 즉시 개입이 필요한 3명에게 집중</li>
+<li><strong>데이터 기반 교수</strong>: 반 전체 공통 어려움을 다음 수업에 반영</li>
+</ol>
+<p><strong>실제 활용 사례</strong>:
+- 교사 A: "68% 학생이 '귀납 가정 적용'에서 막힌다는 걸 보고, 다음 수업에서 집중 설명했더니 효과적이었어요."
+- 교사 B: "학생별 메타인지 점수를 보고, K4 질문이 많은 학생들을 격려했어요."</p>
+<blockquote>
+<p><strong>구현 상세</strong>: Observer의 학습 패턴 분석 알고리즘과 대시보드 API는 4.2절에서 다룬다.</p>
+</blockquote>
+<h3 id="335-freetalker-agent-freepass">3.3.5 FreeTalker Agent: "대조군 (Freepass 모드)"<a class="headerlink" href="#335-freetalker-agent-freepass" title="Permanent link">&para;</a></h3>
+<h4 id="_15">실험적 필요성<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>MAICE의 명료화 프로세스가 정말 효과적인지 검증하려면, **명료화 없이 즉시 답변하는 대조군**이 필요하다. FreeTalker Agent는 일반 ChatGPT, Claude처럼 작동하여, Agent 모드와 비교할 수 있게 한다.</p>
+<p><strong>역할</strong>:
+- <strong>A/B 테스트의 대조군</strong>: 학생 절반은 Agent 모드(명료화), 절반은 Freepass 모드(즉시 답변)로 무작위 배정
+- <strong>명료화 없이 즉시 답변</strong>: 학생 질문을 받으면 분류나 명료화 없이 바로 답변 생성
+- <strong>일반 LLM 동작 재현</strong>: 상용 AI 서비스와 동일한 방식으로 응답</p>
+<h4 id="_16">작동 방식<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>flowchart LR
+    Q[학생 질문] --&gt; FT[FreeTalker Agent]
+    FT --&gt; A[즉시 답변 생성]
+    A --&gt; S[실시간 스트리밍]
+
+    style FT fill:#FFB6C1</code></pre>
+<p><strong>Agent 모드와의 차이</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>Agent 모드</th>
+<th>Freepass 모드 (FreeTalker)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>질문 분류</strong></td>
+<td>✓ K1-K4 분류</td>
+<td>✗ 분류 없음</td>
+</tr>
+<tr>
+<td><strong>명료화</strong></td>
+<td>✓ needs_clarify 시 명료화</td>
+<td>✗ 명료화 없음</td>
+</tr>
+<tr>
+<td><strong>답변 전략</strong></td>
+<td>✓ K1-K4별 차별화</td>
+<td>✗ 동일한 방식</td>
+</tr>
+<tr>
+<td><strong>학습 관찰</strong></td>
+<td>✓ Observer 요약</td>
+<td>✓ Observer 요약 (동일)</td>
+</tr>
+<tr>
+<td><strong>학생 경험</strong></td>
+<td>"왜 자꾸 물어봐?"</td>
+<td>"빠른 답변!"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ab">실험 설계: A/B 테스트<a class="headerlink" href="#ab" title="Permanent link">&para;</a></h4>
+<p><strong>무작위 배정</strong>:
+- 학생 59명을 무작위로 Agent(30명) / Freepass(29명) 배정
+- 학생은 자신이 어느 모드인지 모름
+- 모드는 세션 전체 동안 고정 (중간에 변경 안 됨)</p>
+<p><strong>대조군의 중요성</strong>:
+- Agent 모드의 효과를 <strong>인과적으로 입증</strong>
+- 선택 편향(selection bias) 제거
+- "명료화가 정말 도움이 되는가?" 검증</p>
+<h4 id="6">실험 결과 (6장에서 상세 분석)<a class="headerlink" href="#6" title="Permanent link">&para;</a></h4>
+<p><strong>단일 세션 비교</strong>:
+- Agent: 평균 11.22점 (15점 만점)
+- Freepass: 평균 11.53점
+- → Agent가 약간 낮음 (명료화로 인한 시간 소요)</p>
+<p><strong>학습 진행 (다회 세션) 비교</strong>:
+- Agent: 세션 증가폭 +0.45점
+- Freepass: 세션 증가폭 -0.39점
+- → Agent가 학습 진행에서 우수함 ✅</p>
+<p><strong>하위권 학생 (Q1) 비교</strong>:
+- Agent: 세션 증가폭 -0.585점
+- Freepass: 세션 증가폭 -0.716점
+- → Agent가 더 효과적 (Cohen's d ≈ 0.38)</p>
+<p><strong>핵심 발견</strong>: 명료화 프로세스는 **단일 세션에서는 느리지만, 장기적 학습 효과는 우수**하다.</p>
+<blockquote>
+<p><strong>구현 상세</strong>: FreeTalker의 프롬프트 및 A/B 테스트 무작위 배정 로직은 4.2절에서 다룬다.</p>
+</blockquote>
+<hr />
+<p><strong>3장 요약</strong>: 5개 에이전트(Classifier, Question Improvement, Answer Generator, Observer, FreeTalker)의 교육적 역할과 협업 방식을 살펴보았다. 다음 4장에서는 이러한 에이전트들을 실제로 어떻게 구현했는지, 기술 스택과 코드 구조를 상세히 다룬다.</p>
+<h2 id="34">3.4 질문 품질 평가 루브릭<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
+<p>앞서 설명한 에이전트 시스템이 학생 질문과 AI 답변을 얼마나 잘 개선하는지 측정하기 위해, 본 연구는 **3영역 15점 만점의 자동 평가 루브릭**을 개발하였다.</p>
+<h3 id="341">3.4.1 루브릭 설계 원칙<a class="headerlink" href="#341" title="Permanent link">&para;</a></h3>
+<p><strong>이론적 기반</strong>:
+- King(1994)의 질문 생성 연구: 학생 생성 질문이 깊이 있는 이해를 촉진
+- Graesser &amp; Person(1994)의 질문 인지적 수준 분류
+- Dewey의 반성적 사고 5단계</p>
+<p><strong>4대 평가 기준</strong>:
+1. <strong>맥락 제공</strong>: 학습 수준, 단원, 어려움 영역 명시
+2. <strong>명확성</strong>: 핵심 질문의 단일성, 논리적 구조
+3. <strong>적절성</strong>: 수학 교과 관련성, 수준 정합성
+4. <strong>학습 관련성</strong>: 구체적 학습 목표, 선수 학습 연결</p>
+<h3 id="342-3-15">3.4.2 3영역 평가 구조 (총 15점 만점)<a class="headerlink" href="#342-3-15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>평가 영역</th>
+<th>점수</th>
+<th>평가 대상</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>질문 점수</strong></td>
+<td>0-5점</td>
+<td>학생 질문의 최종 품질</td>
+<td>4대 기준 충족도</td>
+</tr>
+<tr>
+<td><strong>답변 점수</strong></td>
+<td>1-5점</td>
+<td>AI 답변의 교육적 적절성</td>
+<td>맥락 이해, 표준 용어, 정보량</td>
+</tr>
+<tr>
+<td><strong>학습 지원 점수</strong></td>
+<td>1-5점</td>
+<td>명료화 과정의 교육성</td>
+<td>Dewey 5단계 구현</td>
+</tr>
+</tbody>
+</table>
+<p><strong>평가 예시</strong>:
+- <strong>13-15점</strong> (우수): "n² &lt; 2ⁿ 귀납법 증명에서 2^k+2k+1 &lt; 2^(k+1) 증명이 막혀요"
+  - 질문 5 + 답변 5 + 학습 지원 5
+- <strong>7-9점</strong> (보통): "수학적 귀납법이 뭐야?" → 명료화 후 개선
+  - 질문 3 + 답변 4 + 학습 지원 3
+- <strong>1-3점</strong> (미흡): "로블록스" (비수학적)
+  - 질문 0 + 답변 1 + 학습 지원 1</p>
+<p><strong>자동 채점 검증</strong>: AI 자동 평가와 교사 평가 간 상관계수 0.66 (p&lt;0.001), 강한 양의 상관관계 확인.</p>
+<h2 id="35">3.5 명료화 프로세스 요약<a class="headerlink" href="#35" title="Permanent link">&para;</a></h2>
+<p>본 절에서는 3.3.2절에서 상세히 다룬 명료화 프로세스의 핵심을 요약한다.</p>
+<h3 id="351">3.5.1 핵심 메커니즘<a class="headerlink" href="#351" title="Permanent link">&para;</a></h3>
+<p><strong>3단계 게이팅</strong>:
+1. <strong>answerable</strong> → 즉시 답변
+2. <strong>needs_clarify</strong> → 명료화 프로세스
+3. <strong>unanswerable</strong> → 정중한 안내</p>
+<p><strong>Dewey 5단계 매핑</strong>:
+- 1단계 (문제 인식) → "무엇이 불확실한가요?"
+- 2단계 (문제 정의) → "정확히 무엇을 알고 싶은가요?"
+- 3단계 (가설 설정) → "어떤 방법을 시도해봤나요?"
+- 4단계 (가설 검증) → "논리적 연결을 어떻게 보나요?"
+- 5단계 (결론 도출) → "최종적으로 무엇을 얻고 싶나요?"</p>
+<h3 id="352-3">3.5.2 3단계 차별화 전략<a class="headerlink" href="#352-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Stage 1</strong> (Quick Scope): 1-2단어 질문 → 선택지 제공 (1회)</li>
+<li><strong>Stage 2</strong> (Specific Clarify): 3-5단어 질문 → 세부 정보 1-2개 (1-2회)</li>
+<li><strong>Stage 3</strong> (Deep Inquiry): 의도 불명확 → Dewey 5단계 적용 (2-3회)</li>
+</ul>
+<p><strong>교육적 의도 명시</strong>: "질문을 구체화하면 딱 맞는 설명을 드릴 수 있어요!"</p>
+<h3 id="353">3.5.3 검증 결과<a class="headerlink" href="#353" title="Permanent link">&para;</a></h3>
+<ul>
+<li>교육적 가치: 4.&#8536;점</li>
+<li>재사용 의향: 4.&#8536;점</li>
+<li>평균 명료화 횟수: 1.8회 (3회 제한 내)</li>
+<li>질문 품질 향상: 3.2점 → 4.7점 (46% 증가)</li>
+</ul>
+<hr />
+<p><strong>다음 장 예고</strong>: 4장에서는 3장에서 설명한 아키텍처를 실제로 구현한 기술 스택, 코드 구조, 프롬프트 엔지니어링 기법을 상세히 다룬다.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="마지막 업데이트">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025년 11월 1일 21:55:27 KST">2025년 11월 1일 21:55:27</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="작성일">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025년 11월 1일 21:55:27 KST">2025년 11월 1일 21:55:27</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../02-theoretical-background/" class="md-footer__link md-footer__link--prev" aria-label="이전: 2장. 이론적 배경">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                2장. 이론적 배경
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-system-implementation/" class="md-footer__link md-footer__link--next" aria-label="다음: 4장. MAICE 시스템 구현">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                4장. MAICE 시스템 구현
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 김규봉 (부산대학교 AI융합교육전공)
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "toc.integrate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
