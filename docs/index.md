@@ -54,13 +54,13 @@
     
     주요 내용: 명료화의 교육학적 근거
 
-- :material-cog: **[3장. 시스템 설계](chapters/03-system-design.md)**
+- :material-cog: **[3장. MAICE 교육 시스템 아키텍처](chapters/03-system-design.md)**
 
     ---
     
-    MAICE 아키텍처, 멀티 에이전트 설계, 명료화 프로세스
+    설계 철학, 3계층 아키텍처, 5개 에이전트 역할과 협업
     
-    주요 내용: Question Classifier, Question Improvement
+    주요 내용: 명료화 중심 학습, Dewey/Bloom 이론 구현, A/B 테스트 설계
 
 - :material-calculator: **[4장. 수학적 귀납법 적용](chapters/04-mathematical-induction-application.md)**
 
@@ -124,6 +124,12 @@
     - **질문 데이터**: 1,012건의 학생 질문
     - **교사 평가단**: 중등 수학교사 4명
     - **자동 채점**: Gemini 2.5 Flash 모델 활용
+
+---
+
+!!! note "재현성 및 데이터 접근"
+    - 분석 코드와 생성된 도표는 `analysis/` 및 `docs/assets/images/`에 포함되어 있습니다.
+    - 원자료와 전체 분석 코드는 요청 시 비식별화 형태로 제공하며, 개인정보/민감정보는 공개하지 않습니다.
 
 ---
 

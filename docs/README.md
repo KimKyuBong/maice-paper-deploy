@@ -67,7 +67,12 @@ MAICE는 고등학교 수학 교육을 위한 AI 기반 채팅 시스템으로, 
 - **실시간 추적**: 개인별 학습 진도 및 어려움 영역 분석
 
 ### 멀티 에이전트 시스템
-- **5개 독립 에이전트**: QuestionClassifier, QuestionImprovement, AnswerGenerator, Observer, FreeTalker
+- **5개 독립 에이전트**:
+  - **Classifier**: K1-K4 질문 분류, 3단계 게이팅, 명료화 질문 제안
+  - **Question Improvement**: Dewey 5단계 반성적 사고 구현, 3단계 차별화 전략
+  - **Answer Generator**: K1-K4별 맞춤형 답변 생성 (간결함/관계 이해/절차 안내/메타인지 훈련)
+  - **Observer**: 학습 진도 추적, 어려움 영역 자동 감지, 교사 대시보드 제공
+  - **FreeTalker**: A/B 테스트 대조군 (Freepass 모드)
 - **Redis Streams**: 백엔드 ↔ 에이전트 신뢰성 있는 통신
 - **Redis Pub/Sub**: 에이전트 간 협업 및 워크플로우 오케스트레이션
 - **멀티프로세스**: 각 에이전트 독립 실행, 자동 재시작
