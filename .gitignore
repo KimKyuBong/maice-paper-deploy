@@ -1,0 +1,41 @@
+# MkDocs 빌드 결과
+site/
+
+# Python 가상환경
+venv_mkdocs/
+venv/
+env/
+ENV/
+.code
+# Python 캐시
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+analysis/
+# 로그 파일
+*.log
+
+# 시스템 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE 설정
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 임시 파일
+*.tmp
+*.temp
+*.bak
+*.backup

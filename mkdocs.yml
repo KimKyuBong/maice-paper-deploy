@@ -1,0 +1,181 @@
+site_name: "수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로"
+site_description: "수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로"
+site_author: 김규봉 (부산대학교 AI융합교육전공, 202373389)
+
+# Repository
+repo_name: MAICE-논문
+repo_url: https://github.com/YOUR_USERNAME/maice-paper  # GitHub 저장소 URL로 변경하세요
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 김규봉 (부산대학교 AI융합교육전공)
+
+# Theme Configuration
+theme:
+  name: material
+  language: ko
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+  
+  font:
+    text: Noto Sans KR
+    code: Roboto Mono
+  
+  features:
+    - navigation.tabs           # 상단 탭 네비게이션
+    - navigation.sections       # 섹션 네비게이션
+    - navigation.expand         # 자동 확장
+    - navigation.top           # 맨 위로 버튼
+    - navigation.footer        # 푸터 네비게이션
+    - search.suggest           # 검색 자동완성
+    - search.highlight         # 검색 결과 하이라이트
+    - search.share             # 검색 결과 공유
+    - toc.follow               # TOC 자동 따라가기
+    - toc.integrate            # TOC 통합
+    - content.code.copy        # 코드 복사 버튼
+    - content.action.edit      # 편집 버튼
+    - content.action.view      # 보기 버튼
+  
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Plugins
+plugins:
+  - search:
+      lang: 
+        - ko
+        - en
+      separator: '[\s\-\.]+'
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+      timezone: Asia/Seoul
+      locale: ko
+      fallback_to_build_date: true
+  - print-site:  # PDF 출력 지원
+      add_to_navigation: true
+      print_page_title: 'PDF로 출력'
+      add_print_site_banner: true
+      print_site_banner_template: "docs/assets/templates/banner.html"
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Additional JavaScript
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
+# Additional CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YOUR_USERNAME  # GitHub 프로필로 변경
+      name: GitHub
+  
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Google Analytics ID (선택사항)
+  
+  # 댓글 시스템 (Giscus)
+  comments:
+    enabled: true
+    # Giscus 설정은 별도로 추가 예정
+
+# Navigation Structure
+nav:
+  - 홈: index.md
+  - 논문 내용:
+    - 1장. 서론: chapters/01-introduction.md
+    - 2장. 이론적 배경: chapters/02-theoretical-background.md
+    - 3장. MAICE 교육 시스템 아키텍처: chapters/03-system-design.md
+    - 4장. MAICE 시스템 구현: chapters/04-system-implementation.md
+    - 5장. 수학적 귀납법 적용: chapters/05-mathematical-induction-application.md
+    - 6장. 연구 방법: chapters/06-research-methods.md
+    - 7장. 결과: chapters/07-results.md
+    - 8장. 논의 및 결론: chapters/08-discussion-conclusion.md
+    - 9장. 참고문헌: chapters/09-references.md
+  - 부록:
+    - 루브릭 상세설명서: 부록_A_루브릭_상세설명서.md
+    - AI채점 결과 샘플: 부록_B_AI채점_결과_샘플.md
+    - 통계분석 상세표: 부록_C_통계분석_상세표.md
+    - 연구 신뢰성 체크리스트: 부록_D_연구_신뢰성_체크리스트.md
+  - 문서:
+    - 시스템 문서: 
+      - 개요: architecture/overview.md
+      - Agent 시스템: architecture/agent-system.md
+      - 백엔드 아키텍처: architecture/backend-architecture.md
+      - 프론트엔드 아키텍처: architecture/frontend-architecture.md
+    - API 문서:
+      - MAICE API: api/maice-api.md
+      - 인증: api/authentication.md
+  - 설문 자료:
+    - 사후 설문지: MAICE_사후설문지.md
+    - 학생 설문조사지: 학생_설문조사지.md
+    - 설문지 개선사항: 설문지_개선사항_요약.md
+  
+  - 피드백: feedback.md
+

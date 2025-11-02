@@ -1,0 +1,56 @@
+{
+  "question_improvement_llm": {
+    "role": "명료화 평가 에이전트",
+    "description": "원본 질문이 명료해졌는지 평가하고, 필요시 질문 유형을 재분류하며, 명료화가 완료된 경우 최종 질문을 생성",
+    "model": "gemini-2.5-flash-lite",
+    "key_features": [
+      "명료화 과정 평가 (PASS/NEED_MORE)",
+      "K1-K4 질문 유형 재분류",
+      "최종 질문 생성",
+      "missing_fields 확인"
+    ]
+  },
+  "classifier_llm": {
+    "role": "질문 분류 에이전트",
+    "description": "학생 질문을 K1-K4 유형과 answerable/needs_clarify/unanswerable 품질로 분류하고 명료화 질문 생성",
+    "model": "gemini-2.5-flash-lite",
+    "key_features": [
+      "K1(즉답형), K2(설명형), K3(적용형), K4(문제해결형) 분류",
+      "answerable/needs_clarify/unanswerable 품질 판정",
+      "듀이의 반성적 사고 이론 기반 명료화 질문 생성",
+      "후속 질문 및 맥락 참조 판단"
+    ]
+  },
+  "answer_generator_llm": {
+    "role": "답변 생성 에이전트",
+    "description": "질문 유형(K1-K4)에 맞는 체계적이고 교육적인 답변 생성",
+    "model": "gemini-2.5-flash-lite",
+    "key_features": [
+      "고등학교 2학년 수준 맞춤 답변",
+      "표준 수학 용어 준수",
+      "LaTeX 수식 형식 사용",
+      "질문 유형별 차별화된 답변 구조 (K1: 즉답형, K2: 설명형, K3: 적용형, K4: 문제해결형)"
+    ]
+  },
+  "observer_llm": {
+    "role": "학습 과정 요약 에이전트",
+    "description": "학생의 질문, 명료화 과정, 답변을 요약하고 세션 제목 생성",
+    "model": "gemini-2.5-flash-lite",
+    "key_features": [
+      "세션 제목 생성 (15자 이내)",
+      "학습 내용 요약 (200자 이내)",
+      "주요 수학 개념 추출",
+      "학생 진척도 평가"
+    ]
+  },
+  "freetalker_llm": {
+    "role": "프리패스 모드 에이전트",
+    "description": "명료화 없이 즉시 답변을 제공하는 프리패스 모드 (대조군)",
+    "model": "gemini-2.5-flash-lite",
+    "key_features": [
+      "명료화 과정 없이 즉시 답변",
+      "LaTeX 수식 지원",
+      "대조군 모드"
+    ]
+  }
+}
