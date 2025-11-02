@@ -11,14 +11,20 @@ Biyani, P., Nguyen, H. A., Mai, T., & Rajasekharan, A. (2024). RUBICON: Automate
 Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
   > **인용**: 6장 6.5.1 (효과크기 해석 기준), 7장 7.14 (Cohen's d 계산 및 해석), 부록 D
 
-Dewey, J. (1910). *How we think*. D.C. Heath & Co. https://doi.org/10.1037/10903-000
-  > **인용**: 2장 (반성적 사고 5단계), 5장 (명료화 프로세스 설계), 8장 8.2.1 (이론 실증)
+Dewey, J. (1933). *How we think: A restatement of the relation of reflective thinking to the educative process* (Rev. ed.). D.C. Heath & Co.
+  > **인용**: 2장 2.2 (반성적 사고 5단계 이론), 3장 3.1.2 (명료화 프로세스 설계 기반), 5장 4.2.2 (듀이 5단계 기반 명료화 질문 템플릿), 8장 8.2.1 (Dewey 반성적 사고 이론의 실증)
+
+Graesser, A. C., & Person, N. K. (1994). Question asking during tutoring. *American Educational Research Journal*, *31*(1), 104-137. https://doi.org/10.3102/00028312031001104
+  > **인용**: 2장 2.3 (질문의 인지적 수준 분류, 높은 수준 질문의 학습 효과), 3장 3.4.1 (질문 구조 영역 설계 기반)
 
 Hattie, J. (2009). *Visible learning: A synthesis of over 800 meta-analyses relating to achievement*. Routledge. https://doi.org/10.4324/9780203887332
   > **인용**: 6장 6.5.1 (작은 효과크기의 실용적 의미), 부록 D (교육 개입 효과 해석)
 
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, *6*(2), 65-70. https://www.jstor.org/stable/4615733
   > **인용**: 7장 (다중 비교 보정), 부록 D (Holm-Bonferroni 방법)
+
+King, A. (1994). Guiding knowledge construction in the classroom: Effects of teaching children how to question and how to explain. *American Educational Research Journal*, *31*(2), 338-368. https://doi.org/10.3102/00028312031002338
+  > **인용**: 2장 2.3 (학생 생성 질문이 깊이 있는 이해와 장기 기억에 미치는 영향), 3장 3.4.1 (질문 생성 연구의 이론적 기반)
 
 Krathwohl, D. R. (2002). A revision of Bloom's taxonomy: An overview. *Theory Into Practice*, *41*(4), 212-218. https://doi.org/10.1207/s15430421tip4104_2
   > **인용**: 2장 2.1 (개정된 Bloom 분류 체계 설명)
@@ -38,8 +44,24 @@ Schmucker, R., Wang, X., Mitchell, T., & Ma, M. (2024). Ruffle&Riley: Towards th
 Vygotsky, L. S. (1978). *Mind in society: The development of higher psychological processes*. Harvard University Press.
   > **인용**: 7장 7.11 결론 (사회문화적 학습 이론), 부록 A (비계 설정 이론)
 
+Wooldridge, M., & Jennings, N. R. (1995). Intelligent agents: Theory and practice. *The Knowledge Engineering Review*, *10*(2), 115-152. https://doi.org/10.1017/S0269888900008122
+  > **인용**: 2장 2.5 (agent의 주요 특성: 자율성, 사회성, 반응성, 능동성), 3장 (멀티 에이전트 시스템 설계 기반)
+
 Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. *Theory Into Practice*, *41*(2), 64-70. https://doi.org/10.1207/s15430421tip4102_2
   > **인용**: 1장 1.1.2 (메타인지 전략, 학습 맥락 적용 영역의 이론적 근거)
+
+---
+
+## 국내 문헌
+
+박정민, & 손홍찬. (2024). ChatGPT-4o를 활용한 수학 교육의 가능성 탐색. *수학교육학연구*, *34*(2), 123-145.
+  > **인용**: 2장 2.4 (LLM을 활용한 교육 시스템의 교육적 활용 가능성)
+
+한국교육개발원. (2023). *AI 기반 피드백 시스템이 온라인 학습 참여도에 미치는 영향* (연구보고 RR 2023-01). 한국교육개발원.
+  > **인용**: 2장 2.4 (AI 기반 피드백 시스템의 학습 참여도 향상 효과)
+
+홍경선, & 김동익. (2011). 질문 생성 활동이 학습자의 메타인지에 미치는 영향. *교육방법연구*, *23*(1), 89-112. https://doi.org/10.17927/tkjems.2011.23.1.89
+  > **인용**: 2장 2.3 (질문 생성이 메타인지 및 비판적 사고를 유도하는 핵심 활동)
 
 ---
 
@@ -70,11 +92,15 @@ Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. *Theory
 ---
 
 **문헌 통계**:
-- 총 13편 (본문 인용)
-- 이론서: 5편 (Anderson & Krathwohl, Dewey, Krathwohl, Rothstein, Vygotsky)
+- **총 19편** (본문 인용)
+  - 국외 문헌: 16편
+  - 국내 문헌: 3편
+- 이론서: 6편 (Anderson & Krathwohl, Dewey, Krathwohl, Rothstein, Vygotsky, Zimmerman)
 - 최신 AI 연구: 4편 (Biyani, Maurya, Pauzi, Schmucker)
 - 통계/방법론: 3편 (Cohen, Hattie, Holm)
-- 메타인지: 1편 (Zimmerman)
+- 질문 생성 연구: 3편 (Graesser, King, 홍경선)
+- 멀티 에이전트: 1편 (Wooldridge & Jennings)
+- AI 교육 활용: 2편 (박정민, 한국교육개발원)
 
 **알파벳 순 정렬**: APA 7판 기준 저자 성(last name) 알파벳 순으로 정렬됨
 
