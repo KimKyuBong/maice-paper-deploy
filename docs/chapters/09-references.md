@@ -41,18 +41,26 @@
 
 ### 통계 분석 방법
 
+- **Cohen, J. (1988).** *Statistical power analysis for the behavioral sciences* (2nd ed.). Hillsdale, NJ: Lawrence Erlbaum Associates.
+  - **인용 위치**: 6장 연구 방법 (5.4.1 정량적 분석), 7장 결과
+  - **인용 내용**: 효과 크기(Cohen's d) 해석 기준 (d = 0.2 작은 효과, 0.5 중간 효과, 0.8 큰 효과)
+
+- **Hattie, J. (2009).** *Visible learning: A synthesis of over 800 meta-analyses relating to achievement*. London: Routledge.
+  - **인용 위치**: 6장 연구 방법 (5.4.1 정량적 분석), 8장 논의
+  - **인용 내용**: 교육 개입의 평균 효과 크기 및 d = 0.2~0.3의 실용적 의미
+
 - **Holm, S. (1979).** A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, 6(2), 65–70.
-  - **인용 위치**: 7장 연구 결과 (통계 검정 부분, 추후 명시)
+  - **인용 위치**: 7장 연구 결과 (통계 검정 부분)
   - **인용 내용**: 다중 비교 검정 시 오류율 조정을 위한 Holm-Bonferroni 방법
 
 ---
 
 ## 참고문헌 요약
 
-**총 6편의 핵심 문헌**으로 구성:
+**총 8편의 핵심 문헌**으로 구성:
 - **질문 형성 이론**: 2편 (Rothstein & Santana, 2011; Zimmerman, 2002)
 - **AI 교육 평가 연구**: 4편 (Biyani et al., 2024; Maurya et al., 2024; Pauzi et al., 2025; Schmucker et al., 2024)
-- **통계 방법**: 1편 (Holm, 1979)
+- **통계 방법 및 효과 크기**: 3편 (Cohen, 1988; Hattie, 2009; Holm, 1979)
 
 모든 문헌은 본문에서 실제로 인용되었으며, 구체적인 인용 위치와 내용이 명시됨.
 
