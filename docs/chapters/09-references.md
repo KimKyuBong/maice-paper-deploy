@@ -14,11 +14,17 @@ Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd 
 Dewey, J. (1910). *How we think*. D.C. Heath & Co. https://doi.org/10.1037/10903-000
   > **인용**: 2장 (반성적 사고 5단계), 5장 (명료화 프로세스 설계), 8장 8.2.1 (이론 실증)
 
+Graesser, A. C., & Person, N. K. (1994). Question asking during tutoring. *American Educational Research Journal*, *31*(1), 104-137. https://doi.org/10.3102/00028312031001104
+  > **인용**: 2장 2.3 (질문의 인지적 수준 분류), 3장 3.4 (질문 품질 평가 루브릭 설계 기반)
+
 Hattie, J. (2009). *Visible learning: A synthesis of over 800 meta-analyses relating to achievement*. Routledge. https://doi.org/10.4324/9780203887332
   > **인용**: 6장 6.5.1 (작은 효과크기의 실용적 의미), 부록 D (교육 개입 효과 해석)
 
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, *6*(2), 65-70. https://www.jstor.org/stable/4615733
   > **인용**: 7장 (다중 비교 보정), 부록 D (Holm-Bonferroni 방법)
+
+King, A. (1994). Guiding knowledge construction in the classroom: Effects of teaching children how to question and how to explain. *American Educational Research Journal*, *31*(2), 338-368. https://doi.org/10.3102/00028312031002338
+  > **인용**: 2장 2.3 (학생 생성 질문이 깊이 있는 이해를 촉진), 3장 3.4 (질문 생성 연구)
 
 Krathwohl, D. R. (2002). A revision of Bloom's taxonomy: An overview. *Theory Into Practice*, *41*(4), 212-218. https://doi.org/10.1207/s15430421tip4104_2
   > **인용**: 2장 2.1 (개정된 Bloom 분류 체계 설명)
@@ -40,6 +46,9 @@ Vygotsky, L. S. (1978). *Mind in society: The development of higher psychologica
 
 Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. *Theory Into Practice*, *41*(2), 64-70. https://doi.org/10.1207/s15430421tip4102_2
   > **인용**: 1장 1.1.2 (메타인지 전략, 학습 맥락 적용 영역의 이론적 근거)
+
+홍경선, 김동익. (2011). 질문 생성 활동이 학습자의 메타인지와 학업 성취에 미치는 영향. *교육공학연구*, *27*(1), 1-25.
+  > **인용**: 2장 2.3 (질문 생성과 메타인지 관계)
 
 ---
 
@@ -70,10 +79,11 @@ Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. *Theory
 ---
 
 **문헌 통계**:
-- 총 13편 (본문 인용)
+- 총 16편 (본문 인용)
 - 이론서: 5편 (Anderson & Krathwohl, Dewey, Krathwohl, Rothstein, Vygotsky)
 - 최신 AI 연구: 4편 (Biyani, Maurya, Pauzi, Schmucker)
 - 통계/방법론: 3편 (Cohen, Hattie, Holm)
+- 질문 생성 연구: 3편 (Graesser & Person, King, 홍경선·김동익)
 - 메타인지: 1편 (Zimmerman)
 
 **알파벳 순 정렬**: APA 7판 기준 저자 성(last name) 알파벳 순으로 정렬됨
