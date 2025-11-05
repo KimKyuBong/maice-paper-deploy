@@ -171,12 +171,23 @@
   },
   "active": "29e6a8f53e9d6de8",
   "lastOpenFiles": [
+    "site/print_page/index.html",
+    "site/print_page",
+    "site/css/print-site-material.css",
+    "site/css/print-site.css",
+    "site/css",
+    "site/js/print-site.js",
+    "site/js",
+    "site/search/search_index.json",
+    "site/search",
+    "site/troubleshooting/monitoring-guide/index.html",
+    "site/troubleshooting/debugging-guide/index.html",
+    "site/assets/images/favicon.png",
     "docs/chapters/01-introduction.md",
     "docs/chapters/00-list-of-tables-NEW.md",
     "docs/chapters/00-list-of-figures-NEW.md",
     "docs/chapters/00-abstract-english.md",
     "docs/experiments/학생_사후설문지_R2_최종.md",
-    "학생_사후설문지_R2_최종.pdf",
     "docs/MAICE_사후설문지.md"
   ]
 }
