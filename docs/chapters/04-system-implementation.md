@@ -418,28 +418,28 @@ graph TB
 
 ```mermaid
 graph TB
-    subgraph "BaseAgent (공통 기반)"
-        A[Redis Streams Client<br/>메시지 큐 통신]
-        B[PostgreSQL Connection<br/>데이터 저장]
-        C[PromptBuilder<br/>프롬프트 동적 생성]
-        D[LLM Tool<br/>Gemini API 호출]
-        E[Session Lock<br/>중복 방지]
+    subgraph BASE["BaseAgent"]
+        A[Redis Streams]
+        B[PostgreSQL]
+        C[PromptBuilder]
+        D[LLM Tool]
+        E[Session Lock]
     end
     
-    subgraph "개별 에이전트"
-        F[QuestionClassifier<br/>분류 로직]
-        G[QuestionImprovement<br/>명료화 로직]
-        H[AnswerGenerator<br/>답변 생성]
+    subgraph AGENTS["Agents"]
+        F[Classifier]
+        G[Question Improvement]
+        H[Answer Generator]
     end
     
-    F -.상속.-> A
-    F -.상속.-> B
-    F -.상속.-> C
-    F -.상속.-> D
-    F -.상속.-> E
+    F -.-> A
+    F -.-> B
+    F -.-> C
+    F -.-> D
+    F -.-> E
     
-    G -.상속.-> A
-    H -.상속.-> A
+    G -.-> A
+    H -.-> A
 ```
 
 **BaseAgent가 제공하는 공통 기능**:
@@ -453,23 +453,11 @@ graph TB
 
 ```mermaid
 graph LR
-    subgraph "질문 처리 파이프라인"
-        A[1️⃣ Classifier<br/>분류 및 게이팅]
-        B[2️⃣ QuestionImprovement<br/>명료화 (필요시)]
-        C[3️⃣ AnswerGenerator<br/>답변 생성]
-        D[4️⃣ Observer<br/>요약 생성]
-    end
-    
-    A -->|answerable| C
-    A -->|needs_clarify| B
+    A[1. Classifier] -->|answerable| C[3. Answer Generator]
+    A -->|needs_clarify| B[2. Question Improvement]
     B -->|PASS| C
     B -->|NEED_MORE| B
-    C --> D
-    
-    style A fill:#FFE5B4
-    style B fill:#FFD700
-    style C fill:#90EE90
-    style D fill:#87CEEB
+    C --> D[4. Observer]
 ```
 
 **Redis pub/sub 이벤트**:
