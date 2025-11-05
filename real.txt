@@ -1,0 +1,684 @@
+Resurrecting Socrates in the Age of AI: A Study Protocol for Evaluating a Socratic
+Tutor to Support Research Question Development in Higher Education
+Ben Degen
+Faculty of Human Sciences, University of Kassel
+Author note
+Ben Degen https://orcid.org/0000-0002-4330-0893
+I have no known conflict of interest to disclose. Correspondence concerning this article
+should be addressed to Ben Degen, University of Kassel, Mönchebergstr. 21a, 34125 Kassel,
+Germany.
+Email: Degen@uni-kassel.de
+Resurrecting Socrates in the Age of AI for RQ Development
+2
+Abstract
+Formulating research questions is a foundational yet challenging academic skill, one
+that generative AI systems often oversimplify by offering instant answers at the expense of
+student reflection. This protocol lays out a study grounded in constructivist learning theory to
+evaluate a novel AI-based Socratic Tutor, designed to foster cognitive engagement and
+scaffold research question development in higher education. Anchored in dialogic pedagogy,
+the tutor engages students through iterative, reflective questioning, aiming to promote System
+2 thinking and counteract overreliance on AI-generated outputs. In a quasi-experimental
+design, approximately 80 German pre-service biology teacher students will be randomly
+assigned to one of two groups: an AI Socratic Tutor condition and an uninstructed chatbot
+control. Across multiple cycles, students are expected to formulate research questions based
+on background texts, with quality assessed through double-blind expert review. The study
+also examines transfer of skills to novel phenomena and captures student perceptions through
+mixed-methods analysis, including surveys, interviews and reflective journals. This study
+aims to advance the understanding of how generative AI can be pedagogically aligned to
+support, not replace, human cognition and offers design principles for human-AI
+collaboration in education.
+Keywords
+1. Chatbots
+2. Generative Artificial Intelligence
+3. Socratic method
+4. Research question development
+5. Higher education
+6. Pre-service teacher 
+Resurrecting Socrates in the Age of AI for RQ Development
+3
+1. Introduction
+Well-formulated research questions are crucial for academic research, shaping the
+trajectory and scope of scientific inquiry, helping to define hypotheses and guiding
+experimental design (Covvey et al., 2024; Lipowski, 2008). However, students at higher
+education institutions (HEIs) often struggle to develop clear and focused research questions,
+particularly those who are novice researchers (Booth et al., 2016). (Under-)graduates
+frequently encounter challenges in crafting these questions due to limited experience in
+synthesising broad knowledge into focused queries and often struggle with the translation of
+complex ideas into researchable terms.
+Acknowledging this, remedies were sought after by lecturers of HEIs all over the
+world. Efforts have been made by systematically linking research and teaching, e.g. by
+creating inquiry-based learning modules requiring students to use practices of professional
+researchers (Böttcher & Thiel, 2018; Lehmann & Mieg, 2018; Pedaste et al., 2015). Others
+proposed various pedagogical approaches that could be utilized, including structured
+guidance through worksheets, scaffolding techniques, and explicit instruction on research
+question development (Byrd & Camba, 2020; Kanter & Byrd, 2020; Zheng & Byrd, 2020).
+Due to the resource-intensive support required, Artificial Intelligence (AI), i.e.
+“computing systems that are able to engage in human-like processes such as learning,
+adapting, synthesizing, self-correction, and use of data for complex processing tasks"
+(Popenici & Kerr, 2017, p. 2) has emerged as a promising tool for enhancing higher
+education (Zawacki-Richter et al., 2019). However, in the author’s view many AI-based
+solutions fall into a trap formulated by Popenici and Kerr in 2017 on using AI in higher
+education. The tendency to (…) “look at technological progress as a solution or replacement
+for sound pedagogical solution or good teaching.” (p.3). Furthermore, more recent research
+also shows, that uncontrolled usage of AI technologies may increase dependence on 
+Resurrecting Socrates in the Age of AI for RQ Development
+4
+generative AI and potentially cause “metacognitive laziness” (Fan et al., 2025). This paper
+lays out an experiment integrating sound pedagogics into AI that aims to bridge this trap and
+counter metacognitive laziness. The here proposed Socratic dialogue-based approach aims to
+stimulate deeper learning through a series of probing questions.
+2. Background
+2.1. Scaffolding research question generation at higher education institutions
+For students in HEIs, research question development is a crucial skill that often
+requires structured guidance and support (Booth et al., 2016; Covvey et al., 2024; Lipowski,
+2008). Although there are several frameworks with varying details to describe the research
+question development process, two basic steps for which support has been developed can be
+distilled from the broader literature across research domains.
+The initial step in research question development involves identifying an interesting
+topic (Booth et al., 2016; Kanter & Byrd, 2020; Zheng & Byrd, 2020). This often requires
+students to move from broad areas of interest to more focused topics that can be effectively
+explored within the scope of a research project. To support this transition, methods such as
+activity worksheets have been developed. For instance, the worksheet method described by
+Byrd and Camba (2020) employs a structured process of identifying topics by guiding
+students to articulate their existing knowledge about potential topics, identifying gaps in their
+understanding and areas requiring further investigation as well as identifying the significance
+of a topic by employing rankings. The helpfulness of this incremental scaffolding approach
+has been positively evaluated by graduate students, especially those in their 1st semester.
+Once a topic has been identified, the next challenge is to transform it into a welldefined research question. Some suggest practical heuristics, such as asking “why” five times
+to get to “the heart of the issue” (Lipowski, 2008, p. 4) or to use the four s’s: size, scope,
+scalability and sustainability (ibid). Other researchers highlight the importance of posing 
+Resurrecting Socrates in the Age of AI for RQ Development
+5
+questions that are not only significant, addressing an important gap in the existing
+knowledge, but also specific, with a clearly defined scope and focus, and answerable, i.e.
+capable of being investigated through appropriate research methods. Additionally, students
+should consider the audience for their research and the broader context of their research
+community. This entails understanding disciplinary expectations, such as the types of
+questions valued within their field of study; research conventions, including the accepted
+formats for framing and presenting inquiries; and, crucially, prior research, encompassing the
+existing body of knowledge and the ongoing scholarly conversations within their research
+community.
+Understandably, this set of expectations can be daunting for students and is seldom
+met. Traditionally HEIs rely on academic staff to provide support and alleviate some of the
+students’ concerns despite the high (opportunity) cost. Recognising the challenges students
+face in framing meaningful and well-defined research questions, as well as the resource
+intensiveness of the support, educators and institutions have explored AI in recent years to
+offer solutions.
+2.2. AI-supported Research Question Development
+Utilizing intelligent tutoring systems (Aleven et al., 2006; Dermeval et al., 2018;
+Pardos et al., 2023; Woolf, 2009), and adaptive learning platforms (Cavalcanti et al., 2021),
+AI is used in various scenarios to personalize learning experiences (Du & Daniel, 2024;
+Holmes et al., 2019), and to provide feedback to students and teachers alike (Demszky & Liu,
+2023; Meyer et al., 2024; Morris et al., 2024).
+With regard to AI's role in supporting research question development, current
+approaches to AI assistance can broadly be categorised into two types: AI-Centric Generation
+and Human-AI Collaboration. Here it is argued that the former approach is not fit for users’ 
+Resurrecting Socrates in the Age of AI for RQ Development
+6
+educational progress. Indeed, as will be shown, many of the currently available AI tools for
+research question development are not explicitly designed for educational purposes, even
+those AI tools that are intended to act as support.
+Research published by Lu and colleagues (2024) for example falls into AI-CentricGeneration category. Their paper, called The AI Scientist: Towards Fully Automated OpenEnded Scientific Discovery lays out an AI-based software that mimics researchers’ process:
+“The AI Scientist seamlessly performs ideation, a literature search, experiment planning,
+experiment iterations, manuscript writing, and peer reviewing to produce insightful papers.”
+(p. 2). Another example is the work on idea generation by Si et al. (2024). The three
+researchers from Stanford University explored whether researchers or an LLM ideation agent
+would produce more novel research ideas. They recruited over 100 researchers to write novel
+ideas and carried out blind reviews of both LLM and human ideas. The findings were very
+startling: “(…) we conclude that AI ideas generated by our ideation agent are judged as more
+novel than human expert generated ideas, consistently across all three different statistical
+tests.” (p.11). Although one should mention, that the LLM ideas were considered more novel
+and slightly less feasible than those of human experts.
+While both examples demonstrate astonishing accomplishments, it is virtually nonuseful or even detrimental for educational purposes, as it defies the purpose of education to
+foster the skills of students and promote deeper engagement with the questions at hand as it
+offloads critical thinking to the AI.
+The challenge for researchers in education therefore is to use what we know about
+learning and teaching to create AI applications for educational design purposes. Here it is
+argued that this can only be accomplished via Human-AI-Collaboration.
+Resurrecting Socrates in the Age of AI for RQ Development
+7
+One example for this is the deployment of recommender systems. Utilizing an LLMbased agent system called CoQuest Liu and colleagues (2023) sought to support research
+question development by automatically generating new research questions for users to act on.
+Despite CoQuest having students in mind, there are still problems remaining that limit
+the impact regarding fostering the skills of students. First, recommender systems might lead
+to overreliance, as their basis is reliance on the recommendations. This overreliance appears
+to be hard to overcome, as a study by Buçinca et al. (2021) demonstrated. Intended to reduce
+overreliance by adding explanations to recommendations, Buçinca and her colleagues had no
+substantial success: “(…) when the AI suggests incorrect or suboptimal solutions, people still
+on average make poorer final decisions than they would have without AI’s assistance”
+(Buçinca et al., 2021, p188:2).
+Second, students might use rather quick, intuitive thinking and heuristics to quickly
+analyse the quality of the presented recommendations rather than deliberate thinking. This
+reliance on intuitive, fast, and automatic judgments aligns with the work of Kahneman,
+Frederick and Tversky on the concept of System 1 thinking, which operates effortlessly but is
+prone to biases and errors (Kahneman, 2011; Kahneman & Frederick, 2005; Tversky &
+Kahneman, 1974). This assumption is further supported by current research on the use of
+ChatGPT, highlight a usage pattern that favours easy tasks, such as summarisation, rather
+than fostering thoughtful analysis and reflection (Ravšelj et al., 2025). In contrast, deliberate
+and effortful System 2 thinking would enable a more critical evaluation of the AI's outputs.
+However, fostering System 2 thinking in students when interacting with AI tools requires not
+only recommendations but a design that encourage reflective engagement rather than
+impulsive acceptance of recommendations.
+The challenge lies in creating AI systems that mitigate the cognitive biases inherent to
+System 1 while scaffolding the deliberate, critical reasoning processes associated with 
+Resurrecting Socrates in the Age of AI for RQ Development
+8
+System 2. The next section lays out one possible solution to this challenge which builds upon
+a traditional pedagogical method that inherently foster deliberate, reflective, and analytical
+reasoning: Socratic questioning.
+2.3. The Socratic method
+Dialogues, in the form of vigorous debates, question and answer, criticism and
+opinion have ever since been tools of educators to promote skills. Particularly useful has been
+the instructional function of dialogue, i.e. “an intentional process in which a teacher "leads" a
+student through questioning and guidance, to formulating certain answers or understandings”
+(Burbules & Bruce, 2001, p. 1122). This is also often referred to as Socratic Questioning.
+Socratic questioning has a long history in education, dating back to ancient Greece
+and its namesake Socrates (Heckmann & Krohn, 2018) and is one of many types of dialogic
+methods with kinship to Socrates’ method (Knezic et al., 2010). Despite well-documented
+debates on the origins and actual usage by Socrates (Burbules & Bruce, 2001), discord due to
+the ambiguous usage of the term (Carey & Mullan, 2004), and differences in definition (Lee
+et al., 2014) common elements can be found within the literature.
+First, a guiding facilitator is needed, whose task it is to stimulate and steer the
+conversation. Second, The questioning process traditionally followed a cross-examination
+format, but evolved into a cooperative exploration between the questioner and the individual
+being questioned (Overholser, 1993). Third, the focus lies on guiding students towards a
+deeper understanding of a given topic rather than simply providing them with direct answers,
+which might explain its effectiveness in promoting higher-order thinking and developing
+competencies (Fahrner & Wolf, 2020; Katsara & De Witte, 2019; Knezic et al., 2010; Yang
+et al., 2005). Fourth, a series of questions is aimed at guiding individuals to discover
+knowledge through logical reasoning and/or self-reflection dissociating socratic questioning
+from the socratic dialogue, which aims to stimulate a group. 
+Resurrecting Socrates in the Age of AI for RQ Development
+9
+ The types of questions used by the facilitator might differ largely and depend on the
+goals to be achieved. Paul (1990, p. 276-278) for example lists six categories and examples of
+generic questions for each category in his Taxonomy of Socratic Questions, as listed on the
+following page. Interested readers might also look at the revised, but in the authors’ view
+more generic, taxonomy published by Paul & Elder in 2007.
+Table 1. Taxonomy of Socratic Questions including selected examples of questions.
+Category Selected examples
+Questions of clarification
+What do you mean by ________? Could you
+give me an example? Could you explain that
+further? Could you put that another way? How
+does this relate to our discussion (problem,
+issue)?
+Questions that probe assumptions
+What are you assuming? What could we assume
+instead? You seem to be assuming. How would
+you justify taking this for granted? Is it always
+the case?
+Questions that probe reason and
+evidence
+What would be an example? Are these reasons
+adequate? Do you have any evidence for that?
+How does that apply to this case? But is that
+good evidence to believe that?
+Questions about viewpoints or
+perspectives
+You seem to be approaching this issue from
+perspective. Why have you chosen this rather
+than that perspective? How would other
+groups/types of people respond? Why? What
+would influence them? What would someone
+who disagrees say?
+Questions that probe implications or
+consequences
+What are you implying by that? What effect
+would that have? Would that necessarily happen
+or only probably happen? What is an
+alternative?
+Questions about the question
+How can we find out? What does this question
+assume? Why is this question important? Can
+we break this question down at all? Is the
+question clear? Do we understand it? Is this
+question easy or hard to answer? Why?
+Note. By Paul (1990, p. 276-278)
+Resurrecting Socrates in the Age of AI for RQ Development
+10
+While those questions were traditionally employed in interpersonal face-to-face
+interactions, this study tries to adapt the Socratic questioning method for AI-based
+interactions.
+2.4. Constructivist theoretical assumptions
+The AI-based Socratic questioning draws on fundamental constructivist theoretical
+assumptions. Vygotsky’s concept of the More Knowledgeable Other suggests that effective
+learning occurs when guidance is provided by a more experienced entity (Vygotsky, 1980).
+Be it a human instructor or, in this instance, an AI system. Similarly, Bruner’s Spiral
+Curriculum (1966) suggests that learning is most effective when learners construct their
+knowledge through exploration and the subject at hand is revisited at increasing levels of
+complexity, allowing students to deepen their understanding over time. An AI Socratic Tutor
+can align with these principles by engaging students in iterative dialogues that progressively
+refine their research questions, encouraging them to revisit and expand upon their initial
+ideas.
+Hence, a fundamental assumption of this work is, that an AI chatbot instructed to use
+Socratic questioning can foster deeper engagement with the subject matter and encourage
+students to construct knowledge collectively through reasoned discourse, presenting an
+exciting avenue for enhancing learning and fostering deeper engagement. An experiment is
+warranted to test this assumption, with the following research questions delivering guidance
+for the experiment:
+3. Research Questions
+- RQ1: To what extent does the use of a Socratic AI Tutor improve the quality of research
+questions formulated by students compared to an uninstructed AI chatbot?
+Resurrecting Socrates in the Age of AI for RQ Development
+11
+- RQ2: How do students perceive the educational value of the Socratic AI Tutor compared
+to an uninstructed AI chatbot?
+- RQ3: To what extent does the Socratic AI Tutor promote the transfer of research question
+development skills to novel phenomena compared to an uninstructed AI chatbot?
+4. Methodology and materials
+4.1. Research approach
+The methodology employed for this study follows a mixed-method, quasiexperimental design to ensure a comprehensive evaluation of the effects of the
+socratic instruction. Two courses of students enrolled in a Biology didactics course at
+an university in Germany, totalling approximately 80 graduate teacher education
+students, will be assigned to one of the following groups:
+- Group 1: Students using the Socratic AI Tutor.
+- Group 2: Students using an uninstructed AI chatbot.
+Students of both groups will use the chatbots in an iterative process, repeating the
+intervention spanning the semester, as laid out in the next section.
+4.2. Procedure
+Initially, the students of both groups will generate codes for the login to the digital
+survey environment used to carry out the experiment. These codes provide an anonymised
+unique identification across the whole semester. Furthermore, a pre-test on their research
+question development competency will be conducted. The test will be based on the subdimension Formulating questions of the test instrument developed in the longitudinal multicohort study Ko-WADiS (Mathesius, 2014). Each following iterative cycle will be comprised 
+Resurrecting Socrates in the Age of AI for RQ Development
+12
+of two parts. Part 1 is the participation in the survey environment which encompasses the
+following stages:
+1. provision of background texts
+2. prompting the students to develop an initial research question
+3. forwarding to the refinement of the research question supported by either the
+Socratic AI Tutor or the uninstructed AI chatbot
+4. testing via a transfer task
+5. collection of survey data
+Part 2 utilises learning journals gain insights on research question development and the use of
+the AI support via meta-reflection
+The phenomena for research question development are pre-selected and a background
+text is provided to all participants to focus their efforts and increase comparability of the
+results. Furthermore, the phenomena will gradually increase in their degree of abstraction
+towards broader topics, to accommodate for anticipated initial problems in creating research
+questions. The provisioned background texts are purposefully designed to start narrow but do
+allow the development of multiple areas of interest at a later stage. Similarly, the transfer task
+will be designed similarly with background texts covering a different phenomenon. An
+exemplary background text for a later stage and exemplary research questions can be found in
+Annex A.
+The first stage of part 1, i.e. the provision of background texts is designed in a way,
+that students are only allowed to continue after two minutes to ensure that the text has been
+read and prevent prematurely skipping. These background texts will also be available during
+the following stage of initial research question. 
+Resurrecting Socrates in the Age of AI for RQ Development
+13
+4.3. Hypotheses
+Based on the conducted literature view and the assumption stated earlier, the
+following hypotheses have been deducted:
+- H1: Research questions developed with the support of the Socratic AI Tutor will be
+significantly better rated than initially submitted research questions.
+o H1.1: The difference between the ratings of initially developed research questions and
+the improved questions in the group with the support of the Socratic AI Tutor will
+decrease over time.
+Based on the work of Si et al. (2024), which found that AI generated research
+questions were often judged better than questions developed by researchers, as mentioned
+earlier, H2 has been added:
+- H2: Research questions developed by students using the Socratic AI Tutor will be rated
+lower than research questions developed by students in the uninstructed chatbot group.
+- H3: Students will report higher levels of perceived cognitive engagement and reflection
+when using the Socratic AI Tutor compared to uninstructed chatbot group.
+- H4: The Socratic AI group will demonstrate higher performance in transfer tasks
+requiring the formulation of research questions in a different observation/topic compared
+to the uninstructed chatbot group.
+4.4. The AI-Based Socratic Tutor
+Initial attempts to fine-tune an open instruction model (Llama-3.1-8B) on a semisynthetic dataset using monolithic odds ratio preference optimization (ORPO) (Hong et al.,
+2024). For interested readers the code used for training as well as the database and the model
+can be accessed under https://colab.research.google.com/drive/10PnLhkPpDI_8CLayI3-
+Resurrecting Socrates in the Age of AI for RQ Development
+14
+75h9MMznc11cL?usp=sharing and https://huggingface.co/QuestforAIEd], respectively.
+These attempts led to disappointing results, most definitely due to the low number of
+examples within the dataset. Due to the lack of a viable dataset, the ChatGPT Assistant by
+OpenAI based on the gpt-4o model (03/2025) was utilized.
+Testing different system instructions led to the inclusion of several aspects of a
+Socratic dialogue and the PICOT-framework (Riva et al., 2012). The PICOT framework,
+originally stemming from the field of medicine, guides formulating precise research
+questions, particularly in evaluating interventions. It comprises five elements: Population (P),
+specifying the target group for the study; Intervention (I), detailing the treatment under
+investigation; Comparison (C), identifying the control or alternative intervention; Outcome
+(O), describing the measurable effects of the intervention; and Time (T), indicating the
+duration for assessing outcomes. Ultimately, the assistant was embedded into the digital
+survey environment via API.
+The temperature, i.e. the setting that allows to control for randomness when picking
+words during text creation on a scale of 0 to 1, with low values making the text more
+predictable but less creative, was set to 0.10 for answers to be logical and consistent. In
+addition, the Top-P-value, i.e. the number of words possibly to be considered by the model,
+was set to 0.50 to allow for answers in diverse contexts but in a consistent manner. These
+settings were chosen based on the work by Amin & Schuller (2024) on sensitivity analysis,
+who found that “(…) conservative predictions with lower T ≤ 0.3 values or top- p ≤ 0.7 yield
+better and stable performance. Increasing T or Top-P beyond that generally worsened the
+performances” (p. 6). The user interface (see Fig. 1) was designed to minimize distraction
+and with commonly known designs of AI chats in mind to increase usability.
+Resurrecting Socrates in the Age of AI for RQ Development
+15
+Fig. 1. User interface of the AI-based Socratic Tutor.
+4.5. Data Collection
+A Likert-scale questionnaire will be employed to gather information on students'
+general perceptions and usage of AI chatbots, as well as their specific experiences with the
+Socratic Tutor. To ensure methodological robustness and contextual relevance, the
+questionnaire was developed by integrating elements from the Unified Theory of Acceptance
+and Use of Technology (UTAUT; Venkatesh, 2022) and the validated survey instrument by
+Stöhr et al. (2024).
+The scale was designed to balance predictive validity with practical usability,
+minimising participant fatigue while maximising informational yield and is expected to allow
+for a nuanced assessment of both students’ acceptance of the Socratic AI Tutor and its
+educational effectiveness. Demographic information (e.g., gender, academic level) will also
+be collected to enable subgroup analysis. In addition to the quantitative measures, the survey
+includes open-ended questions to capture students’ subjective impressions.
+Resurrecting Socrates in the Age of AI for RQ Development
+16
+User queries and assistant responses are collected using the ChatGPT Assistant
+platform, cleaned, and stored in a tabular format to prepare for further data analysis. In
+addition, the students learning journal entries as well as the output of additionally
+implemented guided interviews will be collected to receive an in-depth understanding of the
+intervention outcomes. A data management plan was developed to be made public via the
+Verbund Forschungsdaten Bildung (German Network of Educational Research Data).
+4.6. Data Analysis
+The quality of the initially submitted research questions as well as the final submitted
+research questions of each iteration will be assessed utilising double-blind review by faculty
+of the university and a 0-15 point scale, which is commonly utilised in grading course work
+in Germany, whereas 15 is the highest achievable outcome. Inter-rater reliability will be
+calculated using Fleiss’ Kappa (Fleiss & Cohen, 1973).
+Quantitative data, such as the quality of research questions, will be analysed using
+ANCOVA to identify significant differences regarding the pre- and post-intervention-quality
+of the research questions between the two groups. Descriptive and inferential statistics will be
+applied to the survey data to assess students' perceptions of the tool's usefulness, with
+responses summarized and compared across groups. A thematic analysis to uncover recurring
+patterns in the qualitative data is planned, and it is expected to gain more nuanced
+perspectives on students’ interactions with the Socratic Tutor.
+5. ETHICS:
+This study adheres to rigorous ethical standards to ensure the protection of
+participants. Informed consent was obtained from all participants prior to their involvement,
+clearly outlining the purpose of the study, the voluntary nature of participation, and the right
+to withdraw at any time without penalty (Israel & Hay, 2006). Anonymity was ensured by 
+Resurrecting Socrates in the Age of AI for RQ Development
+17
+assigning unique identification codes to participants. Care was taken to minimise potential
+risks, such as stress or discomfort during the intervention, by providing clear instructions and
+an opportunity to ask questions throughout the process. We acknowledge the fact, that
+intensive use of new technology can lead to intervention-generated inequalities, benefitting
+socioeconomically advantaged groups (Veinot et al., 2018). Hence, it is planned to grant
+access to the Socratic Tutor to all students at the HEI in case it proves to be successful in
+supporting research question development. Interviews are conducted on a strictly voluntary
+basis. Furthermore, the study is conducted in a course that is not taught by the author to
+prevent dependency effects.
+6. Limitations
+Despite best efforts, several limitations warrant consideration. The use of a
+proprietary large language model (ChatGPT-4o) presents a known constraint: the model’s
+internal updates and decision-making processes are not fully transparent to users. However,
+this choice was made deliberately, as initial attempts at fine-tuning an open-source model
+proved insufficient for achieving pedagogically coherent Socratic dialogues. The use of
+commercial tools reflects a broader challenge in aligning generative AI systems with
+educational goals and research transparency. Additionally, the study’s focus on pre-service
+biology teacher education within a single institutional setting may limit generalisability to
+other domains or cultural contexts. Finally, individual learner differences such as prior
+subject knowledge, comfort with AI, and self-regulation may influence both engagement and
+outcomes but may not be sufficiently captured by the methods deployed.
+7. Conclusion
+This study protocol proposes a study for a novel approach to leveraging generative AI
+for educational purposes by integrating the principles of Socratic questioning into an AI-
+Resurrecting Socrates in the Age of AI for RQ Development
+18
+powered chatbot. Recognising the limitations of AI-centric generation models, which often
+prioritise efficiency at the expense of critical engagement, an experimental design was
+outlined. It seeks to promote reflective inquiry and support the development of research
+question formulation skills among pre-service teacher education students.
+Grounded in constructivist learning theory, the Socratic AI Tutor is conceptualised not
+as a provider of answers, but as a facilitator of thinking. Its design seeks to counteract
+tendencies toward metacognitive laziness and to scaffold System 2 reasoning through
+structured questioning. The study follows a mixed-method research design to examine not
+only measurable outcomes such as the quality of student-generated research questions and
+transfer of skills, but also the nuanced experiences and perceptions students hold about
+interacting with AI in a reflective manner.
+While the empirical phase of the study is yet to be conducted, the theoretical
+foundations and methodological considerations suggest a promising step toward more
+thoughtful and pedagogically aligned uses of AI in higher education. In contrast to many
+current AI implementations, this work emphasises the process of learning over the product,
+treating the learner not as a passive recipient of machine intelligence, but as an active
+participant.
+Ideally, this protocol may serve as a foundation for future research on the design and
+deployment of AI tools that enhance, not replace, human cognition. The aim is to advance a
+more pedagogically sound, and intellectually engaging vision for AI in education.
+8. Future avenues for investigation
+Regardless of the results, further work will be necessary, and several avenues might warrant
+further exploration. First, the design of the tutor itself might merit exploration. As delaying 
+Resurrecting Socrates in the Age of AI for RQ Development
+19
+the presentation of AI recommendation has been shown to enhance reflective (Liu et al.,
+2023; Park et al., 2019), it is worth investigating whether the immediacy of AI feedback
+might inadvertently prioritise perceived helpfulness over thoughtful engagement. Strategies
+to encourage deeper cognitive processes, such as intentional delays, aligning with the dualprocess model of System 1 and System 2 (Kahneman, 2011), might help in achieving
+educational outcomes. Furthermore, the time available to develop research questions might
+be expanded to allow for more thoughtful engagement, too.
+Secondly, planning research on the domain-specificity of the Socratic tutor, i.e. testing
+whether it’s helpful in other domains such as math or chemistry, by employing
+generalizability studies. This also leads to the second avenue, the transferability of the
+skillset: does the Socratic tutor foster research question development skills in such a way that
+students can apply them across disciplines and real-world problem-solving contexts?
+Investigating whether the inquiry-driven mindset promoted by the tutor transfers to nonacademic settings would offer valuable insights into its broader applicability.
+Further avenues for research include exploring the longitudinal effects of Socratic
+tutor use. While short-term studies may reveal improvements in research question
+formulation, examining whether these skills persist and evolve over time could illuminate the
+tutor's lasting impact. Additionally, studying the role of individual differences, such as
+cognitive style, self-regulation, and prior knowledge, could help tailor the Socratic tutor to
+diverse learner profiles, ensuring its effectiveness across varying educational contexts.
+Resurrecting Socrates in the Age of AI for RQ Development
+20
+ANNEX A
+Example of a version of a provisioned background text for the late stage
+Fledermäuse – Meister der Nacht
+Fledermäuse sind die einzigen Säugetiere, die aktiv fliegen können. Weltweit
+existieren über 1.400 Arten, die eine zentrale Rolle in verschiedenen Ökosystemen spielen.
+Sie ernähren sich je nach Art von Insekten, Früchten, Nektar oder sogar Blut.
+Insektenfressende Fledermäuse sind wertvolle Schädlingsbekämpfer, da sie große Mengen
+an Insekten konsumieren. Ihr Orientierungssystem, die Echoortung, ermöglicht es ihnen,
+sich auch in völliger Dunkelheit sicher zu bewegen. Dabei stoßen sie hochfrequente
+Schallwellen aus, die von Objekten reflektiert werden und so ein akustisches Bild ihrer
+Umgebung liefern. Fledermäuse sind jedoch zunehmend durch Lebensraumverlust,
+Krankheiten wie das White-Nose-Syndrom, Klimawandel und erzwungene Interaktionen
+mit Menschen, bspw. durch die Nähe zu Windenergiestandorten, bedroht. Ihr Schutz ist
+nicht nur für die Artenvielfalt wichtig, sondern auch für die Stabilität vieler ökologischer
+Prozesse.
+Translation of the exemplary version of a provisioned background text for the late stage
+Bats – Masters of the night
+Bats are the only mammals capable of active flight. Globally, there are over 1,400
+species, playing a crucial role in various ecosystems. Depending on the species, they feed
+on insects, fruits, nectar, or even blood. Insectivorous bats are valuable pest controllers, as
+they consume large quantities of insects. Their navigation system, echolocation, allows
+them to move safely even in complete darkness. They emit high-frequency sound waves,
+which are reflected by objects and provide an acoustic image of their surroundings. 
+Resurrecting Socrates in the Age of AI for RQ Development
+21
+However, bats are increasingly threatened by habitat loss, diseases such as White-Nose
+Syndrome, climate change, and forced interactions with humans, for instance, due to
+proximity to wind energy sites. Protecting bats is not only vital for biodiversity but also for
+maintaining the stability of many ecological processes.
+Example research questions:
+• How does echolocation influence the hunting strategies of different bat species in
+various habitats?
+• What role do bats play as pest controllers in agricultural regions?
+• How do nectar-feeding bats interact with pollinator plants, and what are the
+implications for biodiversity?
+• How effective is the application of antimycotics in bat caves in curbing the spread of
+White-Nose Syndrome?
+• How does climate change impact the migration patterns and distribution of bat
+populations?
+• How does local bus-stop advertisement change the public awareness about bat
+conservation among students?
+• Do ultra-sound generators installed over a period of 6 months help to reduce deaths of
+bat from wind energy facilities?
+References
+Aleven, V., McLaren, B. M., Sewall, J., & Koedinger, K. R. (2006). The Cognitive Tutor
+Authoring Tools (CTAT): Preliminary Evaluation of Efficiency Gains. In M. Ikeda,
+K. D. Ashley, & T.-W. Chan (Hrsg.), Intelligent Tutoring Systems (Bd. 4053, S. 61–
+70). Springer Berlin Heidelberg. https://doi.org/10.1007/11774303_7
+Amin, M. M., & Schuller, B. W. (2024). On Prompt Sensitivity of ChatGPT in Affective
+Computing (arXiv:2403.14006). arXiv. http://arxiv.org/abs/2403.14006
+Booth, W. C., Colomb, G. G., Williams, J. M., Bizup, J., & FitzGerald, W. T. (2016). The
+Craft of Research, Fourth Edition. University of Chicago Press.
+https://press.uchicago.edu/ucp/books/book/chicago/C/bo23521678.html
+Böttcher, F., & Thiel, F. (2018). Evaluating research-oriented teaching: A new instrument to
+assess university students’ research competences. Higher Education, 75(1), 91–110.
+https://doi.org/10.1007/s10734-017-0128-y
+Bruner, J. S. (1966). Toward a theory of instruction (Nachdr.). Belknap Press of Harvard
+University Press.
+Buçinca, Z., Malaya, M. B., & Gajos, K. Z. (2021). To Trust or to Think: Cognitive Forcing
+Functions Can Reduce Overreliance on AI in AI-assisted Decision-making
+(arXiv:2102.09692). arXiv. http://arxiv.org/abs/2102.09692
+Resurrecting Socrates in the Age of AI for RQ Development
+22
+Burbules, N. C., & Bruce, B. C. (2001). Theory and Research on Teaching as Dialogue. In V.
+Richardson (Hrsg.), Handbook of research on teaching, 4th Edition (S. 1102–1121).
+American Educational Research Association.
+Byrd, V. L., & Camba, J. D. (2020). A Worksheet Method for Developing Research
+Questions: An Examination of Three Graduate Student Cohorts. 2020 IEEE Frontiers
+in Education Conference (FIE), 1–7. https://doi.org/10.1109/FIE44824.2020.9273883
+Carey, T. A., & Mullan, R. J. (2004). What is Socratic questioning? Psychotherapy: Theory,
+Research, Practice, Training, 41(3), 217–226. https://doi.org/10.1037/0033-
+3204.41.3.217
+Cavalcanti, A. P., Barbosa, A., Carvalho, R., Freitas, F., Tsai, Y.-S., Gašević, D., & Mello, R.
+F. (2021). Automatic feedback in online learning environments: A systematic
+literature review. Computers and Education: Artificial Intelligence, 2, 100027.
+https://doi.org/10.1016/j.caeai.2021.100027
+Covvey, J. R., McClendon, C., & Gionfriddo, M. R. (2024). Back to the basics: Guidance for
+formulating good research questions. Research in Social and Administrative
+Pharmacy, 20(1), 66–69. https://doi.org/10.1016/j.sapharm.2023.09.009
+Demszky, D., & Liu, J. (2023). M-Powering Teachers: Natural Language Processing
+Powered Feedback Improves 1:1 Instruction and Student Outcomes. Proceedings of
+the Tenth ACM Conference on Learning @ Scale, 59–69.
+https://doi.org/10.1145/3573051.3593379
+Dermeval, D., Paiva, R., Bittencourt, I. I., Vassileva, J., & Borges, D. (2018). Authoring
+Tools for Designing Intelligent Tutoring Systems: A Systematic Review of the
+Literature. International Journal of Artificial Intelligence in Education, 28(3), 336–
+384. https://doi.org/10.1007/s40593-017-0157-9
+Du, J., & Daniel, B. K. (2024). Transforming language education: A systematic review of AIpowered chatbots for English as a foreign language speaking practice. Computers and
+Education: Artificial Intelligence, 6, 100230.
+https://doi.org/10.1016/j.caeai.2024.100230
+Fahrner, M., & Wolf, B. (2020). Überfachlicher Kompetenzerwerb durch Anwendung der
+sokratischen Methode in der Mathematik. wbv. https://doi.org/10.25656/01:18568
+Fan, Y., Tang, L., Le, H., Shen, K., Tan, S., Zhao, Y., Shen, Y., Li, X., & Gašević, D. (2025).
+Beware of metacognitive laziness: Effects of generative artificial intelligence on
+learning motivation, processes, and performance. British Journal of Educational
+Technology, 56(2), 489–530. https://doi.org/10.1111/bjet.13544
+Fleiss, J. L., & Cohen, J. (1973). The Equivalence of Weighted Kappa and the Intraclass
+Correlation Coefficient as Measures of Reliability. Educational and Psychological
+Measurement, 33(3), 613–619. https://doi.org/10.1177/001316447303300309
+Heckmann, G., & Krohn, D. (2018). Das sokratische Gespräch (3. Auflage). LIT.
+Holmes, W., Bialik, M., & Fadel, C. (2019). Artificial intelligence in education. In C.
+Stückelberger & P. Duggal (Hrsg.), Data ethics: Building trust: How digital
+technologies can serve humanity (S. 621–653). Globethics Publications.
+https://doi.org/10.58863/20.500.12424/4276068
+Hong, J., Lee, N., & Thorne, J. (2024). ORPO: Monolithic Preference Optimization without
+Reference Model (arXiv:2403.07691). arXiv. http://arxiv.org/abs/2403.07691
+Israel, M., & Hay, I. (2006). Research Ethics for Social Scientists. SAGE.
+Kahneman, D. (2011). Thinking, fast and slow. Farrar, Straus and Giroux.
+Kahneman, D., & Frederick, S. (2005). A Model of Heuristic Judgement. In K. J. Holyoak &
+R. G. Morrison (Hrsg.), The Cambridge Handbook of Thinking and Reasoning (S.
+267–294). Cambridge University Press.
+Kanter, N. R., & Byrd, V. L. (2020). A Method for Transforming a Broad Topic to a Focused 
+Resurrecting Socrates in the Age of AI for RQ Development
+23
+Topic for Developing Research Questions. 2020 IEEE Frontiers in Education
+Conference (FIE), 1–7. https://doi.org/10.1109/FIE44824.2020.9273817
+Katsara, O., & De Witte, K. (2019). How to use Socratic questioning in order to promote
+adults’ self-directed learning. Studies in the Education of Adults, 51(1), 109–129.
+https://doi.org/10.1080/02660830.2018.1526446
+Knezic, D., Wubbels, T., Elbers, E., & Hajer, M. (2010). The Socratic Dialogue and teacher
+education. Teaching and Teacher Education, 26(4), 1104–1111.
+https://doi.org/10.1016/j.tate.2009.11.006
+Lee, M., Kim, H., & Kim, M. (2014). The effects of Socratic questioning on critical thinking
+in web-based collaborative learning. Education as Change, 18(2), 285–302.
+https://doi.org/10.1080/16823206.2013.849576
+Lehmann, J., & Mieg, H. A. (Hrsg.). (2018). Forschendes Lernen: Ein Praxisbuch. Verlag
+der Fachhochschule Potsdam.
+Lipowski, E. E. (2008). Developing great research questions. American Journal of HealthSystem Pharmacy, 65(17), 1667–1670. https://doi.org/10.2146/ajhp070276
+Liu, Y., Chen, S., Cheng, H., Yu, M., Ran, X., Mo, A., Tang, Y., & Huang, Y. (2023). How
+AI Processing Delays Foster Creativity: Exploring Research Question Co-Creation
+with an LLM-based Agent (arXiv:2310.06155). arXiv.
+https://doi.org/10.48550/arXiv.2310.06155
+Lu, C., Lu, C., Lange, R. T., Foerster, J., Clune, J., & Ha, D. (2024). The AI Scientist:
+Towards Fully Automated Open-Ended Scientific Discovery (arXiv:2408.06292).
+arXiv. http://arxiv.org/abs/2408.06292
+Mathesius, S. (2014). Kompetenzen von Biologiestudierenden im Bereich der
+naturwissenschaftlichen Erkenntnisgewinnung. Erkenntnisweg Biologiedidaktik, 73–
+88.
+Meyer, J., Jansen, T., Schiller, R., Liebenow, L. W., Steinbach, M., Horbach, A., &
+Fleckenstein, J. (2024). Using LLMs to bring evidence-based feedback into the
+classroom: AI-generated feedback increases secondary students’ text revision,
+motivation, and positive emotions. Computers and Education: Artificial Intelligence,
+6, 100199. https://doi.org/10.1016/j.caeai.2023.100199
+Morris, W., Crossley, S., Holmes, L., Ou, C., Dascalu, M., & McNamara, D. (2024).
+Formative Feedback on Student-Authored Summaries in Intelligent Textbooks Using
+Large Language Models. International Journal of Artificial Intelligence in Education.
+https://doi.org/10.1007/s40593-024-00395-0
+Overholser, J. C. (1993). Elements of the Socratic method: I. Systematic questioning.
+Psychotherapy: Theory, Research, Practice, Training, 30(1), 67–74.
+https://doi.org/10.1037/0033-3204.30.1.67
+Pardos, Z. A., Tang, M., Anastasopoulos, I., Sheel, S. K., & Zhang, E. (2023). OATutor: An
+Open-source Adaptive Tutoring System and Curated Content Library for Learning
+Sciences Research. Proceedings of the 2023 CHI Conference on Human Factors in
+Computing Systems, 1–17. https://doi.org/10.1145/3544548.3581574
+Park, J. S., Barber, R., Kirlik, A., & Karahalios, K. (2019). A Slow Algorithm Improves
+Users’ Assessments of the Algorithm’s Accuracy. Proc. ACM Hum.-Comput.
+Interact., 3(CSCW), 102:1-102:15. https://doi.org/10.1145/3359204
+Paul, R., & Elder, L. (2007). Critical Thinking: The Art of Socratic Questioning. Journal of
+Developmental Education, 31(1), 36–37.
+Paul, R. (with Sonoma State University). (1990). Critical thinking: What every person needs
+to survive in a rapidly changing world (A. J. A. Binker, Hrsg.). Center for Critical
+Thinking and Moral Critique, Sonoma State University.
+Pedaste, M., Mäeots, M., Siiman, L. A., de Jong, T., van Riesen, S. A. N., Kamp, E. T., 
+Resurrecting Socrates in the Age of AI for RQ Development
+24
+Manoli, C. C., Zacharia, Z. C., & Tsourlidaki, E. (2015). Phases of inquiry-based
+learning: Definitions and the inquiry cycle. Educational Research Review, 14, 47–61.
+https://doi.org/10.1016/j.edurev.2015.02.003
+Popenici, S. A. D., & Kerr, S. (2017). Exploring the impact of artificial intelligence on
+teaching and learning in higher education. Research and Practice in Technology
+Enhanced Learning, 12(1), 22. https://doi.org/10.1186/s41039-017-0062-8
+Ravšelj, D., Keržič, D., Tomaževič, N., Umek, L., Brezovar, N., Iahad, N. A., Abdulla, A. A.,
+Akopyan, A., Segura, M. W. A., AlHumaid, J., Allam, M. F., Alló, M., Andoh, R. P.
+K., Andronic, O., Arthur, Y. D., Aydın, F., Badran, A., Balbontín-Alvarado, R., Saad,
+H. B., … Nisheva, M. M. (2025). Higher education students’ perceptions of ChatGPT:
+A global study of early reactions. PLOS ONE, 20(2), e0315011.
+https://doi.org/10.1371/journal.pone.0315011
+Riva, J. J., Malik, K. M. P., Burnie, S. J., Endicott, A. R., & Busse, J. W. (2012). What is
+your research question? An introduction to the PICOT format for clinicians. The
+Journal of the Canadian Chiropractic Association, 56(3), 167–171.
+Si, C., Yang, D., & Hashimoto, T. (2024). Can LLMs Generate Novel Research Ideas? A
+Large-Scale Human Study with 100+ NLP Researchers (arXiv:2409.04109). arXiv.
+http://arxiv.org/abs/2409.04109
+Stöhr, C., Ou, A. W., & Malmström, H. (2024). Perceptions and usage of AI chatbots among
+students in higher education across genders, academic levels and fields of study.
+Computers and Education: Artificial Intelligence, 7, 100259.
+https://doi.org/10.1016/j.caeai.2024.100259
+Tversky, A., & Kahneman, D. (1974). Judgment under Uncertainty: Heuristics and Biases:
+Biases in judgments reveal some heuristics of thinking under uncertainty. Science,
+185(4157), 1124–1131. https://doi.org/10.1126/science.185.4157.1124
+Veinot, T. C., Mitchell, H., & Ancker, J. S. (2018). Good intentions are not enough: How
+informatics interventions can worsen inequality. Journal of the American Medical
+Informatics Association : JAMIA, 25(8), 1080. https://doi.org/10.1093/jamia/ocy052
+Venkatesh, V. (2022). Adoption and use of AI tools: A research agenda grounded in UTAUT.
+Annals of Operations Research, 308(1), 641–652. https://doi.org/10.1007/s10479-
+020-03918-9
+Vygotsky, L. S. (1980). Mind in Society: Development of Higher Psychological Processes
+(M. Cole, V. Jolm-Steiner, S. Scribner, & E. Souberman, Hrsg.). Harvard University
+Press. https://doi.org/10.2307/j.ctvjf9vz4
+Woolf, B. P. (2009). Building intelligent interactive tutors: Student-centered strategies for
+revolutionizing e-learning. Morgan Kaufmann Publishers/Elsevier.
+Yang, Y.-T. C., Newby, T. J., & Bill, R. L. (2005). Using Socratic Questioning to Promote
+Critical Thinking Skills Through Asynchronous Discussion Forums in Distance
+Learning Environments. American Journal of Distance Education, 19(3), 163–181.
+https://doi.org/10.1207/s15389286ajde1903_4
+Zawacki-Richter, O., Marín, V. I., Bond, M., & Gouverneur, F. (2019). Systematic review of
+research on artificial intelligence applications in higher education – where are the
+educators? International Journal of Educational Technology in Higher Education,
+16(1), 39. https://doi.org/10.1186/s41239-019-0171-0
+Zheng, A., & Byrd, V. L. (2020). Students’ Perception of a Method for Identifying Topics for
+Research Questions. 2020 IEEE Frontiers in Education Conference (FIE), 1–8.
+https://doi.org/10.1109/FIE44824.2020.9274027
