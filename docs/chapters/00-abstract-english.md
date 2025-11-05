@@ -23,7 +23,7 @@ This study designed and developed MAICE (Mathematical AI Chatbot for Education),
 
 This study employed Design-Based Research (DBR) combined with a quasi-experimental design. Fifty-nine high school grade 2 students from Busan Metropolitan City were randomly assigned to either Agent mode (clarification process provided, n=30) or Freepass mode (immediate answers provided, n=29). The study was conducted over approximately two weeks from October 20 to November 1, 2025, utilizing A/B testing methodology.
 
-The QAC Checklist (Question-Answer-Context Checklist, 45 points, 9 sub-items) was developed to evaluate question quality (mathematical professionalism, question structure, learning context), answer quality (learner customization, explanation systematicity, learning expandability), and dialogue context (clarification effectiveness, dialogue consistency, learning support). The QAC Checklist demonstrated excellent internal consistency (Cronbach's α = 0.879), and exploratory factor analysis confirmed a three-factor structure explaining 69.9% of total variance. Additional measures included learning achievement tests (100 points), learning satisfaction surveys (5-point scale, 7 items), and metacognitive ability assessments (5-point scale, 5 items).
+The QAC Checklist (Question-Answer-Context Checklist, 40 points, 8 sub-items) was developed to evaluate question quality (mathematical professionalism, question structure, learning context), answer quality (learner customization, explanation systematicity, learning expandability), and dialogue context (dialogue consistency, learning support). The QAC Checklist demonstrated excellent internal consistency (Cronbach's α = 0.879), and exploratory factor analysis confirmed a three-factor structure explaining 69.9% of total variance. Additional measures included learning achievement tests (100 points), learning satisfaction surveys (5-point scale, 7 items), and metacognitive ability assessments (5-point scale, 5 items).
 
 Statistical analyses employed independent samples t-tests, paired samples t-tests, Welch's t-tests, and Mann-Whitney U tests. Effect sizes were calculated using Cohen's d, Hedge's g, and Cliff's delta. 95% confidence intervals for mean differences were estimated using Bootstrap methods (1,000 resampling iterations).
 
@@ -31,7 +31,7 @@ Statistical analyses employed independent samples t-tests, paired samples t-test
 
 **1. Immediate Effects of Clarification Process**
 
-Single-session analysis revealed that Agent mode was statistically significantly superior in learning support (C3) items (Agent 3.74 vs. Freepass 3.34, one-tailed p=0.034, Cohen's d=0.275). Agent mode also showed clear superiority across the entire dialogue context domain, including clarification, dialogue consistency, and learning support (Agent 10.46 vs. Freepass 9.78, difference +0.68, Cohen's d=0.182).
+Single-session analysis revealed that Agent mode was statistically significantly superior in learning support (C2) items (Agent 3.74 vs. Freepass 3.34, one-tailed p=0.034, Cohen's d=0.275). Agent mode also showed clear superiority across the entire dialogue context domain, including dialogue consistency (C1) and learning support (C2) (Agent 10.46 vs. Freepass 9.78, difference +0.68, Cohen's d=0.182).
 
 **2. Empirical Evidence of Cumulative Learning Effects**
 
