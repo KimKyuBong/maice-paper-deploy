@@ -69,23 +69,26 @@ MAICE 시스템은 다음의 다층적 이론 구조 위에 설계되었다:
 
 이제 각 이론을 본 연구의 맥락에서 상세히 검토한다.
 
-## 2.1 블룸의 지식 분류(K1–K4)
+## 2.1 블룸의 지식 분류: 4가지 지식 차원
 
-블룸의 개정 분류에서 지식 차원(Knowledge Dimension)은 다음 네 범주로 구성된다.[^anderson2001] [^krathwohl2002] 본 연구에서는 질문 명료화의 목표를 학습자의 지식 차원에 정렬하여, 질문 품질과 학습 효과를 동시에 개선한다. 본 연구의 agent 파이프라인은 먼저 K1–K4 기반 질문 분류를 수행하고, 이어 듀이 이론에 근거한 명료화 유도를 적용한다.
+블룸의 개정 분류(Anderson & Krathwohl, 2001)에서 지식 차원(Knowledge Dimension)은 다음 네 범주로 구성된다.[^anderson2001] [^krathwohl2002] 본 연구에서는 질문 명료화의 목표를 학습자의 지식 차원에 정렬하여, 질문 품질과 학습 효과를 동시에 개선한다.
 
-| 지식 차원       | 정의                   | 수학적 귀납법 맥락의 예시 질문                       |
-| ----------- | -------------------- | --------------------------------------- |
-| K1 사실적 지식   | 용어, 기본 사실, 기호·규칙의 기억 | "귀납법의 기본 단계와 귀납 단계의 정의는 무엇인가요?"         |
-| K2 개념적 지식   | 관계, 분류, 원리·법칙의 이해    | "귀납 가정이 증명 논리에서 맡는 역할을 설명해 주세요."        |
-| K3 절차적 지식   | 방법·알고리즘·기법의 적용 절차    | "부등식 증명에서 k→k+1 전개는 어떤 순서로 진행하나요?"      |
-| K4 메타인지적 지식 | 자기 인지·전략 선택·오류 진단    | "내 전개에서 누락한 가정은 무엇이며, 어떤 전략을 선택해야 하나요?" |
+| 지식 차원 | 원문 표기 | 정의 | 수학적 귀납법 맥락의 예시 질문 |
+|----------|----------|------|----------------------------|
+| **사실적 지식** | Factual Knowledge | 용어, 기본 사실, 기호·규칙의 기억 | "귀납법의 기본 단계와 귀납 단계의 정의는 무엇인가요?" |
+| **개념적 지식** | Conceptual Knowledge | 관계, 분류, 원리·법칙의 이해 | "귀납 가정이 증명 논리에서 맡는 역할을 설명해 주세요." |
+| **절차적 지식** | Procedural Knowledge | 방법·알고리즘·기법의 적용 절차 | "부등식 증명에서 k→k+1 전개는 어떤 순서로 진행하나요?" |
+| **메타인지적 지식** | Metacognitive Knowledge | 자기 인지·전략 선택·오류 진단 | "내 전개에서 누락한 가정은 무엇이며, 어떤 전략을 선택해야 하나요?" |
+
+!!! warning "표기법에 대한 주의"
+    Anderson & Krathwohl (2001) 원문에서는 K1, K2, K3, K4와 같은 약어 표기를 사용하지 않는다. 본 연구에서는 시스템 구현의 편의를 위해 이러한 약어를 도입하였으나, 이는 원저자의 표기법이 아님을 명시한다.
 
 !!! note "명료화와의 정렬"
-    - K1–K2: 용어 혼동, 개념적 오해를 명료화 질문으로 선제 교정
-    - K3: 절차적 막힘을 단계화된 프롬프트로 유도(중간 점검 체크포인트)
-    - K4: 스스로의 오류·전략을 메타인지적으로 진단하도록 반문 유도
+    - 사실적·개념적 지식: 용어 혼동, 개념적 오해를 명료화 질문으로 선제 교정
+    - 절차적 지식: 절차적 막힘을 단계화된 프롬프트로 유도(중간 점검 체크포인트)
+    - 메타인지적 지식: 스스로의 오류·전략을 메타인지적으로 진단하도록 반문 유도
 
-본 연구의 **QC**(Question Classifier)는 질문 분류 단계에서 학습자의 발화를 K1–K4 신호로 탐지하고, **AG**(Answer Generator)가 각 차원에 정렬된 맞춤 답변을 제공한다(예: K1 용어 정리 → K2 관계 설명 → K3 절차 안내 → K4 자기 점검). 이를 통해 질문의 질적 향상과 문제 해결 과정을 지원한다.
+본 연구의 **QC**(Question Classifier)는 질문 분류 단계에서 학습자의 발화를 이 4가지 지식 차원으로 분류하고, **AG**(Answer Generator)가 각 차원에 정렬된 맞춤 답변을 제공한다. 이를 통해 질문의 질적 향상과 문제 해결 과정을 지원한다.
 
 [^anderson2001]: Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives. New York, NY: Longman.
 
@@ -95,19 +98,22 @@ MAICE 시스템은 다음의 다층적 이론 구조 위에 설계되었다:
 
 ### 2.2.1 반성적 사고의 정의와 5단계
 
-듀이(1933)는 반성적 사고(reflective thinking)를 "문제를 해결하기 위해 하나의 믿음을 기초로 다른 믿음을 탐구하고 진실을 확인하는 능동적, 지속적, 신중한 사고의 행위"로 정의하였다.[^dewey1933] 이는 단순한 정보 습득이나 수동적 수용을 넘어, 학습자가 능동적으로 문제를 구조화하고 해결책을 탐구하는 과정을 강조한다.
+듀이(1933)는 반성적 사고(reflective thinking)를 "어떤 믿음이나 지식의 형태에 대한 능동적이고 지속적이며 신중한 고려로서, 그것을 뒷받침하는 근거와 그것이 이끄는 결론들을 검토하는 것"으로 정의하였다.[^dewey1933] 원문에서 Dewey는 "Active, persistent, and careful consideration of any belief or supposed form of knowledge in the light of the grounds that support it, and the further conclusions to which it tends"라고 표현하였다. 이는 단순한 정보 습득이나 수동적 수용을 넘어, 학습자가 능동적으로 믿음의 근거를 탐구하고 그 함의를 추론하는 과정을 강조한다.
 
 [^dewey1933]: Dewey, J. (1933). How We Think: A Restatement of the Relation of Reflective Thinking to the Educative Process. Boston: D.C. Heath and Company.
 
 듀이가 제시한 반성적 사고의 5단계는 다음과 같다:
 
-| 단계 | 이름 | 특징 | 수학적 귀납법 학습 예시 |
-|-----|------|------|----------------------|
-| **1단계** | 문제 상황 인식<br/>(Felt Difficulty) | 불확실성, 의문, 막막함 인식 | "귀납법 문제를 풀려는데 어디서부터 시작해야 할지 모르겠다" |
-| **2단계** | 문제 정의<br/>(Problem Definition) | 불확실한 상황을 명확한 문제로 전환 | "귀납 단계에서 n=k+1을 증명할 때 귀납 가정을 어떻게 사용하는지 모르겠다" |
-| **3단계** | 가설 설정<br/>(Hypothesis Formation) | 가능한 해결 방안 도출 | "귀납 가정 P(k)를 식에 대입해보면 될까?" |
-| **4단계** | 가설 검증<br/>(Reasoning) | 논리적 추론과 경험을 통한 검증 | P(k)를 실제로 대입하여 P(k+1) 유도 시도 |
-| **5단계** | 결론 도출<br/>(Verification) | 검증된 가설을 기반으로 결론 | "귀납 가정을 대입하고 정리하니 P(k+1)이 증명되었다" |
+| 단계 | Dewey 원문 표현 | 본 연구의 한국어 명칭 | 수학적 귀납법 학습 예시 |
+|-----|-----------------|---------------------|----------------------|
+| **1단계** | a felt difficulty | 문제 상황 인식 | "귀납법 문제를 풀려는데 어디서부터 시작해야 할지 모르겠다" |
+| **2단계** | its location and definition | 문제의 위치 파악 및 정의 | "귀납 단계에서 n=k+1을 증명할 때 귀납 가정을 어떻게 사용하는지 모르겠다" |
+| **3단계** | suggestion of possible solution | 가능한 해결책의 제안 | "귀납 가정 P(k)를 식에 대입해보면 될까?" |
+| **4단계** | development by reasoning of the bearings of the suggestion | 제안된 해결책의 추론적 전개 | P(k)를 실제로 대입하여 P(k+1) 유도 시도 |
+| **5단계** | further observation and experiment leading to its acceptance or rejection | 관찰과 실험을 통한 수용 또는 거부 | "귀납 가정을 대입하고 정리하니 P(k+1)이 증명되었다" |
+
+!!! note "Dewey 원문 표현 준수"
+    본 표는 Dewey (1933)의 원문 표현을 정확히 제시하며, 한국어 명칭은 본 연구에서 교육적 맥락에 맞게 번역한 것임을 명시한다.
 
 ### 2.2.2 수학 학습에서 반성적 사고의 중요성
 
@@ -218,11 +224,14 @@ MAICE는 Dewey의 2단계(문제 정의)를 **명료화 프로세스**로 구현
 3. **개념 이해 심화**: 질문을 구성하는 과정에서 개념 간 관계를 탐색하고 논리적 연결을 시도
 4. **학습 동기 증진**: 자신의 궁금증에서 시작한 질문은 학습 몰입도를 높임
 
-### 2.3.2 효과적인 질문의 3가지 특징
+### 2.3.2 효과적인 질문의 특징
 
-King(1994)과 Graesser & Person(1994)의 연구를 종합하면, 효과적인 학습 질문은 다음 3가지 특징을 가진다:[^graesser1994]
+King(1994)은 학생 생성 질문이 깊이 있는 이해와 장기 기억에 긍정적 영향을 미친다는 것을 실증하였으며, Graesser & Person(1994)은 튜터링 과정에서의 질문 유형을 체계적으로 분류하였다.[^graesser1994] 본 연구는 이러한 선행 연구들과 예비 조사에서 관찰된 질문 품질 문제를 종합하여, 효과적인 학습 질문의 3가지 핵심 특징을 다음과 같이 도출하였다:
 
 [^graesser1994]: Graesser, A. C., & Person, N. K. (1994). Question Asking During Tutoring. American Educational Research Journal, 31(1), 104-137.
+
+!!! note "본 연구의 특징 도출"
+    다음 3가지 특징은 King(1994)과 Graesser & Person(1994)의 이론적 틀을 바탕으로, 본 연구의 예비 조사에서 발견된 질문 품질 문제(1장 1.1.2절)를 해결하기 위해 구체화한 것이다.
 
 #### 1) 구조화 (Structuring)
 
@@ -832,9 +841,11 @@ Dewey는 학습을 "문제 인식 → 문제 명료화 → 가설 형성 → 논
 
 **Vygotsky(1978)의 근접발달영역(ZPD) 이론**
 
-Vygotsky는 학습자의 현재 수준(실제적 발달 수준)과 잠재적 발달 수준 사이의 간극을 파악하고, 적절한 비계설정(scaffolding)을 제공해야 효과적인 학습이 가능하다고 주장하였다. 이는 본 루브릭의 다음 영역과 직접 연결된다:
+Vygotsky는 학습자의 현재 수준(실제적 발달 수준)과 잠재적 발달 수준 사이의 간극, 즉 근접발달영역(Zone of Proximal Development, ZPD)을 제시하였다. ZPD는 학습자가 혼자서는 수행할 수 없지만 더 유능한 타인의 도움을 받으면 수행할 수 있는 과제의 범위를 의미한다. 이후 Wood, Bruner, and Ross (1976)는 이러한 Vygotsky의 개념을 발전시켜 "비계설정(scaffolding)"이라는 용어를 도입하였으며, 이는 학습자의 ZPD 내에서 제공되는 일시적이고 조정 가능한 지원을 의미한다.[^wood1976] 이는 본 루브릭의 다음 영역과 직접 연결된다:
 - **학습 맥락 적용 (A3)**: 학습자가 자신의 현재 수준, 선수지식, 학습 목표를 얼마나 명시하는가?
-- **학습자 맞춤도 (B1)**: AI가 학습자의 ZPD를 파악하고 적절한 난이도로 설명하는가?
+- **학습자 맞춤도 (B1)**: AI가 학습자의 ZPD를 파악하고 적절한 비계설정을 제공하는가?
+
+[^wood1976]: Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. Journal of Child Psychology and Psychiatry, 17(2), 89-100.
 
 **Bloom(1956)의 교육목표분류학**
 
@@ -857,17 +868,39 @@ Sweller는 학습 자료가 학습자의 작업 기억 용량을 초과하지 �
 
 **Maurya et al.(2024)의 MRBench**
 
-MRBench는 AI 튜터의 수학 추론 및 교육적 효과를 평가하기 위한 다차원 프레임워크로, 다음의 평가 차원을 제시하였다:
+MRBench는 AI 튜터의 수학 추론 및 교육적 효과를 평가하기 위한 다차원 프레임워크이다. 본 연구는 MRBench의 여러 평가 차원 중 다음의 개념을 참고하였다:
 - **Actionability(실행가능성)**: 학습자에게 다음 단계가 명확한가? → 본 루브릭의 **학습자 맞춤도 (B1)** 평가의 기반
 - **Coherence(일관성)**: 설명이 논리적으로 일관되는가? → 본 루브릭의 **설명의 체계성 (B2)** 평가의 기반
 - **Providing Guidance(안내 제공)**: 학습자의 사고 과정을 안내하는가? → 본 루브릭의 **학습 내용 확장성 (B3)** 평가의 기반
 
-**Pauzi et al.(2025)의 UCL 소크라테스 루브릭**
+!!! note "MRBench 프레임워크"
+    MRBench는 8개의 교육학적 차원을 포함하는 종합적인 평가 프레임워크이다. 본 연구는 이 중 본 루브릭 설계와 관련된 핵심 개념들을 선택적으로 참조하였다.
 
-소크라테스 루브릭은 대화형 AI의 교육적 효과를 평가하기 위해 개발된 프레임워크로, 다음의 원리를 강조하였다:
-- **Scaffolding(비계설정)**: 학습자 수준에 맞는 단계적 지원 → 본 루브릭의 **학습자 맞춤도 (B1)**, **설명의 체계성 (B2)** 평가의 기반
-- **Coherence and Tone(일관성과 어조)**: 대화의 일관성과 교육적 어조 유지
-- **Guidance and Actionability(안내와 실행가능성)**: 학습자가 다음 단계를 명확히 알 수 있도록 안내 → 본 루브릭의 **학습 내용 확장성 (B3)** 평가의 기반
+**Paul(1990)의 소크라테스 질문 분류 체계**
+
+Paul(1990)은 소크라테스 대화법을 교육에 적용하기 위한 "Taxonomy of Socratic Questions"를 제시하였으며, 이는 6가지 범주로 구성된다:[^paul1990]
+
+1. **Questions of clarification** (명료화 질문): "What do you mean by ___?", "Could you give me an example?"
+2. **Questions that probe assumptions** (가정 탐구 질문): "What are you assuming?", "How would you justify taking this for granted?"
+3. **Questions that probe reason and evidence** (이유와 증거 탐구): "What would be an example?", "Do you have any evidence for that?"
+4. **Questions about viewpoints or perspectives** (관점 탐구): "Why have you chosen this perspective?", "How would other groups respond?"
+5. **Questions that probe implications or consequences** (함의와 결과 탐구): "What are you implying?", "What effect would that have?"
+6. **Questions about the question** (질문에 대한 질문): "Why is this question important?", "Is the question clear?"
+
+이러한 분류는 AI가 학습자의 사고 과정을 체계적으로 유도하는 질문 설계의 기반이 된다. 특히 1번(명료화 질문)과 6번(질문에 대한 질문)은 본 연구의 **QI**(Question Improver) 에이전트 설계에 직접적으로 활용되었다.
+
+[^paul1990]: Paul, R. (with Sonoma State University). (1990). Critical thinking: What every person needs to survive in a rapidly changing world (A. J. A. Binker, Ed.). Center for Critical Thinking and Moral Critique, Sonoma State University.
+
+**Degen(2025)의 AI 소크라테스 튜터 연구**
+
+최근 Degen(2025)은 고등교육에서 연구 질문 개발을 지원하기 위한 AI 기반 소크라테스 튜터를 제안하였다. 이 연구는 Paul(1990)의 소크라테스 질문 분류 체계를 AI 대화형 시스템에 통합하였으며, 다음의 설계 원리를 강조하였다:[^degen2025]
+- **반성적 참여(Reflective Engagement)**: 즉각적 답변 대신 반성적 질문을 통한 System 2 사고 촉진
+- **점진적 비계설정(Iterative Scaffolding)**: 반복적 대화를 통한 점진적 개선
+- **메타인지 촉진**: 학습자가 자신의 질문과 사고 과정을 돌아보도록 유도
+
+Degen의 연구는 "AI가 답을 제공하는 것이 아니라 사고를 촉진하는 도구여야 한다"는 원칙을 제시하며, 이는 본 연구의 MAICE 설계 철학과 일치한다.
+
+[^degen2025]: Degen, B. (2025). Resurrecting Socrates in the Age of AI: A Study Protocol for Evaluating a Socratic Tutor to Support Research Question Development in Higher Education. [Manuscript in preparation]
 
 **Schmucker et al.(2024)의 Ruffle&Riley**
 
@@ -877,10 +910,6 @@ Ruffle&Riley 연구는 AI 튜터의 학습 경험 품질을 다음 차원으로 
 - **Engagement(참여도)**: 학습 동기 유지
 
 이는 본 루브릭의 **학습 내용 확장성 (B3)** 평가의 기반이 된다.
-
-**Biyani et al.(2024)의 RUBICON**
-
-RUBICON은 도메인 특화 루브릭을 자동 생성하는 프레임워크로, 특정 교과 영역(예: 수학)에 맞춤화된 평가 기준 개발의 방법론을 제공하였다. 본 연구는 이 접근법을 활용하여 한국 고등학교 수학 교육과정에 적합한 루브릭을 개발하였다.
 
 ### 2.7.2 현 상황에 맞는 평가 영역 조합 구성
 
@@ -907,17 +936,17 @@ RUBICON은 도메인 특화 루브릭을 자동 생성하는 프레임워크로,
 
 **B1. 학습자 맞춤도**: 평균 2.474점(27.6% 최저점)으로 "학습자 수준 파악 실패" 문제에 대응
 - **관찰된 문제**: "지수의 확장"을 비즈니스 용어로 해석, 고1 학생에게 대학 수준 통계학 개념 설명
-- **이론적 기반**: Vygotsky(1978)의 비계설정, Tomlinson(2001)의 차별화 교수, MRBench의 "Actionability", 소크라테스 루브릭의 "Scaffolding"
+- **이론적 기반**: Wood et al.(1976)의 비계설정, Vygotsky(1978)의 ZPD, Tomlinson(2001)의 차별화 교수, MRBench의 "Actionability"
 - **측정 대상**: 학습자 수준 파악, 선수지식 연계, 난이도 조절, 개인화된 피드백
 
 **B2. 설명의 체계성**: 평균 2.765점(23.9% 최저점)으로 "비체계적 설명" 문제에 대응
 - **관찰된 문제**: 교육과정 표준 용어 '일반항' 대신 '명시적 공식(Explicit Formula)' 사용, 개념 나열만 하고 위계적 설명 부재
-- **이론적 기반**: Sweller(1988)의 인지부하이론, MRBench의 "Coherence", 소크라테스 루브릭의 "Scaffolding"
+- **이론적 기반**: Sweller(1988)의 인지부하이론, MRBench의 "Coherence", Paul(1990)의 소크라테스 질문 체계(명료화와 논리 전개)
 - **측정 대상**: 개념의 위계적 설명, 단계별 논리 전개, 핵심 요소 강조, 예시 활용
 
 **B3. 학습 내용 확장성**: 평균 1.832점(48.9% 최저점)으로 "심화학습 유도 실패" 문제에 대응 (AI 답변 중 가장 심각한 문제)
 - **관찰된 문제**: "수1의 핵심 부분이 뭐야?"에 개념만 나열하고 학습 방향 제시 없음, "반갑다"에 형식적 응답만 제공
-- **이론적 기반**: Bloom(1956)의 교육목표분류학, 소크라테스 루브릭의 "Guidance and Actionability", Ruffle&Riley의 "Understanding"
+- **이론적 기반**: Bloom(1956)의 교육목표분류학, Paul(1990)의 소크라테스 질문 체계(함의와 관점 탐구), Schmucker et al.(2024) Ruffle&Riley의 "Understanding"
 - **측정 대상**: 심화학습 방향 제시, 응용문제 연계, 오개념 교정, 자기주도 학습 유도
 
 ### 2.7.3 각 문항과 세부 항목 구성
@@ -1009,7 +1038,7 @@ MAICE의 핵심인 명료화 프로세스의 효과성을 측정하기 위해, �
 
 **1. 질문 품질의 독립적 평가 체계 구축**
 
-기존 연구(MRBench, RUBICON, 소크라테스 루브릭)가 주로 AI 응답 품질에 초점을 맞춘 것과 달리, 본 연구는 학생 질문의 품질을 독립적이고 체계적으로 평가하는 프레임워크(A1-A3)를 구축하였다. 이는 "질문의 질이 답변의 질을 결정한다"는 가설을 검증하기 위한 필수적 기반이다.
+기존 연구(MRBench, Degen 2025의 소크라테스 튜터 연구)가 주로 AI 응답 품질에 초점을 맞춘 것과 달리, 본 연구는 학생 질문의 품질을 독립적이고 체계적으로 평가하는 프레임워크(A1-A3)를 구축하였다. 이는 "질문의 질이 답변의 질을 결정한다"는 가설을 검증하기 위한 필수적 기반이다.
 
 **2. 실증 데이터 기반의 문제 중심 설계**
 
@@ -1017,7 +1046,7 @@ MAICE의 핵심인 명료화 프로세스의 효과성을 측정하기 위해, �
 
 **3. 이론적 통합과 교육과정 맥락화**
 
-전통적 교육학 이론(Dewey, Vygotsky, Bloom 등)과 최신 AI 평가 연구(MRBench, 소크라테스 루브릭 등)를 통합하고, 한국 고등학교 수학 교육과정의 실제 수업 환경에 적합하도록 맥락화하였다.
+전통적 교육학 이론(Dewey, Vygotsky, Bloom, Paul의 소크라테스 질문법 등)과 최신 AI 평가 연구(MRBench, Schmucker의 Ruffle&Riley, Degen의 소크라테스 튜터 등)를 통합하고, 한국 고등학교 수학 교육과정의 실제 수업 환경에 적합하도록 맥락화하였다.
 
 **4. 질문-답변 상관관계 실증**
 
@@ -1025,7 +1054,7 @@ MAICE의 핵심인 명료화 프로세스의 효과성을 측정하기 위해, �
 
 **5. 측정 가능성과 재현 가능성**
 
-각 영역을 4개의 구체적이고 관찰 가능한 세부 요소로 분해하여 평가의 객관성과 재현 가능성을 확보하였다. 5점 리커트 척도를 사용하여 질문 영역 15점, 답변 영역 15점으로 총 30점 만점으로 구성하였으며, 이는 MRBench의 3단계 척도를 확장하고 RUBICON의 도메인 특화 평가 접근법을 수학 교육에 적용한 것이다.
+각 영역을 4개의 구체적이고 관찰 가능한 세부 요소로 분해하여 평가의 객관성과 재현 가능성을 확보하였다. 5점 리커트 척도를 사용하여 질문 영역 15점, 답변 영역 15점으로 총 30점 만점으로 구성하였으며, 이는 예비 조사에서 관찰된 문제 패턴과 교육학 이론을 종합하여 본 연구가 독자적으로 개발한 평가 체계이다.
 
 (루브릭의 구체적인 채점 기준과 체크리스트는 부록 A 참조)
 

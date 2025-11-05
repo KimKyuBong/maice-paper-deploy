@@ -5,9 +5,6 @@
 Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives*. New York, NY: Longman.
   > **인용**: 2장 2.1 (K1-K4 지식 차원 분류), 3장 (질문 분류 시스템 설계 기반)
 
-Biyani, P., Nguyen, H. A., Mai, T., & Rajasekharan, A. (2024). RUBICON: Automated rubric-based evaluation of student responses for educational assessment. In *Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics* (pp. 4567-4582). Association for Computational Linguistics. https://doi.org/10.18653/v1/2024.acl-long.245
-  > **인용**: 1장 1.1.2 (루브릭 설계의 이론적 기반, 도메인 특화 평가 접근법), 2장 2.7.1 (도메인 특화 루브릭 자동 생성)
-
 Bloom, B. S. (Ed.). (1956). *Taxonomy of educational objectives: The classification of educational goals. Handbook I: Cognitive domain*. New York: David McKay.
   > **인용**: 2장 2.7.1 (교육목표분류학, 고차원적 사고 발전)
 
@@ -27,7 +24,10 @@ Graesser, A. C., & Person, N. K. (1994). Question asking during tutoring. *Ameri
   > **인용**: 2장 2.4 (AI 기반 피드백의 학습 참여도 향상 효과)
 
 Hattie, J. (2009). *Visible learning: A synthesis of over 800 meta-analyses relating to achievement*. Routledge. https://doi.org/10.4324/9780203887332
-  > **인용**: 6장 6.5.1 (작은 효과크기의 실용적 의미), 부록 D (교육 개입 효과 해석)
+  > **인용**: 6장 6.5.1 (교육 개입의 평균 효과크기 d=0.4, 힌지 포인트), 부록 D (교육 개입 효과 해석)
+
+Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. *Journal of Child Psychology and Psychiatry*, *17*(2), 89-100. https://doi.org/10.1111/j.1469-7610.1976.tb00381.x
+  > **인용**: 2장 2.7.1 (비계설정 scaffolding 개념의 최초 도입)
 
 Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of Educational Research*, *77*(1), 81-112. https://doi.org/10.3102/003465430298487
   > **인용**: 2장 2.4 (효과적 피드백의 교육적 효과, 효과 크기 d=0.79)
@@ -59,8 +59,11 @@ NCTM. (2000). *Principles and standards for school mathematics*. Reston, VA: Nat
 박정민, 손홍찬. (2024). 생성형 AI(ChatGPT-4o)를 활용한 수학 교육의 가능성 탐색. *수학교육학연구*, *34*(2), 151-172.
   > **인용**: 2장 2.4 (AI의 교육적 활용 가능성)
 
-Pauzi, A., Thompson, K., & Holmes, W. (2025). Developing a rubric for evaluating AI tutors using Socratic dialogue: The UCL Socrates framework. *British Journal of Educational Technology*, *56*(1), 123-145. https://doi.org/10.1111/bjet.13389
-  > **인용**: 1장 1.1.2 (Scaffolding 원리), 1장 1.1.5 (B2, B3, C2, C3 영역 설계 기반), 2장 2.7.1 (소크라테스 루브릭, 비계설정 및 안내 원리)
+Degen, B. (2025). Resurrecting Socrates in the Age of AI: A study protocol for evaluating a Socratic tutor to support research question development in higher education. [Manuscript in preparation]
+  > **인용**: 2장 2.7.1 (AI 소크라테스 튜터, 반성적 참여 및 메타인지 촉진), 3장 (질문 명료화 시스템 설계 참고)
+
+Paul, R. (with Sonoma State University). (1990). *Critical thinking: What every person needs to survive in a rapidly changing world* (A. J. A. Binker, Ed.). Center for Critical Thinking and Moral Critique, Sonoma State University.
+  > **인용**: 2장 2.7.1 (소크라테스 질문 6가지 분류 체계), 3장 3.3.2 (QI 명료화 질문 설계 기반)
 
 Rothstein, D., & Santana, L. (2011). *Make just one change: Teach students to ask their own questions*. Harvard Education Press.
   > **인용**: 1장 1.1.2 (효과적인 질문 형성의 교육학적 원리, 질문 평가 영역 이론적 기반)
@@ -118,19 +121,24 @@ Zimmerman, B. J. (2002). Becoming a self-regulated learner: An overview. *Theory
 ---
 
 **문헌 통계**:
-- **총 23편** (본문 인용)
-- **이론서**: 9편 (Anderson & Krathwohl, Bloom, Dewey×2, Krathwohl, Lave & Wenger, Rothstein, Vygotsky, Zimmerman)
+- **총 24편** (본문 인용)
+- **이론서**: 11편 (Anderson & Krathwohl, Bloom, Dewey×2, Krathwohl, Lave & Wenger, Paul, Rothstein, Vygotsky, Wood et al., Zimmerman)
 - **교육 이론**: 6편 (Hattie×2, Narciss, Schoenfeld, Shulman, Tomlinson)
-- **최신 AI 연구**: 4편 (Biyani, Maurya, Pauzi, Schmucker)
+- **최신 AI 연구**: 3편 (Degen, Maurya, Schmucker)
 - **통계/방법론**: 2편 (Cohen, Holm)
 - **수학/과학 교육**: 2편 (NCTM, Sweller)
 - **국내 연구**: 2편 (홍경선·김동익, 박정민·손홍찬)
 - **기타**: 2편 (한국교육개발원, Wooldridge & Jennings)
 
 **특징**:
-- 전통적 교육학 이론(Dewey, Bloom, Vygotsky)과 최신 AI 연구(2024-2025) 균형있게 활용
+- 전통적 교육학 이론(Dewey, Bloom, Vygotsky, Paul, Wood et al.)과 최신 AI 연구(2024-2025) 균형있게 활용
 - 국내외 연구 혼합으로 맥락적 타당성 확보
 - 2장 이론적 배경을 위한 핵심 문헌 대폭 보강
+- **2025-11-05 팩트체크 결과 반영**: 
+  - 원문 표현 정확성 개선
+  - 출처 귀속 수정 완료
+  - 허위/미확인 인용 제거 (Pauzi et al. 2025, Biyani et al. 2024 삭제)
+  - 실제 출처로 교체 (Paul 1990, Degen 2025, Wood et al. 1976 추가)
 
 **알파벳 순 정렬**: APA 7판 기준 저자 성(last name) 알파벳 순으로 정렬됨 (한국어 저자는 가나다 순)
 
