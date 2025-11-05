@@ -610,17 +610,21 @@ agent 간 필요한 정보만 정확히 전달:
 **Agent 간 협업 흐름**:
 
 ```mermaid
-flowchart TD
-    Student[학생 질문] --> QC[1. QC<br/>질문 진단·분류]
-    QC -->|answerable| AG[3. AG<br/>맞춤 답변]
-    QC -->|needs_clarify| QI[2. QI<br/>명료화]
-    QI --> AG
-    AG --> LO[4. LO<br/>학습 분석]
-    LO --> Teacher[교사 대시보드]
+flowchart LR
+    A[학생 질문] --> B{QC}
+    B -->|answerable| D[AG]
+    B -->|needs_clarify| C[QI]
+    C --> D
+    D --> E[LO]
+    E --> F[DB]
     
-    Student2[학생 질문<br/>(Freepass 모드)] --> FT[5. FT<br/>즉시 답변]
-    FT --> LO
+    G[Freepass 질문] --> H[FT]
+    H --> E
 ```
+
+**협업 흐름 설명**:
+- **Agent 모드**: 학생 질문 → **QC** 진단 → (필요시 **QI** 명료화) → **AG** 답변 → **LO** 요약 저장
+- **Freepass 모드**: 학생 질문 → **FT** 즉시 답변 → **LO** 요약 저장
 
 ### 2.5.5 본 연구에의 적용
 
