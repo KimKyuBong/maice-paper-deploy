@@ -104,3 +104,6 @@
 **관리 파일**: `analysis/research/.anonymization_table.json` (Git 제외)  
 **적용 범위**: 논문 전체 (6장, 7장, 8장, 부록 E)
 
+
+
+
