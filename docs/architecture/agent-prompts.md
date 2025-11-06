@@ -193,19 +193,51 @@ class QuestionImprovementAgent(BaseAgent):
 
 **명료화 세션 구조**:
 ```python
-{
-    "session_id": int,
-    "original_question": str,          # 원본 질문
-    "improved_question": str,          # 개선된 질문
-    "missing_fields": List[str],       # 부족한 필드 목록
-    "unit_tags": List[str],            # 단원 태그
-    "clarification_attempts": int,     # 시도 횟수 (최대 3)
-    "clarification_history": List[Dict],  # 명료화 Q&A 히스토리
-    "classification_result": Dict,     # 분류 결과
-    "context": str,                    # 이전 대화 맥락
-    "created_at": datetime
+clarification_session = {
+    "session_id": int,                     # 세션 고유 ID
+    "original_question": str,              # 원본 질문 (불변)
+    "improved_question": str,              # 명료화 후 개선된 질문
+    "missing_fields": List[str],           # 부족한 정보 목록
+    "unit_tags": List[str],                # 단원 태그
+    "clarification_attempts": int,         # 시도 횟수 (최대 3회)
+    "clarification_history": List[Dict],   # 명료화 Q&A 히스토리
+    "classification_result": Dict,         # 초기 분류 결과
+    "context": str,                        # 이전 대화 맥락 (전체)
+    "created_at": datetime                 # 생성 시각
 }
 ```
+
+이 구조를 통해 각 명료화 단계마다 누적된 정보를 보존하고, LLM에 전달할 수 있다.
+
+**컨텍스트 관리 메커니즘**:
+
+에이전트 간 메시지 전달 시, 단순히 질문만 전달하는 것이 아니라 **풍부한 컨텍스트**를 함께 전송한다:
+
+```python
+# Classifier → QuestionImprovement
+{
+    "type": "NEED_CLARIFICATION",
+    "session_id": session_id,
+    "original_question": question,
+    "missing_fields": ["학습_수준", "단원"],
+    "classification_result": {...},
+    "context": previous_conversation_history  # ← 이전 대화 전체
+}
+
+# QuestionImprovement → AnswerGenerator
+{
+    "type": "READY_FOR_ANSWER",
+    "session_id": session_id,
+    "improved_question": final_question,
+    "clarification_history": [...],        # ← 명료화 Q&A 전체
+    "context": full_conversation_context   # ← 전체 대화 맥락
+}
+```
+
+**컨텍스트 손실 방지**:
+- 모든 명료화 Q&A는 PostgreSQL에 실시간 저장
+- Redis 연결 끊김 시 DB에서 자동 복구
+- 에이전트 재시작 시에도 세션 복구 가능
 
 **처리 흐름**:
 1. pub/sub에서 `NEED_CLARIFICATION` 메시지 수신
@@ -571,6 +603,76 @@ class ObserverAgent(BaseAgent):
 ## 요약 결과:
 {summary}
 ```
+
+### 5. FreeTalkerAgent (프리패스 모드 - 대조군)
+
+#### 에이전트 구조
+
+**통신 방식**: Redis Streams (Backend → Agent, Agent → Backend)
+
+**주요 구성**:
+```python
+class FreeTalkerAgent(BaseAgent):
+    # 프롬프트 관리
+    config_loader: PromptConfigLoader
+    prompt_builder: PromptBuilder
+    
+    # LLM 툴
+    llm_tool: SpecializedLLMTool       # 즉시 답변 전용 툴
+    
+    # 통신
+    streams_client: AgentRedisStreamsClient
+```
+
+**처리 흐름**:
+1. Redis Streams에서 질문 수신
+2. 명료화 과정 없이 즉시 LLM 호출
+3. LaTeX 수식 포함 답변 생성
+4. 스트리밍 방식으로 실시간 답변 전송
+5. 완료 메시지 전송
+
+**Agent 모드와의 차이**:
+
+| 항목 | Agent 모드 | Freepass 모드 (FreeTalker) |
+|------|-----------|---------------------------|
+| **질문 분류** | ✓ K1-K4 분류 | ✗ 분류 없음 |
+| **명료화** | ✓ needs_clarify 시 명료화 | ✗ 명료화 없음 |
+| **답변 전략** | ✓ K1-K4별 차별화 | ✗ 동일한 방식 |
+| **학습 관찰** | ✓ Observer 요약 | ✓ Observer 요약 (동일) |
+| **학생 경험** | "명료화 과정" | "즉시 답변" |
+
+#### 시스템 프롬프트
+
+```yaml
+당신은 대한민국 고등학교 수학 교육 전문가입니다.
+학생의 질문에 친근하고 명확하게 답변해주세요.
+
+## 기본 역할:
+- 고등학교 2학년 학생 대상
+- 친근하고 따뜻한 교사 톤
+- 한국어, 존댓말 사용
+- 필요할 때만 LaTeX 수식 사용 ($수식$)
+
+## 답변 원칙:
+- 질문의 의도를 파악하여 직접적으로 답변
+- 수학적으로 정확한 정보 제공
+- 고등학교 교육과정 수준에 맞춤
+- 표준 용어 사용
+```
+
+#### 대조군으로서의 역할
+
+FreeTalkerAgent는 실험 연구에서 **대조군(control group)** 역할을 수행한다:
+
+**A/B 테스트 설계**:
+- 학생 59명을 무작위로 Agent(30명) / Freepass(29명) 배정
+- 학생은 자신이 어느 모드인지 모름
+- 모드는 세션 전체 동안 고정
+
+**검증 목적**:
+- Agent 모드의 명료화 프로세스가 실제로 학습 효과를 향상시키는가?
+- 즉시 답변과 비교하여 명료화의 교육적 가치는 무엇인가?
+- 질문 품질 개선이 학습 결과에 미치는 영향은?
 
 ## 🔄 에이전트 간 통신 구조
 

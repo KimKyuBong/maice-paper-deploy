@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/chapters/02-theoretical-background.md",
+                "file": "docs/chapters/03-system-design.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02-theoretical-background"
+              "title": "03-system-design"
             }
           }
         ]
@@ -171,21 +171,29 @@
   },
   "active": "29e6a8f53e9d6de8",
   "lastOpenFiles": [
+    "docs/chapters/02-theoretical-background.md",
+    "batch_info_20251105_171248.json",
+    "batch_output/anthropic_batch_20251105_171246.jsonl",
+    "batch_output/openai_batch_20251105_171235.jsonl",
+    "batch_output",
+    "analysis/newtest/comprehensive_analysis_20251105_161154.csv",
+    "analysis/newtest/score_range_distribution_20251105_161153.png",
+    "analysis/newtest/score_distributions_20251105_161153.png",
+    "analysis/newtest/detailed_scores_heatmap_20251105_161153.png",
+    "analysis/newtest/comprehensive_agent_vs_freepass.py",
+    "analysis/newtest/agent_vs_freepass_analysis_20251105_160746.csv",
+    "analysis/newtest/agent_vs_freepass_cdf_20251105_160745.png",
+    "analysis/newtest/agent_vs_freepass_histogram_20251105_160745.png",
+    "analysis/newtest/agent_vs_freepass_distribution_20251105_160745.png",
+    "analysis/newtest/analyze_agent_vs_freepass.py",
+    "analysis/newtest/학생세션_수집_20251105_154459.json",
+    "analysis/newtest/학생세션_수집_20251105_154147.json",
+    "analysis/설문조사_모드별_분석결과.md",
     "참고문헌_인용위치_분석.md",
     "인용오류_수정완료_보고서.md",
-    "real.txt",
     "참고문헌_팩트체크_최종보고서.md",
     "원문확인_필요_인용목록.md",
     "참고문헌_팩트체크_보고서.md",
-    "site/print_page/index.html",
-    "site/print_page",
-    "site/css/print-site.css",
-    "site/css/print-site-material.css",
-    "site/css",
-    "site/js/print-site.js",
-    "site/js",
-    "site/search/search_index.json",
-    "site/search",
     "site/assets/images/favicon.png",
     "docs/chapters/01-introduction.md",
     "docs/chapters/00-list-of-tables-NEW.md",

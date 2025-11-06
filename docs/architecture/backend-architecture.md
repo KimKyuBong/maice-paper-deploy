@@ -58,6 +58,22 @@ POST /maice/sessions/         # 새 세션 생성
 PUT  /maice/sessions/{id}     # 세션 정보 수정
 ```
 
+### 이미지 OCR API (`/api/v1/maice/ocr/`)
+```python
+# 주요 엔드포인트
+POST /maice/ocr/convert-image-to-latex   # 이미지 → LaTeX 변환
+```
+
+**기능**:
+- 수식 이미지를 LaTeX 텍스트로 변환
+- Gemini 2.5 Flash Vision API 활용
+- MathLive 호환 LaTeX 포맷 출력
+
+**지원 형식**:
+- 이미지: JPG, PNG, WebP
+- 최대 파일 크기: 10MB
+- 최대 해상도: 1536×1536 픽셀 (자동 리사이즈)
+
 ### 학생 인터페이스 API (`/api/v1/student/`)
 ```python
 # 주요 엔드포인트
@@ -141,6 +157,33 @@ class SessionManager:
     
     async def update_session_summary(self, session_id: int, summary: str) -> None:
         """세션 요약 업데이트"""
+```
+
+### ImageToLatexService (OCR 수식 변환)
+```python
+class ImageToLatexService:
+    """이미지 OCR 수식 인식 서비스"""
+    
+    def __init__(self):
+        self.model = genai.GenerativeModel("gemini-2.5-flash")
+        self.max_file_size = 10 * 1024 * 1024  # 10MB
+        self.max_image_size = 1536  # 픽셀
+    
+    async def convert_image_to_latex(self, image_file: UploadFile) -> str:
+        """이미지를 LaTeX 텍스트로 변환"""
+        # 1. 이미지 전처리
+        # 2. Gemini Vision API 호출
+        # 3. LaTeX 정제
+        # 4. MathLive 호환성 변환
+    
+    async def _process_image(self, image_file: UploadFile) -> Image:
+        """이미지 전처리 (RGB 변환, 리사이즈)"""
+    
+    def _clean_latex_result(self, latex_text: str) -> str:
+        """LLM 응답에서 LaTeX 추출 및 정제"""
+    
+    def _convert_to_mathlive_compatible(self, latex: str) -> str:
+        """MathLive가 인식 가능한 LaTeX로 변환"""
 ```
 
 ## 💾 데이터 레이어 (Repositories)

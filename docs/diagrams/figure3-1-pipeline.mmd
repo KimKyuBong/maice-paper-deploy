@@ -1,0 +1,14 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','fontSize':'16px','fontFamily':'Noto Sans KR, Arial'}}}%%
+flowchart TD
+    A[학생 질문] --> B{질문 분류<br/>Classifier}
+    B -->|answerable| D[맞춤형 답변<br/>Answer Generator]
+    B -->|needs_clarify| C[명료화 과정<br/>Question Improvement]
+    B -->|unanswerable| E[정중한 안내]
+    C --> F[명료화 대화]
+    F --> G{충분한<br/>정보 확보?}
+    G -->|Yes| D
+    G -->|No| F
+    D --> H[학습 과정 관찰<br/>Observer]
+    H --> I[교사 대시보드]
+
+

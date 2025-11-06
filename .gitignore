@@ -39,3 +39,8 @@ Thumbs.db
 *.temp
 *.bak
 *.backup
+
+# 익명화 테이블 (개인정보)
+analysis/research/.anonymization_table.json
+analysis/research/*_익명화_*.json
+

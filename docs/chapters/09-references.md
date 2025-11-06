@@ -8,8 +8,17 @@ Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, te
 Bloom, B. S. (Ed.). (1956). *Taxonomy of educational objectives: The classification of educational goals. Handbook I: Cognitive domain*. New York: David McKay.
   > **인용**: 2장 2.7.1 (교육목표분류학, 고차원적 사고 발전)
 
+Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology*, 3(2), 77-101. https://doi.org/10.1191/1478088706qp063oa
+  > **인용**: 6장 6.3 (질적 데이터 분석 방법론), 7장 7.7 (서술형 응답 주제 분석), 부록 E (정성적 분석 상세 보고서)
+
+Chi, M. T., De Leeuw, N., Chiu, M. H., & LaVancher, C. (1994). Eliciting self-explanations improves understanding. *Cognitive Science*, 18(3), 439-477. https://doi.org/10.1207/s15516709cog1803_3
+  > **인용**: 7장 7.7.2 (Rubber Duck 효과, Self-Explanation Effect), 8장 8.2.4 (양적-질적 통합 분석), 부록 E
+
 Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
   > **인용**: 6장 6.5.1 (효과크기 해석 기준), 7장 7.14 (Cohen's d 계산 및 해석), 부록 D
+
+Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. *MIS Quarterly*, 13(3), 319-340. https://doi.org/10.2307/249008
+  > **인용**: 7장 7.7 (Value-Convenience Gap, 기술 수용 모델), 8장 8.2.4 (사용 의도 vs 편의성 우선)
 
 Dewey, J. (1910). *How we think*. D.C. Heath & Co. https://doi.org/10.1037/10903-000
   > **인용**: 2장 2.7.1 (문제 명료화), 5장 (명료화 프로세스 설계), 8장 8.2.1 (이론 실증)

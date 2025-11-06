@@ -1,0 +1,12 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','fontSize':'18px','fontFamily':'Noto Sans KR, Arial'}}}%%
+flowchart TD
+    Q[학생 질문] --> C{Classifier 분석}
+    C -->|answerable<br/>바로 답변 가능| A[Answer Generator로 전달]
+    C -->|needs_clarify<br/>명료화 필요| I[Question Improvement로 전달]
+    C -->|unanswerable<br/>답변 불가| U[정중한 안내 메시지]
+    
+    style A fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style I fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style U fill:#ffebee,stroke:#e53935,stroke-width:2px
+
+

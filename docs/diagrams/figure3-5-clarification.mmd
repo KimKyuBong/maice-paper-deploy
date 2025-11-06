@@ -1,0 +1,20 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','fontSize':'16px','fontFamily':'Noto Sans KR, Arial'}}}%%
+flowchart TD
+    C[Classifier에서<br/>needs_clarify 전달] --> Q1[명료화 질문 1]
+    Q1 --> S1[학생 응답]
+    S1 --> E1{충분한<br/>정보?}
+    E1 -->|PASS| F[최종 질문 생성]
+    E1 -->|NEED_MORE| Q2[명료화 질문 2]
+    Q2 --> S2[학생 응답]
+    S2 --> E2{충분한<br/>정보?}
+    E2 -->|PASS| F
+    E2 -->|NEED_MORE| Q3[명료화 질문 3]
+    Q3 --> S3[학생 응답]
+    S3 --> F
+    F --> AG[Answer Generator로 전달]
+    
+    style E1 fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style E2 fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style AG fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+
+

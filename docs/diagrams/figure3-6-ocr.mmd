@@ -1,0 +1,19 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','fontSize':'16px','fontFamily':'Noto Sans KR, Arial'}}}%%
+sequenceDiagram
+    participant 학생
+    participant 프론트엔드
+    participant 백엔드
+    participant GeminiAPI as Gemini Vision API
+    
+    학생->>프론트엔드: 수식 이미지 업로드
+    프론트엔드->>프론트엔드: 파일 검증<br/>(10MB, JPG/PNG/WebP)
+    프론트엔드->>백엔드: POST /convert-image-to-latex
+    백엔드->>백엔드: 이미지 전처리<br/>(RGB 변환, 리사이즈)
+    백엔드->>GeminiAPI: Vision API 호출<br/>(수식 인식 프롬프트)
+    GeminiAPI->>백엔드: LaTeX 문자열 반환
+    백엔드->>백엔드: LaTeX 정제 및<br/>MathLive 호환성 변환
+    백엔드->>프론트엔드: LaTeX 응답
+    프론트엔드->>프론트엔드: 커서 위치에 LaTeX 삽입<br/>(자동 렌더링)
+    프론트엔드->>학생: 변환된 수식 표시
+
+
