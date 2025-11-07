@@ -106,7 +106,9 @@ MAICE 시스템은 다음의 다층적 이론 구조 위에 설계되었다:
 
 듀이(1933)는 반성적 사고(reflective thinking)를 "어떤 믿음이나 지식의 형태에 대한 능동적이고 지속적이며 신중한 고려로서, 그것을 뒷받침하는 근거와 그것이 이끄는 결론들을 검토하는 것"으로 정의하였다.[^dewey1933] 원문에서 Dewey는 "Active, persistent, and careful consideration of any belief or supposed form of knowledge in the light of the grounds that support it, and the further conclusions to which it tends"라고 표현하였다. 이는 단순한 정보 습득이나 수동적 수용을 넘어, 학습자가 능동적으로 믿음의 근거를 탐구하고 그 함의를 추론하는 과정을 강조한다.
 
-[^dewey1933]: Dewey, J. (1933). How We Think: A Restatement of the Relation of Reflective Thinking to the Educative Process. Boston: D.C. Heath and Company.
+Dewey(1933, pp.12-13)는 "사고의 기원은 어떤 당혹감, 혼란, 또는 의심(the origin of thinking is some perplexity, confusion, or doubt)"이라고 강조하며, 반성적 사고가 단순한 제안의 수용이 아닌 추가 증거를 탐색하는 능동적 과정임을 명확히 하였다.
+
+[^dewey1933]: Dewey, J. (1933). How We Think: A Restatement of the Relation of Reflective Thinking to the Educative Process. Boston: D.C. Heath and Company. 본 연구는 Dewey의 원문을 Internet Archive 디지털 아카이브를 통해 확인하였으며, 반성적 사고의 개념은 교육학계에서 표준적으로 인용되는 해석을 따랐다.
 
 듀이가 제시한 반성적 사고의 5단계는 다음과 같다:
 

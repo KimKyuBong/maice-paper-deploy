@@ -1,141 +1,81 @@
 # 4. MAICE 시스템 구현
 
 !!! abstract "4장 개요"
-    3장에서 설명한 MAICE 교육 시스템 아키텍처를 실제로 구현한 기술 스택, 계층별 역할, 통신 메커니즘, 배포 전략을 다룬다. 본 장은 **아키텍처 중심**으로 시스템의 구성과 작동 방식을 설명하며, 재현 가능성(reproducibility)과 확장 가능성(scalability)을 확보하기 위한 설계 결정 사항들을 기술한다.
+    본 장은 **3장의 교육적 설계를 실제 작동하는 시스템으로 구현한 기술적 측면**을 다룬다. 교육적 근거와 설계 원리는 3장을 참조하고, 여기서는 기술 스택, 코드 구조, 배포 전략에 집중한다. 재현 가능성(reproducibility)과 확장 가능성(scalability)을 확보하기 위한 구현 세부사항을 기술한다.
 
 ---
 
-## 4.1 전체 시스템 아키텍처
+## 4.1 기술 스택 개요
 
-MAICE 시스템은 **3계층 마이크로서비스 아키텍처**로 구현되었으며, 각 계층은 독립적으로 작동하면서 Redis와 PostgreSQL을 통해 통신한다.
+MAICE 시스템은 **3계층 마이크로서비스 아키텍처**로 구현되었다 (교육적 설계 구조는 3장 3.2절 참조). 각 계층의 기술 스택은 다음과 같다:
 
-### 4.1.1 3계층 구조 개요
+### 4.1.1 계층별 기술 스택
+
+| 계층 | 핵심 기술 | 버전 | 선택 이유 |
+|------|---------|------|----------|
+| **프론트엔드** | SvelteKit | 2.0 | 반응형 UI, SSE 지원, 빠른 개발 |
+| | MathLive | 0.95 | 수식 입력 전문 라이브러리 |
+| | Tailwind CSS | 3.3 | 유틸리티 기반 디자인 시스템 |
+| **백엔드** | FastAPI | 0.104 | 비동기 지원, 타입 힌트, 자동 문서화 |
+| | SQLAlchemy | 2.0 | ORM, 비동기 쿼리 |
+| **에이전트** | LLM API | - | Gemini 2.5 Flash Lite |
+| | Redis Streams | 7.0 | 비동기 메시지 큐 |
+| **데이터베이스** | PostgreSQL | 15 | JSONB 지원, 관계형 무결성 |
+| | Redis | 7.0 | 세션 캐싱, 메시지 큐 |
+| **배포** | Docker Compose | - | 컨테이너 오케스트레이션 |
+| | Nginx | 1.25 | 리버스 프록시, HTTPS |
+
+### 4.1.2 기술 아키텍처 다이어그램
 
 ```mermaid
 graph TB
-    subgraph "계층 1: 프론트엔드 (front/)"
-        A[SvelteKit 2.0<br/>타입스크립트]
-        B[MathLive 0.95<br/>수식 입력]
-        C[Tailwind CSS<br/>디자인 시스템]
-        A --> B
-        A --> C
+    subgraph "프론트엔드 (SvelteKit)"
+        A[대화 인터페이스]
+        B[수식 입력 MathLive]
     end
     
-    subgraph "계층 2: 백엔드 (back/)"
-        D[FastAPI 0.104<br/>REST API]
-        E[SessionManager<br/>세션 관리]
-        F[ConversationOrchestrator<br/>대화 조율]
-        G[ImageToLatexService<br/>OCR 서비스]
-        D --> E
-        D --> F
-        D --> G
+    subgraph "백엔드 (FastAPI)"
+        C[REST API]
+        D[세션 관리]
+        E[에이전트 조율]
     end
     
-    subgraph "계층 3: 에이전트 (agent/)"
-        H[Classifier<br/>질문 분류]
-        I[QuestionImprovement<br/>명료화]
-        J[AnswerGenerator<br/>답변 생성]
-        K[Observer<br/>학습 관찰]
-        L[FreeTalker<br/>대조군]
+    subgraph "에이전트 (5개 독립 프로세스)"
+        F[Classifier]
+        G[QuestionImprovement]
+        H[AnswerGenerator]
+        I[Observer]
+        J[FreeTalker]
     end
     
-    subgraph "데이터 계층"
-        M[(PostgreSQL 15<br/>세션/사용자/로그)]
-        N[(Redis 7<br/>메시지 큐)]
+    subgraph "데이터"
+        K[(PostgreSQL)]
+        L[(Redis)]
     end
     
-    A -->|HTTP/SSE| D
-    D -->|Redis Streams| H
-    H -->|pub/sub| I
-    I -->|pub/sub| J
-    J -->|pub/sub| K
-    D -->|Streams 구독| L
-    
-    E -->|읽기/쓰기| M
-    F -->|Streams 발행| N
-    H -->|Streams 읽기| N
-    J -->|상태 저장| M
-    K -->|요약 저장| M
+    A -->|HTTP/SSE| C
+    C -->|Redis Streams| F
+    F --> G --> H
+    C --> D --> K
+    C --> E --> L
+    H --> K
+    I --> K
 ```
 
-### 4.1.2 계층별 역할과 책임
+**통신 프로토콜**:
+- 프론트 ↔ 백엔드: HTTP REST API, Server-Sent Events (SSE)
+- 백엔드 ↔ 에이전트: Redis Streams (비동기 메시지 큐)
+- 백엔드 ↔ DB: SQLAlchemy ORM (비동기)
 
-#### 계층 1: 프론트엔드 (`front/`)
+**에이전트 구성** (자세한 교육적 역할은 3장 3.3절 참조):
 
-**핵심 역할**: 학생이 수식을 쉽게 입력하고 AI 답변을 실시간으로 받을 수 있는 대화 인터페이스 제공
-
-**주요 구성요소**:
-
-| 컴포넌트 | 역할 | 위치 |
-|---------|------|------|
-| **InlineMathInput** | 수식 입력 에디터 (MathLive 통합) | `src/lib/components/maice/` |
-| **MessageList** | 대화 내역 표시 및 스크롤 관리 | `src/lib/components/maice/` |
-| **ChatHeader** | 모드 전환 (Agent/Freepass) | `src/lib/components/maice/` |
-| **SessionManager** | 세션 목록 및 생성/삭제 관리 | `src/lib/components/maice/` |
-| **SSE Service** | 실시간 스트리밍 답변 수신 | `src/lib/services/` |
-
-**통신 방식**:
-- **HTTP POST**: 질문 전송 (`/api/maice/stream`)
-- **Server-Sent Events (SSE)**: 실시간 답변 스트리밍 수신
-- **REST API**: 세션 조회, 이미지 OCR 변환 등
-
-**기술적 특징**:
-- TypeScript 타입 안정성으로 런타임 에러 최소화
-- Reactive Store 패턴으로 상태 관리
-- 모바일/태블릿 반응형 디자인
-
-#### 계층 2: 백엔드 (`back/`)
-
-**핵심 역할**: 프론트엔드와 에이전트 계층을 연결하는 중재자, 세션 관리 및 데이터 저장
-
-**주요 구성요소**:
-
-| 서비스/컨트롤러 | 역할 | 위치 |
-|--------------|------|------|
-| **ConversationOrchestrator** | 대화 흐름 조율 및 에이전트 호출 | `app/services/maice/` |
-| **SessionManager** | 세션 생성/조회/삭제, 대화 기록 관리 | `app/services/maice/` |
-| **StreamingProcessor** | SSE 스트리밍 처리 | `app/services/maice/` |
-| **ImageToLatexService** | 이미지 OCR → LaTeX 변환 | `app/services/` |
-| **MaiceController** | REST API 엔드포인트 | `app/api/controllers/` |
-| **UserModeService** | A/B 테스트 모드 할당 관리 | `app/services/` |
-
-**데이터 모델**:
-- **Session**: 학생별 학습 세션 (모드, 대화 히스토리)
-- **SessionMessage**: 개별 메시지 (질문, 답변, 명료화)
-- **LLMPromptLog**: 모든 LLM 호출 기록 (재현성 확보)
-- **User**: 학생/교사 계정 정보
-
-**통신 방식**:
-- **프론트엔드 ↔ 백엔드**: HTTP/SSE
-- **백엔드 ↔ 에이전트**: Redis Streams (비동기 메시지 큐)
-- **백엔드 ↔ DB**: SQLAlchemy ORM (비동기)
-
-#### 계층 3: 에이전트 (`agent/`)
-
-**핵심 역할**: 질문 분류, 명료화, 답변 생성, 학습 관찰을 수행하는 5개 독립 AI 에이전트
-
-**에이전트 구성**:
-
-| 에이전트 | 역할 | LLM 모델 | 평균 응답 시간 |
-|---------|------|----------|---------------|
-| **QuestionClassifier** | K1-K4 분류, 명료화 필요성 판단 | gemini-2.5-flash-lite | 1.8초 |
-| **QuestionImprovement** | 명료화 대화, 응답 평가 | gemini-2.5-flash-lite | 2.1초 |
-| **AnswerGenerator** | K1-K4별 맞춤 답변 생성 | gemini-2.5-flash-lite | 2.3초 |
-| **Observer** | 세션 요약, 학습 진도 추출 | gemini-2.5-flash-lite | 1.5초 |
-| **FreeTalker** | 즉시 답변 (대조군) | gemini-2.5-flash-lite | 2.0초 |
-
-**공통 기반 구조**:
-- **BaseAgent**: 모든 에이전트가 상속하는 기본 클래스
-  - Redis 연결 관리
-  - PostgreSQL 연결 풀링
-  - 프롬프트 로딩 (YAML 기반)
-  - 중복 요청 방지
-  - 백그라운드 태스크 관리
-
-**통신 방식**:
-- **Redis Streams**: 백엔드 ↔ 에이전트 간 메시지 큐
-- **Redis pub/sub**: 에이전트 간 이벤트 전달
-- **PostgreSQL**: 세션 히스토리, 프롬프트 로그 저장
+| 에이전트 | 기술적 역할 | 평균 응답 시간 |
+|---------|------------|---------------|
+| **QuestionClassifier** | K1-K4 분류, 명료화 판단 | 1.8초 |
+| **QuestionImprovement** | 명료화 대화, 평가 | 2.1초 |
+| **AnswerGenerator** | 답변 생성 | 2.3초 |
+| **Observer** | 세션 요약 | 1.5초 |
+| **FreeTalker** | 즉시 답변 (대조군) | 2.0초 |
 
 ### 4.1.3 데이터 흐름 아키텍처
 
@@ -576,6 +516,172 @@ flowchart TD
 - **PASS**: 원본 질문의 의도가 명확해짐
 - **NEED_MORE**: 여전히 모호하거나 추가 정보 필요
 - **최대 3회 제한**: 무한 명료화 방지
+
+### 4.3.4 에이전트별 프롬프트 전문
+
+본 시스템의 교육적 효과는 각 에이전트의 프롬프트 설계에 크게 의존한다. 이 절에서는 실제 운영 환경에서 사용된 핵심 프롬프트를 제시한다.
+
+#### Classifier Agent 프롬프트
+
+**System 메시지**:
+```
+당신은 대한민국 고등학교 수학 교육과정 전문 분류기입니다.
+질문을 정확히 분석하여 4가지 유형과 3단계 품질로 분류하고, 
+필요한 경우 **학생에게 직접 묻는** 명료화 질문까지 생성하세요.
+
+## 질문 유형 (K1-K4)
+- K1 (즉답형): 정의, 용어, 기호, 공식, 값, 단위
+- K2 (설명형): 개념 간 관계, 분류, 원리, 이론
+- K3 (적용형): 수행 방법, 알고리즘, 단계별 과정
+- K4 (문제해결형): 전략적 사고, 문제 접근법, 반성
+
+## 품질 평가
+- answerable: 교과·단원·수준 지정, 목표 동사 명확
+- needs_clarify: 범위 과대/목표 불명/수준 불명
+- unanswerable: 수학 외 영역, 평가윤리 위배
+
+## 명료화 질문 생성 원칙 (Dewey 5단계)
+1. 문제 인식: "어떤 부분이 가장 어렵거나 궁금하셨나요? 🤔"
+2. 문제 정의: "지금까지 이해한 부분과 헷갈리는 부분을 나누어볼까요?"
+3. 연결 탐색: "이미 알고 있는 개념과 비교하면 어떤 점이 다른가요?"
+4. 사고 전개: "왜 이 부분이 궁금하신지 조금 더 설명해주실 수 있나요?"
+5. 이해 검증: "어디까지 이해했고, 어디서부터 막히셨는지 말씀해주세요"
+
+⚠️ 명료화 질문은 학생이 직접 읽고 답변할 수 있는 자연스러운 질문이어야 합니다!
+❌ 시스템 분석: "'나'라는 답변이 구체적으로 무엇을 의미하는지 확인 필요"
+✅ 학생 질문: "어떤 부분이 더 궁금하신가요? 😊"
+
+## 출력 형식 (JSON)
+{
+  "knowledge_code": "K1/K2/K3/K4",
+  "quality": "answerable/needs_clarify/unanswerable",
+  "missing_fields": ["부족한 정보1", "부족한 정보2"],
+  "reasoning": "분류 근거",
+  "clarification_questions": ["학생에게 직접 묻는 자연스러운 질문 1개"],
+  "clarification_reasoning": "명료화 질문이 어떻게 missing_fields를 해결하는지"
+}
+```
+
+**설계 근거** (3장 3.3.1 참조):
+- Dewey 반성적 사고 5단계를 명료화 질문 전략으로 구현
+- Bloom K1-K4 분류로 질문 유형 차별화
+- 학생 친화적 톤 ("🤔", 존댓말)으로 심리적 장벽 낮춤
+
+---
+
+#### Question Improvement Agent 프롬프트
+
+**System 메시지**:
+```
+당신은 명료화 과정을 평가하는 전문가입니다.
+학생의 답변이 원본 질문을 충분히 명료하게 만들었는지 판단하고,
+명료화가 완료되면 최종 질문을 생성하세요.
+
+## 평가 기준
+- PASS: 원본 질문의 의도가 명확해짐, 답변 생성 가능
+- NEED_MORE: 여전히 모호함, 추가 정보 필요
+
+## 명료화 생략 기준
+- 원본 질문이 이미 구체적인 경우 → 즉시 PASS
+- 학생이 구체적인 답변을 한 경우 → 즉시 PASS
+- 맥락이 명확한 경우 → PASS
+- 명료화 3회 접근 시 → 관대하게 PASS
+
+## 출력 형식 (JSON)
+{
+  "evaluation": "PASS/NEED_MORE",
+  "confidence": 0.0-1.0,
+  "reasoning": "평가 근거",
+  "missing_field_coverage": {
+    "해결된_필드": ["필드1"],
+    "여전히_부족한_필드": ["필드3"]
+  },
+  "next_clarification": "다음 명료화 질문 (NEED_MORE인 경우)",
+  "reclassified_knowledge_code": "K1/K2/K3/K4 (변경된 경우)",
+  "final_question": "최종 질문 (PASS인 경우)"
+}
+```
+
+**설계 근거** (3장 3.3.2 참조):
+- 명료화 완료 시점을 명확히 판단하여 과도한 명료화 방지
+- 최대 3회 제한으로 학습 흐름 유지
+- missing_fields 추적으로 명료화 진행 상황 관리
+
+---
+
+#### Answer Generator Agent 프롬프트 (K1 예시)
+
+**System 메시지**:
+```
+당신은 대한민국 고등학교 수학 교육과정 전문가입니다.
+학생의 질문에 대해 체계적이고 교육적인 답변을 생성해주세요.
+
+## 기본 역할
+- 대상: 고등학교 2학년 학생
+- 언어: 한국어, 존댓말 필수
+- 톤: 친근하고 이해하기 쉬운 교사 톤
+- 용어: 대한민국 고등학교 수학 교과서 표준 용어
+
+## 현재 질문 유형: K1 (즉답형 - 사실적 지식)
+
+## K1 답변 구조
+1. 핵심 내용 정리: 정확한 정의와 기본 개념
+2. 핵심 공식과 정리: 필요한 수식 (LaTeX 형식)
+3. 실제 예시로 이해하기: 구체적인 예시
+4. 더 넓게 알아보기: 연관 개념
+
+## 수학 수식 작성 규칙
+- 인라인 수식: $수식$
+- 블록 수식: $$수식$$
+- 분수: \frac{a}{b}
+- 지수: x^2 또는 x^{지수}
+- 제곱근: \sqrt{x}
+
+⚠️ 수식과 텍스트 분리!
+✅ 올바른: "$P(k)$가 참이면 $P(k+1)$도 참"
+❌ 잘못된: "$$P(k)가 참 \Rightarrow P(k+1)도 참$$"
+
+⚠️ 중요: 학생에게는 질문 유형 코드(K1, K2, K3, K4)나 
+분류 정보를 절대 언급하지 마세요.
+```
+
+**K2/K3/K4 템플릿**:
+- **K2 (설명형)**: 개념 정리 → 개념 간 연결 → 비교 → 헷갈리는 부분
+- **K3 (적용형)**: 단계별 해결 과정 → 사용 시점 → 실제 연습 → 실수 방지
+- **K4 (문제해결형)**: 문제 분석 → 다양한 접근 → 중간 점검 → 다른 방법
+
+**설계 근거** (3장 3.3.3 참조):
+- Bloom K1-K4에 맞춘 차별화된 답변 구조
+- 교과서 표준 용어로 학습 일관성 유지
+- LaTeX 수식으로 수학적 정확성 확보
+
+---
+
+#### FreeTalker Agent 프롬프트
+
+**System 메시지**:
+```
+필요할 때만 수학 수식을 LaTeX 형식($수식$)으로 작성해주세요.
+```
+
+**User 메시지**:
+```
+사용자: (학생의 질문)
+
+AI: (이전 답변 - 대화 히스토리)
+
+사용자: (현재 질문)
+```
+
+**설계 근거** (3장 3.3.5 참조):
+- 명료화 없이 즉시 답변하여 Agent 모드와 대조
+- 최소한의 프롬프트로 일반 LLM 사용 방식 재현
+- A/B 테스트 대조군 역할
+
+---
+
+!!! note "프롬프트 재현성 확보"
+    모든 프롬프트와 LLM 응답은 `llm_prompt_logs` 테이블에 기록되어 재현 가능성(reproducibility)을 보장한다. 프롬프트 전문은 부록 I에서 확인할 수 있다.
 
 ---
 

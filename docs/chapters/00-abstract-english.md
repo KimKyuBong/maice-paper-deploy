@@ -53,11 +53,11 @@ The most significant finding was that Agent mode showed statistically significan
 
 The theoretical contributions of this study include establishing the pedagogical foundation of clarification processes, presenting a comprehensive evaluation framework that analyzes not only single-session quality but also cumulative learning effects and differential effects by academic level, and establishing causal relationships between clarification processes and learning outcomes through randomized A/B testing.
 
-Practical contributions include demonstrating statistically significant learning effects for lower-achieving students, thereby proving the system's potential as a practical tool for closing educational gaps; providing specific guidelines that AI tutors should prioritize clarification over immediate answer provision; and presenting immediately applicable technical solutions for actual classroom environments through Docker-based deployment and multiprocess agent systems.
+Practical contributions include demonstrating statistically significant learning effects for lower-achieving students, thereby proving the system's potential as a practical tool for closing educational gaps; providing specific guidelines that AI tutors should prioritize clarification over immediate answer provision; presenting immediately applicable technical solutions for actual classroom environments through Docker-based deployment and multiprocess agent systems; and establishing MAICE as a research platform that enables teacher-led AI education research by allowing teachers to customize prompts and evaluate their effectiveness using the QAC Checklist, facilitating continuous improvement in prompting design.
 
 This study empirically demonstrated that AI educational tools have genuine educational value not simply by providing correct answers, but by stimulating students' thinking processes and enhancing their questioning abilities. MAICE presents a model for effective AI educational systems that combines modern AI technology with the solid pedagogical foundations of Dewey's reflective thinking and Bloom's knowledge taxonomy, bridging theory and practice.
 
 ---
 
-**Keywords**: question clarification, AI agent, reflective thinking, mathematical induction, multi-agent system, Dewey, educational gap reduction, A/B testing
+**Keywords**: question clarification, AI agent, reflective thinking, mathematical induction, multi-agent system, Dewey, educational gap reduction, teacher-led research, prompting design
 
