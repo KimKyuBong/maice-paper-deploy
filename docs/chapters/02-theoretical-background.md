@@ -221,7 +221,7 @@ MAICE는 Dewey의 2단계(문제 정의)를 **명료화 프로세스**로 구현
 
 질문 생성(question generation)은 학습자의 메타인지 및 비판적 사고를 유도하는 핵심적 활동으로, 학습자 주도적인 문제 해결과 이해 중심 수업을 가능하게 한다.[^hong2011] King(1994)은 학생 생성 질문이 단순 정보 습득을 넘어 깊이 있는 이해와 장기 기억에 긍정적 영향을 미친다는 것을 실증적으로 보여주었다.[^king1994]
 
-[^hong2011]: 홍경선, 김동익. (2011). 수학적 의사소통 능력 향상을 위한 발문 전략 연구. 공학교육연구, 14(4), 28-37.
+[^hong2011]: 홍경선, 김동익. (2011). 공학교육에서 학생 생성 질문 교수학습방법을 적용한 수업 사례연구. 공학교육연구, 14(6), 24-30.
 
 [^king1994]: King, A. (1994). Guiding Knowledge Construction in the Classroom: Effects of Teaching Children How to Question and How to Explain. American Educational Research Journal, 31(2), 338-368.
 

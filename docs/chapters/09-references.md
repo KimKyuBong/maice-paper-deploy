@@ -44,8 +44,8 @@ Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of Educationa
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, *6*(2), 65-70. https://www.jstor.org/stable/4615733
   > **인용**: 7장 (다중 비교 보정), 부록 D (Holm-Bonferroni 방법)
 
-홍경선, 김동익. (2011). 수학적 의사소통 능력 향상을 위한 발문 전략 연구. *공학교육연구*, *14*(4), 28-37.
-  > **인용**: 2장 2.3 (질문 생성의 교육적 가치, 학습자 주도적 문제 해결)
+홍경선, 김동익. (2011). 공학교육에서 학생 생성 질문 교수학습방법을 적용한 수업 사례연구. *공학교육연구*, *14*(6), 24-30.
+  > **인용**: 2장 2.3.1 (질문 생성이 학습자의 메타인지 및 비판적 사고를 유도하는 핵심 활동)
 
 King, A. (1994). Guiding knowledge construction in the classroom: Effects of teaching children how to question and how to explain. *American Educational Research Journal*, *31*(2), 338-368. https://doi.org/10.3102/00028312031002338
   > **인용**: 2장 2.3.1 (질문 생성이 깊이 있는 이해와 장기 기억에 긍정적 영향), 2장 2.3.2 (본 연구의 질문 특징 도출을 위한 이론적 틀), 2장 2.7.3 (A1, A2, A3 질문 평가 영역 기반)
