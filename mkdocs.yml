@@ -148,6 +148,12 @@ extra:
 # Navigation Structure
 nav:
   - 홈: index.md
+  - 논문 초록:
+    - 국문 초록: chapters/00-abstract-korean.md
+    - 영문 초록 (Abstract): chapters/00-abstract-english.md
+    - 목차: chapters/00-table-of-contents.md
+    - 표 차례: chapters/00-list-of-tables-NEW.md
+    - 그림 차례: chapters/00-list-of-figures-NEW.md
   - 논문 내용:
     - 1장. 서론: chapters/01-introduction.md
     - 2장. 이론적 배경: chapters/02-theoretical-background.md
