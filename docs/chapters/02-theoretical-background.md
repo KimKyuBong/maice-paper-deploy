@@ -628,14 +628,14 @@ agent 간 필요한 정보만 정확히 전달:
 
 ```mermaid
 flowchart LR
-    A[학생 질문] --> B{QC}
+    A[Agent 모드:<br/>학생 질문] --> B{QC}
     B -->|answerable| D[AG]
     B -->|needs_clarify| C[QI]
     C --> D
     D --> E[LO]
     E --> F[DB]
     
-    G[Freepass 질문] --> H[FT]
+    G[Freepass 모드:<br/>학생 질문] --> H[FT]
     H --> E
 ```
 
