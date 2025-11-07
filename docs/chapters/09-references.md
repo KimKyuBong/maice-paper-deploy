@@ -44,7 +44,7 @@ Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of Educationa
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, *6*(2), 65-70. https://www.jstor.org/stable/4615733
   > **인용**: 7장 (다중 비교 보정), 부록 D (Holm-Bonferroni 방법)
 
-홍경선, 김동익. (2011). 수학적 의사소통 능력 향상을 위한 발문 전략 연구. *수학교육학연구*, *21*(4), 439-460.
+홍경선, 김동익. (2011). 수학적 의사소통 능력 향상을 위한 발문 전략 연구. *공학교육연구*, *14*(4), 28-37.
   > **인용**: 2장 2.3 (질문 생성의 교육적 가치, 학습자 주도적 문제 해결)
 
 King, A. (1994). Guiding knowledge construction in the classroom: Effects of teaching children how to question and how to explain. *American Educational Research Journal*, *31*(2), 338-368. https://doi.org/10.3102/00028312031002338
