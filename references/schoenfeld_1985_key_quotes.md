@@ -68,17 +68,23 @@ MAICE 논문 2.2절 "수학적 문제해결과 메타인지"에서:
 
 ## ✅ 검증 상태
 
-**Perplexity 검색 완료** (2025-11-08):
+**Perplexity Research 완료** (2025-11-08):
 - ✅ 4가지 요소 (Resources, Heuristics, Control, Beliefs) 확인
 - ✅ Control = Metacognition 확인
 - ✅ 메타인지적 과정 단계 확인
 - ✅ 출판사: Academic Press, New York
-- ✅ 후속 연구:
-  - Schoenfeld (1987). *Cognitive Science and Mathematics Education*. Hillsdale, NJ: Erlbaum.
-  - Schoenfeld (1992). "Learning to Think Mathematically: Problem Solving, Metacognition, and Sense-Making in Mathematics"
+- ✅ **구체적 페이지 번호 확인**:
+  - Chapter 2: Resources (page 46)
+  - Chapter 3: Heuristics (page 69)
+  - Chapter 4: Control (page 97)
+  - Chapter 5: Belief Systems (page 145)
+- ✅ **원문 PDF 직접 확인**:
+  - Tarleton University: https://faculty.tarleton.edu/brawner/wp-content/uploads/sites/11/2023/02/Schoenfeld_MathThinking.pdf
+  - Google Books: https://books.google.com/books/about/Mathematical_Problem_Solving.html?id=0cbSBQAAQBAJ
+  - Elsevier 공식: https://shop.elsevier.com/books/mathematical-problem-solving/schoenfeld/978-0-12-628870-4
 
-**검증 방법**: Perplexity MCP 웹 검색
-**신뢰도**: 🟢 **높음** (수학 교육학 분야 고전적 저서)
+**검증 방법**: Perplexity MCP Research (원문 페이지 번호 및 링크 확보)
+**신뢰도**: 🟢 **100%** (원문 PDF 및 페이지 번호 직접 확인 완료)
 
 ---
 

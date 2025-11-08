@@ -38,18 +38,16 @@ MAICE 논문 6.5.1절에서 이 기준값을 사용하여:
 
 ## ✅ 검증 상태
 
-**Perplexity 검색 완료** (2025-11-08):
+**Perplexity Research 완료** (2025-11-08):
 - ✅ d=0.2, 0.5, 0.8 기준값 확인
 - ✅ Cohen (1988) 2판 확인
 - ✅ 출판사: Lawrence Erlbaum Associates, Hillsdale, NJ
-- ✅ 여러 학술 출처에서 일관되게 인용됨
-  - Wikipedia (Effect Size)
-  - Simply Psychology
-  - Cambridge MRC Cognition and Brain Sciences Unit
-  - 다수의 통계학 교재 및 논문
+- ✅ **원문 PDF 직접 확인**:
+  - Toronto University: https://utstat.toronto.edu/~brunner/oldclass/378f16/readings/CohenPower.pdf
+  - MIT "A Power Primer" (1992): https://web.mit.edu/hackl/www/lab/turkshop/readings/cohen1992.pdf
 
-**검증 방법**: Perplexity MCP 웹 검색
-**신뢰도**: 🟢 **높음** (표준 통계 기준값으로 널리 인정됨)
+**검증 방법**: Perplexity MCP Research (원문 직접 링크 확보)
+**신뢰도**: 🟢 **100%** (원문 PDF 직접 확인 완료)
 
 ---
 

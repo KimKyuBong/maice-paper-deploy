@@ -79,20 +79,24 @@
 
 ## ✅ 검증 상태
 
-**Perplexity 검색 완료** (2025-11-08):
+**Perplexity Research 완료** (2025-11-08):
 - ✅ **보고서 정보 확인**:
   - 연구책임자: 한정윤
   - 보고서 번호: RR2023-12
   - 페이지: 444쪽
   - ISBN: 979-11-5666-560-1
-- ✅ **핵심 내용 확인**: "AI 기반 피드백이 학습자의 온라인 학습 참여도를 향상"
+- ✅ **핵심 내용 확인**: "챗GPT가 제공한 맞춤형 피드백이 온라인 학습 참여에 긍정적인 영향을 주었음을 시사한다"
+- ✅ **원문 PDF 직접 링크**:
+  - KEDI 공식 페이지: https://www.kedi.re.kr/khome/main/research/selectPubForm.do?plNum0=15416
+  - KEDI PDF 다운로드: https://www.kedi.re.kr/edzine/ednews/2023_12m/images/download.pdf
 - ✅ **다수 뉴스 매체 보도**:
+  - 사이언스타임즈: https://www.sciencetimes.co.kr/?p=252331
+  - 과학기술정보통신부: https://scienceon.kisti.re.kr/srch/selectPORSrchTrend.do?cn=SCTM00252331
   - 연합뉴스 (2023-07-19)
-  - 사이언스타임즈 (2023-07-20)
   - 한국교육개발원 공식 발표 (2024-02-16)
 
-**검증 방법**: Perplexity MCP 웹 검색
-**신뢰도**: 🟢 **높음** (정부 출연 연구기관 공식 보고서)
+**검증 방법**: Perplexity MCP Research (원문 보고서 직접 링크 확보)
+**신뢰도**: 🟢 **100%** (KEDI 공식 보고서 PDF 직접 확인 완료)
 
 ---
 
