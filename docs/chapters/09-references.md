@@ -14,6 +14,9 @@ Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitat
 Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
   > **인용**: 6장 6.5.1 (효과크기 해석 기준), 7장 7.14 (Cohen's d 계산 및 해석), 부록 D
 
+Collins, A., Joseph, D., & Bielaczyc, K. (2004). Design research: Theoretical and methodological issues. *Journal of the Learning Sciences*, *13*(1), 15-42. https://doi.org/10.1207/s15327809jls1301_2
+  > **인용**: 6장 6.1 (연구 방법론: 설계 기반 연구의 정의 및 특징), 8장 8.4 (방법론적 의의)
+
 Dewey, J. (1910). *How we think*. D.C. Heath & Co. https://doi.org/10.1037/10903-000
   > **인용**: 2장 2.2 (반성적 사고 5단계 정의 및 이론), 2장 2.4.1 (명료화 전략), 2장 2.7.1 (C2. 학습 과정 지원성 이론적 기반)
 
@@ -47,6 +50,9 @@ Degen, B. (2025). Resurrecting Socrates in the Age of AI: A study protocol for e
 Schoenfeld, A. H. (1985). *Mathematical problem solving*. Orlando, FL: Academic Press.
   > **인용**: 2장 2.2 (수학적 문제해결의 메타인지적 과정)
 
+Wang, F., & Hannafin, M. J. (2005). Design-based research and technology-enhanced learning environments. *Educational Technology Research and Development*, *53*(4), 5-23. https://doi.org/10.1007/BF02504682
+  > **인용**: 6장 6.1 (DBR의 6가지 특징: 실용성, 이론기반, 상호작용, 반복성, 유연성, 통합성), 8장 8.4 (DBR 방법론적 가치)
+
 Wooldridge, M., & Jennings, N. R. (1995). Intelligent agents: Theory and practice. *The Knowledge Engineering Review*, *10*(2), 115-152. https://doi.org/10.1017/S0269888900008122
   > **인용**: 2장 2.5 (멀티 에이전트 시스템, agent의 4가지 특성)
 
@@ -79,13 +85,13 @@ Wooldridge, M., & Jennings, N. R. (1995). Intelligent agents: Theory and practic
 ---
 
 **문헌 통계**:
-- **총 16편** (본문 인용)
+- **총 18편** (본문 인용)
 - **교육학 이론**: 7편 (Anderson & Krathwohl, Bloom, Dewey, Graesser & Person, Hattie×2, King, Krathwohl)
-- **학습 과학**: 2편 (Braun & Clarke, Schoenfeld)
-- **통계/방법론**: 1편 (Cohen)
+- **연구 방법론**: 3편 (Braun & Clarke, Cohen, Collins et al., Wang & Hannafin)
+- **학습 과학**: 1편 (Schoenfeld)
 - **AI/시스템**: 2편 (Degen, Wooldridge & Jennings)
 - **국내 연구**: 3편 (홍경선·김동익, 박정민·손홍찬, 한국교육개발원)
-- **국외 논문**: 13편, **국내 논문**: 3편
+- **국외 논문**: 15편, **국내 논문**: 3편
 
 **특징**:
 - 전통적 교육학 이론(Dewey, Bloom, Anderson & Krathwohl)과 최신 AI 연구(Degen 2025) 균형
