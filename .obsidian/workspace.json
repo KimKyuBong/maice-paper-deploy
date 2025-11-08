@@ -171,6 +171,14 @@
   },
   "active": "29e6a8f53e9d6de8",
   "lastOpenFiles": [
+    "전체세션_누적효과_최종분석_20251108.md",
+    "analysis/final_full_analysis.csv",
+    "analysis/users_data.csv",
+    "누적효과_재분석_결과_20251108.md",
+    "analysis/full_sessions_with_scores.csv",
+    "analysis/session_metadata_full.csv",
+    "analysis/analyze_all_280sessions.py",
+    "analysis/reanalyze_cumulative_effect.py",
     "연구_타당성_최종보고_20251108.md",
     "루브릭_타당성_종합분석_20251108.md",
     "선행연구_비교분석_20251108.md",
@@ -185,15 +193,10 @@
     "ai_teacher_correlation_summary.json",
     "teacher_evaluations.json",
     "gemini_pro_teacher_comparison.json",
-    "references/king.txt",
-    "analysis/mode_comparison_by_teacher_results.json",
     "analysis/mode_comparison_by_teacher_details.png",
     "analysis/mode_comparison_by_teacher_overall.png",
-    "analysis/analyze_mode_scores_by_teacher.py",
-    "analysis/teacher_correlation_results.json",
     "analysis/teacher_correlation_pairwise.png",
     "analysis/teacher_correlation_heatmap.png",
-    "analysis/analyze_teacher_correlations.py",
     "3장_4장_분리_완료_20251106.md",
     "3장_4장_분리_가이드_최종.md",
     "3장_4장_중복분석_20251106.md",
@@ -203,7 +206,6 @@
     "docs/chapters/00-approval-page.md",
     "docs/chapters/03-system-design.md",
     "논문_철학_반영_완료_20251106.md",
-    "analysis/batch_output/openai_batch_20251105_171235.jsonl",
     "analysis/research/설문분석_28명_최종.md",
     "analysis/newtest/교사검증_샘플링_방법론_논문용.md",
     "docs/chapters/02-theoretical-background.md",
@@ -214,8 +216,6 @@
     "analysis/newtest/agent_vs_freepass_histogram_20251105_160745.png",
     "analysis/newtest/agent_vs_freepass_distribution_20251105_160745.png",
     "analysis/설문조사_모드별_분석결과.md",
-    "참고문헌_인용위치_분석.md",
-    "인용오류_수정완료_보고서.md",
-    "참고문헌_팩트체크_최종보고서.md"
+    "참고문헌_인용위치_분석.md"
   ]
 }
