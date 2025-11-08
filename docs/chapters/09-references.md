@@ -41,9 +41,6 @@ Krathwohl, D. R. (2002). A revision of Bloom's taxonomy: An overview. *Theory In
 박정민, 손홍찬. (2024). 생성형 AI(ChatGPT-4o)를 활용한 수학 교육의 가능성 탐색. *수학교육학연구*, *34*(2), 151-172.
   > **인용**: 2장 2.4 (AI의 교육적 활용 가능성)
 
-Chandler, P., & Sweller, J. (1992). The split-attention effect as a factor in the design of instruction. *British Journal of Educational Psychology*, *62*(2), 233-246. https://doi.org/10.1111/j.2044-8279.1992.tb01017.x
-  > **인용**: 2장 2.6.5 (인지 과부하 이론)
-
 Degen, B. (2025). Resurrecting Socrates in the Age of AI: A study protocol for evaluating a Socratic tutor to support research question development in higher education. [Manuscript in preparation]
   > **인용**: 2장 2.5.3 (Orchestrated Multi-Agent System, AI 소크라테스 튜터)
 
@@ -82,22 +79,22 @@ Wooldridge, M., & Jennings, N. R. (1995). Intelligent agents: Theory and practic
 ---
 
 **문헌 통계**:
-- **총 17편** (본문 인용)
+- **총 16편** (본문 인용)
 - **교육학 이론**: 7편 (Anderson & Krathwohl, Bloom, Dewey, Graesser & Person, Hattie×2, King, Krathwohl)
-- **학습 과학**: 3편 (Braun & Clarke, Chandler & Sweller, Schoenfeld)
+- **학습 과학**: 2편 (Braun & Clarke, Schoenfeld)
 - **통계/방법론**: 1편 (Cohen)
 - **AI/시스템**: 2편 (Degen, Wooldridge & Jennings)
 - **국내 연구**: 3편 (홍경선·김동익, 박정민·손홍찬, 한국교육개발원)
-- **국외 논문**: 14편, **국내 논문**: 3편
+- **국외 논문**: 13편, **국내 논문**: 3편
 
 **특징**:
 - 전통적 교육학 이론(Dewey, Bloom, Anderson & Krathwohl)과 최신 AI 연구(Degen 2025) 균형
-- 실증적 연구 중심: 원문 확인 완료된 문헌만 인용
-- 국내외 연구 균형: 국내 3편(18%), 국외 14편(82%)
-- **2025-11-08 레퍼런스 검증 완료**: 
-  - 본문 미인용 레퍼런스 11개 삭제 (Narciss, Maurya, Shulman, Sweller, Tomlinson, Rothstein, Zimmerman, Dewey 1933, NCTM, Wood et al., Holm)
+- 실증적 연구 중심: 원문 확인 완료된 문헌만 인용 (4편)
+- 국내외 연구 균형: 국내 3편(19%), 국외 13편(81%)
+- **2025-11-08 레퍼런스 검증 최종 완료**: 
+  - 본문 미인용 레퍼런스 12개 삭제 (Narciss, Maurya, Shulman, Sweller, Tomlinson, Rothstein, Zimmerman, Dewey 1933, NCTM, Wood et al., Holm, Chandler & Sweller)
   - 원문 확인 완료 4개 (King, Hattie & Timperley, 홍경선·김동익, 박정민·손홍찬)
-  - Chandler & Sweller (1992), Degen (2025) 추가로 본문 인용 정확성 개선
+  - Degen (2025) 본문 추가로 최신 AI 연구 반영
 
 **알파벳 순 정렬**: APA 7판 기준 저자 성(last name) 알파벳 순으로 정렬됨 (한국어 저자는 가나다 순)
 

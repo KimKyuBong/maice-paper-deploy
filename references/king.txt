@@ -1,0 +1,1144 @@
+American Educational Research Journal
+Summer 1994, Vol. 31, No. 2, pp. 338-368
+Guiding Knowledge Construction
+in the Classroom:
+Effects of Teaching Children
+How to Question and How to Explain
+Alison King
+California State University San Marcos
+Following teacher-presented science lessons, pairs of fourth and fifth graders
+studied the material by asking and answering each others' self-generated questions. In one condition students' discussion was guided by questions designed
+to promote connections among ideas within a lesson. In a second condition
+discussion was guided by similar lesson-based questions as well as ones intended to access prior knowledge/experience and promote connections between
+the lesson and that knowledge. All students were trained to generate explanations (one manifestation of complex knowledge construction). Analysis of postlesson knowledge maps and verbal interaction during study showed that
+students trained to ask both kinds of questions engaged in more complex
+knowledge construction than those trained in lesson-based questioning only
+and controls. These findings, together with performance on comprehension
+tests for material studied, support the conclusion that, although both kinds
+of questions induce complex knowledge construction, questions designed to
+access prior knowledge/experience are more effective in enhancing learning.
+ALISON KING is Professor of Educational Psychology at California State University
+San Marcos, San Marcos, CA 92096. Her specializations are cognition and instruction.Questioning and Knowledge Construction
+C ontemporary constructivist theories of learning maintain that when individuals encounter new information they use their own prior knowledge
+and personal experience to help them make sense of that new material (Resnick,
+1987). During this meaning-making process, individuals may draw inferences
+about the new information, take a new perspective on some aspect of their
+existing knowledge, elaborate the new material by adding details, and generate
+relationships between the new material and information already in memory.
+Each of these procedures helps individuals reformulate the new information
+or restructure their existing knowledge and thereby achieve deeper understanding (Brown & Campione, 1986; Brown, Bransford, Ferrara, & Campione, 1983).
+According to Wittrock's model of generative learning (e.g., Wittrock, 1974,
+1990), understanding and memory of material are enhanced when individuals
+actively construct knowledge and integrate it in these ways, rather than simply
+memorize information as presented. Those self-generated inferences, elaborations, and relationships are personally meaningful and anchored in that individual's own experience. These views of learning are consistent with contemporary connectionist theories as well as network models of memory (e.g.,
+Anderson, 1976; Baddeley, 1976: Rumelhart & McClelland, 1986; Schank, 1975),
+which claim that the structure of memory is associative. During the process
+of reformulating information or constructing knowledge, new associations are
+formed and old ones altered within the individual's knowledge networks or
+structures. These links connect the new ideas together and integrate them into
+that individual's existing cognitive representations of the world. Adding more
+and better links results in a more elaborated and richly integrated cognitive structure that facilitates memory and recall.
+Because knowledge construction is an internal cognitive process, researchers studying this area must look for external indications that knowledge construction is taking place. Although written tests and other learner-developed
+products can reveal evidence that new knowledge has been constructed or existing knowledge reformulated, overt indications of on-line knowledge construction require an analysis of process data; for example, learners' think alouds when
+they work alone during learning or their verbal interaction when they work
+in pairs or groups. Verbal indicators of knowledge construction may include
+simple restatements of information and paraphrasing of material; however, more
+complex knowledge construction is indicated by explanations, inferences,
+justifications, hypotheses, speculations, and the like (Chan, Burtis, Scardamalia,
+& Bereiter, 1992; King & Rosenshine, 1993). Chan et al. (1992) have shown
+that the level of such knowledge-construction activity exerts a corresponding
+direct effect on learning. And two lines of research (e.g., Chi, Hutchinson, &
+Robin, 1989; Webb, 1989) have consistently shown that when students provide self-explanations during study, their performance on learning tasks is
+enhanced.
+Several recent studies have demonstrated that knowledge construction can
+be made intentional through instructional interventions. For example, generative
+summarizing has been used to reformulate material read, thus enhancing text
+comprehension (e.g., Armbruster, Anderson, & Ostertag, 1987; Wittrock, 1974,
+339King
+1990; Wittrock & Alesandrini, 1990). Elaboration strategies have been used to
+facilitate integration of new facts with prior knowledge (e.g., Pressley & Levin,
+1986; Pressley, McDaniel, Turnure, Wood, & Ahmad, 1987; Pressley, Wood,
+Woloshyn, Martin, King, & Menke, 1992). Idea-prompting statements have been
+used to improve creative writing (e.g., Scardamalia, Bereiter, & Steinbach, 1984);
+and various questioning procedures have been used to stimulate inferencing
+and explanation (e.g., Graesser, 1992; Graesser & Franklin, 1990; King, 1989,
+1990, 1992; King & Rosenshine, 1993; Martin & Pressley, 1991; Pressley et al.,
+1992). In each of these studies learners were prompted to think about new
+material in such a way that they transformed that material in some manner,
+thus constructing new knowledge.
+Guided Questioning and Knowledge Construction
+One of those instructional interventions is based on a cognitive strategy known
+as guided cooperative questioning. In guided cooperative questioning students
+use a set of thought-provoking question stems such as ' 'What are the strengths
+and weaknesses of. . . ?" ''What would happen if. . . ?" and "Why is. . . important?" to generate their own specific questions on the material being studied.
+Then in small groups or pairs they pose their questions to each other and answer
+each other's questions. In a series of studies in small-group discussion contexts
+conducted by the present author, students used this strategy for learning material
+presented in teacher-led lessons and lectures. Results of those studies showed
+that students using guided cooperative questioning performed better on comprehension of the material than did comparison students who simply discussed
+the material (King, 1989), used unguided cooperative questioning (King, 1990),
+used cooperative questioning with less-elaborated stems (King & Rosenshine,
+1993), or used similar questions generated by other students (King, in press).
+Furthermore, the guiding questions consistently elicited elaborated explanations,
+inferences, justifications, speculations, and other outward signs of complex
+knowledge construction (King, 1989, 1990; King & Rosenshine, 1993).
+Therefore, it was concluded that such overt constructive activity enhances
+learning.
+Findings also indicated that the effectiveness of the guided questioning
+strategy can be attributed to the format of the guiding questions. Specifically,
+the format of those questions helped the learners to generate specific kinds of
+questions that prompted them to think about and discuss the material in specific
+ways such as comparing and contrasting, inferring cause and effect, noting
+strengths and weaknesses, evaluating ideas, explaining, and justifying. As a result,
+during discussion the learners tended to make those same kinds of connections
+among ideas. Presumably the mental representations they constructed reflected
+those same precise and explicit links between and among the ideas in that
+material. Such highly elaborated and richly integrated mental representations
+would provide more cues for recall and would be more stable and durable over
+time; and this could account for strategy users' improved comprehension of
+the material and for their enhanced ability to remember it later on (King & Rosenshine, 1993).
+340Questioning and Knowledge Construction
+Results such as these led to the speculation that the use of different types
+of guiding questions might promote the building of qualitatively different
+knowledge structures. For example, particular question stems might prompt
+individuals to construct new representations of the presented material in longterm memory; in effect, they would be constructing new knowledge of the
+material presented in the lesson per se. In contrast, other types of questions
+might promote connecting the new material to existing knowledge structures.
+These questions would, in effect, go beyond the lesson by linking it to prior
+knowledge relevant to the lesson topic, and resulting in the construction of
+more complex mental representations (cf. internal and external connections,
+Mayer, 1980, 1984). To illustrate, generic questions that are simply ''comprehension" oriented such as "What does. . .mean?" and "Describe. . .in your own
+words" might help students to define central concepts and recall the main ideas
+from the lesson; whereas questions that are more integrative in nature such
+as "How are. . .and. . .similar?" and "How does. . .affect. . .?" might induce
+learners to connect and integrate several of the newly presented ideas. The mental representations of individuals using these two different types of questions
+would presumably differ somewhat, the former being less complex and the
+latter more complex; however, they would both be lesson based, that is,
+representations of the newly presented material. On the other hand, in contrast to those lesson-based questions, certain other question stems might prompt
+students to go beyond the lesson content to access their prior knowledge and
+personal experience and connect the new material to existing knowledge structures, thus embellishing those existing mental representations and thereby constructing more complex knowledge. For example, such "experience-based"
+questions as "How d o e s . . . tie in with. . . that we learned before?" might prompt
+learners to "mindfully" (see Pressley et al., 1992; Perkins & Salomon, 1989)
+access their relevant prior knowledge and link the new material to their existing knowledge structures. Other experience-based questions might encourage
+an even broader view of the lesson material and how it relates to the learner's
+everyday experience and knowledge of the world. To illustrate, experiencebased questions such as "How could. . .be used to. . .?" and "What would
+happen if. . . ?" call for creative thinking. They require learners to access a wider
+range of material from their own experience to be able to make the needed
+links. To establish, for example, how a lesson concept could be used to explain an everyday occurrence or solve an everyday problem, students have to
+think further. Presumably, the different mental representations resulting from
+the lesson-based and experience-based constructive activity would affect
+memory and recall for the material differently (cf. the distinction that Kintsch,
+in 1986, makes in learning from text between mental representations that are
+text-based models and ones that are situation models).
+In addition to training students to generate thoughtful questions to induce
+constructive activity in each other, we speculated that knowledge construction might be further promoted if students were also trained in how to generate
+explanations and other verbal manifestations of knowledge construction. In particular, if children could be provided with guidance in how to explain, the ef-
+341King
+fects of using the guided questioning strategy combined with this explanation
+training might be even more pronounced (cf. Chi et al., 1989; Webb, 1989).
+Furthermore, training students in how to explain would reduce effects resulting
+from individual differences in ability to generate explanations.
+The Present Study
+In the present study, two different guided questioning strategies and unguided
+questioning were compared. In one questioning condition, students' discussion was guided by the use of lesson-based questions intended to induce construction of knowledge of the lesson itself by facilitating connections among
+the ideas within the lesson. In a second condition, students' discussion was
+guided by both lesson-based and experience-based questions. The experiencedbased questions went beyond the material being studied and were specifically
+intended to access prior knowledge and experience. In the third condition,
+which served as a control, questioning was not guided. Students in all three
+conditions received training in how to explain.
+The purposes of the present study were (a) to compare the effects of the
+two guided questioning-explaining strategies and the explanation-only control
+group on immediate comprehension of presented material and retention of that
+material over time, (b) to assess the quantity and quality of overt knowledge
+construction activity of students in the three conditions as evidenced by analysis
+of the content of their tape-recorded discussions of lesson content, (c) to assess
+students' cognitive representations of lesson material as evidenced by the
+knowledge maps they constructed, and (d) to determine the effects of explanation training within the control group by comparing both pre- and posttreatment lesson comprehension scores and knowledge maps.
+Method
+Sample and Design
+Twenty-eight fourth graders and 30 fifth graders in one suburban elementary
+school in southern California were combined into one class to participate in
+the study. These particular students were selected because they constituted the
+classes of two teachers who had expressed interest in learning new cognitive
+strategies for use in the classroom. Students in both classes were normally
+distributed in terms of ability and ethnicity. Ten of the students did not obtain
+parental permission to have their discussions tape-recorded or were mainstreamed special education students. Those 10 students were paired nonrandomly with each other so as to include them with their classmates in all of the
+learning activities; however, their verbal interaction was not taped and data from
+their tests were not used in any of the analyses.
+The remaining 48 students were randomly assigned to one of the three
+conditions separately by grade: guided questioning-explaining in which students'
+discussions were guided by the use of questions designed to promote connec-
+342Questioning and Knowledge Construction
+tions within the lesson material (lesson-based questioning with explanation);
+guided questioning-explaining in which students' discussions were guided by
+the use of both lesson-based and experienced-based questions (experience-based
+questioning with explanation); and a control group untrained in questioning
+but directed to engage in questioning (unguided questioning with explanation).
+Within conditions and grade level students were randomly assigned to dyads.
+This process resulted in the following configuration within conditions: lessonbased questioning with explanation, n = 16, four dyads of fourth graders and
+four dyads of fifth graders; experience-based questioning with explanation,
+n = 18, four dyads of fourth graders and five dyads of fifth graders; unguided
+questioning with explanation, n = 14, three dyads of fourth graders and four
+dyads of fifth graders. Assignment to conditions and dyads was made without
+regard to gender or ethnicity. Consequently, although most dyads were
+heterogeneous on ethnicity, some of the dyads were same-sex and some were
+mixed-sex.
+Overview of Procedures
+All instruction, training, practice, and testing connected with this study was
+designed as part of the regular science curriculum for these students. All of these
+activities were carried out in the students' classroom environment with their
+regular teachers under supervision of the investigator. The two teachers whose
+classes participated worked as a team to conduct all activities over a period
+of 3 weeks. The teachers received extensive training from the investigator in
+how to teach the explanation procedure and the question-generation strategies
+to their students.
+The instructional materials consisted of a series of lessons constituting a
+unit titled "Systems of the Body." To determine prior knowledge of the unit
+topic, each student constructed a knowledge map of systems and parts of the
+body. Immediately following an initial lesson, a test of comprehension of that
+lesson was administered. The following day students (as a group) received training and practice in how to formulate explanations. In the next session, students
+in the two questioning conditions were pulled out separately by condition and
+trained in their respective questioning strategies. They were provided with
+strategy prompt cards on which their guiding questions were listed. In each
+of the next two sessions a lesson was presented to the whole class, and then
+students got into their dyads to practice using their questioning and explaining
+strategies in discussing the material presented. During the next session (posttest session) a lesson was presented, students discussed it in their pairs (this
+time their discussions were tape-recorded); then they completed the written
+posttest and constructed knowledge maps representing the lesson content. The
+next session (transfer session) consisted of presentation of a new lesson, discussion in pairs but without the prompt cards (again taped), followed by testing
+and knowledge mapping. The final session (retention session) consisted only
+of the administration of a 7-day retention test on the material presented in the
+posttest lesson followed by construction of a knowledge map on the entire unit
+"Systems of the Body."
+343King
+Materials
+Instructional materials. The unit on systems of the body was developed
+from school district curriculum materials. The unit consisted of five lessons,
+each covering one system of the body: circulatory, digestive, respiratory, brain
+and nervous, and skeletal-muscular. The five lesson plans were developed collaboratively by the investigator and the two teachers.
+Strategy prompt cards. Three sets of individual hand-held strategy prompt
+cards were developed for the corresponding three conditions. These cards were
+used by the students during the practice and subsequent lesson-discussion sessions to prompt their discussion. The cards for each condition, shown in Figure
+1, were the same color; however, their content differed according to condition. The cards for the lesson-based questioning condition contained three comprehension questions and seven connection questions, as did the experiencebased questioning cards. However the last three connection questions on the
+experience-based questioners' cards explicitly guided students to access prior
+knowledge (e.g., "How does. . .tie in with. . .that we learned before?").
+Although four of the connection questions were the same for these two groups,
+the students were trained to use them differently, as described in a following
+section. The control students' prompt cards contained only instructions to
+discuss the lesson by asking questions and giving explanations, but their cards
+provided no guiding questions.
+Teacher Training
+The two teachers met with the investigator for two sessions (of 1 hour and
+3 hours) prior to the beginning of the study for training in how to teach skills
+of explanation and question-generation as well as use of the lesson materials
+to present the five lessons. The same materials and procedures were used in
+training the teachers as the teachers were expected to use with the students.
+These materials included the explicit lesson plans, color overheads, and strategy
+prompt cards; and the procedures included explicit instruction, use of examples,
+and cognitive modeling followed by scaffolded practice with corrective feedback. These materials and procedures are described more fully in following
+sections.
+Strategy Training, Practice, and Treatment
+All training, practice, and testing occurred in conjunction with lesson content
+from the unit; that is, these activities were situated within specific learning contexts (Brown, Collins & Duguid, 1989).
+Explanation training. The teachers used a procedure developed by the
+author (King, in preparation) for teaching the skill of explanation. Briefly, the
+teachers first explained to the students the differences between describing
+something (telling the "what' about it) and explaining it (telling the "why" and
+"how" of it). In doing so they used examples of description and explanation
+from students' previous (pretreatment) lesson on the circulatory system. Then
+the teachers demonstrated how to develop an explanation using concepts and
+344Comprehension questions
+Describe. . .in your own words.
+What does. . . mean?
+Why is. . . important?
+Connection questions
+Explain why. . .
+Explain how. . .
+How are. . . and. . . similar?
+What is the difference between. . . and. . . ?
+How does. . . affect. . . ?
+What are the strengths and weaknesses of.
+What causes. . . ?
+Prompt card given to students in the lesson-based questioning
+condition
+Comprehension questions
+Describe... in your own words.
+What does. . . mean?
+Why is. . .important?
+Connection questions
+Explain why. . .
+Explain how. . .
+How are. . . and. . . similar?
+What is the difference between. . . and. . . ?
+How could... be used t o . . . ?
+What would happen if. . .?
+How d o e s . . . tie in with. . . that we learned before?
+Prompt card given to students in the experience-based questioning
+condition
+DIRECTIONS:
+Discuss the lesson with each other.
+Ask each other questions.
+Answer each other's questions by giving
+explanations.
+Prompt card given to students in the unguided questioning
+condition
+Figure 1. Prompt cardsKing
+processes from that same lesson. They proceeded to scaffold the students in
+acquisition of the skill of explaining while they continually emphasized the importance of (a) telling how and why, (b) using students' own words to do so,
+and (c) connecting the idea being explained to something already known. The
+appendix ^frows the procedure and one example the teachers used for teaching
+how to explain.
+Questioning training. The two trained-questioning groups received their
+training and instructions in question generation separately. Students in both
+groups used material from the lesson on the circulatory system for training and
+practice in question generation.
+In both conditions, the teacher first taught students to differentiate between
+"memory" questions (those requiring them to simply remember and repeat what
+they had heard and memorized from the lesson) and "thinking" questions (those
+that require them to not only remember information from the lesson but also
+think about that information in some way). She provided examples of memory
+questions (e.g., "What are the main parts of the circulatory system?") and thinking questions (e.g., "Describe in your own words how the circulatory system
+works."). The teacher pointed out that every memory question could be converted to a thinking type of question. She demonstrated this from the overhead
+on which memory and thinking questions were paired. Then she used modeling and scaffolding to assist students to generate additional examples of both,
+first as a group and then individually. Thinking questions were further classified
+into comprehension questions and connection questions. She stated that comprehension questions "check how well you understand the lesson" and "ask
+you for a definition in your own words or ask you to tell about something you
+learned about—but in your own words, not the teacher's words," e.g.,
+"Describe in your own words how the circulatory system works." Connection questions were defined as linking two ideas from the lesson togeher (e.g.,
+"What is the difference between arteries and veins?" and "Explain how what
+happens in the heart affects what happens in the arteries."). Several examples
+of both kinds of questions were provided on the overhead, and the students
+were then given their question prompt cards. Using the question stems provided on the prompt cards, the same modeling and scaffolding procedures were
+followed to provide for student practice in generating examples of both comprehension questions and connection questions.
+Students in both groups were told that asking and answering their own
+(and others') comprehension and connection questions would help them to
+understand and remember the material presented in the lessons. Students were
+then assigned to dyads, where they practiced asking each other questions on
+the lesson they had on the circulatory system. Partners used their newly acquired skills of explanation to answer the questions posed by their partners.
+Scripted materials were used to ensure that the same procedures for
+teaching about questioning and training in question generation were followed
+for both the lesson-based questioning group and the experience-based questioning group. However, experienced-based questioners were trained to use
+their connection questions to generate experience-based questions as well as
+346Questioning and Knowledge Construction
+lesson-based ones. Experience-based questions explicitly related the lesson
+material to students' prior knowledge and experience, that is, material learned
+in a previous lesson or their general knowledge of the world. Students were
+told that ''some thinking connection questions link ideas from the lesson to
+ideas outside of the lesson, that is, things you already knew about." Examples
+of such questions were given: "Explain how the circulatory system is similar
+to a tree," "What do you think would happen if our hearts were smaller?" and
+"How is the circulatory system related to the digestive system?"
+Students in the explanation only (control) group did not receive any training in questioning but did receive the same explanation training as the questioners did. During the sessions when the treatment students received questioning
+training, control students practiced discussing the same lesson content. Instead
+of a question prompt card, these students received a prompt card with instructions to discuss the lessons fully with their partners by asking and answering
+each others' questions (see Figure 1). The control students were also told that
+asking and answering each others' questions on the material would help them
+to understand and remember it better.
+Practice. Following each of the next two lessons of the unit (the digestive
+system and the respiratory system), which were presented to the class as a whole,
+the students in all conditions got into their dyads. They practiced their respective questioning and explaining strategies by discussing the lesson using the
+prompt cards appropriate to their condition. The teachers and two experimenters monitored the dyads to ensure that students were following directions and using their questioning and explaining strategies correctly. Additional
+modeling and scaffolding were used as needed. Following all training and practice sessions, the prompt cards were collected to avoid the potential problem
+of students sharing the questions with their peers in other conditions.
+Treatment. The lesson for the treatment (posttest) session was on the brain
+and nervous system. It was conducted 6 days after the last practice session.
+This session was carried out in the same manner as the practice sessions with
+the exception that the dyads' discussions were tape-recorded. By way of explanation, the teachers told the students "We want to tape your discussion
+because we want to be sure you are all participating, and we can't listen to
+all dyads at the same time." Because of lack of access to a sufficient number
+of tape recorders, taping was carried out in two sessions. For the first session,
+half of the dyads from each of the three conditions (randomly selected prior
+to the session) discussed the lesson and were taped. They then took a written
+posttest and constructed a knowledge map of the brain and nervous system
+while the second session of discussion taping was taking place with the remaining dyads, who then completed their written tests and knowledge maps.
+Discussion-taping time was 10 minutes for each session. Students had not been
+told that they would be tested.
+A transfer session was conducted 3 days later to determine whether students
+would maintain the use of their strategy unprompted and with a new lesson.
+In this session the teachers presented a lesson on the skeletal-muscular system.
+The students discussed the lesson content as before but were not given their
+347King
+prompt cards for guidance, nor were they reminded to ask questions or explain. Students who asked for their cards were told "You can discuss the lesson
+without the cards." Discussion time was again 10 minutes. Students' discussion was again taped in the same manner as mentioned previously, and they
+completed a written comprehension test and a knowledge map on the lesson
+content.
+Tests
+Measures of both cognitive and metacognitive performance were administered.
+Tests of lesson comprehension were administered to all students individually
+at pretreatment, posttreatment, transfer, and retention to assess their literal comprehension of the material presented as well as their ability to make inferences
+and connections beyond that material. At the conclusion of the posttest and
+transfer sessions, students constructed knowledge maps of the presented lesson
+content. They also constructed knowledge maps of the unit topic prior to the
+study and at completion. In addition, verbal protocols were taken during the
+students' discussion following the posttest and transfer. These protocols were
+to be examined for evidence of strategy maintenance/transfer as well as instances
+of explanation and other verbal behaviors that might indicate knowledgeconstruction activity. Metacognitive measures were completed by students during strategy training, practice, and each of the sessions in which they discussed
+lessons.
+Lesson comprehension tests. The four lesson comprehension tests were
+developed by the author based on the lesson plans used and materials provided
+in the instructional unit. Each test addressed only material covered in its related
+lesson. The pretreatment test of lesson comprehension, administered following the first lesson and prior to the beginning of training and treatment, was
+used to determine students' pretreatment ability to understand material
+presented in a teacher-led lesson. Two tests were constructed based on the posttest lesson, one for administration at the end of the posttest session and the
+other seven days later to assess retention of that lesson material. A test was also
+administered at the transfer session to assess comprehension of the transfer
+lesson. Students completed all comprehension tests individually. The difficulty level of all tests was set high to avoid ceiling effects. Each test contained
+10 items in multiple-choice format that assessed students' literal comprehension of points emphasized in the lesson and five questions in open-ended written format that assessed their ability to make inferences, provide explanations,
+integrate concepts within the lesson, or go beyond what was presented in the
+lesson. An example of multiple-choice items used is, "The muscles are controlled by the: (a) cerebellum, (b) spinal cord, (c) cerebral cortex." Multiplechoice items were scored at one point each for correct answers for a total of
+10 points possible for the literal understanding part of the test. Examples of
+the open-ended questions are, "Why would a human be totally unable to function without a cerebrum?" and "How is the autonomic nervous system related
+to the respiratory system?" Answers to these questions were not explicitly stated
+in the lesson and required inferencing and/or explanation based on material
+348Questioning and Knowledge Construction
+that was explicitly provided. Students could receive up to two partial points
+for each open-ended question for a total of 10 points possible for the inferential/integrative part of the test. Reponses to the open-ended questions were
+evaluated independently by two raters who were blind to condition. Interrater
+reliabilities ranged from .88 to .92 for the inferential/integrative parts of the
+four tests. Any differences were reconciled through discussion to determine
+the data to be used in analyses. Internal consistency for the four comprehension tests ranged from .56 to .78 for the literal (multiple-choice format) parts
+of the tests and .52 to .61 for the inferential/integrative (written-response format) parts. These reliabilities are understandably low given the small number
+of items on each part of the tests. Perhaps using more than 10 items on the
+literal part of the tests and 5 on the inferential/integrative parts would bolster
+the reliabilities.
+Knowledge mapping. Knowledge mapping was used as a means of assessing the accuracy and complexity of children's constructed knowledge for each
+lesson and for the unit as a whole. A knowledge map of a given topic was considered to be a reflection of the child's mental representation of knowledge
+about that topic and therefore a valid indication of that child's current state
+of understanding. Such maps, often called semantic maps, are graphic representations of information and consist of nodes that represent concepts, parts, or
+attributes and links to represent relationships among the nodes. Semantic maps
+are commonly used as a way of representing declarative knowledge about a
+particular topic (e.g., Jones, Pierce, & Hunter, 1988-9; McKeown & Beck, 1990).
+Knowledge mapping of this sort had been used for assessment purposes in a
+previous study (King & Rosenshine, 1993) as well as by several other researchers (e.g., Leinhardt & Smith, 1985; Leinhardt, 1987; Naveh-Benjamin, McKeachie,
+Lin, & Tucker, 1986; Novak & Go wan, 1984). According to their teachers,
+students in the present study had previously learned to construct semantic maps
+of this sort and had used the procedure often over the preceding few months.
+The investigator used lesson plans and videotapes of the lessons to construct model knowledge maps for each of the posttest and transfer lessons and
+for the unit as a whole. These maps showed component parts and various
+characteristics and functions of the systems; and they depicted hierarchical
+ordering and other relationships among parts. Using these models as a standard, students' knowledge maps were analyzed to assess their accuracy and
+completeness and for evidence of attempts to construct more complex
+knowledge in the form of connections among concepts within the unit and
+connections to their prior knowledge and other world knowledge not specifically covered in the lessons. The knowledge maps were evaluated holistically and
+rated on a scale of 1 to 5 by two independent raters blind to condition. Interrater reliabilities ranged from .90 to .92 for the four knowledge maps. Discrepancies in ratings were resolved through averaging and those averages were used
+in the analyses.
+Metacognitive self-monitoring. As mentioned previously, after each lesson's
+discussion session students rated how well they understood the materials as
+well as their use of specific aspects of the explaining and questioning procedures.
+349King
+In the two guided questioning conditions students answered the questions "How
+well did I do in making up comprehension questions?" " H o w well did I do
+in making up connection questions?" and " H o w well did I explain to others?"
+In the control condition students answered " H o w well did I discuss today's
+lesson?" In all three conditions students also answered " H o w well d o I think
+I understand today's lesson?" Each item was rated on a 5-point scale. These
+scales clearly have face validity, but because they rely on students' self
+assessments of their verbal behavior, they may not be highly reliable. However,
+the repeated use of these metacognitive measures was expected to help students
+to monitor their application of the strategies, thus enhancing strategy use, as
+they have been found to do in studies by Davey and McBride (1986) and others
+(e.g., Brown, 1987).
+Strategy use. Following the retention tests at the end of the study all
+students rated their perceptions of the strategy's helpfulness in learning. On
+a 7-point scale students responded to: " H o w helpful was this questioning
+strategy in helping you learn and remember the information in this unit on the
+parts and systems of the body?" Students' perceptions of the helpfulness of
+a strategy have been found to influence their continued use of that strategy
+(Pressley, Levin, & Ghatala, 1988).
+Student verbal interaction. The two sets of verbal protocols were analyzed
+to identify examples of knowledge constructive activity. The coding scheme
+used was the same as one used previously by the author (King & Rosenshine,
+1993) with one exception described later. The coding scheme, summarized in
+Table 1, consists of three levels of questions and three corresponding levels
+of knowledge construction.
+Table 1
+Coding Scheme for Question Generation and Knowledge Construction
+Questions Knowledge-construction statements
+Integration question
+Goes beyond what was explicitly
+stated in the lesson, connects
+two ideas together, or asks for
+an explanation, inference, justification, etc.
+Comprehension question
+Asks for a process or term to
+be described or defined
+Factual question
+Asks for recall of facts or other
+information explicitly covered
+in the lesson
+Knowledge integration
+Makes new connections or goes beyond
+what was provided in the lesson—
+explanations, inferences, relationships
+between ideas, justifications, statements
+linking lesson content to material from
+outside the lesson (prior knowledge and
+personal experience)
+Knowledge assimilation
+Definitions, descriptions, and other
+material paraphrased in students' own
+words
+Knowledge restating
+Simple statements of fact or information
+gleaned directly from the lesson or prior
+knowledge.
+350Questioning and Knowledge Construction
+As in a previous study (King & Rosenshine, 1993), questions were coded
+according to what they asked for. Thus, factual questions simply asked for recall
+of facts or other information explicitly covered in the lesson; that is, they simply
+called upon memory for presented material (e.g., "How many bones are in the
+body?" and "Name two kinds of neurons.").
+Comprehension questions were ones that asked for a process or term to
+be described or defined. These questions were at the comprehension level. Additionally, although they too called on memory in the sense that they asked
+for recall of material presented and could be answered by restating definitions
+verbatim as presented by the teacher, they also provided opportunities for
+students to paraphrase definitions and procedures in their own words and thus
+could induce a more complex level of knowledge building on the part of the
+responder. The generic comprehension questions on students' prompt cards,
+shown in Figure 1, were designed to prompt children to generate specific
+comprehension-type questions. Examples of comprehension questions students
+asked are "What does autonomic mean?" and "Describe in your own words
+what a neuron is."
+Integration questions (King & Rosenshine, 1993), which were labeled connection questions on the children's prompt cards, were thought-provoking questions that required students to go beyond what was explicitly stated in the lesson
+by linking two ideas together in some way (e.g., "How is the cerebellum different from the medulla?" and "How is the spinal cord like this overhead projector cord?"), or asking for an explanation, or requiring some sort of inference,
+justification, or speculation (e.g., "What do you think would happen if we had
+no bones?"). Questions following the format of any of the connection questions in Figure 1 were coded as integration questions; however, not all integration questions followed the structure of the provided connection questions.
+Three levels of knowledge-construction statements were identified, ranging from low to high in complexity, and roughly corresponding to the three
+kinds of questions. Simple statements of information or facts gleaned directly
+from the lesson or from prior knowledge or experience were coded as
+knowledge restating (King & Rosenshine, 1993), the lowest level of knowledge
+construction. For example, in response to the question "What is the muscle
+attached to the bone with?" a knowledge restatement was "It is attached by
+ligaments."
+In a previous study on knowledge construction (King & Rosenshine, 1993)
+all of the indicators of complex knowledge construction were grouped into
+one category labeled "explanations." In contrast, in the present study these
+indicators of knowledge construction were separated into two categories:
+knowledge assimilation (roughly corresponding to the declarative form of the
+"assimilation" level in the constructive activity scale developed by Chan et al.,
+1992), and knowledge integration. Knowledge assimilation statements were
+statements that demonstrated understanding of the material by paraphrasing
+definitions or processes presented in the lesson; that is, the definition was not
+restated verbatim, but was translated into a student's own words and often
+elaborated upon. For example, in response to the integration question "How
+351King
+are bones and muscles similar?" the statement 'They attach to each other and
+help each other do their work" shows understanding of the interdependence
+of the two subsystems and is stated in the students' own words; and therefore
+was coded as a knowledge assimilation statement. Similarly, the following statement on the importance of the nervous system appears to be in the student's
+own words and shows knowledge assimilation: "It is important because if we
+didn't have it we wouldn't be able to feel and breathe and move—and think.
+The brain sends messages to the nervous system—to all parts of the body and
+the nerves send messages back to the brain. They send messages on what to
+do and the reason it is important is because we wouldn't be able to do anything."
+Statements that integrated aspects of the new material in some manner or
+in some way went beyond the material presented in the lesson were evidence
+of more complex constructed meaning. Therefore, explanations, inferences,
+interpretations, relationships between ideas, justifications, speculations, and
+statements linking the lesson content to material from outside the lesson (prior
+knowledge) were coded as knowledge integration. For example, one student's
+description of the nervous system, "It is like the school office phone. The office phone has different lines—there are a lot—they can all be used at once
+without interfering with each other—to send messages back and forth," shows
+knowledge integration because it explains a concept by linking the new information about the nervous system to the student's prior knowledge about
+telephone systems. When one student asked "What is the most important part
+of your body?" her partner demonstrated knowledge integration by making
+the inference "It is the brain and the brain stem." This response was coded
+an inference rather than knowledge restating because this information had not
+been stated explicitly in the lesson.
+It was expected that, during discussion, integration questions would induce construction of complex knowledge (knowledge integration), whereas
+comprehension questions would induce knowledge assimilation. Similarly, factual questions could be expected to elicit restatement of factual knowledge (see
+Table 1). However, any type of question could (presumably) elicit any type of
+response and therefore be said to induce any level of knowledge construction.
+It should be noted that the act of generating questions, particularly comprehension and integration questions, is also knowledge-constructing activity
+because it requires some reconceptualization to generate such questions.
+However, in the present study the question-generation type of knowledge construction was instructed for and prompted during treatment and was therefore
+not classified as exclusively knowledge construction.
+Students' verbal interaction was coded by a rater blind to treatment condition and purpose of the experiment. To establish reliability, 10 protocols were
+randomly selected for coding by a second rater also blind to condition and experimental treatment. Interrater reliability on the six verbal interaction categories
+ranged from .92 to .99. Both raters examined the lesson plans or viewed the
+videotape of the lesson prior to rating to facilitate accuracy in coding of
+children's statements as having been restated verbatim or paraphrased, and
+covered in the lesson or not covered. The number of student questions and
+352Questioning and Knowledge Construction
+statements during the 10-minute discussion session were totaled for each dyad
+in each of the six verbal interaction categories. Thus, for both the posttest and
+transfer sessions, the data used in the analysis for each category represents the
+sum of two children's verbalization over a period of 10 minutes.
+Results
+The unit of analysis used in all subsequent analyses for lesson comprehension
+and verbal interaction was the dyad. This unit of analysis was used because
+the process of knowledge building during dyadic interaction was viewed as
+being interdependent; that is, the responses (and often the questions) of one
+partner are, to a great extent, elicited or stimulated by the questions and
+statements of the other partner. Therefore, all student verbal interaction data
+(questions and knowledge-building statements) were collapsed within each dyad
+for the posttest discussion session as well as for the transfer discussion session.
+Similarly, although the comprehension tests and knowledge maps were completed by students independently, partners' scores on these measures would
+have been affected by the joint knowledge-building activity within their dyad.
+Therefore, total scores on these measures were combined for each dyad. Means
+and standard deviations for these data, as well as significant post hoc comparisons, are presented in Table 2.
+Separate 3 (Strategy) x 2 (Grade Level) analyses of variance (ANOVAs) on
+the pretreatment tests of lesson comprehension and the pretest knowledge map
+of the content of the science unit showed no significant differences among the
+three conditions and no significant Grade x Strategy interactions. On the literal
+part of the lesson comprehension test, analyses revealed F(2, 18) = 1.89,
+p = . 19 for grade and Fs = (2, 18) < 1 for both strategy and interaction effects; and for the inferential/integrative part, Fs < 1 for strategy and grade and
+F(2, 18) = 1.26,p = .31 for the Grade x Strategy interaction. On knowledge
+mapping, results were F(2, 18) = 3.39, p = .08 for grade, F(2, 18) < 1 for
+strategy, and F (2, 18) = 1.29, p = .30 for the Grade x Strategy interaction.
+Therefore, it was concluded that, prior to treatment, the three groups did not
+differ on their knowledge of the content to be covered in the unit, nor on their
+ability to learn from teacher-presented lessons. Neither did the fifth graders differ
+from the fourth graders in these respects.
+Lesson Comprehension
+Strategy x Grade Level ANOVAs revealed no significant differences between
+fourth and fifth graders on comprehension of the posttest lesson, F (2, 18) < 1,
+or retention, F(2, 18) < 1, and no significant interactions. Therefore, scores
+on these lesson comprehension tests were collapsed across the two grades for
+the following analyses.
+ANOVAs were used to determine effects of the three strategies on comprehension of the posttest lesson, on retention of that material 7 days later,
+and transfer. In each case when these ANOVAs were significant, Fisher's Pro-
+353Table 2
+Means, Standard Deviations, and Significant Post Hoc Comparisons for Dyads in Three Strategy Conditions
+Knowledge-construction
+Experience-based
+guided questioning
+with explanation
+(E) n * 9 dyads
+Strategy
+Lesson-based
+guided questioning
+with explanation
+(L) n = 8 dyads
+Unguided questioning
+with explanation
+(control)
+(C) n = 7 dyads
+M SD M SD M SD
+Significant
+post hoc
+comparisons
+Lesson comprehension3
+Pretest
+literal items
+inferential/integrative
+Posttest
+literal items
+inferential/integrative
+Retention test
+literal items
+inferential/integrative
+Transfer test
+literal items
+inferential/integrative
+6.89 2.21 7.38 1.30 7.14 1.77
+1.44 .77 1.25 .96 1.36 .95
+14.44 2.56 14.12 1.25 11.71 2.43 E > C * ; L > C
+5.28 1.12 5.06 1.76 3.14 1.84 E > C * ; L > C
+14.17 2.12 11.63 1.77 8.71 1.70 E > L > C *
+4.67 .94 3.50 .93 2.07 1.31 E > L > C *
+12.11 1.62 11.13 1.73 10.14 2.27
+3.28 1.64 3.13 1.62 2.86 1.11Verbal interactionb
+Posttest session
+Question type
+Integration
+Comprehension
+Factual
+Knowledge construction statements
+Knowledge integration
+Knowledge assimilation
+Knowledge restating
+Transfer session
+Question Type
+Integration
+Comprehension
+Factual
+Knowledge construction statements
+Knowledge integration
+Knowledge assimilation
+Knowledge restating
+Knowledge Mappingc
+Pretest map of unit
+Posttest map of unit
+Posttest lesson map
+Transfer lesson map
+5.89 2.21 6.75 1.75 .86 1.86 E>C*"•; L > C
+3.22 .97 4.75 2.49 2.86 2.26
+2.44 3.13 .50 1.07 7.00 5.68 C > E * ; C > L *
+2.56 1.23 1.38 1.06 .43 .78 E>L*; E > C * '
+4.78 2.04 5.63 3.70 1.29 .95 E > C * ; L > C *
+4.67 3.42 4.25 2.71 12.00 7.00 C > E * ' •; C > L
+3.00 1.41 3.13 2.10 1.29 1.11
+1.00 1.32 3.75 1.98 1.00 1.00 L>E*« '; L > C
+8.00 4.97 5.38 2.50 8.14 5.17
+.56 1.01 .88 1.72 .00 .00
+3.56 2.18 3.75 1.98 1.57 .97
+6.44 3.16 6.25 2.76 9.00 5.50
+4.67 1.00 4.88 1.46 4.43 1.27
+7.00 1.23 7.50 1.41 5.43 1.62 E>C*; ; L > C *
+6.11 1.27 4.75 1.75 4.57 1.51
+5.89 1.17 4.50 1.31 4.14 1.07 E>L*; E > C *
+Comprehension means reflect the combined scores for correct items within dyads. bPeer interaction means reflect totals within dyads during the
+10-minute session. cKnowledge map means reflect combined scores within dyads.
+*p<.05. **p<.01.King
+tected LSD post hoc procedure was used to examine pairwise comparisons
+among the three group means (see Seaman, Levin, & Serlin, 1991, for a discussion of the appropriateness of the Fisher test when no more than three means
+are compared).
+Posttest. Analyses revealed that, for the literal part of the posttest, F(2,
+21) = 3.56, p < .05, and for the inferential/integrative part, F(2, 21) = 4.17,
+p < .05. As Table 2 shows, the post hoc comparisons among the means for the
+three conditions on the posttest revealed that both the experience-based questioners and the lesson-based questioners performed significantly better than controls on literal comprehension as well as on inference/integration. These findings
+indicate that the guiding questions, whether lesson-based or experience-based
+in content, foster both literal comprehension as well as inference/integration.
+Retention. At retention, significant effects were also found for the literal
+part of the retention test, F (2, 21) = 16.34, p < .001, and for the inferential/integrative part, F(2, 21) = 11.99, p < .001. Fisher post hoc tests revealed that
+experience-based questioners outperformed lesson-based questioners who in
+turn outperformed controls on both the literal and inferential/integrative parts
+of the retention test. These results suggest that experience-based questions are
+superior to lesson-based ones in promoting retention of learned material over
+time.
+Transfer.The ANOVAs on the comprehension test for the transfer lesson
+were nonsignificant for both literal comprehension, F(2, 21) = 2.18, p = .15,
+and inference/integration, F (2, 21) < 1, indicating no differences among groups
+on comprehension at transfer.
+Student Verbal Interaction
+To determine how interaction within dyads might have contributed to these
+learning outcomes, student verbal interaction during the posttest study session
+and the transfer study session was analyzed for quantity and quality of questions asked and knowledge-construction statements made. First, to determine
+whether there were any grade level differences on these variables, Strategy x
+Grade Level ANOVAs were conducted on the six verbal interaction variables
+for the posttest study session and the transfer study session. There were no
+significant grade effects for any of the variables at posttest. For fact questions,
+integration questions, total questions, knowledge restatement, knowledge
+assimilation, and knowledge integration, all Fs (2, 18) < 1. And for comprehension questions, F ( l , 18) = 4.1, p = .06 (means = 4.45 & 2.92 for fourth and
+fifth grade, respectively). There were no significant Grade x Strategy interactions. Nor were any differences found at transfer. For fact questions, integration
+questions, total questions, knowledge restatement, all Fs (2, 18) < 1; and for
+knowledge assimilation, F(2, 18) = 1.52,p = .26, and for knowledge integration, F(2, 18) = 3.54, p = .08 (means = 1.00 & .08 for fourth and fifth grade,
+respectively). There were no significant Strategy x Grade interactions. These
+results indicate no grade differences; therefore, scores on the questioning and
+constructive activity variables were collapsed across the two grades for the
+subsequent analyses.
+356Questioning and Knowledge Construction
+Questioning and knowledge-construction statements at posttest. Inspection of Table 2 shows that, although there were no differences among the three
+conditions on total number of questions asked during the posttest discussion
+session, F(2, 21) < 1, students in the three conditions tended to ask different
+kinds of questions. ANOVAs on the data for questioning showed no differences
+among conditions for assimilation questions, F (2, 21) = 2.01, p < 15, but
+revealed differences for factual questioning, F (2, 21) = 6.16, p < .01, and
+integration questioning, F(2, 21) = 19-35, p< .001. These latter analyses were
+followed up with Fisher post hoc comparisons. Students in the control group
+asked significantly more factual questions than students in the experience-based
+condition. Students in both the experience-based questioning condition and
+the lesson-based questioning condition asked more integration questions than
+the controls. This latter finding is not surprising because this is the type of question students in the two questioning conditions had been trained to ask and
+were prompted to ask.
+A somewhat similar pattern of performance was demonstrated on the three
+levels of knowledge construction statements. Separate ANOVAs revealed significant differences among conditions on knowledge restating, F (2, 21) = 6.73,
+p < .01, knowledge assimilation, F (2, 21) = 6.08, p < .01, and knowledge
+integration, F (2, 21) = 8.00, p < .01. Fisher post hoc comparisons revealed
+that the controls made significantly more factual statements than did both the
+experience-based questioners and the lesson-based questioners. Also, students
+trained in experience-based questioning and those trained in lesson-based questioning demonstrated significantly more knowledge assimilation than did the
+control group. And, in terms of the highest level of knowledge construction,
+the experience-based questioners made significantly more knowledge integration statements than did the controls and the lesson-based questioners, who
+made somewhat more (but not significantly more) integration statements than
+the controls, p = .10.
+These findings lend some support to the notion of a correspondence
+between level of questioning and level of knowledge-construction activity, suggesting that level of questioning used may induce level of knowledge construction taking place. For example, not only did the control group operate at the
+lowest level of questioning, asking mostly factual questions (65% of their questions were factual), but also their statements were primarily at the lowest level
+of knowledge construction, with 88% of their statements being knowledge
+restatement. In contrast, experience-based questioners operated mostly at the
+highest level of questioning and knowledge construction. A full 51 % of their
+questions were at the integration level with another 28% at the comprehension level; whereas 21 % of their statements were knowledge integration ones,
+the highest level of constructive activity, and another 40% were knowledge
+assimilation. These findings suggest that when students ask integration and comprehension questions they are more likely to engage in complex levels of knowledge construction, and when they ask factual questions they are more likely
+to engage in knowledge restating, the lowest form of knowledge construction.
+Students' integration statements during the posttest discussion were ex-
+357King
+amined further to identify those integration statements that were experiencebased, statements that clearly referred to that student's existing knowledge or
+personal experience, and those that were lesson-based, ones referring to material
+within the lesson. An ANOVA on these data revealed significant differences
+among conditions for experience-based integration statements, F(2, 21) = 5.41,
+p < .05. Post hoc comparisons revealed that experienced-based questioners made
+significantly more experienced-based integration statements than did the lessonbased questioners, p < .05, who made more than controls, p < .05 (means =
+1.67, 1.25, and .29, respectively). This finding suggests that the experiencebased questioners actually did make some of the sorts of experiential connections and linkages to their prior knowledge that they had been trained to make.
+Furthermore, these findings show that accessing prior knowledge occurs infrequently in a naturally occurring spontaneous discussion, the control condition. The ANOVA for lesson-based integration statements was also significant,
+F (2, 21) = 3.91, p < 05. Post hoes revealed that experienced-based questioners
+made significantly more lesson-based integration statements than did lessonbased questioners, p < .05, and controls, p < .05 (means = .89, 13, & .14,
+respectively).
+Questioning and knowledge-construction statements at transfer. In the
+transfer discussion session, during which students did not use their prompt
+cards, the pattern of questioning and knowledge construction activity was not
+as clear cut. Again, there were no differences among conditions on total questions asked, F(2, 21) < 1. Nor were there any differences for factual questions,
+F (2, 21) < 1. However, there were differences among conditions on comprehension questions, F(2, 21) = 8.91, p < .01, and post hoc comparisons revealed
+that students trained in lesson-based questioning asked significantly more comprehension questions than did the experience-based questioners and the
+controls. Although the analysis for integration questions was only marginally
+significant, F(2, 21) = 3.03, p = .07, and therefore the post hoc test was not
+performed, the means in Table 2 clearly show that both experience-based and
+lesson-based questioners asked substantially more integration questions at
+transfer than did controls.
+The ANOVAs on the knowledge construction data from the transfer session showed no significant differences among conditions for knowledge
+restating, F (2, 21) = 1.16, p > .30, knowledge assimilation, F(2, 21) = 3.16,
+p > .05, and knowledge integration, F(2, 21) = 1.05, p > .35. However, inspection of the means in Table 2 shows that both the experience-based questioners and the lesson-based questioners demonstrated somewhat more knowledge assimilation than the control group and they showed some indication of
+knowledge integration. Here, too, integration statements were examined more
+closely to identify ones that were experience-based and those that were lessonbased. Although the ANOVA for experience-based integration statements was
+non-significant, F (2, 21) = 2.44,p = . 11, experience-based questioners made
+somewhat more experience-based statements than did the lesson-based questioners and controls (means = .78, .25, .00, respectively). The ANOVA on lessonbased integration statements was nonsignificant, F(2, 21) = 1.00.
+358Questioning and Knowledge Construction
+Knowledge Mapping
+The knowledge maps were constructed by the children as measures of their
+knowledge representation. In general, most of the children's knowledge maps
+depicted parts of a particular system of the body and facts about that system,
+but did not arrange them in hierarchical fashion nor show other relationships
+among them; that is, most of the maps were simple one-level ones that appeared
+unintegrated and were without evidence of clustering beyond that first level.
+All of the knowledge maps appeared to be lesson bound, or unit bound in the
+case of the pre- and postlesson knowledge maps of the unit topic, and they
+did not indicate connections to prior knowledge and other world knowledge
+not specifically covered in the lessons. Unfortunately it became clear that the
+students had not after all, prior to the beginning of the study, learned how to
+construct knowledge maps other than the simple component-parts sort with
+nodes linked to the central concept only. When asked about this, the teachers
+acknowledged that the students had not learned how to develop and depict
+hierarchical relationships among component parts. Because of their lack of prior
+skill in constructing sufficiently complex maps, the children undoubtedly were
+unable to graphically represent certain aspects of their knowledge structures,
+such as nodes representing prior knowledge and interrelationships (links) between and among various nodes. Therefore, the children's knowledge maps
+could not have accurately reflected the total complexity of their mental representations. Consequently, the maps were a valid measure of only the accuracy and
+completeness of the children's knowledge and not of its complexity. Therefore,
+the maps were evaluated only for accuracy and completeness.
+An ANOVA on the knowledge maps for the posttest lesson was marginally
+significant, F(2, 21) = 2.59, p = .09, and inspection of the means in Table 2
+shows that the experience-based questioners and the lesson-based questioners
+constructed somewhat more accurate and complete maps than did the controls. The analysis on the maps from the transfer lesson (muscles and bones)
+was significant, F(2, 21) = 4.97, p < .05, and post hoes revealed that the
+experience-based questioners produced better maps than did either the lessonbased questioners or the controls. The ANOVA for the posttreatment knowledge
+maps of the systems of the body unit was also significant, F(2, 21) = 4.34,
+p < .05, and post hoes showed that both of the trained questioning groups
+outperformed the controls.
+Explanation-Only Control Group Analyses
+To determine whether the explanation-only control group students improved
+in their ability to comprehend lessons, at both literal and inferential levels,
+separate repeated measures ANOVAs were conducted on dyads' scores for the
+literal portion and the inferential/integrative portion of the comprehension test
+on the pretest lesson (the circulatory system lesson) and the posttest lesson (the
+brain and nervous system lesson). Results indicated that over the span of this
+study the explanation-only control group students improved their skill in literal
+comprehension of teacher-led lessons, F ( l , 13) = 12.24, p< .05 (means =
+7.14, & 11.71 from pre to post) and they also improved in their ability to make
+359King
+inferences, explain, and integrate material from that lesson, F ( l , 13) = 7.91,
+p < .05 (means = 1.36 & 3.14 from pre to post). These control students also
+increased their knowledge of the systems of the body over the duration of the
+study as indicated by a repeated measures ANOVA conducted on their scores
+for the pretest and posttest knowledge maps of the systems of the body unit,
+F(l,13) = 10.50, p < .05 (means = 4.43 & 5.43 from pre to post). These results
+may suggest that simply learning how to explain can promote learning; however,
+there are no pre-post comparisons for knowledge integration or knowledge
+assimilation activity to support such a conclusion.
+Student Ratings of Their Lesson Comprehension
+A 3 (Strategy) x 3 (Time) repeated measures ANOVA was conducted on the
+individual students' ratings of how well they understood the lessons at practice sessions 1 and 2 and at posttest. The means for the three groups on the
+three lessons ranged from 4.28 to 4.78 on a 5-point scale. This analysis revealed
+no significant effect for strategy, or time, and no significant interaction. These
+results suggest that all three groups believed they understood the lesson material
+equally well regardless of which strategy was used, and their impression of their
+understanding did not improve or decrease over the period of the study.
+Student Ratings of Their Ability to Generate Questions and Explanations
+Three separate 2 (Strategy) x 4 (Time) repeated measures analyses were conducted on the experience-based questioners' and lesson-based questioners'
+ratings of how well they made up comprehension questions and connection
+questions and how well they explained things to their partner during the questioning sessions. For generating comprehension questions there was no significant effect for strategy, F (1, 96) = 1.73, p > .05. However, the effect for time
+was significant, F(3, 96) = 13.16, p< .001 (means = 3.73, 4.05, 4.59, 4.31
+from early to later sessions), indicating that students in both of the questioning
+conditions believed that they improved in their ability to generate comprehension questions over time. There was no Strategy x Time interaction. A similar
+pattern emerged for connection questions, with no significant effect for strategy,
+F ( l , 96) = < 1, and a significant effect for time, F(3, 96) = 6.65, p < .001
+(means = 4.14, 3.71, 4,51, 4.34 from first to last session). Again, apparently
+students believed that they improved with practice in generating connection
+questions.
+The repeated measures analysis for generating explanations revealed no
+significant effect for strategy and the effect for time only neared significance,
+F($, 96) = 2.37, p = .07. The means for the four sessions were 4.00, 4.35,
+4.48, and 4A6y indicating little change over time in students' ratings of their
+ability to explain. This may suggest that, according to students' perceptions,
+they learned well how to explain from their initial training session in explanation.
+A one-way repeated measures analysis was conducted on the control group
+students' ratings of how well they discussed lesson material. The effect for time
+was significant, F (3, 55) = 10.71,/? < .001 (means = 3.36, 4,36, 4.96, & 4.50
+over the four sessions), indicating students' sense of improvement with practice.
+360Questioning and Knowledge Construction
+Student Ratings of Strategy Helpfulness
+An ANOVA was used to examine students' end-of-study ratings of how useful
+they found their strategy to be for helping them learn the material in their science
+unit. On a 7-point scale, means were 4.64, 5.72, and 4.89 for the control, lessonbased questioning, and experience-based questioning groups respectively. There
+were no significant differences among conditions, F(2, 45) = 2.51, p > .09.
+Discussion
+Results of this study indicate that when children use questions that guide them
+to connect ideas within a lesson together or connect the lesson to their prior
+knowledge, they engage in complex knowledge construction which, in turn,
+enhances learning; and these learning effects are stronger for questions that connect to prior knowledge. These results are consistent with Wittrock's (1990)
+model of generative learning that indicates that material generated in relation
+to prior knowledge is more memorable. This study also shows that elementary
+age children can be trained to generate these kinds of questions for themselves,
+and they can also be taught how to formulate explanations, one manifestation
+of complex knowledge construction.
+Knowledge Construction
+Using guided questioning to stimulate discussion not only elicited verbal indicators of knowledge construction, but also enhanced comprehension and
+retention of presented material as well as knowledge mapping of that material.
+Although the children in both of the guided questioning strategy conditions
+outperformed their peers in the control group on lesson comprehension, as
+predicted, the experience-based questioners retained even more of the material
+over time than did the lesson-based questioners. This may suggest that connecting new material to existing knowledge structures, as the experience-based
+questioners were trained to do, facilitates retention more than does connecting concepts within the new material, as the lesson-based questioners were
+trained to do. Such a conclusion is consistent with the distinction that Kintsch
+(1986) makes between learning about text and learning from text. Kintsch points
+out that when a reader constructs a mental representation that is based only
+on the material read, that is, the mental representation is a text-based model
+of the material, that material can be remembered well; however, constructing
+a broader situation model facilitates inferencing as well. Similarly, in the present study, constructing a lesson-based model may have been less likely to promote memory and inferencing at retention than was integrating the material into
+existing knowledge in the continuous process of building more extensive mental
+representations of the world. The findings for knowledge integration lend support to this view. Not only did the experience-based questioners make more
+knowledge integration statements during the posttest discussion than did the
+lesson-based questioners, but also significantly more of their integration
+361King
+statements were experience-based ones as compared to those of the lessonbased questioners.
+The finding that the experience-based questioners engaged in more
+integration-level knowledge construction suggests that their knowledge structures were more integrated than those of the other groups, and the fact that
+they retained the material better over time suggests that those knowledge structures were also more stable. Furthermore, the finding that more of the
+experience-based questioners' integration statements were experienced-based
+than were those of the lesson-based questioners and controls suggests that their
+knowledge representations were also more global, more richly integrated with
+their existing knowledge and personal experience, than those of their peers.
+These findings together suggest that such stable, integrated, and global
+knowledge structures were a result of the use of experience-based questions.
+It may be that experience-based questions are more beneficial to learning than
+lesson-based questions or unguided questioning because they prompt students
+to access and use their prior knowledge and experience during knowledge construction, and, as a result, help them to construct more complex knowledge.
+If it had been possible to assess students' posttreatment knowledge structures by evaluation of their knowledge maps as originally planned, there might
+have been additional specific evidence to support the conclusions regarding
+the complexity of the children's posttreatment knowledge structures. In any
+case, the posttest maps of the experience-based questioners were more accurate
+and complete than those of the lesson-based questioners and controls, suggesting
+greater complexity of their mental representations. But why would the mental
+representations of the experience-based questioners be more accurate and complete than those of the lesson-based questioners when those maps only showed
+material from the lesson per se and did not go beyond the lesson to show connections to prior knowledge? The superiority of the experience-based questioners' maps over those of the lesson-based questioners can presumably be
+accounted for by the fact that during that posttest discussion session experiencebased questioners made more integration statements, more of which were
+experience-based connections, than did the lesson-based questioners. Perhaps
+the quantity and type of their knowledge integration statements at posttest
+resulted in such strong links to prior knowledge that the new material became
+sufficiently anchored in their mental representations as to be well reflected in
+their knowledge maps. The fact that they retained more of the posttest material
+after 7 days than did the lesson-based questioners suggests that their mental
+representations actually were more stable as well as more complete and accurate.
+It should be pointed out that these effects on knowledge construction (i.e.,
+lesson comprehension and retention, knowledge-construction statements, and
+knowledge mapping) cannot be explained by a metacognitive mediator, that
+is, students' perception that they were highly capable in using their strategy.
+For the metacognitive measures, there were no differences among conditions
+on students' ratings of their ability in lesson comprehension, questioning, and
+explaining, nor on their perception of the helpfulness of their strategy. Although
+these results suggest that self-monitoring and sense of strategy competence alone
+362Questioning and Knowledge Construction
+cannot account for differences among groups on knowledge construction, as
+pointed out previously, such self-ratings are not particularly reliable indicators
+of metacognition.
+Role of Questioning in Knowledge Construction
+Findings from this study suggest a correspondence between level of questioning and level of knowledge-construction statements, with integration questions
+(the highest level of questioning) inducing knowledge integration (the highest
+level of knowledge construction) and factual questions (the lowest level of questioning) inducing knowledge restatement (the lowest level of knowledge construction). At posttest the two groups trained in questioning asked more integration questions that did the controls. Furthermore, the experience-based
+questioners operated at the highest level of knowledge construction as indicated
+by the quantity of integration statements they made. Conversely, the controls
+operated at the lowest level of knowledge construction as evidenced by their
+asking more factual questions and making more knowledge restatements. Apparently when students ask integration and comprehension questions they are
+more likely to engage in higher levels of knowledge construction; and when
+they ask factual questions they are more likely to engage in knowledge restating,
+the lowest form of knowledge construction. Some additional support for this
+conclusion was found in students' behavior during the transfer session. In the
+transfer lesson discussion the experience-based questioners and the lesson-based
+questioners did not have their question cards to prompt them to ask their integration and comprehension types of questions and they asked somewhat more
+factual questions and made somewhat more restatements of knowledge than
+they had in the posttest session.
+Transfer
+In the transfer lesson discussion, both the experience-based questioners and
+lesson-based questioners did ask more integration questions than the controls,
+indicating that both of the trained questioning strategies were maintained at
+least to some extent in an unprompted context with new lesson material. Thus,
+these questioning strategies appear to be easily learned and used in an elementary classroom context even without prompting. However, despite the fact that
+those students rated highly both their ability to ask comprehension and connection questions and their ability to explain things, they did not maintain the
+same level of questioning or constructive activity in the transfer context, when
+they no longer had the question cards to prompt them, as they had in the posttest session. One explanation for these results may be that students needed more
+practice in generating questions and may have needed the suport of the question prompts for a longer period of time to internalize the stems. Other researchers (e.g., Davey & McBride, 1986; Graesser, 1992; Palincsar & Brown, 1989;
+Pressley et al., 1992) have pointed out the need for considerable training in
+question generation before that skill is acquired, let alone maintained. Or perhaps
+students were reluctant to use their questioning strategies on their own and
+363King
+may have needed more practice in applying them in other contexts before
+transfer effects could be expected.
+Strategy effects on comprehension at transfer were disappointing. It seems
+reasonable to expect that questions that deliberately establish links to the world
+outside the lesson (i.e., experience-based questions) would facilitate transfer
+to other non-lesson-based contexts to a greater extent than would lesson-based
+questions. However, there were no differences among conditions on lesson
+comprehension at transfer, and the experience-based questioners asked no more
+integration questions and made no more knowledge-integration statements than
+the lesson-based questioners did. However, their knowledge maps were more
+complex than those of the other two groups. By way of possible explanation,
+it should be recalled that, in contrast to their peers, a greater proportion of the
+experience-based questioners' integration statements at transfer were linkages
+to prior knowledge, that is, experience-based ones versus lesson-based ones;
+and this may have resulted in more richly integrated knowledge representations. If the experience-based questioners did achieve such richly integrated
+knowledge representations, that might explain the greater complexity of their
+knowledge maps, which in effect were an external reflection of those mental
+representations. Again, it is possible that the experience-based questions would
+have had an effect at transfer with more practice in question generation and
+more extended use of the question prompt cards.
+This study provides evidence that questioning strategies can be used to
+facilitate the knowledge construction process, which in turn enhances learning. Moreover, it lends support to the Chan et al. (1992) finding that knowledgeconstructive activity has a direct effect on learning.
+364Questioning and Knowledge Construction
+APPENDIX
+Procedure and Example Used for Teaching How to Explain
+• Explanations don't just tell what something is or describe it—they tell the how and
+why about it
+• Explanations should be in our own words—not just repeating an explanation we have
+heard and memorized
+• When we explain something we often use information we already have to make what
+we are explaining clearer (like comparing the new information to something we already
+know about)
+• Explanations often connect two things or ideas or link a procedure and an idea together
+Description Explanation
+Definition:
+Describing something or telling what happened (telling the "what")
+Example:
+Description of the circulatory
+system
+The circulatory system is made up of the
+heart, veins, arteries, and blood. Some of
+the arteries and veins are small, and some
+are large. The heart pumps blood through
+the arteries and veins.
+Explaining something or explaining what
+happened (telling the "why" and "how"
+of it)
+Explanation of the circulatory
+system
+We need a circulatory system in our
+bodies to move the blood around to all
+parts of the body because the blood carries oxygen, which is food for the cells of
+the body. All parts of the body need the
+oxygen to grow and function. The circulatory system is just a way of getting that
+oxygen moved around. The tubes the
+blood moves in are the arteries and veins.
+The arteries and veins are all connected,
+like highways and roads, so they can
+transport blood to any place in the body.
+Near the heart the arteries and veins are
+large because they have a lot of blood to
+carry, and as they get closer to one part
+of the body or to a cell they become much
+smaller (like freeways, highways, streets,
+roads, and dirt paths). They can also be
+seen as being like branches of a tree that
+get smaller as they get closer to the leaves
+because they don't have so much to carry
+to only one leaf. The heart is a pump and
+it pumps the blood so that it keeps moving around in the network of arteries and
+veins. The heart pumps by squeezing in
+and then releasing over and over and over
+(like making a fist and relaxing it).
+365King
+Note
+This research was supported by a faculty development grant to the author from California State University San Marcos. The author would like to thank Kim Morgan and Darlene
+Porter for their participation in the classroom training and instruction components of this
+study, and Amy Mauch and Barbara Rollins for assistance with transcribing verbal protocols,
+data collection, and coding. A version of this paper was presented at the Annual Meeting
+of the American Educational Research Association in Atlanta, Georgia, April, 1993.
+References
+Anderson, J. R. (1976). Language, memory and thought. Hillsdale: Erlbaum.
+Armbruster, B. B., Anderson, T. H., & Ostertag, J. (1987). Does text structure/summarization instruction facilitate learning from expository text? Reading Research Quarterly,
+22, 331-346.
+Baddeley, A. D. (1976). The psychology of memory. New York: Harper & Row.
+Brown, A. L. (1987). Metacognition, executive control, self-regulation and other more
+mysterious mechanisms. In F. E. Weinert & R. H. Kluwe (Eds.), Metacognition,
+motivation, and understanding (pp. 65-116). Hillsdale, NJ: Erlbaum.
+Brown, A. L., Bransford, J. D., Ferrara, R. A., & Campione, J. C. (1983). Learning,
+remembering and understanding. In J. H. Flavell & E. M. Markman (Eds.), Handbook of child psychology. Vol. Ill: Cognitive development (pp. 77-166). New York:
+Wiley.
+Brown, A. L., & Campione, J. C. (1986). Psychological theory and the study of learning
+disabilities. American Psychologist, 41, 1059-1068.
+Brown, J. S., Collins, A., & Duguid, P. (1989). Situated cognition and the culture of learning. Educational Researcher, 18, 32-42.
+Chan, C. K. K., Burtis, P. J., Scardamalia, M., & Bereiter, C. (1992). Constructive activity
+in learning from text. American Educational Research fournal, 29, 97-118.
+Chi, M. T. H., Hutchinson, J. E.,. & Robin, A. F. (1989). How inferences about novel
+domain-related concepts can be constrained by structural knowledge. Merrill-Palmer
+Quarterly, 35, 27-62.
+Davey, B., & McBride, S. (1986). Effects of question-generation training on reading comprehension, fournal of Educational Psychology, 78, 256-262.
+Graesser, A. C. (1992). Questioning mechanisms during complex learning. (Technical
+report). Arlington, VA: Cognitive Science Program, Office of Naval Research.
+Graesser, A. C, & Franklin, S. P. (1990). QUEST: A cognitive model of question answering. Discourse Processes, 13, 279-303.
+Jones, B. F., Pierce, J., & Hunter, B. (1988-9) Teaching students to construct graphic
+representations. Educational Leadership, 46(4), 20-25.
+King, A. (1989). Effects of self-questioning training on college students' comprehension
+of lectures. Contemporary Educational Psychology, 14, 366-381.
+King, A. (1990). Enhancing peer interaction and learning in the classroom through
+reciprocal peer questioning. American Educational Research fournal, 27(4),
+664-687.
+King, A. (1992). Comparison of self-questioning, summarizing, and notetaking-review
+as strategies for learning from lectures. American Educational Research fournal,
+29(2), 303-323.
+King, A. (1993). Making a transition from "sage on the stage" to "guide on the side."
+College Teaching, 41(1) 30-35.
+King, A. (in press). Autonomy and question asking: The role of personal control in guided
+cooperative questioning. Learning and Individual Differences.
+King, A., & Rosenshine, B. (1993) Effects of guided cooperative questioning on children's
+knowledge construction, fournal of Experimental Education, 61, 127-148.
+366Questioning and Knowledge Construction
+Kintsch, W. (1986). Learning from text. Cognition and Instruction, 3(2), 87-108.
+Leinhardt, G. (1987). Development of an expert explanation: An analysis of a sequence
+of subtraction lessons. Cognition and Instruction, 4, 225-282.
+Leinhardt, G., & Smith, D. A. (1985). Expertise in mathematics instruction: Subject matter knowledge. Journal of Educational Psychology, 77, 247-271.
+Martin, V. L., & Pressley, M. (1991). Elaborative interrogation effects depend on the nature
+of the question. Journal of Educational Psychology, 83, 113-119.
+Mayer, R. E. (1980). Elaboration techniques that increase the meaningfulness of technical
+text; An experimental test of the learning strategy hypothesis. Journal of Educational Psychology, 770-784.
+Mayer, R. E. (1984). Aids to prose comprehension. Educational Psychologist, 19, 30-42.
+McKeown, M. G., & Beck, I. L. (1990). The assessment and characterization of young
+learners' knowledge of a topic in history. American Educational Research Journal, 27, 688-726.
+Naveh-Benjamin, M., McKeachie, W. J., Lin, Y., & Tucker, D. G. (1986). Inferring students'
+cognitive structures and their development using the "ordered tree technique." Journal of Educational Psychology, 78, 130-140.
+Novak, J. D., & Gowan, D. B. (1984). Learning how to learn. Cambridge University Press.
+Palincsar, A. S., & Brown, A. L. (1989). Instruction for self-regulated reading. In L. B.
+Resnick & L. E. Klopfer (Eds.), Toward the thinking curriculum: Current cognitive
+research (pp. 19-39) Alexandria, VA: Association for Supervision and Curriculum
+Development.
+Perkins, D. N., & Salomon, G. (1989). Are cognitive skills context-bound? Educational
+Researcher, 18, 16-25.
+Pressley, M., & Levin, J. R. (1986). Elaborative learning strategies for the inefficient learner.
+In S. J. Ceci (Ed.), Handbook of cognitive, social, and neuropsychological aspects
+of learning disabilities (pp. 175-212) Hillsdale, NJ: Lawrence Erlbaum.
+Pressley, M., Levin, J. R., & Ghatala, E. S. (1988). Strategy comparison opportunities promote long-term strategy use. Contemporary Educational Psychology, 13, 157-168.
+Pressley, M., McDaniel, M. A., Turnure, J. E., Wood, E., & Ahmad, M. (1987). Generation and precision of elaboration: Effects on intentional and incidental learning. Journal of Experimental Psychology: Learning, Memory, and Cognition, 13, 291-300.
+Pressley, M., Symons, S., McDaniel, M. A., Snyder, B. L., & Turnure, J. E. (1988). Elaborative
+interrogation facilitates acquisition of confusing facts. Journal of Educational
+Psychology, 800), 268-278.
+Pressley, M., Wood., E. Woloshyn, V. E., Martin, V., King, A., & Menke, D. (1992). Encouraging mindful use of prior knowledge: Attempting to construct explanatory
+answers facilitates learning. Educational Psychologist, 27, 91-109.
+Resnick, L., (1987). Education and learning to think. Washington, DC: National Academy
+Press.
+Rumelhart, D. E., & McClelland, J. L. (1986). Parallel distributed processing: Explorations in the microstructure of cognition. Cambridge: MIT Press.
+Scardamalia, M., Bereiter, C, & Steinbach, R. (1984). Teachability of reflective processes
+in written composition. Cognitive Science, 8, 173-190.
+Schank, R. C. (1975). Conceptual information processing. North Holland: Amsterdam.
+Seaman, M. A., Levin, J. R., & Serlin, R. C. (1991). New developments in pairwise multiple comparisons: Some powerful and practicable procedures. Psychological Bulletin,
+110, 577-586.
+Webb, N. M. (1989). Peer interaction and learning in small groups. International Journal of Educational Research, 21-39.
+Wittrock, M. C. (1974). Learning as a generative process. Educational Psychologist, 11,
+87-95.
+Wittrock, M. C. (1990). Generative processes of comprehension. Educational Psychologist,
+367King
+24, 345-376.
+Wittrock, M. C, & Alesandrini, K. (1990) Generation of summaries and analogies and
+analytic and holistic abilities. American Educational Research Journal, 27, 489-502.
+Manuscript received May 6, 1993
+Revision received September 30, 1993
+Accepted November 3, 1993
+368

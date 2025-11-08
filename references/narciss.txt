@@ -1,0 +1,1977 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/233833269
+Feedback Strategies for Interactive Learning Tasks
+Chapter · January 2008
+CITATIONS
+521
+READS
+16,851
+1 author:
+Susanne Narciss
+TUD Dresden University of Technology
+138 PUBLICATIONS 3,934 CITATIONS
+SEE PROFILE
+All content following this page was uploaded by Susanne Narciss on 27 May 2014.
+The user has requested enhancement of the downloaded file.
+11
+Feedback Strategies for
+Interactive Learning Tasks
+Susanne Narciss
+Learning and Instruction, Technische Universitaet Dresden, Germany
+CONTENTS
+Introduction .....................................................................................................................................................................126
+Feedback in Instructional Contexts: Definition..............................................................................................................126
+A Conceptual Framework for Feedback in Interactive Instruction................................................................................127
+Basic Assumptions.................................................................................................................................................128
+Factors Affecting the Efficiency of External Feedback........................................................................................130
+Requirements of Learning Tasks and Instructional Objectives...................................................................130
+Internal Loop Factors: Prior Knowledge, Cognitive, Metacognitive, and Motivational Skills..................130
+External Loop Factors: Instructional Goals, Diagnostic Procedures, Feedback Quality ...........................131
+Designing and Evaluating (Tutoring) Feedback.............................................................................................................132
+Selecting and Specifying the Functions of External Feedback............................................................................132
+Cognitive Functions .....................................................................................................................................133
+Metacognitive Functions..............................................................................................................................134
+Motivational Functions ................................................................................................................................134
+Selecting and Specifying the Content of Feedback Elements..............................................................................135
+Overview on Elaborated Feedback Components ........................................................................................135
+Cognitive Task and Error Analyses .............................................................................................................136
+Selecting and Specifying the Form and Mode of Feedback Presentation ...........................................................137
+Immediate vs. Delayed Feedback Timing ...................................................................................................137
+Single Try vs. Multiple Try: Simultaneous vs. Sequential Presentation of Elaborated Feedback ............138
+Adaptive vs. Nonadaptive Feedback Presentation ......................................................................................138
+Unimodal vs. Multimodal Feedback Presentation ......................................................................................139
+Implications for Evaluating (Tutoring) Feedback.................................................................................................139
+References .......................................................................................................................................................................140
+125
+In J. M. Spector, M. D. Merrill, J. J. G. van Merriënboer, & M. P. Driscoll (2008) (Eds.), Handbook of Research on Educational Communications and Technology (pp. 125-144). Mahwah, NJ: LEA.
+Susanne Narciss
+ABSTRACT
+Modern information technologies increase the range
+of feedback strategies that can be implemented in com-
+puter-based learning environments; however, the
+design and implementation of feedback strategies are
+very complex tasks that are often based more on intu-
+ition than on psychologically sound design principles.
+The purpose of this chapter is to present theoretically
+and empirically based guidelines for the design and
+evaluation of feedback strategies. To this end, this
+chapter describes an interactive, two-feedback-loop
+model that explains core factors and effects of feed-
+back in interactive instruction (Narciss, 2006). Based
+on these theoretical considerations, a multidimensional
+view of designing and evaluating multiples feedback
+strategies under multiple individual and situational
+conditions is presented. This multidimensional view
+integrates recommendations of prior research on elab-
+orated feedback (Schimmel, 1988; Smith and Ragan,
+1993), task analyses (Jonassen et al., 1999), error anal-
+yses (VanLehn, 1990), and tutoring techniques (McK-
+endree, 1990; Merrill et al., 1992).
+KEYWORDS
+Cybernetics: System theory concerned with the issues
+of regulation, order, and stability confronting us in
+the treatment of complex systems and processes.
+Feedback: Output of a system that is fed back to the
+controller of the system as an input signal to reg-
+ulate the system with regard to a reference value
+(cybernetic definition); post-response information
+that is provided to learners to inform them of their
+actual state of learning or performance (instruc-
+tional context).
+Informative tutoring feedback: Multiple-try feedback
+strategies providing elaborated feedback compo-
+nents that guide the learner toward successful task
+completion without offering immediately the cor-
+rect response.
+Interactive learning task: Tasks providing multiple
+response steps or tries and instructional compo-
+nents such as feedback, guiding questions,
+prompts, simulation facilities, and so on.
+INTRODUCTION
+For almost a century researchers have investigated the
+factors and effects of feedback involved in instruc-
+tional contexts; consequently, the body of feedback
+research is very large. This large body of feedback
+126
+research has been examined and revisited extensively
+by Edna Mory in previous editions of this Handbook
+(Mory, 1996, 2004). As space is restricted, the body
+of feedback research that was included in these previ-
+ous reviews will be not revisited in detail here, but the
+insights of this research will be organized and outlined
+on the basis of a conceptual framework for designing
+and evaluating feedback for interactive learning tasks.
+To introduce this conceptual framework, definitions of
+the term feedback will be discussed first.
+FEEDBACK IN INSTRUCTIONAL
+CONTEXTS: DEFINITION
+The term feedback is a widely used concept in many
+technical and scientific domains (e.g., economics, elec-
+tronics, biology, medicine, psychology). The concept
+of feedback is derived from cybernetics (Wiener,
+1954), which is concerned with the control of sys-
+tems—that is, with issues of regulation, order, and
+stability that arise in the context of complex systems
+and processes. In cybernetics, feedback refers to the
+output of a system that is fed back to the controller of
+the system as an input signal. This input/feedback sig-
+nal closes the feedback loop and, in combination with
+an externally defined reference value, controls the sys-
+tem. In addition to the reference value and the feedback
+signal, the controller and the variable to be controlled
+are key elements. The controller stores the reference
+value, compares it with the current actual value, and,
+on the basis of this comparison, assesses what correc-
+tion is required; hence, the effects of a feedback signal
+depend not only on this feedback signal but also all
+the other functional elements of the causal loop.
+Since the development of Thorndike’s (1913) law
+of effect, it has become well established in psychology
+that the consequences of a behavior may influence the
+rate and intensity of that behavior in future situations.
+In the domain of learning and instruction, feedback
+has been considered to be either a fundamental prin-
+ciple for efficient learning (Andre, 1997; Bilodeau,
+1969; Bloom, 1976; Fitts, 1962; Taylor, 1987) or at
+least as an important element of instruction (Collies et
+al., 2001; Dick et al., 2001).
+Some instructional researchers consider feedback
+in instructional contexts to be any type of information
+that is provided to learners after they have responded
+to a learning task (Wager and Wager, 1985). This
+notion of feedback is far too large because of the large
+variety of post-response information, and it does not
+include the idea that the information is presented with
+the purpose of allowing the learner to compare his or
+her actual outcome with a desired outcome to regulate
+or control the next attempt with this learning task.
+Experimental researchers thus use a more limited
+notion of feedback. They use the term informative
+feedback to refer to all post-response stimuli that are
+provided to a learner by an external source of infor-
+mation, according to experimentally defined rules and
+conditions, to inform the learner on his or her actual
+state of learning or performance (Annett, 1969; Bilo-
+deau, 1969; Holding, 1965).
+According to the cybernetic and experimental defi-
+nitions, a general definition for feedback in instructional
+contexts might be as follows: Feedback is all post-
+response information that is provided to a learner to
+inform the learner on his or her actual state of learning
+or performance. In instructional contexts, this definition
+of feedback requires the differentiation among feedback
+presented by an external source of information and feed-
+back provided by internal sources of information (i.e.,
+information directly perceivable by the learner while
+task processing, such as proprioceptive information
+when performing a pointing task). This differentiation
+is particularly important from a methodological point
+of view; consequently, in early experimental feedback
+studies researchers tried to eliminate or control internal
+sources of feedback to investigate the effects of external
+feedback on learning and performance (for a review, see
+Bilodeau, 1969). The differentiation among external and
+internal feedback is also crucial if one investigates the
+effects of feedback on the basis of recent instructional
+models viewing the process of knowledge acquisition
+as a process of active knowledge construction and com-
+munication (Jonassen, 1999) or as a self-regulated learn-
+ing process (Butler and Winne, 1995). This differentia-
+tion should be kept in mind when revisiting feedback
+research and considering feedback strategies.
+External feedback may confirm or complement the
+internal feedback, or it may contradict the internal
+feedback. The latter case raises at least three questions:
+• How do learners treat or cope with the dis-
+crepancy between internal and external feed-
+back?
+• What individual and situational factors con-
+tribute to a discrepancy between external and
+internal feedback?
+• How can we design and evaluate feedback
+strategies that support learners regulating
+their learning process successfully if there is
+a discrepancy between internal and external
+feedback?
+The first question has been addressed implicitly by
+the response certitude model of Kulhavy and his col-
+laborators (Kulhavy and Stock, 1989; Kulhavy et al.,
+Feedback Strategies for Interactive Learning Tasks
+1990a,b; Stock et al., 1992) and by the five-stage
+model of mindful feedback processing (Bangert-
+Drowns et al., 1991). Furthermore, it was explicitly
+the focus of Butler and Winne’s theoretical synthesis
+regarding feedback and self-regulated learning (Butler
+and Winne, 1995). These models have been described
+and discussed in detail in Mory’s prior reviews (Mory,
+1996, 2004).
+The second question has been answered indirectly
+as a result of meta-analyses that showed that external
+feedback effects are not always positive and thus tried
+to identify possible moderators for the efficiency of
+external feedback (Bangert-Drowns et al., 1991;
+Kluger and DeNisi, 1996). The insights of these meta-
+analyses are integrated in the conceptual framework
+elaborated below.
+The third question, one of the most crucial ques-
+tions for instructional design and practice, has been in
+part addressed by researchers developing and evaluat-
+ing intelligent tutoring systems (ITS). Detailed reviews
+of the insights of ITS research are provided by Ander-
+son et al. (1995) and VanLehn et al. (2005); see also
+Chapters 24 and 27 in this Handbook. Core issues and
+insights from prior research with regard to this ques-
+tion are discussed below.
+A CONCEPTUAL FRAMEWORK
+FOR FEEDBACK IN
+INTERACTIVE INSTRUCTION
+This section focuses on feedback for interactive (com-
+puter-based) learning tasks that is provided by an exter-
+nal source of information (e.g., an instructional pro-
+gram, a teacher) to contribute to the regulation of the
+learning process in such a way that learners acquire the
+knowledge and skills required to master these tasks. As
+elaborated in the next sections, internal feedback is
+considered an important factor for treating the infor-
+mation provided by the external feedback. Conceptu-
+alizing feedback as an instructional activity that aims
+at contributing to the regulation of a learning process
+makes it possible to use the core insights provided by
+models of instruction and self-regulated learning
+(Bloom,1976; Boekaerts, 1996; Carroll, 1963) to ana-
+lyze possible factors and effects of informative feed-
+back. Instructional models are based on the assumption
+that the effects an instructional activity can have are
+determined by the quality of the instructional activity
+(e.g., scope, nature, and structure of the information
+provided and form of presentation), individual learning
+prerequisites (e.g., previous knowledge, metacognitive
+strategies, motivational dispositions, and strategies),
+and situational factors in the instructional setting
+127
+Susanne Narciss
+Learner
+Teacher-Instructional Medium
+Learner Factors
+• Cognitive, metacognitive
+• Motivational
+Instructional Factors
+• Instructional goals
+• Instructional content and tasks
+Subjective Representation of
+Task Requirements
+Internal Reference Value
+Internal Controller
+• Processes internal reference value and internal feedback
+• Compares internal reference value and internal feedback
+• Compares external feedback and internal reference value
+• Compares internal and external feedback
+• Generates internal control action
+External Feedback
+Internal Control Action
+= External Control Action
+Internal Feedback
+of Actual Output
+Control
+Actuator
+• Correcting
+• Elaborating
+Controlled Variables
+• Cognitive performance criteria
+• Meta-cognitive performance criteria
+• Motivational criteria
+Internal
+Sensor
+External Representation of
+Task Requirements
+External Reference Value
+External Controller
+• Processess external reference value and feedback
+• Compares external reference value and feedback
+• Generates external control action
+of Actual Output
+External Feedback
+External
+Sensor
+Controlled Process
+Mastery of Learning Task Requirements
+Figure 11.1 Overview of the components of the ITFL model. (From Narciss, S., Informatives tutorielles Feedback. Entwicklungs-
+und Evaluationsprinzipien auf der Basis instruktionspsychologischer Erkenntnisse (Informative Tutoring Feedback), Waxmann,
+Münster, 2006. With permission.)
+(instructional goals, learning content, and tasks). The
+current conceptual framework links these issues with
+systems theory and attempts to integrate findings from
+systems theory with recommendations from prior
+research on elaborated feedback (Schimmel, 1988;
+Smith and Ragan, 1993), on task analysis (Jonassen et
+al., 1999), on error analysis (VanLehn, 1990), and on
+tutoring techniques (Anderson, et al., 1995; McKen-
+dree, 1990; Merrill et al., 1992; VanLehn et al., 2005).
+Basic Assumptions
+The basic components of a generic feedback loop serve
+as the starting point for formulating a feedback model
+with two interacting feedback loops: the interactive,
+two-feedback-loop (ITFL) model:
+• Identification or definition of the variables
+that should be controlled
+• Continuous measurement of these controlled
+variables by a sensor
+• Feedback of the actual values of the con-
+trolled variables to a controller
+• Reference value for each controlled variable
+that is predefined and stored in the controller
+• Comparison of the actual values of the con-
+trolled variables with (predefined) reference
+values by the controller
+Note: If there is a discrepancy between the actual and
+the reference value, the controller must transform this
+discrepancy into a control action.
+• Transmission of this control action to a con-
+trol element (control actuator)
+• Execution of the control action by a control
+actuator
+According to systems theory, the control actuator
+that carries out the control actions, the controlled vari-
+ables, and a sensor that measures the controlled vari-
+able are key elements of the controlled process. To
+regulate the controlled process, the controller requires
+the reference value, the actual value provided by feed-
+back, and comparison and transformation procedures
+for generating the control actions.
+In the ITFL model, the controlled process is
+defined as the carrying out of learning tasks or the
+mastering of the demands associated with these tasks.
+Building on models of self-regulated learning (Boe-
+kaerts, 1996) as well as the approach of Butler and
+Winne (1995), this model distinguishes among cogni-
+tive, motivational, and metacognitive demands (see
+Figure 11.1). Quantifiable controlled variables for
+these criteria could include carefully defined and oper-
+ationalized cognitive, metacognitive, or motivational
+indicators of mastery of particular task requirements.
+128
+When regulatory paradigms from systems theory
+are applied to an instructional context containing exter-
+nal feedback, two interacting feedback loops must be
+considered: (1) an internal feedback loop that pro-
+cesses internal feedback, or the actual values to which
+the learner has direct access (e.g., confidence in
+answers, perceived effort); and (2) an external feed-
+back loop that processes the actual values determined
+by the learning medium (e.g., the instructor, learning
+program, experimenter).
+A distinction between external and internal feed-
+back loops means that it is also necessary to differen-
+tiate between the following elements:
+• Sensors—Internal and external feedback
+loops require a diagnostic component that
+registers the actual values of the controlled
+variables.
+• Reference values—Control of internal and
+external feedback loops can only be carried
+out on the basis of relevant reference values.
+In the ITFL model, it is assumed that internal
+reference values are generated on the basis
+of a subjective representation of the demands
+of learning tasks, whereas external reference
+values are based on an external representa-
+tion of these demands. Subjective task rep-
+resentations are mainly governed by
+individual prerequisites such as existing
+knowledge, metacognitive and motivational
+strategies, and individual learning goals.
+External representations of task demands are
+closely related to the features of an instruc-
+tional context, particularly to the specific
+instructional goals.
+• Controller—For the actual values registered
+by the internal and external sensors to be
+processed, each requires a component in
+which reference and actual values can be
+compared; thus, both external and internal
+controllers in which this process can be car-
+ried out are needed.
+In an instructional context that provides external infor-
+mative feedback, the differentiations made in the ITFL
+model lead to the following assumptions regarding the
+interaction between internal and external feedback loops:
+• The starting points for internal and external
+regulatory processes are the relevant con-
+trolled variables for the particular controlled
+process (i.e., mastery of learning task
+requirements).
+Feedback Strategies for Interactive Learning Tasks
+• The actual value of the controlled variable
+or variables is registered by both the
+learner and by an external actor such as an
+instructor or a computer-based instruc-
+tional system.
+• External actual values are initially pro-
+cessed externally in the external controller
+of the teaching medium. The external ref-
+erence value, the comparison between the
+reference value and the actual value, and
+the externally specified rules for calculat-
+ing the correction value determine the ini-
+tial value of the external controller. This
+initial value, which in systems theory
+would be referred to as an external correc-
+tion variable, is fed to the internal control-
+ler as external feedback.
+• This external feedback is processed in the
+internal controller along with the internal
+actual value (i.e., internal feedback). This
+means that several comparisons must be car-
+ried out by the internal controller. These
+include comparisons between:
+• Internally measured actual value (internal
+feedback) and internal reference value
+• External feedback and internal feedback
+• External feedback and internal reference
+value
+• From these comparison processes a correc-
+tion variable (i.e., an internal correction
+variable) must be generated. The learner’s
+main task in this case is to locate the source
+of any discrepancies that are detected
+between these various values. Such dis-
+crepancies can occur when, for example,
+internal or external sensors register feed-
+back values inaccurately, the quality of
+internal or external feedback is poor, or the
+subjective task representation is incorrect
+or imprecise and thus leads to incorrect
+reference values. The results of this causal
+analysis are important for calculating the
+internal correction variable. This means
+that the internal correction variable is the
+result of a number of internal processing
+procedures.
+• The internal correction variable is channeled
+to the first stage of the controlled pro-
+cess—the control element—where it serves
+as the basis for selection and activation of
+corrective measures. These corrective mea-
+sures can in turn have an impact on the con-
+trolled variables.
+129
+Susanne Narciss
+Factors Affecting the Efficiency
+of External Feedback
+The assumptions of the ITFL model lead to the con-
+clusion that the efficient regulation of task processing
+with external feedback may be affected by factors of
+both the internal and the external feedback loops. Both
+feedback loops contribute to the regulation of the same
+controlled process, which is characterized by the
+requirements of the learning tasks.
+Requirements of Learning Tasks
+and Instructional Objectives
+As mentioned above, the starting point for both feed-
+back loops is the controlled process, which can be
+more or less complex depending on the requirements
+of the learning tasks and the instructional objectives.
+For a system to be regulated successfully, it is crucial
+that its controlled process be described carefully and
+precisely. At the same time, it is necessary to define
+which variables will serve as controlled variables that
+will be measured and regulated, how these are to be
+measured, and the procedures through which correc-
+tions are to be carried out. In instructional contexts,
+this involves initially analyzing exactly what require-
+ments are associated with the instructional content,
+goals, and tasks. Moreover, to select corrective mea-
+sures for the regulation of controlled variables, the
+errors and difficulties that could arise in connection
+with mastering task requirements must also be identi-
+fied, as well as the information and strategies that are
+necessary to eliminate these errors or difficulties.
+Instructional content, goals, and tasks may be more
+or less complex concerning their requirements.
+Bloom’s revised version of the taxonomy of learning
+objectives may serve as a basis for categorizing task
+requirements (Anderson et al., 2001). Analyzing learn-
+ing task requirements on the basis of this taxonomy
+makes it clear that it is more difficult to identify pre-
+cisely the content-related, cognitive, metacognitive,
+and motivational requirements for complex tasks (i.e.,
+those that require higher order, content-related knowl-
+edge or operations) than for simple tasks. As a conse-
+quence, one may assume that the internal and external
+feedback loops might function less efficiently for com-
+plex learning tasks. The notion that task complexity
+affects the internal feedback loop was, for example,
+identified in Mory’s studies, which aimed at general-
+izing Kulhavy and Stock’s model of response certitude
+(Mory, 1994, 1996, 2004). Mory found that for higher
+order learning tasks, students’ response certitude could
+not be used as a reliable measure for adapting feed-
+back, because students were not able to assess their
+130
+answers to these tasks correctly (in terms of the ITFL
+model, they were not able to generate a reliable internal
+feedback).
+This assumption is also reflected in many studies
+on elaborated feedback that were conducted to inves-
+tigate the hypothesis that elaborated feedback is more
+effective with more complex tasks; however, results of
+these studies are rather mixed (see reviews by Azevedo
+and Bernard, 1995; Bangert-Drowns et al., 1991;
+Mory, 1996, 2004). Yet, feedback studies that devel-
+oped elaborated feedback on the basis of thorough
+analyses of task requirements generally found the
+developed elaborated feedback types to be superior to
+simple outcome feedback (Birenbaum and Tatsuoka,
+1987; Nagata, 1993, 1997; Nagata and Swisher, 1995;
+Narciss, 2004, 2006; Narciss and Huth, 2004, 2006).
+In some studies, however, with very complex and dif-
+ficult tasks or with serious errors, elaborated feedback
+was not efficient even if it was developed on the basis
+of task analyses (Birenbaum and Tatsuoka, 1987; Clar-
+iana and Lee, 2001; Nagata, 1997).
+Internal Loop Factors: Prior Knowledge, Cognitive,
+Metacognitive, and Motivational Skills
+According to the ITFL model, the learner’s represen-
+tation of task requirements, the learner’s ability to
+assess his or her responses (quality of the internal
+sensor), the learner’s abilities and strategies with
+regard to analyzing and comparing internal and exter-
+nal information and identifying corrective actions
+(quality of the internal controller), and, finally, the
+learner’s abilities and motivation in applying these cor-
+rective actions (quality of the control actuator) are core
+factors contributing to the efficiency of the internal
+feedback loop. All internal factors influence the exter-
+nal feedback loop because the two loops interact.
+Subjective Task Representation: Prior Knowledge
+The starting point for processes in the internal control-
+ler is a precise definition of reference values of con-
+trolled variables. These reference values are generated
+on the basis of how learners understand and represent
+the requirements of the learning tasks. Meaningful ref-
+erence values can only be generated if the subjective
+representation of task requirements is adequate.
+Whether learners are able to represent task require-
+ments adequately and precisely depends on the com-
+plexity of these requirements but also on individual
+factors such as prior knowledge, metacognitive knowl-
+edge, and strategies and motivation. How much indi-
+vidual difference in subjective task representations
+affects the impact of feedback on learning is an inter-
+esting question for future research.
+Learners’ Self-Assessment Skills
+Comparing the reference values with the actual values
+of controlled variables yields meaningful information
+only if the actual values of the controlled variables are
+determined accurately. In the internal loop, this depends
+a great deal on learners’ abilities or skills in assessing
+their responses and performance (Mory, 1996, 2004).
+Learners must identify indicators for each task require-
+ment that can help them evaluate the extent to which
+the task requirements are fulfilled. How external feed-
+back may support the acquisition of self-assessment
+skills is another interesting issue for future research.
+Learners’ Skills and Strategies
+in Information Processing
+To generate an appropriate control action, learners must
+compare the internal and external feedback, the internal
+feedback and reference values, and the external feedback
+and the internal reference values. As discussed in the
+five-stage model of mindful feedback processing
+(Bangert-Drowns et al., 1991) and in Butler and Winne’s
+(1995) synthesis on feedback and self-regulated learning,
+many individual factors may affect how learners process
+these informational components, particularly when dis-
+crepancies exist between the different components.
+Learners’ Will and Skills in
+Overcoming Errors and Obstacles
+As shown in studies on feedback seeking, even the
+most sophisticated feedback is useless if learners do
+not attend to it (Aleven et al., 2003; Narciss et al.,
+2004) or are not willing to invest time and effort in
+error correction. In addition to having the will, students
+also need the skills necessary to fulfill the requirements
+related to error correction. Butler and Winne (1995)
+derived six maladaptive ways of feedback seeking and
+processing from Chinn and Brewer’s (1993) work on
+how misconceptions may hinder conceptual change:
+Students may (1) ignore the external feedback, (2)
+reject the external feedback, (3) judge the external
+feedback irrelevant, (4) consider external and internal
+feedback to be unrelated, (5) reinterpret external feed-
+back to make it conform to the internal feedback, or
+(6) make superficial rather than fundamental changes
+to their knowledge or beliefs. In all these cases, the
+effect of the external feedback will be small.
+External Loop Factors: Instructional Goals,
+Diagnostic Procedures, Feedback Quality
+In addition to these internal loop factors, the ITFL
+model attracts attention to external loop factors that
+might affect the efficiency of both feedback loops.
+Feedback Strategies for Interactive Learning Tasks
+These include the external representation of task
+requirements related to the instructional goals; the
+accuracy of the diagnostic procedures assessing learn-
+ers’ responses (equal to the quality of the external
+sensor); the teaching medium abilities and strategies
+with regard to analyzing learners’ responses—namely,
+errors—and identifying corrective actions with regard
+to these errors (quality of the external controller); and,
+finally, the teaching medium’s ability in communicat-
+ing these corrective actions (equal to the quality of the
+external feedback).
+External Representation of Task
+Requirements and Instructional Goals
+The starting point for processes in the external con-
+troller is a precise definition of reference values of
+controlled variables. In the external loop, these refer-
+ence values are generated on the basis of how the
+instructional medium (e.g., teacher, computer-based
+learning environment) represents the requirements of
+the learning tasks. As in the internal loop, meaningful
+reference values can only be generated if the represen-
+tation of task requirements is adequate. This means
+that learning goals must be operationalized in such a
+way that valid and reliably verifiable learning out-
+comes can be defined in the form of reference values.
+As mentioned above, this might be more difficult for
+more complex task requirements.
+Accuracy of Diagnostic Procedures
+In the external loop, the controlled variables must
+also be diagnosed accurately to make the comparison
+between the reference values with the actual values
+of controlled variables meaningful. This, in turn,
+means that the indicators appropriate for measuring
+different levels of mastery in a valid and reliable way
+must be determined. How challenging an accurate
+diagnosis might be is elicited in a recent study of
+Chi et al. (2004) on the accuracy of human tutors.
+Chi and her colleagues found that tutors were only
+able to assess students’ understanding from their own
+perspective, and they were not able to diagnose stu-
+dents’ alternative understanding from the perspective
+of the students’ knowledge.
+Quality of External Data Processing
+and Feedback Design
+If a discrepancy between the actual and reference val-
+ues of controlled variables is detected, a correction
+variable must be defined. A key issue here is how well
+the external controller (i.e., the learning medium) is
+able to transform this discrepancy value into a correc-
+tion variable that has a high level of information rele-
+131
+Susanne Narciss
+vant to mastering the task requirements. Especially
+with difficult and complex learning tasks, a series of
+transformations may be necessary so learners can
+obtain information about the external correction vari-
+able (external feedback) that they can use to correct
+errors or overcome obstacles. The starting point for
+the necessary transformational steps is precise knowl-
+edge of the controlled process. It is necessary to know
+which factors, in the sense of controlled variables, are
+responsible for the system’s performance and thus
+must be addressed by the correction variable—that is,
+the external feedback.
+DESIGNING AND EVALUATING
+(TUTORING) FEEDBACK
+Researchers used a large variety of feedback types.
+Widely used feedback types include:
+• Knowledge of performance (KP) provides
+learners with a summative feedback after
+they have responded to a set of tasks. This
+feedback contains information on the
+achieved performance level for this set of
+tasks (e.g., percentage of correctly solved
+tasks).
+• Knowledge of result/response (KR) provides
+learners with information on the correctness
+of their actual response (e.g., correct/incor-
+rect).
+• Knowledge of the correct response (KCR)
+provides the correct answer to the given task.
+• Answer-until-correct (AUC) feedback pro-
+vides KR and offers the opportunity of fur-
+ther tries with the same task until the task is
+answered correctly.
+• Multiple-try feedback (MTF) provides KR
+and offers the opportunity of a limited num-
+ber of further tries with the same task.
+• Elaborated feedback (EF) provides addi-
+tional information besides KR or KCR.
+Complex elaborated feedback exists in multiple forms
+and is thus related to a large if not fuzzy set of mean-
+ings. Several authors have attempted to classify the
+numerous feedback types (Dempsey et al., 1993; Kul-
+havy and Stock, 1989; Mason and Bruning, 2001;
+Schimmel, 1988). There is some congruency with
+regard to classifying simple feedback types such as
+KR or KCR, even though these feedback types are
+sometimes denoted by different terms (e.g., knowledge
+of result, confirmation feedback, simple verification
+feedback, knowledge of the correct answer/response).
+132
+The various classifications differ, however, in how they
+organize the different types of elaborated feedback:
+Kulhavy and Stock (1989) differentiate among task-
+specific elaborated information, which in cases of mul-
+tiple-choice tasks is considered to be knowledge of the
+correct response; instruction-based elaborated infor-
+mation (e.g., hints to the section of the instructional
+text that is relevant for answering the task); and extra-
+instructional elaborated information, which goes
+beyond the instructional text and might, for example,
+address metacognitive strategies. Mason and Bruning
+(2001) differentiate among the following elaborated
+feedback components: topic-contingent (provides item
+verification and general information concerning the
+topic), response-contingent (provides KR, KCR, and
+explanations as to why answers are correct or incor-
+rect), bug-related (provides KR and error-specific
+information) (Schimmel, 1988), and attribute isolation
+(provides KR and highlights the relevant attributes of
+the concept) (Merrill, 1987).
+Comparing these classifications reveals that feed-
+back types can vary in functional, content-related, and
+formal characteristics. One may conclude that the
+nature and quality of an external feedback message is
+determined by at least three facets of feedback: (1)
+functional aspects related to instructional objectives
+(e.g., cognitive functions such as promoting informa-
+tion processing, motivational functions such as rein-
+forcing correct responses or sustaining effort and per-
+sistence); (2) semantic aspects related to the content
+of the feedback message (e.g., frequency, timing,
+mode, amount, form); and (3) formal and technical
+aspects related to the presentation of the feedback mes-
+sage (Narciss, 2006; Narciss and Huth, 2004).
+The purposes of the following sections are (1) to
+present principles for selecting and specifying the
+functional, content-related, and formal dimensions of
+elaborated feedback components that can be imple-
+mented in a tutoring feedback algorithm, and (2) to
+outline implications for future feedback research.
+Selecting and Specifying the
+Functions of External Feedback
+Different theoretical frameworks use different types of
+feedback and attribute different functions to feedback
+in learning situations. From a behavioral viewpoint,
+feedback is considered to reinforce correct responses.
+In behavioral learning contexts, the focus of interest
+is therefore more on formal and technical feedback
+characteristics such as frequency and delay than on the
+complexity of the feedback contents; hence, behavioral
+studies use outcome-related feedback types such as
+knowledge of result or knowledge of the correct
+TABLE 11.1
+Feedback Functions in Four Sources
+Cusella
+(1987)
+Reinforcing
+Informing
+Indicating
+Motivating
+Regulating
+Instructing
+Sales
+(1993)
+Stimulating
+Informing
+Guiding
+Motivating
+Regulating
+Instructing
+Assessing
+Advising
+Wager and
+Mory (1993)
+Confirming
+Informing
+Indicating
+Motivating
+Correcting
+Instructing
+Assessing
+Butler and Winne
+(1995)
+Confirming
+Informing
+Indicating
+Correcting
+Making suggestions
+Completing knowledge
+Differentiating
+Restructuring
+response (for a review, see Kulik and Kulik, 1988).
+From a cognitive viewpoint, feedback is considered a
+source of information necessary for the correction of
+incorrect responses (Anderson et al., 1971; Kulhavy
+and Stock, 1989). The question of which type of elab-
+orated feedback information is most efficient is of
+major interest in cognitive feedback studies; however,
+in most of these studies even elaborated informative
+feedback has only been conceptualized as seeking to
+confirm or change a learner’s domain knowledge.
+Feedback models that view feedback in the context of
+self-regulated learning theorize that the most important
+function of feedback is tutoring or guiding the learner
+to regulate the learning process successfully (Butler
+and Winne, 1995).
+This brief summary of prior research reveals that
+feedback can affect the learning process at various
+levels, and can therefore have numerous different func-
+tions. For this reason, a number of authors have made
+more subtle distinctions (Butler and Winne, 1995;
+Cusella, 1987; Sales, 1993; Wager and Mory, 1993)
+(see Table 11.1). A comparison of these differentiated
+treatments of feedback functions reveals that all of
+these authors advocate feedback as an acknowledging
+or reinforcing function, an informing function, and
+some form of guiding or steering function. Moreover,
+all of them have postulated a regulatory or correcting
+function for feedback. In addition, Cusella (1987),
+Sales (1993), and Wager and Mory (1993) drew atten-
+tion to the motivational and instructional function of
+feedback. Butler and Winne (1995) described at least
+three subfunctions of the instructing function (tuning
+or completing, differentiating, and restructuring). In
+addition, these authors have pointed out that feedback
+can activate metacognitive processes such as monitor-
+ing or information seeking.
+If external informative feedback is viewed from
+the standpoint of the current ITFL model, it becomes
+clear that as a general rule multiple feedback functions
+Feedback Strategies for Interactive Learning Tasks
+come into play simultaneously, according to how the
+controlled and command variables are defined. On the
+basis of the models of good information processors
+(Pressley, 1986), intelligent novices (Mathan and
+Koedinger, 2005), and self-directed learning (Boe-
+kaerts, 1996), possible feedback functions can be
+defined from the cognitive, metacognitive, and moti-
+vational standpoints. Because finer differentiations of
+feedback functions make it possible to work out which
+information will be useful in which settings, careful
+selection and specification of the intended feedback
+functions provide the basis for designing tutorial feed-
+back.
+Cognitive Functions
+In the case of complex tasks, incorrect answers and
+solutions can occur for widely varying reasons (Van-
+Lehn, 1990). The content-related, procedural, or stra-
+tegic knowledge elements that a learner needs to arrive
+at a correct solution may be lacking, erroneous, or
+imprecise. The necessary knowledge elements may
+also be incorrectly linked or the conditions for their
+use incorrect or ill-defined. Feedback can offer infor-
+mation on all of these aspects. A distinction can be
+made between the following cognitive feedback func-
+tions in connection with incorrect responses:
+• An informative function in cases where the
+number, location, and type of error or reason
+for the error are unknown
+• A completion function in cases where the
+error is attributable to lack of content-
+related, procedural, or strategic knowledge
+and the feedback provides information on
+the missing knowledge
+• A corrective function in cases where the
+error is attributable to erroneous content or
+erroneous procedural or strategic elements
+and the feedback provides information that
+can be used to correct the erroneous ele-
+ments
+• A differentiation function in cases where the
+error is attributable to imprecise content-
+related, procedural, or strategic knowledge
+elements and the feedback provides infor-
+mation that allows for clarification of the
+imprecise elements
+• A restructuring function in cases where the
+error is attributable to erroneous connections
+between content, procedural, or strategic ele-
+ments and the feedback provides informa-
+tion that can be used to restructure these
+incorrectly connected elements.
+133
+Susanne Narciss
+Metacognitive Functions
+According to Butler and Winne (1995), external feed-
+back can have numerous metacognitive functions apart
+from those listed in Table 11.1; for example, external
+feedback can address metacognitive strategies and their
+deployment options, provide criteria for monitoring and
+evaluating goals, or motivate learners to generate their
+own monitoring related information. In addition, it can
+serve as a basis for assessing the suitability of solution
+strategies employed or of error search and correction
+strategies; hence, at least the following feedback func-
+tions can be differentiated from each other with regard
+to mastery of metacognitive requirements:
+• An informative function in cases where
+metacognitive strategies or the conditions
+for their use are unknown and feedback pro-
+vides information about metacognitive strat-
+egies
+• A specification function in cases where feed-
+back provides criteria for monitoring goals
+or where conditions for the use of specific
+solution strategies or metacognitive strate-
+gies are specified
+• A corrective function in cases where errors
+have arisen in the use of metacognitive strat-
+egies and the feedback provides information
+that can be used to correct erroneous strate-
+gies
+• A guiding function in cases where learners
+are encouraged (e.g., through leading ques-
+tions) to generate their own criteria for mon-
+itoring or evaluation or to assess the
+suitability of their own solution strategies or
+other actions
+Recent studies on the effects of feedback addressing
+metacognitive processes and strategies have provided
+mixed results (Roll et al., 2006; van den Boom et al.,
+2004).
+Motivational Functions
+Even though feedback has been assigned an important
+role for both achievement and motivation (Hoska,
+1993; Kluger and DeNisi, 1996; Mory, 1996), most
+studies on external informative feedback have focused
+on learner achievement and neglected the impact of
+feedback on motivation. At the motivational level,
+however, it is crucial, despite errors and the resulting
+negative effect, to maintain the level of effort, persis-
+tence, and intensity of task processing. Many theories
+of motivation suggest that perceived values of task
+134
+processing and self-perceptions of competence are cru-
+cial factors in learners’ motivation (Pintrich, 2003).
+Generally, all types of feedback contain an evalu-
+ative feedback component (i.e., information regarding
+the correctness or quality of the solution) that reveals
+success or failure in task processing. Feedback thus
+has an impact on the attainment value of the task that
+might result in more effort or strategy investment and
+might affect performance. Symonds and Chase (1929)
+and Brown (1932) reported supportive results for this
+motivational effect of feedback. Recently, a study of
+V ollmeyer and Rheinberg (2005) revealed that this
+impact of feedback is present even if feedback is
+merely announced. Moreover, Ulicsak (2004) found
+that students spent more time reflecting group activi-
+ties if they believed that the instructional system
+observes them and will provide feedback.
+If feedback provides additional elaborated com-
+ponents that guide learners to successful task com-
+pletion without immediately providing knowledge of
+the correct response, it offers mastery experiences
+that can be linked to personal causation. As such,
+mastery experiences are considered the most impor-
+tant source for developing a positive self-efficacy—in
+other words, positive perceptions of competence
+(Bandura, 1997; Usher and Pajares, 2006). Feedback
+may also affect how the difficulty of such tasks, the
+prospects of success, and the attributions of success
+or failure are assessed in future situations; hence, at
+least the following basic motivational functions
+should be considered when evaluating informative
+elaborated feedback:
+• An incentive function, in that feedback ren-
+ders the results of task processing visible
+• A task facilitation function to contribute
+information for overcoming task difficulties
+• A self-efficacy enhancing function, if it pro-
+vides information that makes it possible to
+master tasks successfully, even if errors are
+committed or difficulties arise
+• A reattribution function, if it provides infor-
+mation that contributes to mastery experi-
+ences that can be linked to personal
+causation
+In addition to informative elaborated feedback
+types, a variety of motivational elaborated feedback
+types has been investigated by motivational research-
+ers. Such motivational feedback types include reattri-
+bution feedback (Dresel and Ziegler, 2006; Schunk,
+1983); mastery-oriented feedback, which makes
+learner’s progress visible (Schunk and Rice, 1993);
+and task vs. competence feedback (Sansone, 1986,
+TABLE 11.2
+Content-Related Classification of Feedback Components
+Category Examples
+Knowledge of performance (KP) 15 or 20 correct; 85% correct
+Knowledge of result/response (KR) Correct/incorrect
+Knowledge of the correct results (KCR) Elaborated concepts
+Knowledge about task constraints (KTC) Hints/explanations on subtasks
+back) , Waxmann, Münster, 2006. With permission.
+Feedback Strategies for Interactive Learning Tasks
+Description/indication of the correct response
+Hints/explanations on type of task
+Hints/explanations on task-processing rules
+Hints/explanations on task requirements
+Knowledge about concepts (KC) Hints/explanations on technical terms
+Examples illustrating the concept
+Hints/explanations on the conceptual context
+Hints/explanations on concept attributes
+Attribute-isolation examples
+Knowledge about mistakes (KM) Number of mistakes
+Location of mistakes
+Hints/explanations on type of errors
+Hints/explanations on sources of errors
+Knowledge about how to proceed (KH) Bug-related hints for error correction
+Hints/explanations on task-specific strategies
+Hints/explanations on task-processing steps
+Guiding questions
+Worked-out examples
+Knowledge about metacognition (KMC) Hints/explanations on metacognitive strategies
+Metacognitive guiding questions
+Source: Narciss, S., Informatives tutorielles Feedback. Entwicklungs- und Evaluationsprin-
+zipien auf der Basis instruktionspsychologischer Erkenntnisse (Informative Tutoring Feed-
+1989; Senko and Harackiewitz, 2005). In summary,
+elaborated motivational feedback components that had
+a positive impact on learners’ motivation (namely, on
+perceptions of competence) (1) stressed the relation
+between effort, ability, and success; (2) made progress
+visible; (3) provided task information rather than per-
+formance information; or (4) elicited goal discrepancy.
+Selecting and Specifying the
+Content of Feedback Elements
+In general, the content of a feedback message may
+consist of two components (Kulhavy and Stock, 1989).
+The first component, the evaluative or, in Kulhavy’s
+terms, the verification component, relates to the learn-
+ing outcome and indicates the performance level
+achieved (e.g., correct/incorrect response, percentage
+of correct answers, and distance to the learning crite-
+rion). This component is attributed a controlling func-
+tion (Keller, 1983). The second component, the infor-
+mational component, consists of additional
+information relating to the topic, the task, errors, or
+solutions. Combining the evaluation and information
+component of feedback might result in a large variety
+of feedback contents.
+Overview on Elaborated Feedback Components
+Table 11.2 presents a content-related classification of
+feedback components that provides a structured over-
+view of simple and elaborated feedback components
+by organizing the components with regard to which
+aspect of the instructional context is addressed. This
+content-related classification assumes that elaborated
+information might address: (1) task rules, task con-
+straints, and task requirements; (2) conceptual knowl-
+edge; (3) errors or mistakes; (4) procedural knowledge;
+and (5) metacognitive knowledge. Five categories of
+elaborated feedback components can thus be defined:
+• Elaborated components that provide infor-
+mation on task rules, task constraints, and
+task requirements are linked by the category
+of knowledge on task constraints (KTC).
+135
+Susanne Narciss
+• Elaborated components that provide infor-
+mation on conceptual knowledge relevant
+for task processing are linked by the cate-
+gory of knowledge about concepts (KC).
+• Elaborated components that provide informa-
+tion on errors or mistakes are linked with the
+category of knowledge about mistakes (KM).
+• Elaborated components that provide infor-
+mation on procedural knowledge relevant for
+task processing are linked by the category
+knowledge on how to proceed or, briefly,
+know-how (KH).
+• Elaborated components that provide infor-
+mation on metacognitive knowledge are
+linked by the category knowledge on meta-
+cognition (KMC). To design feedback algo-
+rithms with elaborated components, several
+simple and elaborated feedback components
+can be combined. In most of the feedback
+studies, elaborated feedback was designed
+by combining knowledge of the correct
+result or knowledge of the result with elab-
+orated components such as explanations of
+errors or to correct responses.
+Cognitive Task and Error Analyses
+Narciss and Huth (2004) derived the steps necessary
+to select and specify the feedback content from knowl-
+edge about cognitive task analysis and error analysis
+(for a detailed description, see Jonassen et al., 1999;
+VanLehn, 1990). Similar steps were proposed by Van-
+Lehn and his collaborators (VanLehn, et al., 2005) and
+by Rittle-Johnson and Koedinger (2005) based on
+insights and experiences in developing intelligent
+tutoring systems.
+The first step consists of the selection and specifi-
+cation of instructional objectives (e.g., acquisition of
+a knowledge domain, mastery of learning tasks, liter-
+acy in the given context). The starting point of this
+step is the curriculum and its objectives, which in
+general have to be specified to obtain explicit, con-
+crete, and measurable learning outcomes. The revised
+version of Bloom’s taxonomy of educational objec-
+tives offers a well-founded framework for this speci-
+fication of learning objectives (Anderson et al., 2001).
+The specified concrete learning outcomes provide the
+basis for the selection of the feedback functions, con-
+tent, and forms.
+Feedback is presented after the accomplishment of
+learning tasks; consequently, learning tasks are espe-
+cially relevant to the design of feedback. The second
+step is, therefore, to select typical learning tasks and
+match them to the required learning outcomes.
+136
+The third step consists of analyzing the require-
+ments for each type of task. The aim of these task
+analyses is to identify: (1) domain-specific knowl-
+edge items (e.g., facts, concepts, events, rules, mod-
+els, theories), (2) cognitive operations related to these
+items (e.g., remember, transform, classify, argue,
+infer), and (3) cognitive and metacognitive skills
+involved in the mastery of the selected learning tasks.
+The informative components of a feedback message
+can refer to each of these aspects of a learning task;
+hence, the results of these task analyses provide an
+overview of both task requirements and possible
+informative components that can be implemented in
+a feedback message.
+As mentioned above, from a cognitive and from
+a self-regulated learning viewpoint, elaborated or
+informative feedback is considered a necessary source
+of information, especially if the learner encounters
+obstacles or proceeds incorrectly. A next important
+step for the design of informative feedback is there-
+fore to describe typical errors and typical incorrect
+steps. Furthermore, it is necessary to identify miscon-
+ceptions and incorrect or inefficient strategies that can
+be attributed to the described errors (Crippen and
+Brooks, 2005; Narciss and Huth, 2004, 2006; Van-
+Lehn, 1990).
+The steps described above are essential prerequi-
+sites for the selection and specification of helpful infor-
+mation. The results of the task and error analyses pro-
+vide information that is necessary to select those
+informative components that match the task require-
+ments. If the major function of the feedback message
+is tutoring learners to master the given learning tasks,
+then the related requirements feedback should not
+immediately provide the correct response or explain
+the correct strategy. This information should only be
+offered if the learners do not succeed otherwise; hence,
+offering adequate tutoring when learners encounter
+obstacles requires providing information that gives
+knowledge on how to proceed without presenting
+knowledge of the correct response. Table 11.2 presents
+examples of such informative tutoring feedback com-
+ponents.
+Smith and Ragan (1993) recommended that the
+content should be tailored to the type of learning
+tasks; however, it should be kept in mind that studies
+comparing the efficiency of different types of infor-
+mation with regard to various learning tasks
+reported rather mixed results (for detailed review,
+see Mory, 1996, 2004). Furthermore, with the devel-
+opment of new paradigms for learning and instruc-
+tion, the question of which knowledge should be
+addressed by the feedback content is getting more
+and more complex.
+Selecting and Specifying the Form
+and Mode of Feedback Presentation
+Feedback types vary not only in their content-related
+aspects but also in formal and technical aspects rele-
+vant for feedback presentation. Using formal criteria
+(e.g., timing, frequency), Holding (1965) differenti-
+ated, for example, 32 different types of feedback. The
+interactive capabilities of modern information technol-
+ogy increase the range of feedback strategies that can
+be implemented efficiently in computer-based instruc-
+tion (Hannafin et al., 1993). Using the interactive capa-
+bilities of modern information technology, it is, for
+example, possible to combine elaborated feedback,
+tutoring, and mastery learning strategies to design
+informative tutoring feedback. The term informative
+tutoring feedback (ITF) refers to feedback strategies
+that provide elaborated feedback components to guide
+the learner toward successful task completion. The
+focus of this elaborated information is on tutoring stu-
+dents to detect errors, overcome obstacles, and apply
+more efficient strategies for solving the learning tasks.
+In contrast to elaborated feedback types, which pro-
+vide learners with immediate knowledge of the correct
+response and additional information, ITF components
+are presented without immediate knowledge of the
+correct response. Additionally, ITF strategies offer the
+opportunity to apply the feedback information on
+another try (Narciss, 2006). These ITF strategies are
+rooted in studies on tutoring activities (McKendree,
+1990; Merrill, et al., 1992, 1995). The following sec-
+tions present an overview on important aspects of feed-
+back that must be taken into consideration when
+choosing the form and mode of feedback presentation.
+Immediate vs. Delayed Feedback Timing
+An aspect of feedback that received much attention in
+feedback research is the timing of the feedback (Demp-
+sey and Wager, 1988; for a review, see Kulik and Kulik,
+1988). From Skinner’s operant learning theory, one
+might assume that the feedback should be provided
+soon after the response; however, experimental studies
+that used paradigms similar to those of studies testing
+the effects of blocked or massed vs. distributed practice
+found that delaying feedback can be beneficial, espe-
+cially for retention in a delayed post-test. This effect
+is referred to as the delay retention effect (Brackbill et
+al., 1963). Kulhavy and Anderson (1972) explained the
+delay retention effect by an interference perseveration
+hypothesis, which suggests that immediate feedback
+might proactively interfere with the incorrect response,
+and this interference might hinder the acquisition of
+the correct response. Delayed feedback is not related
+Feedback Strategies for Interactive Learning Tasks
+to proactive interference, because the incorrect
+response is not present and probably forgotten.
+Research based on the interference perseveration
+hypotheses provided mixed results (Kulhavy and
+Anderson, 1972; Kulhavy and Stock, 1989; Marko-
+wotz and Renner, 1966; Peek and Tillema, 1978;
+Rankin and Trepper, 1978; Schroth and Lund, 1993;
+Sturges, 1969, 1972, 1978; Surber and Anderson,
+1975). Kulik and Kulik (1988) proposed a dual-trace
+information processing explanation for the delay reten-
+tion effect. They pointed out that, with immediate feed-
+back, learners only have one trial, whereas with
+delayed feedback they have two separate trials with an
+item. In the case of memorization, two separate trials
+are better than one, and delayed feedback might be
+superior to immediate feedback.
+Clariana has developed a connectionist descrip-
+tion of feedback timing to better explain the existing
+results and to provide a basis for new insights on
+immediate and delayed feedback (Clariana, 1999;
+Clariana et al., 2000). With regard to the potential
+effects of immediate vs. delayed feedback, Clari-
+ana’s model proposes a strengthening effect for
+incorrect responses with delayed feedback, whereas
+immediate feedback weakens the association
+between incorrect responses and items. These
+hypotheses were confirmed by a study of Clariana
+and Koul (2005); yet, the superiority of delayed feed-
+back (i.e., the delay retention effect) was only found
+in experimental situations with test items, and it was
+not found in applied studies (Kulik and Kulik, 1988).
+Because researchers used a variety of immediate and
+delayed feedback types—item per item vs. end of
+session; directly after the session vs. hours or days
+after session (Dempsey and Wager, 1988)—Mory
+(2004, p. 256) stated that the field of research on
+feedback timing is “muddied.”
+Recently, Mathan and Koedinger (2005) reconsid-
+ered the debate on feedback timing from a metacog-
+nitive perspective. They suggested that the question of
+when to provide feedback following an error has to be
+answered on the basis of a model of desired perfor-
+mance. If this model includes metacognitive skills for
+error detection and correction, then feedback providing
+knowledge of the correct response should not be
+offered immediately, because it does not foster the
+acquisition of these skills. In contrast, feedback offer-
+ing knowledge of the result together with knowledge
+about mistakes implemented in a multiple-try algo-
+rithm that requires students to analyze their erroneous
+responses and to identify error correction steps can be
+provided immediately (e.g., Mathan and Koedinger,
+2005; Moreno and Valdez, 2005; Narciss and Huth,
+2006).
+137
+Susanne Narciss
+Single Try vs. Multiple Try: Simultaneous vs.
+Sequential Presentation of Elaborated Feedback
+A second formal aspect is related to the question of
+how many tries are offered to learners after they have
+received feedback. Many studies offer only a single
+try per item; that is, learners respond to an item, are
+provided with feedback, and do not have the opportu-
+nity to respond again to this item; however, some stud-
+ies have offered multiple tries after providing feed-
+back. Most of these studies use answer-until-correct
+(AUC) feedback (for a review, see Clariana, 1993).
+Clariana’s review of 30 studies that compared single-
+try feedback types (immediate knowledge of result,
+immediate knowledge of the correct response, delayed
+feedback, no feedback) to multiple-try feedback/AUC
+found a superiority of all feedback types over no feed-
+back, but no differences between single-try and mul-
+tiple-try feedback. In a more recent review, Clariana
+and Koul (2004) contrasted multiple-try feedback
+effects (AUC) for verbatim outcomes with higher order
+“more than verbatim” outcomes (i.e., drawing and
+labeling biological diagrams). This review revealed
+that AUC is less effective for verbatim outcomes but
+more effective for higher order outcomes (Clariana and
+Koul, 2005).
+Multiple-try feedback types other than AUC can
+be developed if one considers a third formal aspect of
+feedback presentation: Complex elaborated feedback
+can be presented simultaneously (i.e., all information
+in one step) or sequentially (cumulatively or step by
+step). Most studies on complex elaborated feedback
+provide the elaborated information simultaneously
+with knowledge of the result or knowledge of the cor-
+rect response (e.g., Kulhavy et al., 1985; Phye, 1979;
+Phye and Bender, 1989). However, only half of the
+studies utilizing this simultaneous presentation of elab-
+orated feedback produced significant positive effects
+(Kulhavy and Stock, 1989; Mory, 1996, 2004).
+In addition to these empirical findings on pre-
+senting complex elaborated feedback simulta-
+neously, research on cognitive load in instructional
+contexts would suggest that a sequential presentation
+of complex elaborated feedback should be superior
+to a simultaneous presentation (Chandler and
+Sweller, 1992). Indeed, the few controlled experi-
+mental studies that have investigated the tutorial
+feedback types that present elaborated feedback
+components sequentially have reported positive
+effects (Albacete and VanLehn, 2000; Heift, 2004;
+Nagata, 1993; Nagata and Swisher, 1995; Narciss
+and Huth, 2006; VanLehn et al., 2005).
+Because a sequential presentation of feedback
+components requires offering multiple tries with the
+138
+same item, a direct comparison of the effects of simul-
+taneous vs. sequential feedback presentations is very
+difficult if not impossible. An important issue for
+future research, however, would be addressing the
+question of how many feedback steps of cycles are
+effective under which individual and situational con-
+ditions.
+Adaptive vs. Nonadaptive Feedback Presentation
+A fourth formal aspect of feedback presentation is
+whether the feedback is presented in an adaptive or a
+nonadaptive way. The adaptation issue is related at
+such questions as these:
+• Which learner characteristics are critical
+for adaptation? Crucial characteristics that
+have been extensively addressed by feed-
+back research and by most research on
+tutoring systems include the learner’s prior
+knowledge or knowledge state (Albert and
+Lukas, 1999; Hancock et al., 1995a) and
+the learner’s metacognitive state in general
+measured by the learner’s response certi-
+tude (Hancock et al., 1992, 1995b; Mory,
+1991, 1994). Other important characteris-
+tics that have received attention only in
+recent studies include the learner’s motiva-
+tion (e.g., self-efficacy) (Narciss, 2004),
+goal orientation (Senko and Harackiewicz,
+2005), and metacognitive skills other than
+response certitude (Aleven et al., 2006).
+• Which task characteristics are critical for
+adaptation? According to Sanz (2004), this
+question is sometimes neglected by
+instructional designers; however, adapta-
+tion may be more or less necessary for
+different tasks, and there might be critical
+task characteristics (i.e., specific task
+requirements) that can be used as indica-
+tors for deciding when and how much
+adaptation would be reasonable. In the
+algebra tutoring system Ms. Lindquist, the
+three feedback strategies are, for example,
+determined by the exercise and its structure
+(Heffernan, 2001).
+• How do we diagnose the individual char-
+acteristics in a reliable and valid way?
+Several approaches to diagnosing learner
+characteristics have been investigated by
+researchers developing intelligent tutoring
+systems: manually authored finite state
+machines (Koedinger et al., 2004); gener-
+ative approaches, such as model tracing
+no ref
+for
+Kuray
+and Ho
+(Anderson et al., 1995); evaluative
+approaches (Mitrovich et al., 2002); and
+decision theoretic approaches (Murray et
+al., 2004). Recently, several authors have
+suggested using observable data on stu-
+dents’ activities to infer nonobservable
+learner characteristics (Kutay and Ho,
+2005; Melis and Anders, 2005; Romero et
+al., 2005).
+• How do we adapt feedback to the critical
+situational and individual factors? Adap-
+tive feedback can be implemented in sev-
+eral ways. An approach used frequently in
+intelligent tutoring systems involves con-
+trolling the sequence, content, and instruc-
+tional activities (program-controlled
+adaptation). A second type of adaptation is
+based on the idea that the learner has to
+take an active part in instruction and thus
+is presented with a choice of instructional
+activities (learner-controlled adaptation).
+Unfortunately, learners sometimes lack the
+metacognitive skills and motivation
+required to decide which instructional
+activities would be best for them (for
+reviews on the effects of learner- vs. pro-
+gram-controlled instruction, see Steinberg,
+1977, 1989; see also Corbett and Anderson,
+1990; Narciss et al., 2004). Recent studies
+and frameworks on adaptive feedback
+include metacognitive feedback compo-
+nents that should foster the acquisition of
+metacognitive skills (Aleven et al., 2006;
+Gouli et al., 2005). A third type of adapta-
+tion consists of combining program and
+learner control, which offers a variety of
+other possibilities for adapting feedback
+and raises new issues for future research
+(e.g., when and how to shift from program
+to learner control and vice versa).
+Unimodal vs. Multimodal Feedback Presentation
+The capabilities of modern information technologies
+allow the presentation of feedback not only as written
+text but also as narrated text (Narciss and Huth, 2004,
+2006) or as a static or dynamic graphic. Furthermore,
+feedback can be provided by animated agents
+(Moreno, 2004). When and how to apply the princi-
+ples of multimedia learning derived from Mayer’s
+theory of multimedia learning (Mayer, 2001) for the
+multi-modal presentation of feedback have yet to be
+investigated.
+Feedback Strategies for Interactive Learning Tasks
+Implications for Evaluating
+(Tutoring) Feedback
+The design principles outlined above show that exter-
+nal feedback, particularly informative tutorial feed-
+back, is a multidimensional instructional measure.
+Moreover, the interactive, two-feedback-loop model
+described earlier suggests that the effects of external
+feedback occur through an interaction with the
+learner (i.e., with a complex information processing
+system). This in turn means that the effects of exter-
+nal feedback are not general but only emerge in
+specific situational and individual settings; for exam-
+ple, the amount of time it takes for errors to be
+eliminated with the help of external feedback
+depends on (1) the individual characteristics of the
+learner; (2) the quality of the external feedback com-
+ponents; (3) the type, complexity, and difficulty of
+the tasks; and (4) the type of error. In highly skilled
+learners or for easy tasks or simple slips, for exam-
+ple, knowledge-of-result feedback alone is sufficient
+to yield a correct response the next time. In learners
+with a low level of skill, for very complex and dif-
+ficult tasks, or in the case of serious errors, it is
+possible that even informative tutorial feedback may
+not be sufficient for mastering the high demands.
+The effects of various feedback strategies also
+largely depend on how learners process and interpret
+the information provided. In addition to cognitive
+requirements (e.g., prior knowledge, strategic knowl-
+edge), individual motivational factors, such as self-
+efficacy and perceived task values, and individual
+metacognitive factors, such as monitoring competen-
+cies and strategies, play a role. To draw differentiated
+conclusions about the effects of various types of
+feedback, not only cognitive but also individual
+motivational and metacognitive factors, and the
+nature of individual feedback, processing should be
+controlled.
+External feedback can contribute to changes that
+occur (1) during the treatment, (2) shortly after the
+treatment, or (3) long after the treatment; thus, evalu-
+ating the effects of various feedback strategies requires
+collecting data both during and after the treatment
+(Phye, 1991, 2001; Phye and Sanders, 1994). When
+investigating the effects of various types or strategies
+of external feedback, it should no longer be a question
+of which feedback type is the best but rather one of
+the following questions:
+• Under which individual and situational con-
+ditions do which feedback components or
+strategies have high information value for
+learners?
+139
+Susanne Narciss
+Individual Factors
+• Learning goals
+• Prior knowledge and meta-cognitive skills
+• Motivation
+Contents of Feedback
+• Evaluative component
+• Informative component
+- Hints, cues
+- Analogies
+- Explanations
+- Worked out examples
+- etc.
+Functions of Feedback
+• Cognitive
+• Meta-Cognitive
+• Motivational
+Presentation
+of Feedback
+Contents
+• Timing
+• Schedule
+• Adaptivity
+Individual
+Processing
+• Cognitive
+• Motivational
+• Meta-Cognitive
+Cognitive Effects Cognitive Effects
+Motivational Effects Motivational Effects
+Meta-Cognitive
+Effects
+Meta-Cognitive
+Effects
+Instructional Factors
+• Instructional goals
+• Instructional content and tasks
+• Errors and sources of errors
+Treatment
+Performance
+Post-Test
+Performance
+Figure 11.2 Summary of factors and effects of external feedback. (From Narciss, S., Informatives tutorielles Feedback. Entwicklungs-
+und Evaluationsprinzipien auf der Basis instruktionspsychologischer Erkenntnisse (Informative Tutoring Feedback), Waxmann,
+Münster, 2006. With permission.)
+• Under these individual and situational con-
+ditions, what cognitive, metacognitive, and
+motivational effects do the various feedback
+components or strategies have?
+• When are these effects expected to occur,
+and what is their expected duration?
+Figure 11.2 summarizes these considerations regard-
+ing requirements for and the effects of various kinds
+of external feedback.
+REFERENCES
+Albacete, P. and VanLehn, K. (2000). Evaluating the effective-
+ness of a cognitive tutor for fundamental physics concepts.
+In Proc. of the 22nd Annual Meeting of the Cognitive Science
+Society, August 13–15, Philadelphia, PA.
+Albert, D. and Lukas, J. (1999). Knowledge Spaces: Theories,
+Empirical Research, and Applications. Mahwah, NJ:
+Lawrence Erlbaum Associates.
+Aleven, V., Stahl, E., Schworm, S., Fischer, F., and Wallace, R.
+(2003). Help seeking and help design in interactive learning
+environments. Rev. Educ. Psychol., 62, 148–156.*
+Aleven, V., McLaren, B. M., Roll, I., and Koedinger, K. R.
+(2006). Toward computer–based tutoring: a model of
+help–seeking with a cognitive tutor. Int. J. Artif. Intell. Educ.,
+16, 101–130.
+Anderson, J. R., Corbett, A. T., Koedinger, K. R., and Pelletier,
+R. (1995). Cognitive tutors: lessons learned. J. Learning Sci.,
+4, 167–207.*
+Anderson, L. W., Krathwohl, D. R., Airasian, P. W., Cruikshank,
+K.A., Mayer, R. E., Pintrich, P. R., Raths, J., and Wittrock,
+M. C. (2001). A Taxonomy for Learning, Teaching, and
+Assessing: A Revision of Bloom’s Taxonomy of Educational
+Objectives. New York: Longman.
+Anderson, R. C., Kulhavy, R. W., and Andre, T. (1971). Feed-
+back procedures in programmed instruction. J. Educ. Psy-
+chol., 62, 148–156.*
+Andre, T. (1997). Selected microinstructional methods to facil-
+itate knowledge construction: implications for instructional
+design. In Instructional Design: International Perspectives.
+V ol. 1. Theory, Research, and Models, edited by R. D. Ten-
+nyson and F. Schott, pp. 243–267. Mahwah, NJ: Lawrence
+Erlbaum Associates.
+Annett, J. (1969). Feedback and Human Behavior. Oxford: Pen-
+guin Books.*
+Azevedo, R. and Bernard, R. M. (1995). A meta-analysis of the
+effects of feedback in computer-based instruction. J. Educ.
+Comput. Res., 13, 111–127.
+Bandura, A. (1997). Self-Efficacy: The Exercise of Control. New
+York: Holt.
+Bangert-Drowns, R. L., Kulik, C. C., Kulik, J. A., and Morgan,
+M. T. (1991). The instructional effect of feedback in test-
+like events. Rev. Educ. Res., 61, 213–238.*
+Bilodeau, E. A. (1969). Principles of Skill Acquisition. New
+York: Academic Press.*
+Birenbaum, M. and Tatsuoka, K. (1987). Effects of ‘on-line’
+test feedback on the seriousness of subsequent errors. J.
+Educ. Meas., 24, 145–155.
+Bloom, B. (1976). Human Characteristics and School Learning.
+New York: McGraw–Hill.
+Boekaerts, M. (1996). Self-regulated learning at the junction of
+cognition and motivation. Eur. Psychol., 1, 100–112.
+140
+Brackbill, Y., Blobitt, W. E., Davlin, D., and Wagner, J. E.
+(1963). Amplitude of response and the delay–retention
+effect. J. Exp. Psychol., 66, 57–64.
+Brown, F. J. (1932). Knowledge of results as an incentive in
+school room practice. J. Educ. Psychol., 23, 532–552.
+Butler, D. L., and Winne, P. H. (1995). Feedback and self–reg-
+ulated learning: a theoretical synthesis. Rev. Educ. Res., 65,
+245–281.*
+Carroll, J. B. (1963). A model of school learning. Teachers
+College Record, 64, 723–733.
+Chandler, P. and Sweller, J. (1992). The split-attention effect as
+a factor in the design of instruction. Br. J. Educ. Psychol.,
+62, 233–246.
+Chi, M., Siler, S. A., and Joeng, H. (2004). Can tutors monitor
+students’ understanding accurately? Cognition and Instruc-
+tion, 22, 363–387.
+Chinn, C. A. and Brewer, W. F. (1993). The role of anomalous
+data in knowledge acquisition: a theoretical framework and
+implications for science instruction. Rev. Educ. Res., 63,
+1–49.
+Clariana, R. B. (1993). A review multiple-try feedback in tra-
+ditional and computer–based instruction. J. Comput. Based
+Instruct., 20, 67–74.
+Clariana, R. B. (1999). CBT design: a feedback achievement
+treatment interaction. 21st Annu. Proc. Assoc. Educ. Com-
+mun. Technol., 22, 87–92.
+Clariana, R. B. and Koul, R. (2004). Multiple-try feedback and
+higher–order learning outcomes. Int. J. Instruct. Media, 32,
+239–245.
+Clariana, R. B. and Koul, R. (2005). The effects of different
+forms of feedback on fuzzy and verbatim memory of science
+principles. Br. J. Educ. Psychol., 75, 1–13.
+Clariana, R. B. and Lee, D. (2001). The effects of recognition
+and recall study tasks with feedback in a computer-based
+vocabulary lesson. Educ. Technol. Res. Dev., 49, 23–36.
+Clariana, R. B., Wagner, D., and Rohrer-Murphy, L. C. (2000).
+A connectionist description of feedback timing. Educ. Tech-
+nol. Res. Dev., 48, 5–21.
+Collies, B., DeBoer, W., and Slotman, K. (2001). Feedback for
+web-based assignments. J. Comput. Assisted Learning, 17,
+306–313.
+Corbett, A. T. and Anderson, J. R. (1990). The effect of feedback
+control on learning to program with the Lisp Tutor. In Pro-
+ceedings of the Twelfth Annual Conference of the Cognitive
+Science Society, July 25–28, Cambridge, MA (http://act–r.
+psy.cmu.edu/papers/165/FeedbackControl_CorJRA.pdf).
+Crippen, K. J. and Brooks, D. W. (2005). The AP descriptive
+chemistry question: student errors. J. Comput. Math. Sci.
+Teach., 24, 357–366.
+Cusella, L. P. (1987). Feedback, motivation and performance.
+In Handbook of Organizational Communication: An Inter-
+disciplinary Perspective, edited by F. M. Jablin, L. L. Put-
+nam, K. H. Roberts, and L. W. Pooter, pp. 624–678.
+Newsbury Park, CA: SAGE.
+Dempsey, J. V., and Sales, G. C., Eds. (1993). Interactive
+Instruction and Feedback. Englewood Cliffs, NJ: Educa-
+tional Technology Publications.*
+Dempsey, J. V., Driscoll, M. P., and Swindell, L. K. (1993). Text-
+based feedback. In Interactive Instruction and Feedback,
+edited by J. V. Dempsey and G. C. Sales, pp. 21–54. Engle-
+wood Cliffs, NJ: Educational Technology Publications.
+Dempsey, J. V. and Wager, S. U. (1988). A taxonomy for the
+timing of feedback in computer-based instruction. Educ.
+Psychol., 28(10), 20–25.
+Feedback Strategies for Interactive Learning Tasks
+Dick, W., Carey, L., and Carey, J. O. (2001). The Systematic
+Design of Instruction. New York: Addison, Wesley, Longman.
+Dresel, M. and Ziegler, A. (2006). Langfristige Förderung von
+Fähigkeitsselbstkonzept und impliziter Fähigkeitstheorie
+durch computerbasiertes attributionales Feedback (long-
+term enhancement of academic self-concept and implicit
+ability theory through computer-based attributional feed-
+back). Zeitschrift für Pädagogische Psychologie, 20, 49–64.
+Fitts, P. M. (1962). Factors in complex skill training. In Training
+Research and Education, edited by R. Glaser, pp. 177–197.
+Oxford, England: University of Pittsburgh Press.
+Gouli, E., Gogoulou, A., Papanikolaou, K., and Grigoriadou,
+M. (2005). An adaptive feedback framework to support
+reflection, tutoring and guiding in assessment. In Advances
+in Web-Based Education: Personalized Learning Environ-
+ments, edited by G. Magoulas and S. Chen, pp. 178–202.
+New York: Idea Group Publishing.
+Hancock, T. E., Stock, W. A., and Kulhavy, R. W. (1992).
+Predicting feedback effects from response-certitude esti-
+mates. Bull. Psychonom. Soc., 30, 173–176.
+Hancock, T. E., Thurman, R. A., and Hubbard, D. C. (1995a).
+An expanded control model for the use of instructional feed-
+back. Contemp. Educ. Psychol., 20, 410–425.
+Hancock, T. E., Thurman, R. A., and Hubbard, D. C. (1995b).
+Using multiple indicators of cognitive state in logistic mod-
+els that predict individual performance in machine-mediated
+learning environments. Machine-Mediated Learning, 5(3),
+237–253.
+Hannafin, M. J., Hannafin, K. D., and Dalton, D. W. (1993).
+Feedback and emerging instructional technologies. In Inter-
+active Instruction and Feedback, edited by J. V. Dempsey
+and G. C. Sales, pp. 263–286. Englewood Cliffs, NJ: Edu-
+cational Technology Publications.
+Heffernan, N. T. (2001). Intelligent Tutoring Systems Have
+Forgotten the Tutor: Adding a Cognitive Model of Human
+Tutors, Ph.D. dissertation, School of Computer Science,
+Carnegie Mellon University (http://www.algebratutor.org).
+Heift, T. (2004). Corrective feedback and learner uptake in
+CALL. ReCall: J. Eurocall, 16, 416–431.
+Holding, D. H. (1965). Principles of Training. Oxford, England:
+Pergamon Press.
+Hoska, D. M. (1993). Motivating learners trough CBI feedback:
+developing a positive learner perspective. In Interactive
+Instruction and Feedback, J. V. Dempsey and G. C. Sales, pp.
+105–131. Englewood Cliffs, NJ: Educational Technology.*
+Jonassen, D. H. (1999). Designing constructivist learning environ-
+ments. In Instructional-Design Theories and Models: A New
+Paradigm of Instructional Theory, Vol. II, edited by C. M. Reige-
+luth, pp. 215–239. Mahwah, NJ: Lawrence Erlbaum Associates.
+Jonassen, D. H., Tessmer, M., and Hannum, W. H. (1999).
+Classifying knowledge and skills from task analysis. In Task
+Analysis Methods for Instructional Design, edited by D. H.
+Jonassen, M. Tessmer, and W. H. Hannum, pp. 25–32. Mah-
+wah, NJ: Lawrence Erlbaum Associates.
+Keller, J. M. (1983). Motivational design of instruction. In
+Instructional Design Theories and Models: An Overview of
+Their Current Status, edited by C. M. Reigeluth, pp.
+386–434. Mahwah, NJ: Lawrence Erlbaum Associates.
+Koedinger, K. R., Aleven, V., Heffernan, N., McLaren, B., and
+Hockenberry, M. (2004). Opening the door to non-program-
+mers: authoring intelligent tutor behavior by demonstration.
+In Proceedings of the Seventh International Conference on
+Intelligent Tutoring System (ITS 2004), pp. 162–174. Berlin:
+Springer Verlag.
+141
+Susanne Narciss
+Kluger, A. N. and DeNisi, A. (1996). Effects of feedback inter-
+ventions on performance: a historical review, a meta-analy-
+sis, and a preliminary feedback intervention theory. Psychol.
+Bull., 119, 254–284.*
+Kulhavy, R. W. and Anderson, R. C. (1972). Learning-criterion
+error perseveration in text material. J. Educ. Psychol., 63(5),
+505–512.
+Kulhavy, R. W. and Stock, W. A. (1989). Feedback in written
+instruction: the place of response certitude. Educ. Psychol.
+Rev., 1, 279–308.*
+Kulhavy, R. W., White, M. T., Topp, B. W., Chan, A. L., and
+Adams, J. (1985). Feedback complexity and corrective effi-
+ciency. Contemp. Educ. Psychol., 10, 285–291.
+Kulhavy, R. W., Stock, W. A., Hancock, T. E., Swindell, L. K.,
+and Hammrich, P. L. (1990a). Written feedback: response cer-
+titude and durability. Contemp. Educ. Psychol., 15, 319–332.
+Kulhavy, R. W., Stock, W. A., Thornton, N. E., Winston, K. S.,
+and Behrens, J. T. (1990b). Response feedback, certitude
+and learning from text. Br. J. Educ. Psychol., 60, 161–170.
+Kulik, J. A. and Kulik, C. C. (1988). Timing of feedback and
+verbal learning. Rev. Educ. Res., 58, 79–97.*
+Markowotz, N. and Renner, K. E. (1966). Feedback and the
+delay-retention effect. J. Exp. Psychol., 72(3), 452–455.
+Mason, J. B. and Bruning, R. (2001). Providing Feedback in
+Computer-Based Instruction: What the Research Tells Us,
+http://dwb4.unl.edu/dwb/Research/MB/MasonBruning.html.
+Mathan, S. A. and Koedinger, K. R. (2005). Fostering the intel-
+ligent novice: learning from errors with meta-cognitive
+tutoring. Educ. Psychol., 40, 257–265.
+Mayer, R. E. (2001). Multimedia Learning. New York: Cam-
+bridge University Press.
+McKendree, J. (1990). Effective feedback content for tutoring
+complex skills. Hum.–Comput. Interact., 5, 381–413.*
+Melis, E. and Anders, E. (2005). Global feedback in Activmath.
+J. Comput. Math. Sci. Teach., 24, 197–220.
+Merrill, D. C., Reiser, B. J., Ranney, M., and Trafton, J. G.
+(1992). Effective tutoring techniques: a comparison of
+human tutors and intelligent tutoring systems. J. Learning
+Sci., 2, 277–305.*
+Merrill, D. C., Reiser, B. J., Merrill, S. K., and Landes, S.
+(1995). Tutoring: guided learning by doing. Cognit.
+Instruct., 13, 315–372.
+Merrill, J. (1987). Levels of questioning and forms of feedback:
+instructional factors in courseware design. J. Comput.-Based
+Instruct., 14(1), 18–22.
+Moreno, R. (2004). Decreasing cognitive load for novice stu-
+dents: effects of explanatory versus corrective feedback in
+discovery-based multimedia. Instruct. Sci., 32, 99–113.
+Moreno, R. and Valdez, A. (2005). Cognitive load and learning
+effects of having students organize pictures and words in
+multimedia environments: the role of student interactivity
+and feedback. Educ. Technol. Res. Dev., 53, 35–45.
+Mory, E. H. (1994). Adaptive feedback in computer-based
+instruction: effects of response certitude on performance,
+feedback-study time and efficiency. J. Educ. Comput. Res.,
+11, 263–290.
+Mory, E. H. (1996). Feedback research. In Handbook of
+Research for Educational Communications and Technology,
+edited by D. H. Jonassen, pp. 919–956. New York: Simon
+& Schuster.*
+Mory, E. H. (2004). Feedback research revisited. In Handbook
+of Research on Educational Communications and Technol-
+ogy, 2nd ed., edited by D. H. Jonassen, pp. 745–783. Mah-
+wah, NJ: Lawrence Erlbaum Associates.*
+142
+Murray, R. C., VanLehn, K., and Mostow, J. (2004). Looking
+ahead to select tutorial actions: a decision-theoretic
+approach. Int. J. Artif. Intell. Educ., 14, 235–278.
+Nagata, N. (1993). Intelligent computer feedback for second
+language instruction. Modern Lang. J., 77, 330–339.
+Nagata, N. (1997). An experimental comparison of deductive
+and inductive feedback generated by a simple parser. System,
+25, 515–534.
+Nagata, N. and Swisher, M. V. (1995). A study of consciousness-
+raising by computer: the effect of metalinguistic feedback on
+second language learning. Foreign Lang. Ann., 28, 337–347.
+Narciss, S. (2004). The impact of informative tutoring feedback
+and self–efficacy on motivation and achievement in concept
+learning. Experimental Psychology, 51(3), 214–228.
+Narciss, S. (2006). Informatives tutorielles Feedback. Entwick-
+lungs- und Evaluationsprinzipien auf der Basis instruktion-
+spsychologischer Erkenntnisse (Informative Tutoring
+Feedback). Münster: Waxmann.
+Narciss, S. and Huth, K. (2004). How to design informative
+tutoring feedback for multi–media learning. In Instructional
+Design for Multimedia Learning, edited by H. M. Niegem-
+ann, D. Leutner, and R. Brünken, pp. 181–195. Münster:
+Waxmann.*
+Narciss, S. and Huth, K. (2006). Fostering achievement and
+motivation with bug-related tutoring feedback in a computer-
+based training for written subtraction. Learning Instruct. 16,
+310–322.
+Narciss, S., Körndle, H., Reimann, G., and Müller. C. (2004).
+Feedback-seeking and feedback efficiency in web-based
+learning: how do they relate to task and learner characteris-
+tics? In Instructional Design for Effective and Enjoyable
+Computer–Supported Learning: Proceedings of the First
+Joint Meeting of the EARLI SIGs Instructional Design and
+Learning and Instruction with Computers [CD-ROM],
+edited by P. Gerjets, P. A. Kirschner, J. Elen, and R. Joiner,
+pp. 377–388. Tübingen: Knowledge Media Research Center.
+Peek, J. and Tillema, H. H. (1978). Delay of feedback and
+retention of correct and incorrect responses. J. Exp. Educ.,
+38, 171–178.
+Phye, G. D. (1979). The processing of informative feedback
+about multiple–choice test performance. Contemp. Educ.
+Psychol., 4, 381–394.
+Phye, G. D. (1991). Advice and feedback during cognitive train-
+ing: effects at acquisition and delayed transfer. Contemp.
+Educ. Psychol., 16, 87–94.
+Phye, G. D. (2001). Problem-solving instruction and prob-
+lem–solving transfer: the correspondence issue. J. Exp. Psy-
+chol., 93, 571–578.
+Phye, G. D. and Bender, T. (1989). Feedback complexity and
+practice: response pattern analysis in retention and transfer.
+Contemp. Educ. Psychol., 14, 97–110.
+Phye, G. D. and Sanders, C. E. (1994). Advice and feedback:
+elements of practice for problem solving. Contemp. Educ.
+Psychol., 19, 286–301.
+Pintrich, P. R. (2003). Motivation and classroom learning. In
+Handbook of Psychology. Vol. 7. Educational Psychology,
+edited by W. M. Reynolds and G. E. Miller, pp. 103–122.
+Hoboken, NJ: John Wiley & Sons.
+Pressley, M. (1986). The relevance of the good strategy user
+model to the teaching of mathematics. Educ. Psychol., 21,
+139–161.
+Rankin, R. J. and Trepper, T. (1978). Retention and delay of
+feedback in a computer-assisted task. J. Exp. Educ., 64,
+67–70.
+Rittle-Johnson, B. and Koedinger, K. R. (2005). Designing
+knowledge scaffolds to support mathematical problem solv-
+ing. Cognit. Instruct., 23, 313–349.*
+Roll, I., Aleven, V., McLaren, B. M., Ryu, E., Baker, R., and
+Koedinger, K. R. (2006). The help-tutor: does metacognitive
+feedback improve students’ help-seeking actions, skills and
+learning? In ITS 2006, LNCS 4053, edited by M. Ikeda, K.
+Ashley, and T.-W. Chan, pp. 360–369. Berlin: Springer.
+Romero, C., Ventura, S., and DeBra, P. (2005). Knowledge
+discovery with genetic programming for providing feedback
+to courseware authors. User Model. User-Adapt. Interact.,
+14, 425–464.
+Sales, G. C. (1993). Adapted and adaptive feedback in technol-
+ogy–based instruction. In Interactive Instruction and Feed-
+back, J. V. Dempsey and G. C. Sales, pp. 159–175.
+Englewood Cliffs, NJ: Educational Technology Publications.
+Sansone, C. (1986). A question of competence: the effects of
+competence and task feedback on intrinsic interest. J. Per-
+son. Soc. Psychol., 51, 918–931.
+Sansone, C. (1989). Competence feedback, task feedback, and
+intrinsic interest: an examination of process and context. J.
+Exp. Soc. Psychol., 25, 343–361.
+Sanz, C. (2004). Computer delivered implicit versus explicit
+feedback in processing instruction. In Processing Instruc-
+tion: Theory, Research and Commentary, edited by B. Van-
+Patten, pp. 241–255. Mahwah, NJ: Lawrence Erlbaum
+Associates.
+Schimmel, B. J. (1988). Providing meaningful feedback in
+courseware. In Instructional Designs for Microcomputer
+Courseware, edited by D. H. Jonassen, pp. 183–195. Hills-
+dale, NJ: Lawrence Erlbaum Associates.
+Schroth, M. L. and Lund, E. (1993). Role of delay of feedback
+on subsequent pattern recognition transfer tasks. Contemp.
+Educ. Psychol., 18, 15–22.
+Schunk, D. H. (1983). Ability versus effort attributional feed-
+back: differential effects on self-efficacy and achievement.
+J. Educ. Psychol., 75, 848–856.
+Schunk, D. H. and Rice, J. M. (1993). Strategy fading and
+progress feedback: effects on self-efficacy and comprehen-
+sion among students receiving remedial reading services. J.
+Spec. Educ., 27, 257–276.
+Senko, C. and Harackiewicz, J.M. (2005). Regulation of
+achievement goals: the role of competence feedback. J.
+Educ. Psychol., 97, 320–336.
+Smith, P. L. and Ragan, T. J. (1993). Designing instructional
+feedback for different learning outcomes. In Interactive
+Instruction and Feedback, edited by J. V. Dempsey and G.
+C. Sales, pp. 75–103. Englewood Cliffs, NJ: Educational
+Technology.*
+Steinberg, E. R. (1977). Review of student control in computer-
+assisted instruction. J. Comput.-Based Instruct., 3, 84–90.
+Steinberg, E. R. (1989). Cognition and learner control: a liter-
+ature review, 1977–1988. J. Comput.-Based Instruct., 16,
+117–121.
+Feedback Strategies for Interactive Learning Tasks
+Stock, W. A., Kulhavy, R. W., Pridemore, D. R., and Krug, D.
+(1992). Responding to feedback after multiple-choice
+answers: the influence of response confidence. Q. J. Exp.
+Psychol., 45A, 649–667.
+Sturges, P. T. (1969). Verbal retention as a function of the
+informativeness and delay of information feedback. J. Educ.
+Psychol., 60, 11–14.
+Sturges; P. T. (1972). Information delay and retention: effect of
+information in feedback and tests. J. Educ. Psychol., 63,
+32–43.
+Sturges, P. T. (1978). Delay of informative feedback in com-
+puter-assisted testing. J. Educ. Psychol., 70(3), 357–358.
+Surber, J. R. and Anderson, R. C. (1975). Delay-retention effect
+in natural classroom settings. J. Educ. Psychol., 67(2),
+170–173.
+Swindell, L. K. and Walls, W. F. (1993). Response confidence
+and the delay retention effect. Contemp. Educ. Psychol., 18,
+363–375.
+Symonds, P. M. and Chase, D. H. (1929). Practice vs. motiva-
+tion. J. Educ. Psychol., 20, 19–35.
+Taylor, R. (1987). Selecting effective courseware: three funda-
+mental instructional factors. Contemp. Educ. Psychol., 12,
+231–243.
+Thorndike, E. (1913). Educational Psychology: The Psychology
+of Learning. New York: Teachers College Press.
+Ulicsak, M. H. (2004) ‘How did it know we weren't talking?’:
+an investigation into the impact of self-assessments and feed-
+back in a group activity. J. Comput. Assist. Learning, 20,
+205–211.
+Usher, E. L. and Pajares, F. (2006). Sources of academic and
+self-regulatory efficacy beliefs of entering middle school
+students. Contemp. Educ. Psychol., 31, 125–141.
+van denBoom, G., Paas, F., VanMerrienboer, J. J. G., and
+VanGog, T. (2004). Reflection prompts and tutor feedback
+in a web-based learning environment: effects on students’
+self-regulated learning competence. Comput. Hum. Behav.,
+20, 551–567.
+VanLehn, K. (1990). Mind Bugs: The Origins of Procedural
+Misconceptions. Cambridge, MA: The MIT Press.
+VanLehn, K., Lynch, C., Schulze, K., Shapiro, J.A., Shelby, R.,
+Taylor, L., Treacy, D., Weinstein, A., and Wintersgill, M.
+(2005). The Andes physics tutoring system: lessons learned.
+Int. J. Artif. Intell. Educ., 15 147–204.*
+V ollmeyer, R. and Rheinberg, F. (2005). A surprising effect of
+feedback on learning. Learning Instruct., 15, 589–602.
+Wager, W. and Mory, E. H. (1993). The role of questions in
+learning. In Interactive Instruction and Feedback, edited by
+J. V. Dempsey and G. C. Sales, pp. 55–73. Englewood Cliffs,
+NJ: Educational Technology Publications.
+Wager, W. and Wager, S. (1985). Presenting questions, process-
+ing responses, and providing feedback in CAI. J. Instruct.
+Dev., 8(4), 2–8.
+Wiener, N. (1954). The Human Use of Human Beings: Cyber-
+netics and Society. Oxford, England: Houghton Mifflin.
+* Indicates a core reference.
+143
+View publication stats

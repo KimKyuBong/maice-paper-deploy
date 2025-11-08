@@ -1,0 +1,410 @@
+
+43
+
+Automatic Zoom
+Item Predictor Estimate Std. Error df t ß 95% CI (ß)
+Against
+Purpose of
+Education
+Condition
+[ST] 0.259 0.223 63.72 1.16 0.25 [-0.18, 0.69]
+Future
+Learning
+Risk
+Intercept 2.257 0.184 63.05 12.27 -0.25 [-0.57, 0.07]
+Condition
+[ST] 0.467 0.245 61.24 1.9 0.41 [-0.02, 0.84]
+Learning
+Process
+Intercept 2.723 0.177 65.29 15.36 -0.08 [-0.41, 0.24]
+Condition
+[ST] 0.185 0.237 63.81 0.78 0.17 [-0.26, 0.60]
+Performance
+Interpretation
+Intercept 2.698 0.189 64.07 14.27 -0.04 [-0.38, 0.29]
+Condition
+[ST] 0.148 0.253 62.78 0.59 0.13 [-0.31, 0.57]
+Note. Score ranges from 1 (I completely agree) to 5 (I do not agree at all), n=36 (ST) & 29 (nST). Questions: To
+what extent do you agree with the following statement? (1) The use of AI chatbots contradicts the purpose of
+education. (2) I am concerned about how AI chatbots will affect student learning in the future. (3) I am concerned
+about how the use of the chatbot could negatively affect my learning process. (4) I am worried that my own
+performance becomes less meaningful due to the use of AI. Underlying values reflect raw item means; inferential
+results were obtained via multi-level modelling using R (R version 4.3.0, library(lme4), Linear mixed model fit by
+REML ['lmerMod'], random intercepts by participant, 65 students, 122 observations. Standardised coefficients
+calculated using Satterthwaite's method ['lmerModLmerTest'].
+On the other hand, as universities have long functioned not merely as venues for
+knowledge transmission but as spaces for cultivating human connection and community
+building (Brouwer et al., 2016; Pittman & Richmond, 2008), the shift toward AI-mediated
+learning necessitates a conscious reaffirmation 21st century competences such as collaboration,
+communication and creativity as summarised by Voogt & Roblin (2012). Dialogic engagement,
+collaborative learning, and informal peer interaction, hallmarks of the university experience,
+must be preserved and reimagined within MAS ecologies. Interacting with AI agents should
+not displace, but rather scaffold and extend, the meaningful dialogue between learners.
+In sum, we expect the introduction of orchestrated MAS in higher education to not only
+augment instructional capacity but reconfigure what it means to be a competent learner. Future-
+ready students must be able to collaborate with, reflect on, and critique AI systems while
+cultivating their own creativity and social reasoning. Multi-agent environments therefore
+provide both a challenge and an opportunity: they invite new forms of interaction that stretch
+traditional notions of competence but require equally new pedagogical commitments to ensure
+these interactions remain equitable and educationally meaningful.
+9. Cost-Effectiveness and Scalability Considerations
+The average cost per student interaction with the Socratic AI chatbot during the
+experiment was approximately $0.0057 for a five-minute session, resulting in a total
+expenditure of $0.25 across all participants. These figures reflect token-based pricing and are
+subject to variation depending on the length and complexity of individual prompts and
+responses. Given equivalent token-based pricing, the Socratic AI tutor proved more cost-
+effective than the non-Socratic variant. In light of recent evidence that online tutoring can
+generate significant learning gains (Carlana & La Ferrara, 2024), our findings highlight the
+promise of dialogic, AI-mediated scaffolding. Socratic AI tutors may offer a scalable and cost-
+efficient alternative that aligns with pedagogical goals traditionally associated with human
+tutoring.
+Additionally, for comparative purposes, we estimated the cost of an equivalent human-
+led tutorial interaction using a conservative calculation based on the hourly rate of a research
+associate in the German higher education context. Excluding ancillary employment costs (e.g.
+social security contributions), and assuming a gross salary-based hourly rate (pay scale TV-L
+2025, E13,3), a five-minute exchange per student would amount to approximately €2.72.
+Multiplied across 44 students, this results in an estimated total of €119.684 for a given HEI
+replicating this experiment with humans.
+4
+𝐶𝑜𝑠𝑡 = ' 𝐺𝑟𝑜𝑠𝑠 𝑠𝑎𝑙𝑎𝑟𝑦
+𝐻𝑜𝑢𝑟𝑠 𝑝𝑒𝑟 𝑚𝑜𝑛𝑡ℎ ∗ 1
+608 ∗ 𝑁𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑚𝑖𝑛𝑢𝑡𝑒𝑠 ∗ 𝑁𝑢𝑚𝑏𝑒𝑟 𝑜𝑓 𝑠𝑡𝑢𝑑𝑒𝑛𝑡𝑠
+10. Conclusion: A New Learning Infrastructure for Higher Education
+This paper set out to move beyond dominant automation narratives by reframing
+generative AI not as a tool for cognitive offloading, but as a dialogic infrastructure capable of
+augmenting epistemic agency. Drawing on constructivist theory and the Socratic method, we
+presented an AI chatbot prototype designed to support students in the formulation of research
+questions through structured questioning. Empirical findings from our controlled experiment
+underscore that such dialogic AI systems can meaningfully stimulate reflective, critical and
+independent thinking.
+While this experiment serves as feasibility assessment and provide evidence in favour
+of dialog infrastructure, the significance of this intervention lies not in the standalone
+performance of the Socratic Tutor itself, but in its role as a proof of concept for one
+agent within a larger, orchestrated multi-agent systems. Orchestrated MAS offer a broader
+architectural vision in which specialised agents, such as Socratic guides, critical companions,
+and affective coaches, work in tandem, under pedagogical orchestration, to support diverse
+learner needs and trajectories. Unlike monolithic AI deployments, MAS are designed to be
+modular, work with the same knowledge, be pedagogically aligned, and epistemically diverse.
+From this perspective, orchestrated MAS constitute a new learning infrastructure: a
+hybrid approach in which human and artificial agents collaboratively engage in sustained,
+reflective inquiry. This shift redefines educational roles. Educators become orchestrators of
+learning processes, curating agent constellations in line with instructional intent. Students
+become epistemic co-agents, responsible for navigating, evaluating, and synthesising input
+from a distributed field of human and non-human educators.
+To realise this vision, four institutional commitments are essential. First, a pedagogical
+commitment to epistemic empowerment: AI systems must scaffold inquiry and foster agency,
+not automate cognition. Second, a technical and infrastructural commitment. We hope future
+multi-agent ecosystems to be developed as modular, extensible, and non-proprietary. Third,
+an ethical commitment to transparency, contestability, and human-centred design: orchestration
+layers must enable human oversight and value-sensitive alignment. And fourth, a commitment
+to overhaul curricula reflecting the changing educational landscape.
+As generative systems become embedded in the everyday experience of learning,
+universities must foster not only AI literacy, but the human literacies that allow learners to
+thrive in hybrid epistemic communities. At their best, multi-agent systems enable new
+constellations of support, scalable, dialogic, and equitable. But their promise will only be
+fulfilled through intentional pedagogical design and sustained institutional commitments.
+11. Declaration of generative AI and AI-assisted technologies in the writing process.
+During the preparation of this work the authors used DeepL Write in order to find word- and
+sentence alternatives. After using this tool, the authors reviewed and edited the content as
+needed and takes full responsibility for the content of the published article.
+12. Reference list
+AAIN. (2023). Generative artificial intelligence guidelines.
+https://www.teqsa.gov.au/sites/default/files/2023-04/aain-generative-ai-guidelines.pdf
+Agrawal, K., & Nargund, N. (2025). Neural Orchestration for Multi-Agent Systems: A Deep
+Learning Framework for Optimal Agent Selection in Multi-Domain Task
+Environments (No. arXiv:2505.02861). arXiv.
+https://doi.org/10.48550/arXiv.2505.02861
+Amin, M. M., & Schuller, B. W. (2024). On Prompt Sensitivity of ChatGPT in Affective
+Computing (No. arXiv:2403.14006). arXiv. http://arxiv.org/abs/2403.14006
+Barnett, S. M., & Ceci, S. J. (2002). When and where do we apply what we learn?: A
+taxonomy for far transfer. Psychological Bulletin, 128(4), 612–637.
+https://doi.org/10.1037/0033-2909.128.4.612
+Bašić, Ž., Banovac, A., Kružić, I., & Jerković, I. (2023). ChatGPT-3.5 as writing assistance in
+students’ essays. Humanities and Social Sciences Communications, 10(1), 1–5.
+https://doi.org/10.1057/s41599-023-02269-7
+Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2024). Generative
+AI Can Harm Learning. The Wharton School Research Paper.
+https://doi.org/10.2139/ssrn.4895486
+Bergeron-Oakes, O. (2015, November 24). HiPerGator 2.0 Ranks Second Among Public
+University Supercomputers. WUFT | News and Public Media for North Central
+Florida. https://www.wuft.org/healthscience/2015-11-24/hipergator-2-0-ranks-second-
+among-public-university-supercomputers
+Blasco, A., & Charisi, V. (2024). The Impact of Large Language Models on Students: A
+Randomised Study of Socratic vs. Non-Socratic AI and the Role of Step-by-Step
+Reasoning (SSRN Scholarly Paper No. 5040921).
+https://doi.org/10.2139/ssrn.5040921
+Bloom, B. S. (1956). Taxonomy of educational objectives: The classification of educational
+goals. In M. D. Engelhardt, E. J. Furst, W. J. Hill, & D. R. Krathwohl (Eds),
+Handbook I: Cognitive Domain. David McKay.
+Bond, M., Khosravi, H., De Laat, M., Bergdahl, N., Negrea, V., Oxley, E., Pham, P., Chong,
+S. W., & Siemens, G. (2024). A meta systematic review of artificial intelligence in
+higher education: A call for increased ethics, collaboration, and rigour. International
+Journal of Educational Technology in Higher Education, 21(1), 4.
+https://doi.org/10.1186/s41239-023-00436-z
+Brey, P., & Dainow, B. (2024). Ethics by design for artificial intelligence. AI and Ethics, 4(4),
+1265–1277. https://doi.org/10.1007/s43681-023-00330-4
+Broglia, E., Millings, A., & Barkham, M. (2018). Challenges to addressing student mental
+health in embedded counselling services: A survey of UK higher and further education
+institutions. British Journal of Guidance & Counselling, 46(4), 441–455.
+https://doi.org/10.1080/03069885.2017.1370695
+Brouwer, J., Jansen, E., Flache, A., & Hofman, A. (2016). The impact of social capital on
+self-efficacy and study success among first-year university students. Learning and
+Individual Differences, 52, 109–118. https://doi.org/10.1016/j.lindif.2016.09.016
+Brown, J. L., Healy, M., McCredie, T., & McIlveen, P. (2019). Career services in Australian
+higher education: Aligning the training of practitioners to contemporary practice.
+Journal of Higher Education Policy and Management, 41(5), 518–533.
+https://doi.org/10.1080/1360080X.2019.1646380
+Bruner, J. S. (1966). Toward a theory of instruction. Belknap Press of Harvard University
+Press.
+Buçinca, Z., Malaya, M. B., & Gajos, K. Z. (2021). To Trust or to Think: Cognitive Forcing
+Functions Can Reduce Overreliance on AI in AI-assisted Decision-making (No.
+arXiv:2102.09692). arXiv. http://arxiv.org/abs/2102.09692
+Burbules, N. C., & Bruce, B. C. (2001). Theory and Research on Teaching as Dialogue. In V.
+Richardson (Ed.), Handbook of research on teaching, 4th Edition (pp. 1102–1121).
+American Educational Research Association.
+Carey, T. A., & Mullan, R. J. (2004). What is Socratic questioning? Psychotherapy: Theory,
+Research, Practice, Training, 41(3), 217–226. https://doi.org/10.1037/0033-
+3204.41.3.217
+Carlana, M., & La Ferrara, E. (2024). Apart but Connected: Online Tutoring, Cognitive
+Outcomes, and Soft Skills (Working Paper No. 32272). National Bureau of Economic
+Research. https://doi.org/10.3386/w32272
+Carolus, A., Koch, M. J., & Feng, S. (2025). Time-on-task and instructions help humans to
+keep up with AI: Replication and extension of a comparison of creative performances.
+Scientific Reports, 15(1), 20173. https://doi.org/10.1038/s41598-025-05745-z
+Chan, C. K. Y., & Hu, W. (2023). Students’ voices on generative AI: Perceptions, benefits,
+and challenges in higher education. International Journal of Educational Technology
+in Higher Education, 20(1), 43. https://doi.org/10.1186/s41239-023-00411-8
+Chen, B. (2025). Beyond Tools: Generative AI as Epistemic Infrastructure in Education (No.
+arXiv:2504.06928). arXiv. https://doi.org/10.48550/arXiv.2504.06928
+Dey, F., & Cruzvergara, C. Y. (2014). Evolution of Career Services in Higher Education. New
+Directions for Student Services, 2014(148), 5–18. https://doi.org/10.1002/ss.20105
+Dodig-Crnkovic, G., Basti, G., & Holstein, T. (2025). Delegating Responsibilities to
+Intelligent Autonomous Systems: Challenges and Benefits. Journal of Bioethical
+Inquiry. https://doi.org/10.1007/s11673-025-10428-5
+Du, J., & Daniel, B. K. (2024). Transforming language education: A systematic review of AI-
+powered chatbots for English as a foreign language speaking practice. Computers and
+Education: Artificial Intelligence, 6, 100230.
+https://doi.org/10.1016/j.caeai.2024.100230
+Elshall, A. S., & Badir, A. (2025). Balancing AI-assisted learning and traditional assessment:
+The FACT assessment in environmental data science education. Frontiers in
+Education, 10. https://doi.org/10.3389/feduc.2025.1596462
+European Commission. (2025). The European High Performance Computing Joint
+Undertaking. https://digital-strategy.ec.europa.eu/en/policies/high-performance-
+computing-joint-undertaking
+Fahrner, M., & Wolf, B. (2020). Überfachlicher Kompetenzerwerb durch Anwendung der
+sokratischen Methode in der Mathematik. wbv. https://doi.org/10.25656/01:18568
+Fan, Y., Tang, L., Le, H., Shen, K., Tan, S., Zhao, Y., Shen, Y., Li, X., & Gašević, D. (2025).
+Beware of metacognitive laziness: Effects of generative artificial intelligence on
+learning motivation, processes, and performance. British Journal of Educational
+Technology, 56(2), 489–530. https://doi.org/10.1111/bjet.13544
+Ferrer, X., Nuenen, T. van, Such, J. M., Coté, M., & Criado, N. (2021). Bias and
+Discrimination in AI: A Cross-Disciplinary Perspective. IEEE Technology and Society
+Magazine, 40(2), 72–80. IEEE Technology and Society Magazine.
+https://doi.org/10.1109/MTS.2021.3056293
+Geiecke, F., & Jaravel, X. (2024). Conversations at Scale: Robust AI-led Interviews with a
+Simple Open-Source Platform (SSRN Scholarly Paper No. 4974382).
+https://doi.org/10.2139/ssrn.4974382
+Ghioni, R., Taddeo, M., & Floridi, L. (2024). Open source intelligence and AI: A systematic
+review of the GELSI literature. AI & SOCIETY, 39(4), 1827–1842.
+https://doi.org/10.1007/s00146-023-01628-x
+Groothuijsen, S., van den Beemt, A., Remmers, J. C., & van Meeuwen, L. W. (2024). AI
+chatbots in programming education: Students’ use in a scientific computing course and
+consequences for learning. Computers and Education: Artificial Intelligence, 7,
+100290. https://doi.org/10.1016/j.caeai.2024.100290
+Guggenberger, T., Lämmermann, L., Urbach, N., Walter, A., & Hofmann, P. (2023). Task
+delegation from AI to humans: A principal-agent perspective.
+Haase, J., & Hanel, P. H. P. (2023). Artificial muses: Generative Artificial Intelligence
+Chatbots Have Risen to Human-Level Creativity. Journal of Creativity, 33(3), 100066.
+https://doi.org/10.1016/j.yjoc.2023.100066
+Hadfield-Menell, D. J. (2021). The Principal–Agent Alignment Problem in Artificial
+Intelligence [University of California].
+https://www.proquest.com/docview/2884056303?pq-
+origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses
+Han, T., Adams, L. C., Papaioannou, J.-M., Grundmann, P., Oberhauser, T., Figueroa, A.,
+Löser, A., Truhn, D., & Bressem, K. K. (2025). MedAlpaca—An Open-Source
+Collection of Medical Conversational AI Models and Training Data (No.
+arXiv:2304.08247). arXiv. https://doi.org/10.48550/arXiv.2304.08247
+Heckmann, G., & Krohn, D. (2018). Das sokratische Gespräch (3. Auflage). LIT.
+Hill, L., & Key, O. (2019). Orientierung und Unterstützung zum Studieneingang.
+Umsetzungsstand an deutschen Hochschulen. (No. 226; CHE Arbeitspapier). Centrum
+für Hochschulentwicklung.
+Hmelo-Silver, C., E., Duncan, R. G., & Chinn, C. A. (2007). Scaffolding and Achievement in
+Problem-Based and Inquiry Learning: A Response to Kirschner, Sweller, and Clark
+(2006). Educational Psychologist, 42(2), 99–107.
+https://doi.org/10.1080/00461520701263368
+Holmes, W., Porayska-Pomsta, K., Holstein, K., Sutherland, E., Baker, T., Shum, S. B.,
+Santos, O. C., Rodrigo, M. T., Cukurova, M., Bittencourt, I. I., & Koedinger, K. R.
+(2022). Ethics of AI in Education: Towards a Community-Wide Framework.
+International Journal of Artificial Intelligence in Education, 32(3), 504–526.
+https://doi.org/10.1007/s40593-021-00239-1
+Huang, H. (2024). Promoting students’ creative and design thinking with generative AI-
+supported co-regulated learning: Evidence from digital game development projects in
+healthcare courses. Educational Technology & Society, 27(4), 487–502.
+Idowu, J. A., Koshiyama, A. S., & Treleaven, P. (2024). Investigating algorithmic bias in
+student progress monitoring. Computers and Education: Artificial Intelligence, 7,
+100267. https://doi.org/10.1016/j.caeai.2024.100267
+Katsara, O., & De Witte, K. (2019). How to use Socratic questioning in order to promote
+adults’ self-directed learning. Studies in the Education of Adults, 51(1), 109–129.
+https://doi.org/10.1080/02660830.2018.1526446
+Kestin, G., Miller, K., Klales, A., Milbourne, T., & Ponti, G. (2024). AI Tutoring Outperforms
+Active Learning. https://doi.org/10.21203/rs.3.rs-4243877/v1
+Khurumova, V., & Pinto, J. C. (2024). Career services at HEI’s: What are they offering?
+Frontiers in Education, 9, 1410628. https://doi.org/10.3389/feduc.2024.1410628
+Knezic, D., Wubbels, T., Elbers, E., & Hajer, M. (2010). The Socratic Dialogue and teacher
+education. Teaching and Teacher Education, 26(4), 1104–1111.
+https://doi.org/10.1016/j.tate.2009.11.006
+Krathwohl, D. R. (2002). A Revision of Bloom’s Taxonomy: An Overview. Theory Into
+Practice, 41(4), 212–218. https://doi.org/10.1207/s15430421tip4104_2
+Langenkamp, M., & Yue, D. N. (2022). How Open Source Machine Learning Software
+Shapes AI. Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and
+Society, 385–395. https://doi.org/10.1145/3514094.3534167
+Liu, B., Zhang, J., Lin, F., Jia, X., & Peng, M. (2025). One Size doesn’t Fit All: A
+Personalized Conversational Tutoring Agent for Mathematics Instruction (No.
+arXiv:2502.12633). arXiv. https://doi.org/10.48550/arXiv.2502.12633
+Liu, M., Zhang, J., Nyagoga, L. M., & Liu, L. (2024). Student-AI Question Cocreation for
+Enhancing Reading Comprehension. IEEE Transactions on Learning Technologies,
+17, 815–826. IEEE Transactions on Learning Technologies.
+https://doi.org/10.1109/TLT.2023.3333439
+London School of Economics and Political Science. (2025). Additional services.
+https://www.lse.ac.uk/language-centre/additional-services/home.aspx
+Luo, X., Rechardt, A., Sun, G., Nejad, K. K., Yáñez, F., Yilmaz, B., Lee, K., Cohen, A. O.,
+Borghesani, V., Pashkov, A., Marinazzo, D., Nicholas, J., Salatiello, A., Sucholutsky,
+I., Minervini, P., Razavi, S., Rocca, R., Yusifov, E., Okalova, T., ... Love, B. C.
+(2025). Large language models surpass human experts in predicting neuroscience
+results. Nature Human Behaviour, 9(2), 305–315. https://doi.org/10.1038/s41562-024-
+02046-9
+Manhiça, R., Santos, A., & Cravino, J. (2022). The use of artificial intelligence in learning
+management systems in the context of higher education: Systematic literature review.
+2022 17th Iberian Conference on Information Systems and Technologies (CISTI), 1–6.
+https://doi.org/10.23919/CISTI54924.2022.9820205
+Martin, D. (2020). Nvidia, Co-Founder Give $50M To University Of Florida For AI Data
+Center | CRN. https://www.crn.com/news/components-peripherals/nvidia-co-founder-
+give-50m-to-university-of-florida-for-ai-data-center
+Mathesius, S., Upmeier zu Belzen, A., & Krüger, D. (2014). Kompetenzen von
+Biologiestudierenden im Bereich der naturwissenschaftlichen Erkenntnisgewinnung—
+Entwicklungs eines Testinstruments. Erkenntnisweg Biologiedidaktik, 73–88.
+McMillan, J., Goodman, S., & Schmid, B. (2016). Illuminating “Transaction Spaces” in
+Higher Education: University–Community Partnerships and Brokering as “Boundary
+Work”. Journal of Higher Education Outreach & Engagement, 20(3).
+Menekse, M., Putra, A. S., Kim, J., Butt, A. A., McDaniel, M. A., Davidesco, I., Cadieux, M.,
+Kim, J., & Litman, D. (2025). Enhancing student reflections with natural language
+processing based scaffolding: A quasi-experimental study in a large lecture course.
+Computers and Education: Artificial Intelligence, 8, 100397.
+https://doi.org/10.1016/j.caeai.2025.100397
+Miller, E., Manz, E., Russ, R., Stroupe, D., & Berland, L. (2018). Addressing the epistemic
+elephant in the room: Epistemic agency and the next generation science standards.
+Journal of Research in Science Teaching, 55(7), 1053–1075.
+https://doi.org/10.1002/tea.21459
+Moldoveanu, M. C. (2024). Soft skills: How to see, measure and build the skills that make us
+uniquely human. De Gruyter.
+Morris, W., Crossley, S., Holmes, L., Ou, C., Dascalu, M., & McNamara, D. (2024).
+Formative Feedback on Student-Authored Summaries in Intelligent Textbooks Using
+Large Language Models. International Journal of Artificial Intelligence in Education.
+https://doi.org/10.1007/s40593-024-00395-0
+Odden, T. O. B., Silvia, D. W., & Malthe‐Sørenssen, A. (2023). Using computational essays
+to foster disciplinary epistemic agency in undergraduate science. Journal of Research
+in Science Teaching, 60(5), 937–977. https://doi.org/10.1002/tea.21821
+Ouyang, F., Dinh, T. A., & Xu, W. (2023). A Systematic Review of AI-Driven Educational
+Assessment in STEM Education. Journal for STEM Education Research, 6(3), 408–
+426. https://doi.org/10.1007/s41979-023-00112-x
+Ouyang, F., Zheng, L., & Jiao, P. (2022). Artificial intelligence in online higher education: A
+systematic review of empirical research from 2011 to 2020. Education and
+Information Technologies, 27(6), 7893–7925. https://doi.org/10.1007/s10639-022-
+10925-9
+Overholser, J. C. (1993). Elements of the Socratic method: I. Systematic questioning.
+Psychotherapy: Theory, Research, Practice, Training, 30(1), 67–74.
+https://doi.org/10.1037/0033-3204.30.1.67
+Palmer, A., Smith, N. A., & Spirling, A. (2024). Using proprietary language models in
+academic research requires explicit justification. Nature Computational Science, 4(1),
+2–3. https://doi.org/10.1038/s43588-023-00585-1
+Paul, R. (1990). Critical thinking: What every person needs to survive in a rapidly changing
+world (A. J. A. Binker, Ed.). Center for Critical Thinking and Moral Critique, Sonoma
+State University.
+Paul, R., & Elder, L. (2007). Critical Thinking: The Art of Socratic Questioning. Journal of
+Developmental Education, 31(1), 36–37.
+Pittman, L. D., & Richmond, A. (2008). University Belonging, Friendship Quality, and
+Psychological Adjustment During the Transition to College. The Journal of
+Experimental Education, 76(4), 343–362. https://doi.org/10.3200/JEXE.76.4.343-362
+Qi, C., Jia, L., Wei, Y., Jiang, Y.-H., & Gu, X. (2025). IntelliChain: An Integrated
+Framework for Enhanced Socratic Method Dialogue with LLMs and Knowledge
+Graphs (No. arXiv:2502.00010). arXiv. https://doi.org/10.48550/arXiv.2502.00010
+Regulation (EU) 2024/1689 (2024). http://data.europa.eu/eli/reg/2024/1689/oj/eng
+Riva, J. J., Malik, K. M. P., Burnie, S. J., Endicott, A. R., & Busse, J. W. (2012). What is your
+research question? An introduction to the PICOT format for clinicians. The Journal of
+the Canadian Chiropractic Association, 56(3), 167–171.
+Salvi, F., Horta Ribeiro, M., Gallotti, R., & West, R. (2025). On the conversational
+persuasiveness of GPT-4. Nature Human Behaviour, 1–9.
+https://doi.org/10.1038/s41562-025-02194-6
+Scardamalia, M., & Bereiter, C. (1991). Higher Levels of Agency for Children in Knowledge
+Building: A Challenge for the Design of New Knowledge Media. Journal of the
+Learning Sciences, 1(1), 37–68. https://doi.org/10.1207/s15327809jls0101_3
+Shils, E., & Roberts, J. (2006). Chapter 6: The diffusion of european models outside europe.
+In W. Rüegg (Ed.), A History of the University in Europe: Volume 3, Universities in
+the Nineteenth and Early Twentieth Centuries (1800-1945) (pp. 163–229). Cambridge
+University Press.
+Shukla, P., Bui, P., Levy, S. S., Kowalski, M., Baigelenov, A., & Parsons, P. (2025). De-
+skilling, Cognitive Offloading, and Misplaced Responsibilities: Potential Ironies of
+AI-Assisted Design. Proceedings of the Extended Abstracts of the CHI Conference on
+Human Factors in Computing Systems, 1–7. https://doi.org/10.1145/3706599.3719931
+Shulman, Lees. (1981). Disciplines of Inquiry in Education: An Overview. Educational
+Researcher, 10(6), 5–23. https://doi.org/10.3102/0013189X010006005
+Siegmann, C., & Anderljung, M. (2022). The Brussels Effect and Artificial Intelligence: How
+EU regulation will impact the global AI market (No. arXiv:2208.12645). arXiv.
+https://doi.org/10.48550/arXiv.2208.12645
+Southworth, J., Migliaccio, K., Glover, J., Glover, J., Reed, D., McCarty, C., Brendemuhl, J.,
+& Thomas, A. (2023). Developing a model for AI Across the curriculum:
+Transforming the higher education landscape via innovation in AI literacy. Computers
+and Education: Artificial Intelligence, 4, 100127.
+https://doi.org/10.1016/j.caeai.2023.100127
+Stöhr, C., Ou, A. W., & Malmström, H. (2024). Perceptions and usage of AI chatbots among
+students in higher education across genders, academic levels and fields of study.
+Computers and Education: Artificial Intelligence, 7, 100259.
+https://doi.org/10.1016/j.caeai.2024.100259
+Stroupe, D. (2014). Examining Classroom Science Practice Communities: How Teachers and
+Students Negotiate Epistemic Agency and Learn Science-as-Practice. Science
+Education, 98(3), 487–516. https://doi.org/10.1002/sce.21112
+The Florida Senate. (2025). Local Funding Initiative Request 2025-26.
+https://www.flsenate.gov/PublishedContent/Session/FiscalYear/FY2025-
+26/LocalFundingInitiativeRequests/FY2025-26_S3066.pdf
+Tran, C., James, B., Allen, V., Castro, R. O. de, & Sanin, C. (2025). Using Generative
+Artificial Intelligence in learning and teaching: An empirical analysis on academic
+staff’s perspectives. Journal of Applied Learning and Teaching, 8(1), Article 1.
+https://doi.org/10.37074/jalt.2025.8.1.23
+University College London. (2025). Get one-to-one advice. UCL Careers.
+https://www.ucl.ac.uk/careers/about-us/get-one-one-advice
+Vallor, S. (2015). Moral Deskilling and Upskilling in a New Machine Age: Reflections on the
+Ambiguous Future of Character. Philosophy & Technology, 28(1), 107–124.
+https://doi.org/10.1007/s13347-014-0156-9
+Venkatesh, V. (2022). Adoption and use of AI tools: A research agenda grounded in UTAUT.
+Annals of Operations Research, 308(1), 641–652. https://doi.org/10.1007/s10479-020-
+03918-9
+Voogt, J., & Roblin, N. P. (2012). A comparative analysis of international frameworks for
+21st century competences: Implications for national curriculum policies. Journal of
+Curriculum Studies, 44(3), 299–321. https://doi.org/10.1080/00220272.2012.668938
+Vygotsky, L. S. (1980). Mind in Society: Development of Higher Psychological Processes
+(M. Cole, V. Jolm-Steiner, S. Scribner, & E. Souberman, Eds). Harvard University
+Press. https://doi.org/10.2307/j.ctvjf9vz4
+Wambsganss, T., Janson, A., Söllner, M., Koedinger, K., & Leimeister, J. M. (2025).
+Improving Students’ Argumentation Skills Using Dynamic Machine-Learning–Based
+Modeling. Information Systems Research, 36(1), 474–507.
+https://doi.org/10.1287/isre.2021.0615
+Wambsganss, T., Kueng, T., Soellner, M., & Leimeister, J. M. (2021). ArgueTutor: An
+Adaptive Dialog-Based Learning System for Argumentation Skills. Proceedings of the
+2021 CHI Conference on Human Factors in Computing Systems, 1–13.
+https://doi.org/10.1145/3411764.3445781
+Webb, G. I., Lee, L. K., Petitjean, F., & Goethals, B. (2017). Understanding Concept Drift
+(No. arXiv:1704.00362). arXiv. https://doi.org/10.48550/arXiv.1704.00362
+Weber-Wulff, D., Anohina-Naumeca, A., Bjelobaba, S., Foltýnek, T., Guerrero-Dib, J.,
+Popoola, O., Šigut, P., & Waddington, L. (2023). Testing of detection tools for AI-
+generated text. International Journal for Educational Integrity, 19(1), 26.
+https://doi.org/10.1007/s40979-023-00146-z
+Yao, X., Zhong, Y., & Cao, W. (2025). The analysis of generative artificial intelligence
+technology for innovative thinking and strategies in animation teaching. Scientific
+Reports, 15(1), 18618. https://doi.org/10.1038/s41598-025-03805-y
+Zhang, J., Wang, Z., Zhu, H., Liu, J., Lin, Q., & Cambria, E. (2025). MARS: A Multi-Agent
+Framework Incorporating Socratic Guidance for Automated Prompt Optimization
+(No. arXiv:2503.16874). arXiv. https://doi.org/10.48550/arXiv.2503.16874
+Zhang, Y., Li, Y., Cui, L., Cai, D., Liu, L., Fu, T., Huang, X., Zhao, E., Zhang, Y., Chen, Y.,
+Wang, L., Luu, A. T., Bi, W., Shi, F., & Shi, S. (2023). Siren’s Song in the AI Ocean:
+A Survey on Hallucination in Large Language Models (No. arXiv:2309.01219). arXiv.
+https://doi.org/10.48550/arXiv.2309.01219

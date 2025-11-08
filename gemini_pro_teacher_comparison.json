@@ -1,0 +1,10 @@
+{
+  "gemini_pro_sessions": 24,
+  "overlapping_sessions": 24,
+  "total_comparisons": 43,
+  "overall_correlation": 0.4748779685201682,
+  "overall_p_value": 0.0012924658505383219,
+  "avg_teacher_correlation": 0.532147329019261,
+  "teacher_correlations": [
+    {
+      "teacher_id": 

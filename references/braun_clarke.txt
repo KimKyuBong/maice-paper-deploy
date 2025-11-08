@@ -1,0 +1,1074 @@
+Braun, V. and Clarke, V. (2006) Using thematic analysis in psychol-
+ogy. Qualitative Research in Psychology, 3 (2). pp. 77-101. ISSN
+1478-0887 Available from: http://eprints.uwe.ac.uk/11735
+We recommend you cite the published version.
+The publisher’s URL is:
+http://dx.doi.org/10.1191/1478088706qp063oa
+Refereed: Yes
+This is an electronic version of an article published in ”Braun, Virginia and
+Clarke, Victoria (2006) Using thematic analysis in psychology. Qualitative Re-
+search in Psychology, 3 (2). pp. 77?101”. Qualitative Research in Psychology is
+available online at: http://www.informaworld.com/smpp/content~db=all~content=a795127197~frm=titlelink.
+Disclaimer
+UWE has obtained warranties from all depositors as to their title in the material
+deposited and as to their right to deposit such material.
+UWE makes no representation or warranties of commercial utility, title, or fit-
+ness for a particular purpose or any other warranty, express or implied in respect
+of any material deposited.
+UWE makes no representation that the use of the materials will not infringe
+any patent, copyright, trademark or other property or proprietary rights.
+UWE accepts no liability for any infringement of intellectual property rights
+in any material deposited but will remove such material from public view pend-
+ing investigation in the event of an allegation of any such infringement.
+PLEASE SCROLL DOWN FOR TEXT.
+Using thematic analysis in psychology
+Virginia Braun * & Victoria Clarke
+Department of Psychology Faculty of Applied Sciences
+The University of Auckland The University of the West of England
+Private Bag 92019 Frenchay Campus
+Auckland Bristol
+New Zealand BS16 1QY
+v.braun@auckland.ac.nz Victoria.clarke@uwe.ac.uk
+Ph: +64 9 3737599 x 87561 +44 117 3282176
+Fax: +64 9 3737450 +44 117 3282904
+MS Word Length (incl. references, notes, tables and figures): 13510
+Using thematic analysis in psychology
+Thematic analysis is a poorly demarcated, rarely-acknowledged, yet widely-used qualitative
+analytic method within psychology. In this paper, we argue that it offers an accessible and
+theoretically-flexible approach to analysing qualitative data. We outline what thematic analysis is,
+locating it in relation to other qualitative analytic methods that search for themes or patterns, and
+in relation to different epistemological and ontological positions. We then provide clear guidelines
+to those wanting to start thematic analysis, or conduct it in a more deliberate and rigorous way,
+and consider potential pitfalls in conducting thematic analysis. Finally, we outline the disadvantages
+and advantages of thematic analysis. We conclude by advocating thematic analysis as a useful and
+flexible method for qualitative research in and beyond psychology.
+Keywords: thematic analysis, qualitative psychology, patterns, epistemology, flexibility
+2
+Author Biographical Notes
+Virginia Braun is a senior lecturer in the Department of Psychology at The University of Auckland,
+where she teaches, supervises and conducts qualitative research. Her research interests are
+primarily focused around women‟s health, gendered bodies, and sex and sexuality, and the
+intersections between these areas. She is currently working on projects related to 'sex in long-term
+relationships', 'female genital cosmetic surgery', and „the social context of STI transmission‟.
+Victoria Clarke is a senior lecture in social psychology at the University of the West of England. She
+has published a number of papers on lesbian and gay parenting, and co-edited two special issues of
+Feminism & Psychology on Marriage (with Sara-Jane Finlay & Sue Wilkinson). She is currently
+conducting ESRC-funded research on same sex relationships (with Carol Burgoyne & Maree Burns)
+and co-editing (with Elizabeth Peel) a book LGBT psychology (Out in Psychology, Wiley).
+3
+Using thematic analysis in psychology
+Thematic analysis is a poorly demarcated and rarely-acknowledged, yet widely-used qualitative
+analytic method (see Boyatzis, 1998; Roulston, 2001) within and beyond psychology. In this paper,
+we aim to fill what we, as researchers and teachers in qualitative psychology, have experienced as
+a current gap: the absence of a paper which adequately outlines the theory, application, and
+evaluation of thematic analysis, and one which does so in a way accessible to students and those
+not particularly familiar with qualitative research.1 That is, we aim to write a paper which will be
+useful as both a teaching and research tool in qualitative psychology. Therefore, in this paper we
+discuss theory and method for thematic analysis, and clarify the similarities and differences
+between different approaches that share features in common with a thematic approach.
+Qualitative approaches are incredibly diverse, complex and nuanced (Holloway & Todres, 2003), and
+thematic analysis should be seen as a foundational method for qualitative analysis. It is the first
+qualitative method of analysis that researchers should learn, as it provides core skills that will be
+useful for conducting many other forms of qualitative analysis. Indeed, Holloway and Todres (2003:
+347) identify “thematizing meanings” as one of a few shared generic skills across qualitative
+analysis.2 For this reason, Boyatzis (1998) characterises it not as a specific method but as a tool to
+use across different methods. Similarly, Ryan and Bernard (2000) locate thematic coding as a
+process performed within „major‟ analytic traditions (such as grounded theory), rather than a
+specific approach in its own right. We argue thematic analysis should be considered a method in its
+own right.
+One of the benefits of thematic analysis is its flexibility. Qualitative analytic methods can be
+roughly divided into two camps. Within the first, there are those tied to, or stemming from, a
+particular theoretical or epistemological position. For some of these - such as conversation analysis
+([CA] e.g., Hutchby & Wooffitt, 1998) and interpretative phenomenological analysis ([IPA] e.g.,
+Smith & Osborn, 2003) – there is (as yet) relatively limited variability in how the method is applied,
+within that framework. In essence, one recipe guides analysis. For others of these – such as
+grounded theory (e.g., Glaser, 1992; Strauss & Corbin, 1998), discourse analysis ([DA] e.g., Burman
+& Parker, 1993; Potter & Wetherell, 1987; Willig, 2003) or narrative analysis (e.g., Murray, 2003;
+Riessman, 1993) – there are different manifestations of the method, from within the broad
+4
+theoretical framework. Second, there are methods that are essentially independent of theory and
+epistemology, and can be applied across a range of theoretical and epistemological approaches.
+Although often (implicitly) framed as a realist/experiential method (e.g., Aronson, 1994; Roulston,
+2001), thematic analysis is actually firmly in the second camp, and is compatible with both
+essentialist and constructionist paradigms within psychology (we discuss this later). Through its
+theoretical freedom, thematic analysis provides a flexible and useful research tool, which can
+potentially provide a rich and detailed, yet complex account of data.
+Given the advantages of the flexibility of thematic analysis, it is important that we are clear that
+we are not trying to limit this flexibility. However, an absence of clear and concise guidelines
+around thematic analysis means that the „anything goes‟ critique of qualitative research (Antaki,
+Billig, Edwards, & Potter, 2002) may well apply in some instances. With this paper, we hope to
+strike a balance between demarcating thematic analysis clearly – i.e., explaining what it is, and
+how you do it - and ensuring flexibility in relation to how it is used, so that it does not become
+limited and constrained, and lose one of its key advantages. Indeed, a clear demarcation of this
+method will be useful to ensure that those who use thematic analysis can make active choices about
+the particular form of analysis they are engaged in. Therefore, this paper seeks to celebrate the
+flexibility of the method, and provide a vocabulary and „recipe‟ for people to start doing thematic
+analysis in a way that is theoretically and methodologically sound.3 As we will show, what is
+important is that as well as applying a method to data, researchers make their (epistemological and
+other) assumptions explicit (Holloway & Todres, 2003). Qualitative psychologists need to be clear
+about what they are doing and why, and include the often-omitted „how‟ they did their analysis in
+their reports (Attride-Stirling, 2001).
+In this paper we outline: what thematic analysis is; a 6-phase guide to doing thematic analysis;
+potential pitfalls to avoid when doing thematic analysis; what makes good thematic analysis; and
+advantages and disadvantages of thematic analysis. Throughout, we provide examples from the
+research literature, and our own research. By providing examples we show the types of research
+questions and topics that thematic analysis can be used to study.
+Before we begin, we need to define a few of the terms used throughout the paper. Data corpus
+refers to all data collected for a particular research project, while data set refers to all the data
+5
+from the corpus that is being used for a particular analysis. There are two main ways of choosing
+your data set (which approach you take depends on whether you are coming to the data with a
+specific question or not – see „a number of decisions‟ below). First, your data set may consist of
+many or all individual data items within your data corpus. So, for example, in a project on female
+genital cosmetic surgery, Virginia‟s data corpus consists of interviews with surgeons, media items on
+the topic, and surgeon websites. For any particular analysis, her data set might just be the surgeon
+interviews, just the websites (Braun, 2005b), or it might combine surgeon data with some media
+data (e.g., Braun, 2005a). Second, your data set might be identified by a particular analytic interest
+in some topic in the data, and your data set then becomes all instances in the corpus where that
+topic is referred to. So in Virginia‟s example, if she was interested in how „sexual pleasure‟ was
+talked about, her data set would consist of all instances across the entire data corpus that had some
+relevance to sexual pleasure. These two approaches might sometimes be combined to produce the
+data set. Data item is used to refer to each individual piece of data collected, which together make
+up the data set or corpus. A data item in this instance would be an individual surgeon interview, a
+television documentary, or one particular website. Finally, data extract refers to an individual
+coded chunk of data, which has been identified within, and extracted from, a data item. There will
+be many of these, taken from throughout the entire data set, and only a selection of these extracts
+will feature in the final analysis.
+What is thematic analysis?
+Thematic analysis is a method for identifying, analysing, and reporting patterns (themes) within
+data. It minimally organises and describes your data set in (rich) detail. However, it also often goes
+further than this, and interprets various aspects of the research topic (Boyatzis, 1998). The range of
+different possible thematic analyses will further be highlighted in relation to a number of decisions
+regarding it as a method (see below).
+Thematic analysis is widely used, but there is no clear agreement about what thematic analysis is
+and how you go about doing it (see Attride-Stirling, 2001; Boyatzis, 1998; Tuckett, 2005, for other
+examples). It can be seen as a very poorly „branded‟ method, in that it does not appear to exist as a
+„named‟ analysis in the same way that other methods do (e.g., narrative analysis, grounded theory).
+In this sense, it is often not explicitly claimed as the method of analysis, when, in actuality, we
+6
+argue that a lot of analysis is essentially thematic - but is either claimed as something else (such as
+discourse analysis, or even content analysis (e.g., Meehan, Vermeer, & Windsor, 2000)) or not
+identified as any particular method at all – for example, data were “subjected to qualitative
+analysis for commonly recurring themes” (Braun & Wilkinson, 2003: 30). If we do not know how
+people went about analysing their data, or what assumptions informed their analysis, it is difficult
+to evaluate their research, and to compare and/or synthesise it with other studies on that topic,
+and it can impede other researchers carrying out related projects in the future (Attride-Stirling,
+2001). For these reasons alone, clarity around process and practice of method is vital. We hope that
+this paper will lead to more clarity around thematic analysis.
+Relatedly, insufficient detail is often given to reporting the process and detail of analysis (Attride-
+Stirling, 2001). It is not uncommon to read of themes „emerging‟ from the data (although this issue
+is not limited to thematic analysis). For example, Singer and Hunter‟s (1999: 67) thematic discourse
+analysis of women‟s experiences of early menopause identified that “several themes emerged”
+during the analysis. Rubin and Rubin (1995: 226) claim that analysis is exciting because “you
+discover themes and concepts embedded throughout your interviews”. An account of themes
+„emerging‟ or being „discovered‟ is a passive account of the process of analysis, and it denies the
+active role the researcher always plays in identifying patterns/themes, selecting which are of
+interest, and reporting them to the readers (Taylor & Ussher, 2001).
+4 The language of „themes
+emerging‟:
+Can be misinterpreted to mean that themes „reside‟ in the data, and if we just look hard
+enough they will „emerge‟ like Venus on the half shell. If themes „reside‟ anywhere, they
+reside in our heads from our thinking about our data and creating links as we understand
+them. (Ely, Vinz, Downing, & Anzul, 1997: 205-6)
+It is important at this point for us to acknowledge our own theoretical positions and values in
+relation to qualitative research. We do not subscribe to a naïve realist view of qualitative research
+where the researcher can simply „give voice‟ (see Fine, 2002) to their participants. As Fine (2002:
+218) argues, even a „giving voice‟ approach “involves carving out unacknowledged pieces of
+narrative evidence that we select, edit, and deploy to border our arguments”. However, nor do we
+think there is one ideal theoretical framework for conducting qualitative research, or indeed one
+7
+ideal method. What is important is that the theoretical framework and methods match what the
+researcher wants to know, and that they acknowledge these decisions, and recognise them as
+decisions.
+Thematic analysis differs from other analytic methods that seek to describe patterns across
+qualitative data – such as „thematic‟ discourse analysis, thematic decomposition analysis, IPA and
+grounded theory.
+5 Both IPA and grounded theory seek patterns in the data, but are theoretically
+bounded. IPA is wed to a phenomenological epistemology (Smith, Jarman, & Osborn, 1999; Smith &
+Osborn, 2003), which gives experience primacy (Holloway & Todres, 2003), and is about
+understanding people‟s everyday experience of reality, in great detail, so as to gain an
+understanding of the phenomenon in question (McLeod, 2001). To complicate matters, grounded
+theory comes in different versions (Charmaz, 2002). Regardless, the goal of a grounded theory
+analysis is to generate a plausible – and useful - theory of the phenomena that is grounded in the
+data (McLeod, 2001). However, in our experience, grounded theory seems increasingly to be used in
+a way that is essentially grounded theory „lite‟ - as a set of procedures for coding data very much
+akin to thematic analysis. Such analyses do not appear to fully subscribe to the theoretical
+commitments of a „full-fat‟ grounded theory, which requires analysis to be directed towards theory
+development (Holloway & Todres, 2003). We argue, therefore, that a „named and claimed‟
+thematic analysis means researchers need not subscribe to the implicit theoretical commitments of
+grounded theory if they do not wish to produce a fully worked-up grounded-theory analysis.
+The term thematic discourse analysis is used to refer to a wide range of pattern-type analysis of
+data, ranging from thematic analysis within a social constructionist epistemology (i.e., where
+patterns are identified as socially produced, but no discursive analysis is conducted), to forms of
+analysis very much akin to the interpretative repertoire form of DA (Clarke, 2005). Thematic
+decomposition analysis (e.g., Stenner, 1993; Ussher & Mooney-Somers, 2000) is a specifically-named
+form of „thematic‟ discourse analysis which identifies patterns (themes, stories) within data, and
+theorises language as constitutive of meaning and meaning as social.
+These different methods share a search for certain themes or patterns across an (entire) data set,
+rather than within a data item, such as an individual interview or interviews from one person, as in
+the case of biographical or case-study forms of analysis such as narrative analysis (e.g., Murray,
+2003; Riessman, 1993). In this sense they more or less overlap with thematic analysis. As thematic
+8
+analysis does not require the detailed theoretical and technological knowledge of approaches such
+as grounded theory and DA, it can offer a more accessible form of analysis, particularly for those
+early in a qualitative research career.
+In contrast to IPA or grounded theory (and other methods like narrative, discourse or CA), thematic
+analysis is not wed to any pre-existing theoretical framework, and so it can be used within different
+theoretical frameworks (although not all), and can be used to do different things within them.
+Thematic analysis can be an essentialist or realist method, which reports experiences, meanings and
+the reality of participants, or it can be a constructionist method, which examines the ways in which
+events, realities, meanings, experiences and so on are the effects of a range of discourses operating
+within society. It can also be a „contextualist‟ method, sitting between the two poles of
+essentialism and constructionism, and characterised by theories such as critical realism (e.g.,
+Willig, 1999), which acknowledge the ways individuals make meaning of their experience, and, in
+turn, the ways the broader social context impinges on those meanings, while retaining focus on the
+material and other limits of „reality‟. Therefore, thematic analysis can be a method which works
+both to reflect reality, and to unpick or unravel the surface of „reality‟. However, it is important
+that the theoretical position of a thematic analysis is made clear, as this is all too often left
+unspoken (and is then typically a realist account). Any theoretical framework carries with it a
+number of assumptions about the nature of the data, what they represent in terms of the „the
+world‟, „reality‟, and so forth. A good thematic analysis will make this transparent.
+A number of decisions
+Thematic analysis involves a number of choices which are often not made explicit (or are certainly
+typically not discussed in the method section of papers), but which need explicitly to be considered
+and discussed. In practice, these questions should be considered before analysis (and sometimes
+even collection) of the data begins, and there needs to be an ongoing reflexive dialogue on the part
+of the researcher or researchers with regards to these issues, throughout the analytic process. The
+method section of Taylor and Ussher‟s (2001) thematic discourse analysis of S&M provides a good
+example of research which presents this process explicitly; the method section of Braun & Wilkinson
+(2003) does not.
+9
+What counts as a theme?
+A theme captures something important about the data in relation to the research question, and
+represents some level of patterned response or meaning within the data set. An important question
+to address in terms of coding is what counts as a pattern/theme, or what „size‟ does a theme need
+to be? This is a question of prevalence both in terms of space within each data item, and prevalence
+across the entire data set. Ideally there will be a number of instances of the theme across the data
+set, but more instances do not necessarily mean the theme itself is more crucial. As this is
+qualitative analysis, there is no hard-and-fast answer to the question of what proportion of your
+data set needs to display evidence of the theme for it to be considered a theme. It is not the case
+that if it was present in 50% of one‟s data items, it would be a theme, but if it was present only in
+47%, then it would not be. Nor is it the case that a theme is only something that many data items
+give considerable attention to, rather than a sentence or two. A theme might be given considerable
+space in some data items, and little or none in others, or it might appear in relatively little of the
+data set. So researcher judgement is necessary to determine what a theme is. Our initial guidance
+around this is that you need to retain some flexibility, and rigid rules really do not work. (The
+question of prevalence gets revisited in relation to themes and sub-themes, as the refinement of
+analysis [see later] will often result in overall themes, and sub-themes within those.)
+Furthermore, the „keyness‟ of a theme is not necessarily dependent on quantifiable measures – but
+in terms of whether it captures something important in relation to the overall research question.
+For example, in Victoria‟s research on representations of lesbians and gay parents on 26 talk shows
+(Clarke & Kitzinger, 2004), she identified six „key‟ themes. These six themes were not necessarily
+the most prevalent themes across the data set – they appeared in between 2 and 22 of the 26 talk
+shows - but together they captured an important element of the way in which lesbians and gay men
+„normalise‟ their families in talk show debates. In this instance, her thematic analysis was driven by
+this particular analytic question. How she „measured‟ prevalence is relevant, as prevalence can be
+determined in a number of different ways. Prevalence was counted at the level of the data item
+(i.e., did a theme appear anywhere in each individual talk show). Alternatively, it could have been
+counted in terms of the number of different speakers who articulated the theme, across the entire
+data set, or each individual occurrence of the theme across the entire data set (which raises
+complex questions about where an 'instance' begins and ends within an extended sequence of talk,
+10
+see Riessman, 1993). Because prevalence was not crucial to the analysis presented, Victoria chose
+the most straightforward form, but it is important to note there is no right or wrong method for
+determining prevalence. Part of the flexibility of thematic analysis is that it allows you to
+determine themes (and prevalence) in a number of ways. What is important is that you are
+consistent in how you do this within any particular analysis.
+There are various „conventions‟ for representing prevalence in thematic (and other qualitative)
+analysis that does not provide a quantified measure (unlike much content analysis, Wilkinson, 2000)
+– for instance: “the majority of participants” (Meehan et al., 2000: 372), “many participants”
+(Taylor & Ussher, 2001: 298), or “a number of participants” (Braun, Gavey, & McPhillips, 2003: 249).
+Such descriptors work rhetorically to suggest a theme really existed in the data, and to convince us
+they are reporting truthfully about the data. But do they tell us much? This is perhaps one area
+where more debate needs to occur about how and why we might represent the prevalence of
+themes in the data, and, indeed, whether, if, and why prevalence is particularly important.
+A rich description of the data set, or a detailed account of one particular aspect
+It is important to determine the type of analysis you want to do, and the claims you want to make,
+in relation to your data set. For instance, you might wish to provide a rich thematic description of
+your entire data set, so that the reader gets a sense of them predominant or important themes. In
+this case, the themes you identify, code, and analyse would need to be an accurate reflection of
+the content of the entire data set. In such an analysis, some depth and complexity is necessarily
+lost (particularly if you are writing a short dissertation or article with strict word limits), but a rich
+overall description is maintained. This might be a particularly useful method when you are
+investigating an under-researched area, or with participants whose views on the topic are not
+known.
+An alternative use of thematic analysis is to provide a more detailed and nuanced account of one
+particular theme, or group of themes, within the data. This might relate to a specific question or
+area of interest within the data (a semantic approach – see below), or to a particular „latent‟ theme
+(see below) across the whole or majority of the data set. An example of this would be Victoria‟s talk
+show paper, discussed previously (Clarke & Kitzinger, 2004), which examined normalisation in
+lesbians‟ and gay men‟s accounts of parenting.
+11
+Inductive vs theoretical thematic analysis
+Themes or patterns within data can be identified in one of two primary ways in thematic analysis: in
+an inductive or „bottom up‟ way (e.g., see Frith & Gleeson, 2004), or in a theoretical or deductive
+or „top down‟ way (e.g., see Boyatzis, 1998; Hayes, 1997). An inductive approach means the themes
+identified are strongly linked to the data themselves (Patton, 1990) (as such, this form of thematic
+analysis bears some similarity to grounded theory). In this approach, if the data have been collected
+specifically for the research (e.g., via interview or focus group) the themes identified may bear
+little relationship to the specific question that were asked of the participants. They would also not
+be driven by the researcher‟s theoretical interest in the area or topic. Inductive analysis is
+therefore a process of coding the data without trying to fit it into a pre-existing coding frame, or
+the researcher‟s analytic preconceptions. In this sense, this form of thematic analysis is data-
+driven. However, it is important to note, as we discussed earlier, that researchers cannot free
+themselves of their theoretical and epistemological commitments, and data are not coded in an
+epistemological vacuum.
+In contrast, a „theoretical‟ thematic analysis would tend to be driven by the researcher‟s
+theoretical or analytic interest in the area, and is thus more explicitly analyst-driven. This form of
+thematic analysis tends to provide less a rich description of the data overall, and more a detailed
+analysis of some aspect of the data. The choice between inductive and theoretical maps onto how
+and why you are coding the data as well. You can either code for a quite specific research question
+(which maps onto the more theoretical approach) or the specific research question can evolve
+through the coding process (which maps onto the inductive approach).
+For example, if a researcher was interested in talk about heterosex, and had collected interview
+data, with an inductive approach they would read and re-read the data for any themes related to
+heterosex, and code diversely, without paying attention to the themes that previous research on
+the topic might have identified. For example, the researcher would not look to Hollway‟s (1989)
+influential research identifying discourses of heterosex, and code just for male sexual drive,
+have/hold or permissive discourse themes. In contrast, with a theoretical approach, the researcher
+may well be interested in the way permissiveness plays out across the data, and focus on that
+particular feature in coding the data. What this would then result in is a number of themes around
+12
+permissiveness, which may include, speak to, or expand on something approximating Hollway‟s
+original theme.
+Semantic or latent themes
+Another decision revolves around the „level‟ at which themes are to be identified: at a semantic or
+explicit level, or at a latent or interpretative level (Boyatzis, 1998).
+6 A thematic analysis typically
+focuses exclusively or primarily on one level. With a semantic approach, the themes are identified
+within the explicit or surface meanings of the data and the analyst is not looking for anything
+beyond what a participant has said or what has been written. Ideally, the analytic process involves a
+progression from description, where the data have simply been organised to show patterns in
+semantic content, and summarised, to interpretation, where there is an attempt to theorise the
+significance of the patterns and their broader meanings and implications (Patton, 1990), often in
+relation to previous literature (see Frith & Gleeson, 2004, for an excellent example of this).
+In contrast, a thematic analysis at the latent level goes beyond the semantic content of the data,
+and starts to identify or examine the underlying ideas, assumptions, and conceptualisations – and
+ideologies - that are theorised as shaping or informing the semantic content of the data. If we
+imagine our data three-dimensionally as an uneven blob of jelly, the semantic approach would seek
+to describe the surface of the jelly, its form and meaning, while the latent approach would seek
+identify the features that gave it that particular form and meaning. Thus for latent thematic
+analysis, the development of the themes themselves involves interpretative work, and the analysis
+that is produced is not just description, but is already theorised.
+Analysis within this latter tradition tends to come from a constructionist paradigm (e.g., Burr,
+1995), and in this form, thematic analysis overlaps with some forms of „discourse analysis‟ (which
+are sometimes specifically referred to as „thematic discourse analysis‟ (e.g., Singer & Hunter, 1999;
+-
+Taylor & Ussher, 2001)), where broader assumptions, structures and/or meanings are theorised as
+underpinning what is actually articulated in the data. Increasingly, a number of discourse analysts
+are also revisiting psycho-analytic modes of interpretation (e.g., Hollway & Jefferson, 2000), and
+latent thematic analysis would also be compatible with that framework.
+13
+Epistemology: essentialist/realist vs constructionist thematic analysis
+As we have argued, thematic analysis can be conducted within both realist/essentialist and
+constructionist paradigms, although the outcome and focus will be different from each. The
+question of epistemology is usually determined when a research project is being conceptualised,
+although epistemology may also raise its head again during analysis, when the research focus may
+shift to an interest in different aspects of the data. The research epistemology guides what you can
+say about your data, and informs how you theorise meaning. For instance, with an
+essentialist/realist approach, you can theorise motivations, experience, and meaning in a straight-
+forward way, because a simple, largely unidirectional relationship is assumed between meaning and
+experience and language (language reflects and enables us to articulate meaning and experience)
+(Potter & Wetherell, 1987; Widdicombe & Wooffitt, 1995).
+In contrast, from a constructionist perspective, meaning and experience are socially produced and
+reproduced, rather than inhering within individuals (Burr, 1995). Therefore, thematic analysis
+conducted within a constructionist framework cannot and does not seek to focus on motivation or
+individual psychologies, but instead seeks to theorise the socio-cultural contexts, and structural
+conditions, that enable the individual accounts that are provided. Thematic analysis that focuses on
+„latent‟ themes tends to be more constructionist, and it also tends to start to overlap with thematic
+discourse analysis at this point. However, not all „latent‟ thematic analysis is constructionist.
+The many questions of qualitative research
+It is worth briefly noting that qualitative research involves a series of questions, and there is a need
+to be clear about the relationship between these different questions. First, there is the overall
+research question or questions that drive the project. A research question might be very broad (and
+exploratory), such as „how is lesbian and gay parenting constructed?‟ or „what are the meanings of
+the vagina?‟ Narrower research questions might be „how and why is lesbian and gay parenting
+normalised?‟ (Clarke & Kitzinger, 2004), or „what are the discourses around vaginal size?‟ (see Braun
+& Kitzinger, 2001). These narrow questions may be part of a broader overarching research question,
+and if so, the analyses they inform would also provide answers to the overall research question.
+Although all projects are guided by research questions, these may also be refined as a project
+progresses.
+14
+Second, if data from interviews or focus groups have been collected, there are the questions that
+participants have responded to. Finally, there are the questions that guide the coding and analysis
+of the data. There is no necessary relationship between these three, and indeed, it is often
+desirable that there is a disjuncture between them. Some of the worst examples of „thematic‟
+analysis we have read have simply used the questions put to participants as the „themes‟ identified
+in the „analysis‟
+– although in such instances, there really is not any analysis done at all!
+To sum up, thematic analysis involves the searching across a data set – be that a number of
+interviews or focus groups, or a range of texts – to find repeated patterns of meaning. The exact
+form and product of thematic analysis varies, as indicated above, and so it is important that the
+questions outlined above are considered before and during thematic analyses. Those approaches
+which consider specific aspects, latent themes and are constructionist tend to often cluster
+together, while those that consider meanings across the whole data set, semantic themes, and are
+realist often cluster together. However, there are no hard-and-fast rules in relation to this, and
+different combinations are possible. What is important is that the finished product contains an
+account – not necessarily that detailed – of what was done, and why. So what does one actually do?
+We now provide what is hopefully a straightforward step-by-step guide to conducting thematic
+analysis.
+Doing thematic analysis: a step-by-step guide
+Some of the phases of thematic analysis are similar to the phases of other qualitative research, so
+these stages are not necessarily all unique to thematic analysis. The process starts when the analyst
+begins to notice, and look for, patterns of meaning and issues of potential interest in the data – this
+may be during data collection. The endpoint is the reporting of the content and meaning of patterns
+(themes) in the data, where “themes are abstract (and often fuzzy) constructs the investigators
+identify [sic] before, during, and after analysis” (Ryan & Bernard, 2000: 780). Analysis involves a
+constant moving back and forward between the entire data set, the coded extracts of data that you
+are analysing, and the analysis of the data that you are producing. Writing is an integral part of
+analysis, not something that takes place at the end, as it does with statistical analyses. Therefore,
+writing should begin in phase one, with the jotting down of ideas and potential coding schemes, and
+continue right through the entire coding/analysis process.
+15
+There are different positions regarding when you should engage with the literature relevant to your
+analysis – with some arguing that early reading can narrow your analytic field of vision, leading you
+to focus on some aspects of the data at the expense of other potential crucial aspects. Others argue
+that engagement with the literature can enhance your analysis by sensitising you to more subtle
+features of the data (Tuckett, 2005). Therefore, there is no one right way to proceed with reading,
+for thematic analysis, although a more inductive approach would be enhanced by not engaging with
+literature in the early stages of analysis, whereas a theoretical approach requires engagement with
+the literature prior to analysis.
+We provide an outline to guide you through the six phases of analysis, and offer examples to
+demonstrate the process.7 The different phases are usefully summarised in Table 1. It is important
+to recognise that qualitative analysis guidelines are exactly that – they are not rules, and, following
+the basic precepts, will need to be applied flexibility to fit the research questions and data (Patton,
+1990). Moreover, analysis is not a linear process where you simply move from one phase to the next.
+Instead, it is more recursive process, where you move back and forth as needed, throughout the
+phases. It is also a process that develops over time (Ely et al., 1997), and should not be rushed.
+[INSERT TABLE 1 ABOUT HERE]
+Phase 1: familiarising yourself with your data
+When you engage in analysis, you may have collected the data yourself, or it may have been given
+to you. If you collected it through interactive means, you will come to the analysis with some prior
+knowledge of the data, and possibly some initial analytic interests or thoughts. Regardless, it is vital
+that you immerse yourself in the data to the extent that you are familiar with the depth and
+breadth of the content. Immersion usually involves „repeated reading‟ of the data, and reading the
+data in an active way - searching for meanings, patterns and so on. It is ideal to read through the
+entire data set at least once before you begin your coding, as your ideas, identification of possible
+patterns will be shaped as you read through.
+Whether or not you are aiming for an overall or detailed analysis, are searching for latent or
+semantic themes, or are data- or theoretically-driven will inform how the reading proceeds.
+Regardless, it is important to be familiar with all aspects of your data. At this phase, one of the
+reasons why qualitative research tends to use far smaller samples than, for example, questionnaire
+16
+data will become apparent – the reading and re-reading of data is time consuming. It is, therefore,
+tempting to skip over this phase, or be selective. We would strongly advise against this, as this
+phase provides the bedrock for the rest of the analysis.
+During this phase, it is a good idea to start taking notes or marking ideas for coding that you will
+then go back to in subsequent phases. Once you have done this, you are ready to begin the more
+formal coding process. In essence, coding continues to be developed and defined throughout the
+entire analysis.
+Transcription of verbal data
+If you are working with verbal data such as interviews, television programmes or political speeches,
+the data will need to be transcribed into written form in order to conduct a thematic analysis. The
+process of transcription, while it may seen time-consuming, frustrating, and at times boring, can be
+an excellent way to start familiarising yourself with the data (Riessman, 1993). Further, some
+researchers even argue it should be seen as “a key phase of data analysis within interpretative
+qualitative methodology” (Bird, 2005: 227), and recognised as an interpretative act, where
+meanings are created, rather than simply a mechanical one of putting spoken sounds on paper
+(Lapadat & Lindsay, 1999).
+Various conventions exist for transforming spoken texts into written texts (see Edwards & Lampert,
+1993; Lapadat & Lindsay, 1999). Some systems of transcription have been developed for specific
+forms of analysis – such as the „Jefferson‟ system for CA (see Atkinson & Heritage, 1984; Hutchby &
+Wooffitt, 1998). However, thematic analysis, even constructionist thematic analysis, does not
+require the same level of detail in the transcript as conversation, discourse or even narrative
+analysis. As there is no one way to conduct thematic analysis, there is no one set of guidelines to
+follow when producing a transcript. However, at a minimum it requires a rigorous and thorough
+„orthographic‟ transcript – a „verbatim‟ account of all verbal (and sometimes nonverbal [e.g.,
+coughs]) utterances.
+8 What is important is that the transcript retains the information you need,
+from the verbal account, and in a way which is „true‟ to its original nature (e.g., punctuation added
+can alter the meaning of data - for example 'I hate it, you know. I do' versus 'I hate it. You know I
+do', Poland, 2002: 632), and that the transcription convention is practically suited to the purpose of
+analysis (Edwards, 1993).
+17
+As we have noted, the time spent in transcription is not wasted, as it informs the early stages of
+analysis, and you will develop a far more thorough understanding of your data through having
+transcribed it. Furthermore, the close attention needed to transcribe data may facilitate the close-
+reading and interpretative skills needed to analyse the data (Lapadat & Lindsay, 1999). If your data
+have already been, or will be, transcribed for you, it is important that you spend more time
+familiarising yourself with the data, and also check the transcripts back against the original audio
+recordings for „accuracy‟ (as should always be done).
+Phase 2: generating initial codes
+Phase 2 begins when you have read and familiarised yourself with the data, and have generated an
+initial list of ideas about what is in the data and what is interesting about them. This phase then
+involves the production of initial codes from the data. Codes identify a feature of the data
+(semantic content or latent) that appears interesting to the analyst, and refer to “the most basic
+segment, or element, of the raw data or information that can be assessed in a meaningful way
+regarding the phenomenon” (Boyatzis, 1998: 63). See Figure 1 for an example of codes applied to a
+short segment of data. The process of coding is part of analysis (Miles & Huberman, 1994), as you
+are organising your data into meaningful groups (Tuckett, 2005). However, your coded data differs
+from the units of analysis (your themes) which are (often) broader. Your themes, which you start to
+develop in the next phase, are where the interpretative analysis of the data occurs, and in relation
+to which arguments about the phenomenon being examined are made (Boyatzis, 1998).
+[INSERT FIGURE 1 ABOUT HERE]
+Coding will to some extent depend on whether the themes are more „data-driven‟ or „theory-driven‟
+– in the former, the themes will depend on the data, but in the latter, you might approach the data
+with specific questions in mind that you wish to code around. It will also depend on whether you are
+aiming to code the content of the entire data set, or whether you are coding to identify particular
+(and possibly limited) features of the data set. Coding can be done either manually or through a
+software programme (see, e.g., Kelle, 2004; Seale, 2000, for discussion of software programmes).
+Work systematically through the entire data set, giving full and equal attention to each data item,
+and identify interesting aspects in the data items that may form the basis of repeated patterns
+(themes) across the data set. There are a number of ways of actually coding extracts. If coding
+18
+manually, you can code your data by writing notes on the texts you‟re analysing, by using
+highlighters or coloured pens to indicate potential patterns, or by using „post-it‟ notes to identify
+segments of data. You may initially identify the codes, and then match them up with data extracts
+that demonstrate that code, but it is important in this phase to ensure that all actual data extracts
+are coded, and then collated together within each code. This may involve copying extracts of data
+from individual transcripts or photocopying extracts of printed data, and collating each code
+together in separate computer files or using file cards. If using computer software, you code by
+tagging and naming selections of text within each data item.
+Key advice for this phase is: a) code for as many potential themes/patterns as possible (time
+permitting) – you never know what might be interesting later; b) code extracts of data inclusively –
+i.e., keep a little of the surrounding data if relevant, a common criticism of coding is that the
+context is lost (Bryman, 2001); and c) remember that you can code individual extracts of data in as
+many different „themes‟ as they fit into - so an extract may be uncoded, coded once, or coded
+many times, as relevant. Note that no data set is without contradiction, and a satisfactory thematic
+„map‟ that you will eventually produce - an overall conceptualisation of the data patterns, and
+relationships between them9
+- does not have to smooth out or ignore the tensions and
+inconsistencies within and across data items. It is important to retain accounts which depart from
+the dominant story in the analysis, so do not ignore these in your coding.
+Phase 3: searching for themes
+Phase 3 begins when all data have been initially coded & collated, and you have a long list of the
+different codes you have identified across your data set. This phase, which re-focuses the analysis
+at the broader level of themes, rather than codes, involves sorting the different codes into
+potential themes, and collating all the relevant coded data extracts within the identified themes.
+Essentially, you are starting to analyse your codes, and consider how different codes may combine
+to form an overarching theme. It may be helpful at this phase to use visual representations to help
+you sort the different codes into themes. You might use tables, mind-maps, or you might write the
+name of each code (and a brief description) on a separate piece of paper and play around with
+organising them into theme-piles. A thematic map of this early stage can be seen in Figure 2 (the
+examples in Figures 2 to 4 come from the analysis presented in Braun and Wilkinson (2003) of
+19
+women‟s talk about the vagina). This is when you start thinking about the relationship between
+codes, between themes, and between different levels of themes (e.g., main overarching themes
+and sub-themes within them). Some initial codes may go on to form main themes, whereas others
+may form sub-themes, and others still may be discarded. At this stage you may also have a set of
+codes that do not seem to belong anywhere, and it is perfectly acceptable to create a „theme‟
+called miscellaneous to house the codes – possibly temporarily - that do not seem to fit into your
+main themes.
+[INSERT FIGURE 2 ABOUT HERE]
+You end this phase with a collection of candidate themes, and sub-themes, and all extracts of data
+that have been coded in relation to them. At this point, you will start to have a sense of the
+significance of individual themes. However, do not abandon anything at this stage, as without
+looking at all the extracts in detail (the next phase) it is uncertain whether the themes hold as they
+are, or whether some need to be combined, refined and separated, or discarded.
+Phase 4: reviewing themes
+Phase 4 begins when you have devised a set of candidate themes, and it involves the refinement of
+those themes. During this phase, it will become evident that some candidate themes are not really
+themes (e.g., if there are not enough data to support them, or the data are too diverse), while
+others might collapse into each other (e.g., two apparently separate themes might form one
+theme). Other themes might need to be broken down into separate themes. Patton‟s (1990) dual
+criteria for judging categories - internal homogeneity and external heterogeneity - are worth
+considering here. Data within themes should cohere together meaningfully, while there should be
+clear and identifiable distinctions between themes.
+This phase involves two levels of reviewing and refining your themes. Level one involves reviewing
+at the level of the coded data extracts. This means you need to read all the collated extracts for
+each theme, and consider whether they appear to form a coherent pattern. If your candidate
+themes appear to form a coherent pattern, you then move on to the second level of this phase. If
+your candidate themes do not fit, you will need to consider whether the theme itself is
+problematic, or whether some of the data extracts within it simply do not fit there – in which case,
+you would rework your theme, creating a new theme, finding a home for those extracts that do not
+20
+currently work in an already-existing theme, or discarding them from the analysis. Once you are
+satisfied that your candidate themes adequately capture the contours of the coded data – once you
+have a candidate „thematic map‟ - you are ready to move on to level two of this phase. The
+outcome of this refinement process can be seen in the thematic map presented in Figure 3.
+[INSERT FIGURE 3 ABOUT HERE]
+Level two involves a similar process, but in relation to the entire data set. At this level, you
+consider the validity of individual themes in relation to the data set, but also whether your
+candidate thematic map „accurately‟ reflects the meanings evident in the data set as a whole. To
+some extent, what counts as „accurate representation‟ depends on your theoretical and analytic
+approach. However, in this phase you re-read your entire data set for two purposes. The first is, as
+discussed, to ascertain whether the themes „work‟ in relation to the data set. The second is to code
+any additional data within themes that has been missed in earlier coding stages. The need for re-
+coding from the data set is to be expected as coding is an ongoing organic process.
+If the thematic map works, then you move on to the next phase. However, if the map does not fit
+the data set, you need to return to further reviewing and refining your coding until you have
+devised a thematic map that you are satisfied with. In so doing, it is possible that you will identify
+potential new themes, and you might need to start coding for these as well, if you are interested in
+them. However, a word of warning: as coding data and generating themes could go on ad infinitum,
+it is important not to get over-enthusiastic with endless re-coding. It is impossible to provide clear
+guidelines on when to stop, but when your refinements are not adding anything substantial, stop! If
+the process of recoding is only fine-tuning and making more nuanced a coding frame that already
+works – i.e., it fits the data well – recognise this and stop. Consider it like editing written work - you
+could endlessly edit your sentences and paragraphs, but after a few editing turns, any further work
+is usually unnecessary refinement – like rearranging the hundreds and thousands on an already
+nicely decorated cake.
+At the end of this phase, you should have a fairly good idea of what your different themes are, how
+they fit together, and the overall story they tell about the data.
+21
+Phase 5: defining and naming themes
+Phase 5 begins when you have a satisfactory thematic map of your data – see Figure 4 for the final
+refinements of Virginia‟s thematic map. At this point, you then define and further refine the themes
+that you will present for your analysis, and analyse the data within them. By „define and refine‟ we
+mean identifying the „essence‟ of what each theme is about (as well as the themes overall), and
+determining what aspect of the data each theme captures. It is important not to try and get a
+theme to do too much, or to be too diverse and complex. You do this by going back to collated data
+extracts for each theme, and organising them into a coherent and internally consistent account,
+with accompanying narrative. It is vital that you do not just paraphrase the content of the data
+extracts presented, but identify what is interesting about them and why!
+[INSERT FIGURE 4 ABOUT HERE]
+For each individual theme, you need to conduct and write a detailed analysis. As well as identifying
+the „story‟ that each theme tells, it is important to consider how it fits into the broader overall
+„story‟ that you are telling about your data, in relation to your research question or questions, to
+ensure there is not too much overlap between themes. So you need to consider the themes
+themselves, and each theme in relation to the others. As part of the refinement, you will identify
+whether or not a theme contains any sub-themes. Sub-themes are essentially themes-within-a-
+theme. They can be useful for giving structure to a particularly large and complex theme, and also
+for demonstrating the hierarchy of meaning within the data. For instance, in one of Virginia‟s
+analyses of women‟s talk about the vagina, she identified two overarching themes in women‟s talk:
+the vagina as liability, and the vagina as asset (Braun & Wilkinson, 2003). Within each theme, three
+sub-themes were identified: for liability the sub-themes were „nastiness and dirtiness‟, „anxieties‟
+and „vulnerability‟; for asset the sub-themes were „satisfaction‟, „power‟ and „pleasure‟. However,
+these eventual final themes and sub-themes resulted from a process of refinement of initial themes
+and sub-themes, as shown in Figures 2 to 4.
+It is important that by the end of this phase you can clearly define what your themes are, and what
+they are not. One test for this is to see whether you can describe the scope and content of each
+theme in a couple of sentences. If you cannot do this, further refinement of that theme may be
+needed. Although you will have already given your themes working titles, this is also the point to
+22
+start thinking about the names that you will give them in the final analysis. Names need to be
+concise, punchy, and immediately give the reader a sense of what the theme is about.
+Phase 6: producing the report
+Phase 6 begins when you have a set of fully worked-out themes, and involves the final analysis and
+write-up of the report. The task of the write-up of a thematic analysis, whether it is for publication
+or for a research assignment or dissertation, is to tell the complicated story of your data in a way
+which convinces the reader of the merit and validity of your analysis. It is important that the
+analysis (the write-up of it, including data extracts) provides a concise, coherent, logical, non-
+repetitive, and interesting account of the story the data tell – within and across themes. Your write-
+up must provide sufficient evidence of the themes within the data – i.e., enough data extracts to
+demonstrate the prevalence of the theme. Choose particularly vivid examples, or extracts which
+capture the essence of the point you are demonstrating, without unnecessary complexity. The
+extract should be easily identifiable as an example of the issue. However, your write-up needs to do
+more than just provide data. Extracts need to be embedded within an analytic narrative that
+compelling illustrates the story that you are telling about your data, and your analytic narrative
+needs to go beyond description of the data, and make an argument in relation to your research
+question.
+Pinning down what interpretative analysis actually entails
+It is difficult to specify exactly what interpretative analysis actually entails, particularly as the
+specifics of it will vary from study to study. As a first step we recommend looking at published
+examples of thematic analysis, particularly of the specific version you are planning to use (this is
+made somewhat more difficult in that thematic analysis is often not a named method, but you can
+find examples, e.g., Ellis & Kitzinger, 2002; Kitzinger & Willmott, 2002; Toerien & Wilkinson, 2004).
+In order to provide a sense of the sorts of questions you should be asking of your data, and the sorts
+of analytic claims you should be seeking to make, we will discuss a particularly good example of an
+inductive thematic analysis, which emphasises understanding men‟s experiences in relation to the
+broader social context (see Frith & Gleeson, 2004).
+Frith and Gleeson (2004) aim to explore how men‟s feelings about their bodies influence their
+clothing practices, and they use data gathered in qualitative questionnaires from 75 men to answer
+23
+this question. They report four themes: practicality of clothing choices; lack of concern about
+appearance; use of clothing to conceal or reveal the body; use of clothing to fit cultural ideals. Each
+theme is clearly linked back to the overall research question, but each is distinct. They provide a
+clear sense of the scope and diversity of each theme, using a combination of analyst narrative and
+illustrative data extracts. Where relevant, they broaden their analysis out, moving from a
+descriptive to an interpretative level (often relating their claims to existing literature). For
+example, in „men value practicality‟ they make sense of men‟s accounts in relation to gender norms
+and stereotypes, linking the accounts individual men provided to the expectations that men – as
+members of society – face. What they do, as analysts, is relate the patterns of meaning in men‟s
+responses to an academic analysis of how gender operates. In so doing, they demonstrate the dual
+position that analysts need to take: as both cultural members and cultural commentators. Their
+„discussion‟ section makes broader analytic statements about the overall story that the themes tell
+us about men‟s relationship with clothing. This story reveals that men “deliberately and
+strategically use clothing to manipulate their appearance to meet cultural ideals of masculinity”
+(Frith & Gleeson, 2004: 45), in a way more traditionally more associated with women. This analysis
+makes an important contribution in that it challenges perceived wisdom about clothing/appearance
+and masculinity.
+As this example demonstrates, your analytic claims need to be grounded in, but go beyond, the
+„surface‟ of the data, even for a „semantic‟ level analysis. The sort of questions you need to be
+asking, towards the end phases of your analysis, include: „what does this theme mean?‟ „What are
+the assumptions underpinning it?‟ What are the implications of this theme?‟ „What conditions are
+likely to have given rise to it?‟ „Why do people talk about this thing in this particular way (as
+opposed to other ways)?‟ and „What is the overall story the different themes reveal about the
+topic?‟ These sorts of questions should guide the analysis once you have a clear sense of your
+thematic map.
+Potential pitfalls to avoid when doing thematic analysis
+Thematic analysis is a relatively straight-forward form of qualitative analysis, which does not
+require the same detailed theoretical and technical knowledge that approaches like DA or CA do. It
+is relatively easy to conduct a good thematic analysis on qualitative data, even when you are still
+24
+learning qualitative techniques. However, there are a number of things which can result in a poor
+analysis. In this section, we identify these potential pitfalls, in the hope that they can be avoided.
+The first of these is a failure to actually analyse the data at all! Thematic analysis is not just a
+collection of extracts strung together with little or no analytic narrative. Nor is it a selection of
+extracts with analytic comment that simply or primarily paraphrases their content. The extracts in
+thematic analysis are illustrative of the analytic points the researcher makes about the data, and
+should be used to illustrate/support an analysis that goes beyond their specific content, to make
+sense of the data, and tell the reader what it does or might mean – as discussed above. A second,
+associated, pitfall is the using of the data collection questions (such as from an interview schedule)
+as the „themes‟ that are reported. In such a case, no analytic work has been done to identify
+themes across the entire data set, or make sense of the patterning of responses.
+The third is a weak or unconvincing analysis, where the themes do not appear to work, where there
+is too much overlap between themes, or where the themes are not internally coherent and
+consistent. All aspects of the theme should cohere around a central idea or concept. This pitfall has
+occurred if, depending on what the analysis is trying to do, it fails adequately to capture the
+majority of the data, or fails to provide a rich description/interpretation of one or more aspects of
+the data. A weak or unconvincing analysis can also stem from a failure to provide adequate
+examples from the data – for example, only one or two extracts for a theme. This point is
+essentially about the rhetorics of presentation, and the need for the analysis to be convincing to
+someone who has not read your entire data set: “The „analysis‟ of the material … is a deliberate
+and self-consciously artful creation by the researcher, and must be constructed to persuade the
+reader of the plausibility of an argument” (Foster & Parker, 1995: 204). In so doing, you avoid (the
+appearance of) what Bryman (1988) has referred to as „anecdotalism‟ in qualitative research –
+where one or a few instances of a phenomenon are reified into a pattern or theme, when it or they
+are actually idiosyncratic. This is not to say that a few instances cannot be of interest, or revealing,
+but that it is important not to misrepresent them as an overarching theme.
+The fourth pitfall is a mismatch between the data and the analytic claims that are made about it. In
+such an (unfounded) analysis, the claims cannot be supported by the data, or, in the worst case, the
+data extracts presented suggest another analysis or even contradict the claims. The researcher
+25
+needs to make sure that their interpretations and analytic points are consistent with the data
+extracts. A weak analysis does not appear to consider other obvious alternative readings of the
+data, or fails to consider variation (and even contradiction) in the account that is produced. A
+pattern in data is rarely, if ever, going to be 100% complete and non-contradicted, so an analysis
+which suggests that it is, without a thorough explanation, is open to suspicion. It is important to
+pick compelling examples to demonstrate the themes, so give this considerable thought.
+The fifth involves a mismatch between theory and analytic claims, or between the research
+questions and the form of thematic analysis used. A good thematic analysis needs to make sure that
+the interpretations of the data are consistent with the theoretical framework. So, for instance, if
+you are working within an experiential framework, you would typically not make claims about the
+social construction of the research topic, and if you were doing constructionist thematic analysis
+you would not treat people‟s talk of experience as a transparent window on their world. Finally,
+even a good and interesting analysis which fails to spell out its theoretical assumptions, or clarify
+how it was undertaken, and for what purpose, is lacking crucial information (Holloway & Todres,
+2003), and thus fails in one aspect.
+What makes good thematic analysis?
+One of the criticisms of qualitative research from those outside the field is the perception that
+„anything goes‟. For instance, this sentiment is echoed in the first sentence of Laubschagne‟s (2003)
+abstract: “For many scientists used to doing quantitative studies the whole concept of qualitative
+research is unclear, almost foreign, or 'airy fairy' - not 'real' research”. However, although
+„qualitative‟ research cannot be subjected to the same criteria as „quantitative‟ approaches, it does
+provide methods of analysis that should be applied rigorously to the data. Furthermore, criteria for
+conducting good qualitative research – both data collection and analysis - do exist (e.g., Elliott,
+Fischer, & Rennie, 1999; Parker, 2004; Seale, 1999; Silverman, 2000; Yardley, 2000). The British
+Psychological Society offers relatively succinct online guidelines for assessing quality in qualitative
+research (see http://www.bps.org.uk/publications/journals/joop/qualitative-guidelines.cfm).
+„Criteria‟ for assessing qualitative research is a not uncontroversial topic, with concerns raised
+about rigid criteria limiting freedom and stifling methodological development (Elliott et al., 1999;
+26
+Parker, 2004; Reicher, 2000). Reicher (2000) takes the critique further, by asking whether the
+incredibly diverse range of qualitative approaches can and should be subject to the same criteria.
+Bracketing these critiques off, the issues raised in many general qualitative research assessment
+criteria can be more or less applied to thematic forms of analysis. As thematic analysis is a flexible
+method, you also need to be clear and explicit about what you are doing, and what you say you are
+doing needs to match up with what you actually do. In this sense, the theory and method need to be
+applied rigorously, and “rigour lies in devising a systematic method whose assumptions are
+congruent with the way one conceptualises the subject matter” (Reicher & Taylor, 2005: 549). A
+concise checklist of criteria to consider when determining whether you have generated a good
+thematic analysis is provided in Table 2.
+[Insert Table 2 about here]
+So what does thematic analysis offer psychologists?
+We now end this paper with some brief comments on the advantages and disadvantages of thematic
+analysis. As we have shown throughout this paper, thematic analysis is not a complex method.
+Indeed, as you can see from Table 3, its advantages are many. However, it is not without some
+disadvantages, which we will now briefly consider. Many of the disadvantages depend more on
+poorly conducted analyses or inappropriate research question, than on the method itself. Further,
+the flexibility of the method – which allows for a wide range of analytic options - means that the
+potential range of things that can be said about your data is broad. While this is an advantage, it
+can also be a disadvantage in that it makes developing specific guidelines for higher-phase analysis
+difficult, and can be potentially paralysing to the researcher trying to decide what aspects of their
+data to focus on. Another issue to consider is that a thematic analysis has limited interpretative
+power beyond mere description if it is not used within an existing theoretical framework that
+anchors the analytic claims that are made.
+[INSERT TABLE 3 about here]
+Other disadvantages appear when you consider thematic analysis in relation to some of the other
+qualitative analytic methods. For instance, unlike narrative or other biographical approaches, you
+are unable to retain a sense of continuity and contradiction through any one individual account, and
+these contradictions and consistencies across individual accounts may be revealing. In contrast to
+27
+methods like DA and CA, a simple thematic analysis does not allow the researcher to make claims
+about language use, or the fine-grained functionality of talk.
+Finally, it is worth noting that thematic analysis currently has no particular kudos as an analytic
+method – this, we argue, stems from the very fact that it is poorly demarcated and claimed, yet
+widely used. This means that thematic analysis is often, or appears often to be, what is simply done
+by someone without the knowledge or skills to perform a supposedly more sophisticated – certainly
+more kudos-bearing – „branded‟ form of analysis like grounded theory, IPA or DA. We hope this
+paper will change this view, as, as we have argued, a rigorous thematic approach can produce an
+insightful analysis that answers particular research questions. What is important is choosing a
+method that is appropriate to your research question, rather than falling victim to „methodolatry‟,
+where you are committed to method rather than topic/content or research questions (Holloway &
+Todres, 2003). Indeed, your method of analysis should be driven by both your research question and
+your broader theoretical assumptions. As we have demonstrated, thematic analysis is a flexible
+approach that can be used across a range of epistemologies and research questions.
+28
+Notes
+1 Boyatzis (1998) provides a much more detailed account of thematic analysis. However, we do not
+feel that it is a particularly accessible account for those unfamiliar with qualitative approaches.
+Moreover, his approach differs from ours in that, although he acknowledges the subjective
+dimension of qualitative analysis, his approach is ultimately, if often implicitly, located within a
+positivist empiricist paradigm.
+2 Dey‟s (1993) account of „qualitative data analysis‟ which aims to identify shared techniques across
+the diverse range of qualitative methods, and demonstrate how to do „qualitative analysis‟
+reinforces this point in that his focus is largely thematic – but not claimed as such.
+3 Some authors, such as Potter (1997: 147-148) argue that one should not simply provide „recipes‟
+for qualitative methods, such as DA, because “a large part of doing discourse analysis is a craft skill,
+more like bike riding or sexing a chicken than following the recipe for a mild chicken rogan josh. …
+This makes it hard to describe and learn.” While we do not disagree that the skills needed for
+qualitative analyses of all types need to be learned, others, such as McLeod (2001), argue that by
+not discussing the „how to‟ of analysis, we keep certain methods mysterious (and thus elitist).
+Instead, if we want to make methods democratic and accessible – and indeed, to make qualitative
+research of all forms more understandable to those not trained in the methods, and arguably thus
+more popular – we need to provide concrete advice on how actually to do it. We are not questioning
+the importance of „non-recipe‟ forms of training, but while „recipes‟ necessarily diminish the
+complexity of certain methods, they are important for making methods accessible.
+4 Foster and Parker (1995) suggest one way to acknowledge the creative and active role of the
+analyst is to use the first person when writing.
+5 Content analysis is another method that can be used to identify patterns across qualitative data,
+and is sometimes treated as similar to thematic approaches (e.g., Wilkinson, 2000). However,
+content analysis tends to focus at a more micro level, often provides (frequency) counts (Wilkinson,
+2000), and allows for quantitative analyses of initially qualitative data (Ryan & Bernard, 2000).
+Thematic analysis differs from this in that themes tend not to be quantified (although sometimes
+they may be; and Boyatzis (1998) suggests thematic analysis can be used to transform qualitative
+29
+data into a quantitative form, and subject them statistical analyses), and the unit of analysis tends
+to be more than a word or phrase, which it typically is in content analysis.
+6 Boyatzis‟ (1998) definition of latent and manifest is somewhat narrower than our identification of
+latent and semantic, and he identifies thematic analysis as incorporating both to latent and
+manifest aspects. However, this results from the fact that he associates the process of
+interpretation with latent analysis – whereas we would argue that it should also be an important
+element of a semantic approach.
+7 We are assuming that you will be working with a „good quality‟ data corpus and data set. We
+would argue that „good data‟ are defined by a particular set of criteria regarding what, why, and
+how they were collected, and offer rich, detailed and complex accounts of the topic. Good data do
+not just provide a surface overview of the topic of interest, or simply reiterate a common-sense
+account. The challenge for the novice researcher is to interact with research participants in such a
+way that they generate rich and complex insights. Producing a good analysis of poor quality data is
+a far more demanding task for the analyst, although it can potentially be done by a skilled and
+experienced analyst.
+8 See Poland (2002) for a discussion of the problems with the idea of a „verbatim‟ transcript, and
+what is left out, and retained, through this process.
+9 What we mean by thematic map is similar, but less detailed, than the „codebook‟ Ryan and
+Bernard (2000) refer to, which involves the a detailed account of the hierarchical relationship
+between codes, as well as a description of each, their criteria, exemplars and counter examples,
+and other such detail. Like Boyatzis‟ (1998) account of a thematic code, this model is then applied
+to (and revised in relation to) the data. See figures 2 to 4 for visual representations of a thematic
+maps and its refinement. Another example of a thematic map – this time in table form – can be
+found in Frith & Gleeson (2004).
+30
+References
+Antaki, C., Billig, M., Edwards, D., & Potter, J. (2002). Discourse analysis means doing analysis: A
+critique of six analytic shortcomings. DAOL Discourse Analysis Online [Electronic Version],
+1(1).
+Aronson, J. (1994). A pragmatic view of thematic analysis. The Qualitative Report, 2(1), 2(1).
+Atkinson, J. M., & Heritage, J. (1984). Structures of social action: Studies in conversation analysis.
+Cambridge: Cambridge University Press.
+Attride-Stirling, J. (2001). Thematic networks: an analytic tool for qualitative research. Qualitative
+Research, 1(3), 385-405.
+Bird, C. M. (2005). How I stopped dreading and learned to love transcription. Qualitative Inquiry,
+11(2), 226-248.
+Boyatzis, R. E. (1998). Transforming qualitative information: Thematic analysis and code
+development. Thousand Oaks, CA: Sage.
+Braun, V. (2005a). In search of (better) female sexual pleasure: Female genital 'cosmetic' surgery.
+Sexualities, 8(4), 407-424.
+Braun, V. (2005b). Selling the perfect vulva. Manuscript under submission.
+Braun, V., Gavey, N., & McPhillips, K. (2003). The "fair deal"? Unpacking accounts of reciprocity in
+heterosex. Sexualities, 6(2), 237-261.
+Braun, V., & Kitzinger, C. (2001). The perfectible vagina: Size matters. Culture Health & Sexuality,
+3, 263-277.
+Braun, V., & Wilkinson, S. (2003). Liability or asset? Women talk about the vagina. Psychology of
+women Section Review, 5(2), 28-42.
+Bryman, A. (1988). Quantity and Quality in Social Research. London: Routledge.
+Bryman, A. (2001). Social Research Methods. Oxford: Oxford University Press.
+Burman, E., & Parker, I. (Eds.). (1993). Discourse Analytic Research: Repertoires and Readings of
+Texts in Action. London: Routledge.
+Burr, V. (1995). An introduction to social constructionism. London: Routledge.
+Charmaz, K. (2002). Qualitative interviewing and grounded theory analysis. In J. F. Gubrium & J. A.
+Holstein (Eds.), Handbook of Interview Research: Context & Method (pp. 675-694). Thousand
+Oaks, CA: Sage.
+Clarke, V. (2005). 'We're all very liberal in our views': Students' talk about lesbian and gay
+parenting. Lesbian & Gay Psychology Review, 6(1), 2-15.
+Clarke, V., Burns, M., & Burgoyne, C. (2005). "Who would take whose name?" An exploratory study
+of naming practices in same-sex relationships. Manuscript under submission.
+Clarke, V., & Kitzinger, C. (2004). Lesbian and gay parents on talk shows: Resistance or collusion in
+heterosexism. Qualitative Research in Psychology, 1, 195-217.
+Dey, I. (1993). Qualitative data analysis: A user-friendly guide for social scientists. London:
+Routledge.
+31
+Edwards, J. A. (1993). Principles and contrasting systems of discourse transcription. In J. A. Edwards
+& M. D. Lampert (Eds.), Talking data: transcription and coding in discourse research (pp. 3-
+31). Hillsdale, NJ: Lawrence Erlbaum Associates.
+Edwards, J. A., & Lampert, M. D. (Eds.). (1993). Talking data: transcription and coding in discourse
+research. Hillsdale, NJ: Lawrence Erlbaum Associates.
+Elliott, R., Fischer, C. T., & Rennie, D. L. (1999). Evolving guidelines for publication of qualitative
+research studies in psychology and related fields. British Journal of Clinical Psychology, 38(3),
+215-229.
+Ellis, S. J., & Kitzinger, C. (2002). Denying equality: An analysis of arguments against lowering the
+age of consent for sex between men. Journal of Community and Applied Social Psychology,
+12, 167-180.
+Ely, M., Vinz, R., Downing, M., & Anzul, M. (1997). On writing qualitative research: Living by words.
+London: Routledge/Falmer.
+Fine, M. (2002). Disruptive Voices: The Possibilities for Feminist Research. Ann Arbour: University
+of Michigan Press.
+Foster, J. J., & Parker, I. (1995). Carrying out investigations in psychology: Methods and statistics.
+Leicester, UK: BPS Books.
+Frith, H., & Gleeson, K. (2004). Clothing and embodiment: men managing body image and
+appearance. Psychology of Men & Masculinity, 5(1), 40-48.
+Glaser, B. (1992). Basics of Grounded Theory Analysis. Mill Valley: Sociology Press.
+Hayes, N. (1997). Theory-led thematic analysis: social identification in small companies. In N. Hayes
+(Ed.), Doing Qualitative Analysis in Psychology. Hove, UK: Psychology Press.
+Holloway, I., & Todres, L. (2003). The status of method: flexibility, consistency and coherence.
+Qualitative Research, 3(3), 345-357.
+Hollway, W. (1989). Subjectivity and Method in Psychology: Gender, Meaning and Science. London:
+Sage.
+Hollway, W., & Jefferson, T. (2000). Doing Qualitative Research Differently: Free Association,
+Narrative and the Interview Method. London: Sage.
+Hutchby, I., & Wooffitt, R. (1998). Conversation analysis: Principles, practices and applications.
+Oxford: Polity Press.
+Kelle, U. (2004). Computer-assisted analysis of qualitative data. In U. Flick, E. von Kardorff & I.
+Steinke (Eds.), A companion to qualitative research (pp. 276-283). London: Sage.
+Kitzinger, C., & Willmott, J. (2002). 'The thief of womanhood': Women's experience of Polycystic
+Ovarian Syndrome. Social Science & Medicine, 54(3), 349-361.
+Lapadat, J. C., & Lindsay, A. C. (1999). Transcription in Research and Practice: From
+Standardization of Technique to Interpretive Positionings. Qualitative Inquiry, 5(1), 64-86.
+Laubschagne, A. (2003). Qualitative research - Airy fairy or fundamental? The Qualitative Report
+[Electronic Version], 8(1).
+McLeod, J. (2001). Qualitative research in counselling and psychotherapy. London: Sage.
+32
+Meehan, T., Vermeer, C., & Windsor, C. (2000). Patients' perceptions of seclusion: A qualitative
+investigation. Journal of Advanced Nursing, 31(2), 370-377.
+Miles, M. B., & Huberman, A. M. (1994). Qualitative data analysis: An expanded sourcebook (2nd
+ed.). Thousand Oaks, CA: Sage.
+Murray, M. (2003). Narrative psychology. In J. A. Smith (Ed.), Qualitative psychology: A practical
+guide to research methods (pp. 111-131). London: Sage.
+Parker, I. (2004). Criteria for qualitative research in psychology. Qualitative Research in
+Psychology, 1, 95-106.
+Patton, M. Q. (1990). Qualitative evaluation and research methods (2nd ed.). Newbury Park, CA:
+Sage.
+Poland, B. D. (2002). Transcription quality. In J. F. Gubrium & J. A. Holstein (Eds.), Handbook of
+Interview Research: Context & Method (pp. 629-649). Thousand Oaks, CA: Sage.
+Potter, J. (1997). Discourse analysis as a way of analysing naturally occurring talk. In D. Silverman
+(Ed.), Qualitative research: Theory, method and practice (pp. 144-160). London: Sage.
+Potter, J., & Wetherell, M. (1987). Discourse and social psychology: Beyond attitudes and
+behaviour. London: Sage.
+Reicher, S. (2000). Against methodolatry: Some comments on Elliott, Fischer, and Rennie. British
+Journal of Clinical Psychology, 39(1), 1-6.
+Reicher, S., & Taylor, S. (2005). Similarities and differences between traditions. The Psychologist,
+18(9), 547-549.
+Riessman, C. K. (1993). Narrative Analysis. Newbury Park, CA: Sage.
+Roulston, K. (2001). Data analysis and 'theorizing as ideology'. Qualitative Research, 1(3), 279-302.
+Rubin, H. J., & Rubin, I. S. (1995). Qualitative interviewing: The art of hearing data. Thousand
+Oaks, CA: Sage.
+Ryan, G. W., & Bernard, H. R. (2000). Data management and analysis methods. In N. K. Denzin & Y.
+S. Lincoln (Eds.), Handbook of Qualitative Research (2nd ed., pp. 769-802). Thousand Oaks,
+CA: Sage.
+Seale, C. (1999). The quality of qualitative research. London: Sage.
+Seale, C. (2000). Using computers to analyse qualitative data. In D. Silverman (Ed.), Doing
+qualitative research: A practical handbook (pp. 155-174). London: Sage.
+Silverman, D. (2000). Doing qualitative research: A practice handbook. London: Sage.
+Singer, D., & Hunter, M. (1999). The experience of premature menopause: a thematic discourse
+analysis. Journal of Reproductive and Infant Psychology, 17, 63-81.
+Smith, J. A., Jarman, M., & Osborn, M. (1999). Doing Interpretative phenomenological analysis. In
+M. M. a. K. Chamberlain (Ed.), Qualitative Health Psychology: Theories and Methods. London:
+Sage.
+Smith, J. A., & Osborn, M. (2003). Interpretative phenomenological analysis. In J. A. Smith (Ed.),
+Qualitative Psychology: A Practical Guide to Methods. London: Sage.
+Stenner, P. (1993). Discoursing jealousy. In E. Burman & I. Parker (Eds.), Discourse Analytic
+Research: Repertoires and Readings of Texts in Action (pp. 94-132). London: Routledge.
+33
+Strauss, A., & Corbin, J. (1998). Basics of qualitative research: Techniques and procedures for
+developing grounded theory. Thousand Oaks, CA: Sage.
+Taylor, G. W., & Ussher, J. M. (2001). Making sense of S&M: A discourse analytic account.
+Sexualities, 4(3), 293-314.
+Toerien, M., & Wilkinson, S. (2004). Exploring the depilation norm: a qualitative questionnaire study
+of women's body hair removal. Qualitative Research in Psychology, 1, 69-92.
+Tuckett, A. G. (2005). Applying thematic analysis theory to practice: A researcher's experience.
+Contemporary Nurse, 19(1-2), 75-87.
+Ussher, J. M., & Mooney-Somers, J. (2000). Negotiating desire and sexual subjectivity: Narratives of
+young lesbian avengers. Sexualities, 3(2), 183-2000.
+Widdicombe, S., & Wooffitt, R. (1995). The Language of Youth Subcultures: Social Identity in
+Action. London: Harvester Wheatsheaf.
+Wilkinson, S. (2000). Women with breast cancer talking causes: comparing content, biographical and
+discursive analyses. Feminism & Psychology, 10(4), 431-460.
+Willig, C. (1999). Beyond appearances: A critical realist approach to social constructionism. In D. J.
+Nightingale & J. Cromby (Eds.), Social constructionist psychology: A critical analysis of theory
+and practice (pp. 37-51). Buckingham, UK: Open University Press.
+Willig, C. (2003). Discourse analysis. In J. A. Smith (Ed.), Qualitative psychology: A practical guide
+to research methods (pp. 159-183). London: Sage.
+Yardley, L. (2000). Dilemmas in qualitative health research. Psychology and Health, 15, 215-228.
+34
+Table 1: Phases of Thematic Analysis
+Phase Description of the process
+1. Familiarising yourself with your data: Transcribing data (if necessary), reading and re-
+reading the data, noting down initial ideas.
+2. Generating initial codes: Coding interesting features of the data in a
+systematic fashion across the entire data set,
+collating data relevant to each code.
+3. Searching for themes: Collating codes into potential themes, gathering all
+data relevant to each potential theme.
+4. Reviewing themes: Checking in the themes work in relation to the coded
+extracts (Level 1) and the entire data set (Level 2),
+generating a thematic „map‟ of the analysis.
+5. Defining and naming themes: Ongoing analysis to refine the specifics of each
+theme, and the overall story the analysis tells;
+generating clear definitions and names for each
+theme.
+6. Producing the report: The final opportunity for analysis. Selection of vivid,
+compelling extract examples, final analysis of
+selected extracts, relating back of the analysis to the
+research question and literature, producing a
+scholarly report of the analysis.
+35
+Table 2: A 15-Point Checklist of Criteria for Good Thematic Analysis
+Process No. Criteria
+Transcription 1 The data have been transcribed to an appropriate level of detail, and the
+transcripts have been checked against the tapes for „accuracy‟
+.
+Coding 2 Each data item has been given equal attention in the coding process.
+3 Themes have not been generated from a few vivid examples (an anecdotal
+approach), but instead the coding process has been thorough, inclusive and
+comprehensive.
+4 All relevant extracts for all each theme have been collated.
+5 Themes have been checked against each other and back to the original data set.
+6 Themes are internally coherent, consistent, and distinctive.
+Analysis 7 Data have been analysed – interpreted, made sense of - rather than just
+paraphrased or described.
+8 Analysis and data match each other – the extracts illustrate the analytic claims.
+9 Analysis tells a convincing and well-organised story about the data and topic.
+10 A good balance between analytic narrative and illustrative extracts is provided.
+Overall 11 Enough time has been allocated to complete all phases of the analysis
+adequately, without rushing a phase or giving it a once-over-lightly.
+Written
+report
+12 The assumptions about, and specific approach to, thematic analysis are clearly
+explicated.
+13 There is a good fit between what you claim you do, and what you show you have
+done – i.e., described method and reported analysis are consistent.
+14 The language and concepts used in the report are consistent with the
+epistemological position of the analysis.
+15 The researcher is positioned as active in the research process; themes do not
+just „emerge‟.
+36
+Table 3: Advantages of Thematic Analysis
+Flexibility.
+Relatively easy and quick method to learn, and do.
+Accessible to researchers with little or no experience of qualitative research.
+Results are generally accessible to educated general public.
+Useful method for working within participatory research paradigm, with participants as collaborators.
+Can usefully summarise key features of a large body of data, and/or offer a „thick description‟ of the
+data set.
+Can highlight similarities and differences across the data set.
+Can generate unanticipated insights.
+Allows for social as well as psychological interpretations of data.
+Can be useful for producing qualitative analyses suited to informing policy development.
+37
+Data extract Coded for
+it's too much like hard work I mean how much paper have you got
+to sign to change a flippin‟ name no I I mean no I no we we have
+thought about it ((inaudible)) half heartedly and thought no no I
+jus- I can‟t be bothered, it‟s too much like hard work. (Kate F07a)
+1. Talked about with partner
+2. Too much hassle to change
+name
+Figure 1: Data extract, with codes applied (from Clarke, Burns, & Burgoyne, 2005).
+38
+Figure 2: Initial thematic map, showing five main themes (final analysis presented in Braun &
+Wilkinson, 2003).
+39
+Figure 3: Developed thematic map, showing three main themes (final analysis presented in
+Braun & Wilkinson, 2003).
+40
+Figure 4: Final thematic map, showing final two main themes (see Braun & Wilkinson, 2003).
+41
