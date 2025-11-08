@@ -56,3 +56,4 @@
 **원문 출처**: The Knowledge Engineering Review, Vol. 10, No. 2, 1995, pp. 115-152
 **페이지**: 116
 
+
