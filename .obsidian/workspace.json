@@ -171,6 +171,13 @@
   },
   "active": "29e6a8f53e9d6de8",
   "lastOpenFiles": [
+    "논문_요약_최종.md",
+    "references/kedi_2023_key_quotes.md",
+    "references/schoenfeld_1985_key_quotes.md",
+    "references/cohen_1988_key_quotes.md",
+    "references/wooldridge_jennings_1995_key_quotes.md",
+    "references/verification/미확인_레퍼런스_분석_20251108.md",
+    "references/verification/원문확인_최종보고_20251108.md",
     "teacher_evals_detail.json",
     "ai_teacher_correlation_summary.json",
     "teacher_evaluations.json",
@@ -194,7 +201,6 @@
     "docs/chapters/03-system-design.md",
     "논문_철학_반영_완료_20251106.md",
     "analysis/batch_output/openai_batch_20251105_171235.jsonl",
-    "analysis/batch_output/gemini_results_20251105_174045.jsonl",
     "analysis/research/설문분석_28명_최종.md",
     "analysis/newtest/교사검증_샘플링_방법론_논문용.md",
     "docs/chapters/02-theoretical-background.md",
@@ -210,11 +216,6 @@
     "참고문헌_팩트체크_최종보고서.md",
     "원문확인_필요_인용목록.md",
     "참고문헌_팩트체크_보고서.md",
-    "docs/chapters/01-introduction.md",
-    "docs/chapters/00-list-of-tables-NEW.md",
-    "docs/chapters/00-list-of-figures-NEW.md",
-    "docs/chapters/00-abstract-english.md",
-    "docs/experiments/학생_사후설문지_R2_최종.md",
-    "docs/MAICE_사후설문지.md"
+    "docs/chapters/01-introduction.md"
   ]
 }
