@@ -171,6 +171,8 @@
   },
   "active": "29e6a8f53e9d6de8",
   "lastOpenFiles": [
+    "최종_누적효과_분석_3모델평균_20251108.md",
+    "analysis/final_3models.csv",
     "전체세션_누적효과_최종분석_20251108.md",
     "analysis/final_full_analysis.csv",
     "analysis/users_data.csv",
@@ -192,7 +194,6 @@
     "teacher_evals_detail.json",
     "ai_teacher_correlation_summary.json",
     "teacher_evaluations.json",
-    "gemini_pro_teacher_comparison.json",
     "analysis/mode_comparison_by_teacher_details.png",
     "analysis/mode_comparison_by_teacher_overall.png",
     "analysis/teacher_correlation_pairwise.png",
@@ -215,7 +216,6 @@
     "analysis/newtest/agent_vs_freepass_cdf_20251105_160745.png",
     "analysis/newtest/agent_vs_freepass_histogram_20251105_160745.png",
     "analysis/newtest/agent_vs_freepass_distribution_20251105_160745.png",
-    "analysis/설문조사_모드별_분석결과.md",
-    "참고문헌_인용위치_분석.md"
+    "analysis/설문조사_모드별_분석결과.md"
   ]
 }
