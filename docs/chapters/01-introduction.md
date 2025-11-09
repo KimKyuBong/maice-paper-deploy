@@ -162,24 +162,13 @@ parent: "수학 학습에서 질문 명료화를 지원하는 AI에이전트 설
 **[그림 1-1] 프리패스 방식의 문제점 예시**
 
 ```mermaid
-flowchart TD
+flowchart LR
     A["학생 질문<br/>(모호, 맥락 부재)"] --> B["프리패스 AI<br/>즉시 답변"]
     B --> C["문제 발생"]
     
-    C --> D1["맥락 오해<br/>72.3%"]
-    C --> D2["수준 불일치<br/>27.6%"]
-    C --> D3["학습 확장 부족<br/>48.9%"]
-    
-    D1 -.-> E1["예: '지수의 확장'<br/>→ 비즈니스로 오해"]
-    D2 -.-> E2["예: 고1에게<br/>대학 통계 설명"]
-    D3 -.-> E3["예: 단순 목차<br/>나열만"]
-    
-    style A fill:#ffcccc
-    style B fill:#ffffcc
-    style C fill:#ffaaaa
-    style D1 fill:#ffdddd
-    style D2 fill:#ffdddd
-    style D3 fill:#ffdddd
+    C --> D1["맥락 오해 72.3%<br/>'지수의 확장'→비즈니스"]
+    C --> D2["수준 불일치 27.6%<br/>고1에게 대학 통계"]
+    C --> D3["확장성 부족 48.9%<br/>단순 목차 나열"]
 ```
 
 ### 라. 프리패스 방식의 구조적 한계와 MAICE 시스템 설계의 필요성
@@ -210,36 +199,33 @@ flowchart TD
 **[그림 1-2] 연구 진행 절차**
 
 ```mermaid
-flowchart TB
-    A["1단계: 예비조사<br/>(2024.5월)"] --> A1["학생 질문 385건 수집"]
-    A1 --> A2["교사 루브릭 평가"]
-    A2 --> A3["문제 발견<br/>맥락 부재 72.3%<br/>확장성 결여 48.9%"]
+flowchart LR
+    subgraph S1["1. 예비조사<br/>(2024.5월)"]
+        A1["질문 385건<br/>수집·평가"]
+        A2["문제 발견<br/>맥락 72.3%↓<br/>확장성 48.9%↓"]
+    end
     
-    A3 --> B["2단계: 이론 기반 설계"]
-    B --> B1["Dewey 반성적 사고"]
-    B --> B2["Bloom K1-K4 분류"]
-    B1 & B2 --> B3["MAICE 시스템 설계<br/>5개 에이전트"]
+    subgraph S2["2. 설계<br/>(이론 기반)"]
+        B1["Dewey+Bloom<br/>→ 5개 에이전트"]
+    end
     
-    B3 --> C["3단계: 시스템 개발"]
-    C --> C1["멀티 에이전트 구현"]
-    C --> C2["QAC 체크리스트 개발"]
-    C1 & C2 --> C3["베타테스트 (n=11)"]
+    subgraph S3["3. 개발<br/>(구현·검증)"]
+        C1["시스템 구현<br/>QAC 개발<br/>베타 n=11"]
+    end
     
-    C3 --> D["4단계: A/B 테스트<br/>(2024.10-11월)"]
-    D --> D1["무작위 배정<br/>Agent 28명 / Freepass 30명"]
-    D1 --> D2["280개 세션 수집"]
+    subgraph S4["4. A/B 테스트<br/>(2024.10-11월)"]
+        D1["무작위 배정<br/>Agent 28<br/>Freepass 30"]
+        D2["280개 세션"]
+    end
     
-    D2 --> E["5단계: 이중 평가"]
-    E --> E1["LLM 평가<br/>(N=280)"]
-    E --> E2["교사 평가<br/>(N=100)"]
-    E1 & E2 --> E3["상호 검증<br/>r=0.771"]
+    subgraph S5["5. 평가<br/>(이중 검증)"]
+        E1["LLM N=280<br/>교사 N=100<br/>r=0.771"]
+    end
     
-    E3 --> F["6단계: 결과 분석<br/>& 논문 작성"]
+    S1 --> S2 --> S3 --> S4 --> S5
     
-    style A3 fill:#ffcccc
-    style B3 fill:#ccffcc
-    style E3 fill:#ccccff
-    style F fill:#ffffcc
+    A1 --> A2
+    D1 --> D2
 ```
 
 ### 마. 예비 조사 결과가 시사하는 두 가지 설계 방향
