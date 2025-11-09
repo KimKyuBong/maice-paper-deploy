@@ -204,33 +204,33 @@ flowchart TD
 
 ```mermaid
 graph TB
-    subgraph Phase1["📋 Phase 1: 문제 발견 (2024.5월)"]
-        A[예비조사 N=385<br/>→ 맥락 부재 72.3%]
+    subgraph P1["Phase 1: 문제 발견"]
+        A["예비조사 N=385<br/>맥락 부재 72.3%"]
     end
     
-    subgraph Phase2["⚙️ Phase 2: 해결책 설계 & 개발"]
-        B[이론 기반 설계<br/>Dewey + Bloom]
-        C[MAICE 시스템 개발<br/>5개 에이전트]
+    subgraph P2["Phase 2: 해결책 개발"]
+        B["이론 설계<br/>Dewey+Bloom"]
+        C["MAICE 구현<br/>5개 에이전트"]
         B --> C
     end
     
-    subgraph Phase3["🧪 Phase 3: 효과 검증 (2024.10-11월)"]
-        D[A/B 테스트 설계<br/>Agent vs Freepass]
-        E[실험 실행<br/>58명, 280개 세션]
+    subgraph P3["Phase 3: 효과 검증"]
+        D["A/B 테스트<br/>Agent vs Freepass"]
+        E["실험 N=280<br/>58명 참여"]
         D --> E
     end
     
-    subgraph Phase4["✅ Phase 4: 이중 평가 & 분석"]
-        F[LLM 평가 N=280]
-        G[교사 평가 N=100]
-        H[상호 검증 r=0.771]
+    subgraph P4["Phase 4: 평가 & 분석"]
+        F["LLM 평가<br/>N=280"]
+        G["교사 평가<br/>N=100"]
+        H["상호 검증<br/>r=0.771"]
         F --> H
         G --> H
     end
     
-    Phase1 --> Phase2
-    Phase2 --> Phase3
-    Phase3 --> Phase4
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
 ```
 
 ### 마. 예비 조사 결과가 시사하는 두 가지 설계 방향
