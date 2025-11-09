@@ -162,13 +162,24 @@ parent: "수학 학습에서 질문 명료화를 지원하는 AI에이전트 설
 **[그림 1-1] 프리패스 방식의 문제점 예시**
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["학생 질문<br/>(모호, 맥락 부재)"] --> B["프리패스 AI<br/>즉시 답변"]
     B --> C["문제 발생"]
     
-    C --> D1["맥락 오해 72.3%<br/>'지수의 확장'→비즈니스"]
-    C --> D2["수준 불일치 27.6%<br/>고1에게 대학 통계"]
-    C --> D3["확장성 부족 48.9%<br/>단순 목차 나열"]
+    C --> D1["맥락 오해<br/>72.3%"]
+    C --> D2["수준 불일치<br/>27.6%"]
+    C --> D3["학습 확장 부족<br/>48.9%"]
+    
+    D1 -.-> E1["예: '지수의 확장'<br/>→ 비즈니스로 오해"]
+    D2 -.-> E2["예: 고1에게<br/>대학 통계 설명"]
+    D3 -.-> E3["예: 단순 목차<br/>나열만"]
+    
+    style A fill:#ffcccc
+    style B fill:#ffffcc
+    style C fill:#ffaaaa
+    style D1 fill:#ffdddd
+    style D2 fill:#ffdddd
+    style D3 fill:#ffdddd
 ```
 
 ### 라. 프리패스 방식의 구조적 한계와 MAICE 시스템 설계의 필요성
