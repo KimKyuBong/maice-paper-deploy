@@ -170,16 +170,9 @@ flowchart TD
     C --> D2["수준 불일치<br/>27.6%"]
     C --> D3["학습 확장 부족<br/>48.9%"]
     
-    D1 -.-> E1["예: '지수의 확장'<br/>→ 비즈니스로 오해"]
+    D1 -.-> E1["예: 지수의 확장<br/>→ 비즈니스로 오해"]
     D2 -.-> E2["예: 고1에게<br/>대학 통계 설명"]
     D3 -.-> E3["예: 단순 목차<br/>나열만"]
-    
-    style A fill:#ffcccc
-    style B fill:#ffffcc
-    style C fill:#ffaaaa
-    style D1 fill:#ffdddd
-    style D2 fill:#ffdddd
-    style D3 fill:#ffdddd
 ```
 
 ### 라. 프리패스 방식의 구조적 한계와 MAICE 시스템 설계의 필요성
@@ -211,15 +204,11 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    A["1. 예비조사<br/>2024.5월<br/>질문 385건<br/>문제 발견"] --> B["2. 이론 설계<br/>Dewey+Bloom<br/>5개 에이전트"]
-    
-    B --> C["3. 시스템 개발<br/>구현+QAC<br/>베타 n=11"]
-    
-    C --> D["4. A/B 테스트<br/>2024.10-11월<br/>무작위 배정<br/>280개 세션"]
-    
-    D --> E["5. 이중 평가<br/>LLM N=280<br/>교사 N=100<br/>상호검증 r=0.771"]
-    
-    E --> F["6. 결과 분석<br/>논문 작성"]
+    A[1. 예비조사<br/>385건 수집<br/>문제 발견] --> B[2. 이론 설계<br/>Dewey+Bloom<br/>5개 에이전트]
+    B --> C[3. 시스템 개발<br/>구현+QAC<br/>베타테스트]
+    C --> D[4. A/B 테스트<br/>무작위 배정<br/>280개 세션]
+    D --> E[5. 이중 평가<br/>LLM+교사<br/>상호검증]
+    E --> F[6. 결과 분석<br/>논문 작성]
 ```
 
 ### 마. 예비 조사 결과가 시사하는 두 가지 설계 방향
