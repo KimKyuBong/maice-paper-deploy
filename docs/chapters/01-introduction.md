@@ -205,37 +205,24 @@ flowchart TD
 ```mermaid
 graph TB
     subgraph P1["Phase 1: 문제 발견 (2024년 5월)"]
-        direction TB
-        A1["학생 질문 385건 수집<br/>(프리패스 방식)"]
-        A2["교사 4명 루브릭 평가<br/>(6개 영역, 5점 척도)"]
-        A3["핵심 문제 발견<br/>맥락 부재 72.3%<br/>확장성 결여 48.9%<br/>질문-답변 상관 r=0.691"]
-        A1 --> A2 --> A3
+        direction LR
+        A1["질문 385건<br/>수집"] --> A2["교사 4명<br/>평가"] --> A3["핵심 문제<br/>맥락 72.3%<br/>r=0.691"]
     end
     
     subgraph P2["Phase 2: 해결책 설계 & 개발"]
-        direction TB
-        B1["교육 이론 적용<br/>Dewey 5단계 + Bloom K1-K4"]
-        B2["MAICE 시스템 설계<br/>5개 에이전트 협업 구조"]
-        B3["QAC 체크리스트 개발<br/>8개 항목, 40점 만점"]
-        B4["베타테스트 n=11<br/>시스템 안정화"]
-        B1 --> B2 --> B3 --> B4
+        direction LR
+        B1["이론 적용<br/>Dewey+Bloom"] --> B2["MAICE 설계<br/>5개 에이전트"] --> B3["QAC 개발<br/>8항목 40점"] --> B4["베타테스트<br/>n=11"]
     end
     
     subgraph P3["Phase 3: A/B 테스트 실험 (2024년 10-11월)"]
-        direction TB
-        C1["무작위 배정<br/>Agent 28명 vs Freepass 30명"]
-        C2["2주간 실험<br/>280개 세션 수집"]
-        C3["블라인드 설계<br/>학생은 모드 모름"]
-        C1 --> C2 --> C3
+        direction LR
+        C1["무작위 배정<br/>Agent 28<br/>Freepass 30"] --> C2["2주 실험<br/>280개 세션"] --> C3["블라인드<br/>모드 모름"]
     end
     
     subgraph P4["Phase 4: 이중 평가 & 검증"]
-        direction TB
-        D1["LLM 평가<br/>3개 모델, N=280<br/>α=0.840"]
-        D2["교사 평가<br/>수학교사 2명, N=100<br/>대응 설계"]
-        D3["상호 검증<br/>LLM-교사 r=0.771<br/>패턴 일치 확인"]
-        D1 --> D3
-        D2 --> D3
+        direction LR
+        D1["LLM 평가<br/>N=280"] --> D3["상호 검증<br/>r=0.771"]
+        D2["교사 평가<br/>N=100"] --> D3
     end
     
     P1 ==> P2
