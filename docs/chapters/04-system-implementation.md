@@ -715,7 +715,7 @@ AI: (이전 답변 - 대화 히스토리)
 ---
 
 !!! note "프롬프트 재현성 확보"
-    모든 프롬프트와 LLM 응답은 `llm_prompt_logs` 테이블에 기록되어 재현 가능성(reproducibility)을 보장한다. 프롬프트 전문은 부록 I에서 확인할 수 있다.
+    모든 프롬프트와 LLM 응답은 `llm_prompt_logs` 테이블에 기록되어 재현 가능성(reproducibility)을 보장한다. 프롬프트 전문은 부록 C에서 확인할 수 있다.
 
 ---
 
