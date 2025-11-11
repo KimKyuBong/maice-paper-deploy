@@ -152,16 +152,16 @@ nav:
     - 국문 초록: chapters/00-abstract-korean.md
     - 영문 초록 (Abstract): chapters/00-abstract-english.md
     - 목차: chapters/00-table-of-contents.md
-    - 표 차례: chapters/00-list-of-tables-NEW.md
-    - 그림 차례: chapters/00-list-of-figures-NEW.md
+    - 표 차례: chapters/00-list-of-tables.md
+    - 그림 차례: chapters/00-list-of-figures.md
   - 논문 내용:
     - 1장. 서론: chapters/01-introduction.md
     - 2장. 이론적 배경: chapters/02-theoretical-background.md
     - 3장. MAICE 교육 시스템 아키텍처: chapters/03-system-design.md
     - 4장. MAICE 시스템 구현: chapters/04-system-implementation.md
-    - 5장. 수학적 귀납법 적용: chapters/05-mathematical-induction-application.md
+    - 5장. 베타 테스트: chapters/05-beta-test.md
     - 6장. 연구 방법: chapters/06-research-methods.md
-    - 7장. 결과: chapters/07-results.md
+    - 7장. 연구 결과 (정량·질적 통합): chapters/07-results.md
     - 8장. 논의 및 결론: chapters/08-discussion-conclusion.md
     - 9장. 참고문헌: chapters/09-references.md
   - 부록:
@@ -174,6 +174,7 @@ nav:
     - 루브릭 타당도 분석: 부록_G_루브릭_타당도분석.md
     - 교사평가 잠정결과: 부록_H_교사평가_잠정결과.md
     - 평가 루브릭 개발 과정: 부록_I_평가루브릭_개발과정.md
+    - LLM채점 프롬프트 전문: 부록_J_LLM채점_프롬프트_전문.md
   - 문서:
     - 시스템 문서: 
       - 개요: architecture/overview.md
