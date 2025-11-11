@@ -1,0 +1,832 @@
+# 부록 A. 기술 구현 상세
+
+본 부록에서는 MAICE 시스템의 기술적 구현 내역을 상세히 기술한다. 본문 IV장에서는 교육적 핵심인 프롬프트 관리 시스템에 집중하였으며, 본 부록에서는 시스템 아키텍처, 기술 스택, 배포 전략 등 공학적 세부사항을 다룬다.
+
+---
+
+## A.1. 기술 스택 및 아키텍처
+
+### A.1.1. 전체 아키텍처
+
+MAICE는 3계층 마이크로서비스 아키텍처로 구현되었다:
+
+```
+[프론트엔드]     [백엔드]          [에이전트 레이어]
+SvelteKit  <-->  FastAPI    <-->  Gemini 2.5 Flash
+             <-->  Redis/PostgreSQL
+```
+
+**설계 원칙**:
+- **분리된 관심사**: UI, 비즈니스 로직, AI 처리 독립
+- **비동기 메시징**: Redis Streams로 에이전트 독립 실행
+- **확장성**: 수평 확장 가능한 마이크로서비스
+
+### A.1.2. 기술 스택 상세
+
+| 계층 | 기술 | 버전 | 역할 |
+|------|------|------|------|
+| **프론트엔드** | SvelteKit | 2.x | 웹 UI, SSR |
+| | TypeScript | 5.x | 타입 안전성 |
+| | Tailwind CSS | 3.x | 스타일링 |
+| **백엔드** | FastAPI | 0.109 | REST API, WebSocket |
+| | Python | 3.11 | 비즈니스 로직 |
+| | SQLAlchemy | 2.x | ORM |
+| **에이전트** | Gemini 2.5 Flash | API | LLM 추론 |
+| | Redis Streams | 7.x | 비동기 메시지 큐 |
+| **데이터** | PostgreSQL | 15.x | 관계형 DB |
+| | Redis | 7.x | 세션/캐시 |
+| **배포** | Docker | 24.x | 컨테이너화 |
+| | Nginx | 1.25 | 리버스 프록시 |
+
+---
+
+## A.1. 시스템 구현 개요
+
+MAICE 시스템은 **3계층 마이크로서비스 아키텍처**로 구현되었다. 프론트엔드(SvelteKit), 백엔드(FastAPI), 에이전트(Gemini 2.5 Flash + Redis)로 구성되며, PostgreSQL과 Redis로 데이터를 관리한다 (교육적 설계는 3장 참조).
+
+**[표Ⅳ-1] 핵심 기술 스택**
+
+| 계층 | 핵심 기술 | 역할 |
+|------|---------|------|
+| **프론트엔드** | SvelteKit, MathLive | 대화 UI, 수식 입력 |
+| **백엔드** | FastAPI, Redis | API, 에이전트 조율 |
+| **에이전트** | Gemini 2.5 Flash | 질문 분류, 명료화, 답변 |
+| **데이터** | PostgreSQL, Redis | 영구 저장, 메시지 큐 |
+
+### 가. 시스템 아키텍처
+
+**[그림Ⅳ-1] MAICE 시스템 3계층 구조 (데이터 흐름)**
+
+```mermaid
+flowchart LR
+    subgraph L1["계층 1: 프론트엔드"]
+        A[대화 UI]
+        A ~~~ B[수식 입력]
+    end
+    
+    subgraph L2["계층 2: 백엔드"]
+        C[REST API]
+        C ~~~ D[대화 조율]
+        D ~~~ E[SSE]
+    end
+    
+    R[Redis<br/>메시지 큐]
+    
+    subgraph L3["계층 3: 에이전트"]
+        F1[QC]
+        F1 ~~~ F2[QI]
+        F2 ~~~ F3[AG]
+        F3 ~~~ F4[LO]
+        F4 ~~~ F5[FT]
+    end
+    
+    L1 -->|질문| L2
+    L2 -.->|SSE| L1
+    L2 <--> R
+    R <--> L3
+    
+    style L1 fill:#E3F2FD
+    style L2 fill:#FFF3E0
+    style R fill:#FFE082
+    style L3 fill:#F3E5F5
+```
+
+**[그림Ⅳ-2] 에이전트-Redis-DB 데이터 흐름**
+
+```mermaid
+flowchart TB
+    R[Redis 메시지 큐]
+    
+    subgraph agents[에이전트]
+        direction LR
+        A1[QC]
+        A2[QI]
+        A3[AG]
+        A4[LO]
+        A5[FT]
+    end
+    
+    DB[(PostgreSQL)]
+    
+    R <--> A1
+    R <--> A2
+    R <--> A3
+    R <--> A4
+    R <--> A5
+    
+    A3 --> DB
+    A4 --> DB
+    A5 --> DB
+    
+    style R fill:#FFE082
+    style DB fill:#C8E6C9
+```
+
+**[표Ⅳ-2] 계층별 주요 기술 스택 및 통신 프로토콜**
+
+| 계층 | 핵심 기술 | 통신 방식 | 역할 |
+|------|---------|----------|------|
+| **계층 1: 프론트엔드** | SvelteKit 2.0, MathLive | HTTP/SSE | 학생 UI, 수식 입력 |
+| **계층 2: 백엔드** | FastAPI 0.104, Python 3.11 | REST API, Redis | API 제공, 에이전트 조율 |
+| **계층 3: 에이전트** | Gemini 2.5 Flash, asyncio | Redis pub/sub | 질문 분류, 명료화, 답변 |
+| **데이터 계층** | PostgreSQL 15, Redis 7 | ORM, Streams | 영구 저장, 메시지 큐 |
+
+주: 교육적 설계 원리는 3장 3.3절 참조
+
+### 다. 핵심 설계 원칙 및 A/B 테스트 구조
+
+**[표Ⅳ-3] Agent vs Freepass 모드 비교**
+
+| 항목 | Agent 모드 | Freepass 모드 |
+|------|-----------|--------------|
+| **에이전트 수** | 4개 (QC→QI→AG→LO) | 2개 (FT→LO) |
+| **명료화 과정** | ✓ Dewey 5단계 기반 | ✗ 생략 |
+| **질문 분류** | ✓ K1-K4 분류 | ✗ 생략 |
+| **교육적 개입** | ✓ 메타인지 유도 | ✗ 즉시 답변 |
+
+주: 상세한 질문 처리 흐름은 3장 3.3절 및 4.2절 에이전트 구현에서 다룸
+
+**핵심 설계 원칙**:
+
+1. **비동기 처리**: 모든 I/O는 asyncio로 비동기 처리 → 동시 처리 능력 극대화
+2. **느슨한 결합**: Redis pub/sub으로 에이전트 간 직접 의존성 제거 → 독립성 보장
+3. **이벤트 기반 아키텍처**: 메시지 큐로 작업 분산 → 확장 가능한 구조
+4. **완전한 재현성**: 모든 대화, 프롬프트, 응답을 DB에 기록 → 연구 검증 가능
+5. **A/B 테스트 지원**: 사용자 모드에 따라 다른 에이전트 경로 자동 라우팅
+
+---
+
+## A.2. 계층별 구현 상세
+
+### 가. 프론트엔드 계층 (front/)
+
+#### 기술 스택
+
+```yaml
+프레임워크: SvelteKit 2.0 (Vite 기반)
+언어: TypeScript 5.x
+UI 라이브러리:
+  - Tailwind CSS 4.x: 디자인 시스템
+  - MathLive 0.95: 수학 수식 입력/렌더링
+  - KaTeX: 정적 수식 렌더링
+상태 관리: Svelte Stores (Reactive)
+```
+
+#### 주요 컴포넌트 아키텍처
+
+**[그림Ⅳ-3] 프론트엔드 컴포넌트 구조**
+
+```mermaid
+graph TB
+    subgraph "UI 컴포넌트"
+        A[ChatHeader]
+        B[MessageList]
+        C[MathInput]
+        D[SessionManager]
+    end
+    
+    subgraph "서비스 계층"
+        E[APIClient]
+        F[SSE Service]
+    end
+    
+    subgraph "상태 관리"
+        G[authStore]
+        H[themeStore]
+        I[consentStore]
+    end
+    
+    A --> E
+    B --> F
+    C --> E
+    D --> E
+    E --> G
+    F --> B
+```
+
+**InlineMathInput의 핵심 역할**:
+- **수식 입력**: MathLive 기반 LaTeX 에디터
+- **이미지 OCR**: 수식 사진 → LaTeX 자동 변환
+- **실시간 미리보기**: 입력과 동시에 렌더링
+- **모바일 최적화**: 터치 가상 키보드 지원
+
+**MessageList의 역할**:
+- **실시간 스트리밍**: SSE로 받은 답변 청크를 실시간 표시
+- **LaTeX 렌더링**: KaTeX로 수식 자동 렌더링
+- **자동 스크롤**: 새 메시지 추가 시 자동 하단 스크롤
+
+#### 프론트엔드 ↔ 백엔드 통신
+
+**[그림Ⅳ-4] 프론트엔드-백엔드 SSE 스트리밍 통신**
+
+```mermaid
+sequenceDiagram
+    participant UI as 프론트엔드
+    participant API as MaiceAPIClient
+    participant BE as 백엔드 API
+    
+    UI->>API: sendMessage(질문)
+    API->>BE: POST /api/maice/stream
+    BE-->>API: SSE Stream 시작
+    
+    loop 실시간 스트리밍
+        BE-->>API: data: {chunk}
+        API->>UI: 메시지 업데이트 및 렌더링
+    end
+    
+    BE-->>API: data: {type: "done"}
+    API->>UI: 스트리밍 완료
+```
+
+### 나. 백엔드 계층 (back/)
+
+#### 기술 스택
+
+```yaml
+프레임워크: FastAPI 0.104
+언어: Python 3.11
+ORM: SQLAlchemy 2.0 (비동기)
+데이터베이스: PostgreSQL 15
+메시지 브로커: Redis 7 (Streams + pub/sub)
+비동기: asyncio + uvloop
+```
+
+#### 서비스 아키텍처
+
+**[그림Ⅳ-5] 백엔드 서비스 계층 구조**
+
+```mermaid
+graph TB
+    subgraph "API 계층"
+        A[MaiceController]
+        B[AuthController]
+        C[TeacherController]
+    end
+    
+    subgraph "서비스 계층"
+        D[Orchestrator]
+        E[SessionManager]
+        F[StreamProcessor]
+        G[OCR Service]
+        H[UserMode]
+    end
+    
+    subgraph "저장소 계층"
+        I[UserRepo]
+        J[SessionRepo]
+    end
+    
+    subgraph "외부 서비스"
+        K[Redis]
+        L[Gemini API]
+    end
+    
+    A --> D
+    A --> G
+    B --> I
+    C --> J
+    
+    D --> E
+    D --> F
+    D --> K
+    
+    E --> J
+    F --> K
+    G --> L
+```
+
+**ConversationOrchestrator의 핵심 역할**:
+- 질문을 받아 Redis Streams에 발행
+- 에이전트 응답을 구독하여 프론트엔드로 전달
+- 세션별 대화 상태 추적
+
+**SessionManager의 역할**:
+- 세션 생성/조회/삭제
+- 대화 메시지 저장 (PostgreSQL JSONB)
+- 이전 대화 히스토리 제공
+
+**ImageToLatexService의 역할** (3.6.3절 OCR 시스템):
+- 이미지 파일 검증 및 전처리
+- Gemini Vision API 호출
+- LaTeX 정제 및 MathLive 호환성 변환
+
+#### Redis Streams 통신 구조
+
+**[그림Ⅳ-6] Redis Streams 메시지 전달 구조**
+
+```mermaid
+flowchart LR
+    B[백엔드]
+    S1[질문<br/>스트림]
+    S2[응답<br/>스트림]
+    
+    subgraph agents[에이전트]
+        A1[QC]
+        A2[QI]
+        A3[AG]
+    end
+    
+    B -->|발행| S1
+    S1 --> A1
+    S1 --> A2
+    S1 --> A3
+    
+    A1 --> S2
+    A2 --> S2
+    A3 --> S2
+    S2 -->|구독| B
+    
+    style B fill:#E3F2FD
+    style S1 fill:#FFF3E0
+    style S2 fill:#FFF3E0
+    style A1 fill:#F3E5F5
+    style A2 fill:#F3E5F5
+    style A3 fill:#F3E5F5
+```
+
+**[표Ⅳ-4] Redis Streams 메시지 구조**
+
+| 필드 | 타입 | 설명 |
+|------|------|------|
+| session_id | int | 세션 고유 ID |
+| user_id | int | 사용자 ID |
+| question | str | 학생 질문 내용 |
+| mode | str | "agent" 또는 "freepass" |
+| conversation_history | JSON | 이전 대화 히스토리 |
+| timestamp | ISO8601 | 메시지 생성 시각 |
+
+### 다. 에이전트 계층 (agent/)
+
+#### 멀티프로세스 아키텍처
+
+**[그림Ⅳ-7] 에이전트 멀티프로세스 구조**
+
+```mermaid
+flowchart TB
+    W[프로세스 관리자]
+    
+    subgraph agents[독립 실행 에이전트]
+        P1[QC]
+        P2[QI]
+        P3[AG]
+        P4[LO]
+        P5[FT]
+    end
+    
+    W -->|생성 및 관리| P1
+    W -->|생성 및 관리| P2
+    W -->|생성 및 관리| P3
+    W -->|생성 및 관리| P4
+    W -->|생성 및 관리| P5
+    
+    style W fill:#E3F2FD
+    style P1 fill:#F3E5F5
+    style P2 fill:#F3E5F5
+    style P3 fill:#F3E5F5
+    style P4 fill:#F3E5F5
+    style P5 fill:#F3E5F5
+```
+
+**멀티프로세스 설계 이유**:
+1. **독립성**: 한 에이전트 장애가 다른 에이전트에 영향 없음
+2. **병렬 처리**: 각 에이전트가 동시에 다른 세션 처리 가능
+3. **자동 재시작**: 프로세스 감시자(Supervisor)가 장애 시 자동 재시작
+4. **확장성**: 에이전트별로 프로세스 수 증가 가능
+
+#### BaseAgent 공통 구조
+
+**[그림Ⅳ-8] BaseAgent 공통 구조 및 상속 관계**
+
+```mermaid
+flowchart TB
+    subgraph base[BaseAgent 공통 기능]
+        A[Redis 연결] ~~~ B[DB 연결] ~~~ C[프롬프트 빌더] ~~~ D[LLM 호출] ~~~ E[세션 관리]
+    end
+    
+    subgraph agents[↓ 상속받는 에이전트 ↓]
+        QC[QC] ~~~ QI[QI] ~~~ AG[AG] ~~~ LO[LO] ~~~ FT[FT]
+    end
+    
+    base -.-> agents
+    
+    style QC fill:#F3E5F5
+    style QI fill:#F3E5F5
+    style AG fill:#F3E5F5
+    style LO fill:#F3E5F5
+    style FT fill:#F3E5F5
+```
+
+**BaseAgent가 제공하는 공통 기능**:
+- **initialize()**: Redis/PostgreSQL 연결 초기화
+- **run_subscriber()**: 메시지 큐 구독 무한 루프
+- **cleanup()**: 리소스 정리 및 연결 종료
+- **check_duplicate_request()**: 중복 요청 방지
+- **save_prompt_log()**: 모든 LLM 호출 기록
+
+#### 에이전트 간 협업 메커니즘
+
+**[그림Ⅳ-9] 에이전트 간 협업 메커니즘 (Redis pub/sub 기반)**
+
+```mermaid
+flowchart LR
+    QC[QC 질문분류기]
+    QI[QI 명료화관리자]
+    AG[AG 답변생성기]
+    LO[LO 학습관찰자]
+    
+    QC -->|answerable| AG
+    QC -->|needs_clarify| QI
+    QI -->|PASS| AG
+    QI -->|NEED_MORE| QI
+    AG --> LO
+    
+    style QC fill:#E3F2FD
+    style QI fill:#FFF3E0
+    style AG fill:#F3E5F5
+    style LO fill:#C8E6C9
+```
+
+**협업 흐름**:
+
+1. **QC → AG**: `answerable` (즉시 답변 가능한 경우)
+2. **QC → QI**: `needs_clarify` (명료화 필요한 경우)
+3. **QI → AG**: `PASS` (명료화 완료)
+4. **QI → QI**: `NEED_MORE` (추가 명료화 필요, 최대 3회)
+5. **AG → LO**: 답변 완료 후 학습 패턴 분석
+
+**Redis pub/sub 이벤트**:
+
+- `NEED_CLARIFICATION`: QC → QI
+- `READY_FOR_ANSWER`: QI → AG
+- `GENERATE_SUMMARY`: AG → LO
+
+---
+
+## A.3. 배포 및 인프라
+
+### 가. Docker Compose 배포 구조
+
+**[그림Ⅳ-14] Docker Compose 컨테이너 구성**
+
+```mermaid
+flowchart TB
+    User["👤 사용자<br/>(브라우저)"]
+    Nginx["🌐 nginx<br/>:80, :443<br/>(정적 파일 서빙 + 리버스 프록시)"]
+    Back["⚙️ maice-back<br/>FastAPI :8000<br/>(REST API)"]
+    Agent["🤖 maice-agent<br/>5개 에이전트<br/>(AI 처리)"]
+    
+    DB[("💾 postgres<br/>PostgreSQL 15<br/>:5432")]
+    Redis[("📮 redis<br/>Redis 7<br/>:6379")]
+    
+    FrontBuild["📦 프론트엔드 빌드<br/>(SvelteKit → 정적 파일)"]
+    Volume["📁 postgres_data<br/>(영구 저장)"]
+    
+    User -->|HTTPS 요청| Nginx
+    Nginx -->|정적 파일| User
+    Nginx -->|/api 프록시| Back
+    FrontBuild -.->|빌드 결과| Nginx
+    
+    Back -->|SQL 쿼리| DB
+    Back <-->|메시지| Redis
+    Agent <-->|메시지| Redis
+    Agent -->|데이터 저장| DB
+    DB -.->|저장| Volume
+    
+    style User fill:#E8EAF6
+    style Nginx fill:#E3F2FD
+    style Back fill:#FFF3E0
+    style Agent fill:#F3E5F5
+    style DB fill:#C8E6C9
+    style Redis fill:#FFE0B2
+    style FrontBuild fill:#F5F5F5
+    style Volume fill:#F5F5F5
+```
+
+**서비스별 역할**:
+
+
+**[표Ⅳ-5] Docker Compose 서비스 구성**
+
+| 서비스 | 포트 | 역할 | 헬스체크 |
+|--------|------|------|---------|
+| **nginx** | 80, 443 | 정적 파일 서빙, 리버스 프록시 (HTTPS) | HTTP /health |
+| **maice-back** | 8000 | REST API 제공 | HTTP /health |
+| **maice-agent** | - | 백그라운드 AI 처리 | Redis ping |
+| **postgres** | 5432 | 데이터 저장 | pg_isready |
+| **redis** | 6379 | 메시지 브로커 | redis-cli ping |
+
+**의존성 관리**:
+```yaml
+depends_on:
+  postgres:
+    condition: service_healthy
+  redis:
+    condition: service_healthy
+```
+→ PostgreSQL과 Redis가 준비된 후에만 백엔드와 에이전트 시작
+
+### 나. 성능 최적화 전략
+
+#### Connection Pooling
+
+**Redis Connection Pool**:
+- 최대 연결: 50개
+- 각 에이전트가 풀에서 연결 재사용
+- 연결 생성/해제 오버헤드 최소화
+
+**PostgreSQL Connection Pool**:
+- Pool 크기: 20개
+- Max overflow: 10개 (최대 30개 동시 연결)
+- Pool pre-ping: 연결 유효성 사전 검증
+
+#### Rate Limiting
+
+**Gemini API Rate Limiter**:
+- 분당 15 requests (무료 티어)
+- 초과 시 자동 대기 (큐잉)
+- 일일 한도 추적
+
+#### 비동기 I/O
+
+**uvloop 최적화**:
+- Python 기본 asyncio 대비 2-4배 빠른 성능
+- `worker.py`에서 `uvloop.install()` 적용
+
+---
+
+## A.4. 보안 및 안정성
+
+### 가. 프롬프트 보안
+
+**프롬프트 스푸핑 방지**:
+- 질문 영역을 동적 구분자로 명확히 분리
+- 학생 질문에서 시스템 역할 변경 시도 감지
+- 정규식 패턴으로 위험 입력 필터링
+
+**안전한 구분자 시스템**:
+```python
+# 각 요청마다 고유한 구분자 생성
+separators = {
+    "start": f"===QUESTION_START_{random_suffix}===",
+    "end": f"===QUESTION_END_{random_suffix}===",
+    "hash": hashlib.sha256(timestamp).hexdigest()[:16]
+}
+```
+
+### 나. 에러 처리 및 재시도
+
+**계층별 에러 처리**:
+
+**[그림Ⅳ-15] 계층별 에러 처리 및 재시도 전략**
+
+```mermaid
+graph TB
+    A[에러 발생] --> B{에러 유형}
+    
+    B -->|네트워크| C[3회 재시도<br/>지수 백오프]
+    B -->|LLM 타임아웃| D[60초 대기 후<br/>재호출]
+    B -->|프롬프트 파싱| E[에러 메시지<br/>학생에게 전달]
+    B -->|에이전트 장애| F[프로세스 자동<br/>재시작]
+    
+    C --> G{성공?}
+    D --> G
+    
+    G -->|Yes| H[정상 처리]
+    G -->|No| I[최종 실패<br/>에러 로그]
+```
+
+**재시도 전략**:
+- **LLM API**: 3회 재시도, 지수 백오프 (1초 → 2초 → 4초)
+- **Redis 연결**: 5회 재시도, 고정 1초 간격
+- **PostgreSQL**: Connection Pool 자동 재연결
+
+### 다. 모니터링 및 로깅
+
+**구조화된 로깅**:
+- JSON 형식 로그 (Elasticsearch 연동 가능)
+- 세션 ID를 통한 추적
+- 에이전트별 로그 분리
+
+**메트릭 수집** (Prometheus):
+- `agent_requests_total`: 에이전트별 요청 수
+- `agent_response_duration_seconds`: 응답 시간 분포
+- `active_sessions`: 모드별 활성 세션 수
+- `clarification_count`: 명료화 횟수 분포
+
+---
+
+## A.5. 이미지 OCR 수식 인식 시스템 (3.6.3절 연계)
+
+베타테스트 피드백을 반영하여 구현한 OCR 시스템의 기술적 구조:
+
+### 가. 아키텍처
+
+**[그림Ⅳ-16] 이미지 OCR 수식 인식 시스템 (Gemini Vision API)**
+
+```mermaid
+flowchart LR
+    A["📤 이미지 업로드<br/>(프론트엔드)"]
+    B["✅ 파일 검증<br/>(10MB 이하)"]
+    C["🔧 전처리<br/>(ImageToLatexService)"]
+    D["🤖 Gemini Vision<br/>(수식 인식)"]
+    E["📝 LaTeX 정제<br/>(MathLive 호환)"]
+    F["✏️ 에디터 삽입<br/>(실시간 렌더링)"]
+    
+    A --> B --> C --> D --> E --> F
+    
+    style A fill:#E3F2FD
+    style B fill:#FFF3E0
+    style C fill:#F3E5F5
+    style D fill:#E8F5E9
+    style E fill:#FFF3E0
+    style F fill:#E3F2FD
+```
+
+**처리 단계**:
+
+1. **이미지 업로드**: 사용자가 수식 사진 업로드 (JPG/PNG/WebP)
+2. **파일 검증**: 10MB 이하, 형식 확인
+3. **전처리**: RGB 변환, 1536×1536 리사이즈
+4. **Gemini Vision API**: 이미지 → LaTeX 변환
+5. **LaTeX 정제**: MathLive 호환성 명령어 변환 (`\dots` → `\ldots` 등)
+6. **에디터 삽입**: 커서 위치에 삽입, 실시간 렌더링
+
+### 나. 핵심 차별점
+
+**MAICE OCR vs 일반 LLM 이미지 전달**:
+
+
+**[표Ⅳ-6] 일반 LLM vs MAICE OCR 기능 비교**
+
+| 특징 | 일반 LLM | MAICE OCR |
+|------|---------|-----------|
+| **처리 방식** | 이미지를 LLM에 직접 전달 | 이미지 → LaTeX 텍스트 변환 |
+| **편집 가능** | ❌ 이미지로만 인식 | ✅ 텍스트로 편집 가능 |
+| **오인식 수정** | ❌ 재업로드 필요 | ✅ 입력창에서 즉시 수정 |
+| **통합성** | ❌ 이미지와 텍스트 분리 | ✅ 하나의 텍스트로 통합 |
+
+**교육적 가치**:
+1. **수식 검증**: OCR 결과를 확인하며 자신이 쓴 수식 점검
+2. **질문 정제**: 변환된 LaTeX를 편집하며 질문 명료화
+3. **문제 변형**: 일부 수식 수정으로 유사 문제 생성 가능
+
+### 다. 기술 사양
+
+
+**[표Ⅳ-7] OCR 시스템 기술 사양**
+
+| 항목 | 사양 |
+|------|------|
+| **OCR 엔진** | Google Gemini 2.5 Flash Vision API |
+| **지원 형식** | JPG, PNG, WebP |
+| **최대 파일 크기** | 10MB |
+| **최대 이미지 해상도** | 1536 × 1536 픽셀 (자동 리사이즈) |
+| **처리 시간** | 평균 5-10초 |
+| **변환 방식** | 이미지 → LaTeX 텍스트 (MathLive 호환) |
+
+**MathLive 호환성 변환 로직**:
+- `\dots` → `\ldots` (MathLive 선호 표기)
+- `\cdots` → `\ldots` (통일)
+- `\times` → `\cdot` (안정적 렌더링)
+
+
+## A.6. 베타테스트 및 초기 검증
+
+본격적인 실험 연구(6장)에 앞서, 2025년 9월 15일부터 9월 25일까지 고등학교 2학년 학생 11명을 대상으로 베타테스트를 실시하였다. 이 과정에서 시스템의 기술적 안정성과 교육적 실효성을 초기 검증하고, 주요 개선점을 도출하였다.
+
+### 가. 베타테스트 개요 및 주요 발견
+
+**참여자**: 고등학교 2학년 학생 11명 (2025년 9월 15일~25일, 10일간)
+
+**시스템 사용 현황**:
+- 평균 대화 세션: 9.7회 (최소 5회, 최대 13회)
+- 명료화 수행 비율: 약 63% → 학생들이 명료화 과정을 자연스럽게 수용
+
+### 나. 발견된 문제점 및 개선
+
+#### 1) 컨텍스트 유지 불안정성
+
+**문제**: 시스템이 대화 맥락을 유지하지 못해 답변이 단절되는 현상 발생
+
+**원인**: 에이전트 간 대화 기록 공유 로직의 버그, 세션 ID 관리 미흡
+
+**개선**: 명료화 세션 구조화, 에이전트 간 컨텍스트 전달 메커니즘 강화, DB 실시간 동기화
+
+**결과**: 실험 연구(10월)에서 컨텍스트 손실 0건 달성
+
+#### 2) 서버 안정성 문제
+
+**문제**: 동시 접속자 5명 이상 시 응답 지연 및 간헐적 타임아웃 오류
+
+**개선**: API 서버 확장 (1개→3개), 타임아웃 증가, 버퍼 최적화, 자동 재시도 로직 추가
+
+**결과**: 본 실험에서 동시 접속자 30명 이상에서도 안정적 운영
+
+#### 3) 수식 입력 개선
+
+**문제**: 수식 입력 시간 과다 소요 (만족도 2.5/5점)
+
+**개선**: LaTeX 자동완성, 수식 템플릿 라이브러리, 실시간 미리보기, 이미지 OCR 수식 인식 추가
+
+**결과**: 수식 입력 만족도 3.8점으로 52% 증가
+
+### 다. 교육적 효과 초기 검증
+
+#### 메타인지 향상 징후
+
+리커트 척도 문항 중 **메타인지 관련 4개 문항**의 평균 점수가 높게 나타났다:
+
+
+**[표Ⅳ-8] 메타인지 발달 평가 (베타테스트, n=11)**
+
+| 문항 | 평균 점수 |
+|------|----------|
+| "모호했던 질문을 더 구체적으로 바꾸는 방법을 배웠다" | 4.0점 |
+| "내가 무엇을 모르는지 스스로 규정할 수 있게 되었다" | 4.1점 |
+| "조건·정의·목표를 분리해 문제를 재정의하는 연습이 되었다" | 4.0점 |
+| "질문/답변을 여러 번 다듬으며 사고가 정교화되었다" | 3.9점 |
+
+**학생 증언**:
+> "질문의 질이 처음에는 뭉툭했는데, MAICE를 사용하며 질문을 명확하게 표현하면 더 좋은 답변이 온다는 걸 깨달았습니다."
+
+> "명료화 과정이 최종 정답보다 더 큰 배움을 줬다."
+
+#### 개념 이해의 깊이
+
+**깨달음의 순간** 개방형 응답 분석 (11명 중 9명 응답):
+
+1. **수열 공식의 본질 이해** (3명):
+   > "등비수열의 합 공식을 구하는 과정을 보니 계차수열과 비슷하다는 것을 깨달았다."
+   
+   > "부분분수로 전개하면 깔끔하게 소거된다는 것을 알았다."
+
+2. **가우스 덧셈법 재발견** (1명):
+   > "수업 시간에 가우스 얘기가 나왔는데 이해 못했었는데, AI 설명을 들으니 완전히 이해할 수 있었습니다."
+
+3. **수학적 관계 발견** (2명):
+   > "$a^n - a^{n-1} = (a-1)a^{n-1}$을 수열 합과 일반항 관계 문제에 적용할 수 있겠다고 깨달았습니다."
+   
+   > "시그마 식 사용법의 다양한 방식을 알게 되었다."
+
+4. **문제 접근 전략 개선** (1명):
+   > "답지를 봐도 이해 안 되던 문제가, 수식으로 정확히 질문했더니 과정을 빠르게 알 수 있었다."
+
+#### 학습 동기 및 지속성
+
+**학습 몰입 및 재사용 의향**:
+
+
+**[표Ⅳ-9] 베타테스트 학습 몰입 및 재사용 의향**
+
+| 문항 | 평균 점수 |
+|------|----------|
+| "활동 중 시간 가는 줄 몰랐다" | 3.6점 |
+| "계속 써보고 싶다는 생각이 들었다" | 4.1점 |
+| "이 도구는 수열 학습에 유용했다" | 4.3점 |
+| "수업/과제에서 다시 사용할 의향이 있다" | 4.5점 |
+| "친구에게 추천하고 싶다" | 4.0점 |
+
+**긍정적 신호**: 11명 중 10명이 "다시 사용하겠다"고 응답
+
+### 라. 베타테스트의 교훈과 본 실험 반영
+
+베타테스트를 통해 다음 3가지 핵심 교훈을 얻었다:
+
+#### 1. 기술적 안정성이 교육적 효과의 전제 조건
+
+**교훈**: 아무리 우수한 교육 설계라도, 시스템이 불안정하면 학습 경험이 저해된다.
+
+**본 실험 반영**:
+- 서버 안정성 확보 후 10월 20일 본 실험 시작
+- 컨텍스트 유지 문제 완전 해결
+- 동시 접속자 30명 이상에서도 안정적 운영
+
+#### 2. UI/UX는 학습 부담(Cognitive Load)에 직결
+
+**교훈**: 수식 입력이 어려우면 학생이 질문 자체를 포기한다.
+
+**학생 증언**:
+> "문제 하나를 작성할 때도 너무 오래 걸려서, 기능은 좋지만 사용성 개선이 필요합니다."
+
+**본 실험 반영**:
+- LaTeX 자동완성 및 템플릿 라이브러리 추가
+- 실시간 수식 미리보기 구현
+- 모바일 환경 최적화
+
+#### 3. 명료화 프로세스의 교육적 가치 확인
+
+**교훈**: 학생들이 명료화 과정을 **자연스럽게 수용하고 긍정적으로 평가**하였다.
+
+**학생 평가**:
+- "모호했던 질문을 더 구체적으로 바꾸는 방법을 배웠다": 긍정적 평가
+- "명료화 과정이 최종 답변보다 더 큰 배움을 줬다": 11명 중 9명 동의
+
+**본 실험 설계에의 반영**:
+- **A/B 테스트 도입**: 명료화 프로세스의 효과를 엄밀하게 검증하기 위해, Agent 모드(명료화 포함) vs Freepass 모드(즉시 답변)를 무작위 배정 비교
+- **LO 강화**: 학습 패턴 추적 및 분석 기능 개선
+- **측정 도구 개선**: QAC 체크리스트로 질문-답변 품질 정량화
+
+---
+
+**IV장 요약**: 본 장에서는 MAICE 시스템의 기술 스택, 계층별 구현, 프롬프트 관리, 데이터 저장, 배포 인프라, 보안, OCR 시스템, 그리고 베타테스트를 통한 시스템 안정화 과정을 다루었다. 베타테스트를 통해 컨텍스트 유지, 서버 안정성, UI/UX 문제를 발견하고 개선하여, 본 실험(6장)을 위한 안정적인 시스템을 완성하였다. 다음 5장에서는 본 시스템을 수학적 귀납법 단원에 구체적으로 적용한 사례와 실제 학생 대화 시나리오를 다룬다.
+
