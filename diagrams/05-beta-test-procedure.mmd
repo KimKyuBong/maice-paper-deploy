@@ -1,0 +1,110 @@
+graph TB
+    Start([베타테스트 시작<br/>2025.09.15-09.25])
+    
+    %% 참여자 정보
+    Participants[참여자 모집<br/>고2 학생 11명<br/>자발적 참여]
+    
+    %% 1단계: 사전 준비
+    Stage1[1단계: 시스템 소개<br/>및 사용법 안내<br/>⏱️ 20분]
+    Stage1_1[MAICE 시스템 소개]
+    Stage1_2[Agent 모드 설명<br/>명료화 프로세스 안내]
+    Stage1_3[수식 입력 방법 실습]
+    Stage1_4[질문 작성 연습]
+    
+    %% 2단계: 실제 사용
+    Stage2[2단계: 개별 과제 수행<br/>⏱️ 8일간]
+    Stage2_1[수열 단원 학습<br/>등차수열, 등비수열, 수열의 합]
+    Stage2_2{문제 풀이 중<br/>질문 발생?}
+    Stage2_3[MAICE Agent 모드 사용]
+    
+    %% 명료화 프로세스
+    Clarify1[QI: 명료화 질문 제시]
+    Clarify2[학생: 질문 구체화 응답]
+    Clarify3{질문이<br/>충분히<br/>명료화?}
+    Clarify4[AG: 맞춤 답변 제공]
+    
+    %% 데이터 수집
+    DataCollect[로그 자동 수집<br/>- 대화 세션<br/>- 질문/답변<br/>- 명료화 과정]
+    
+    %% 3단계: 사후 평가
+    Stage3[3단계: 사후 설문<br/>및 피드백 수집<br/>⏱️ 20분]
+    Stage3_1[리커트 척도 문항 15개<br/>- 시스템 안정성<br/>- 사용성<br/>- 교육적 효과]
+    Stage3_2[개방형 질문 5개<br/>- 깨달음의 순간<br/>- 개선 요청<br/>- 전반적 경험]
+    
+    %% 분석 단계
+    Analysis[데이터 분석]
+    Analysis1[기술적 문제 발견<br/>- 컨텍스트 손실<br/>- 서버 불안정<br/>- 수식 입력 어려움]
+    Analysis2[교육적 효과 검증<br/>- 메타인지 향상 징후<br/>- 명료화 수용률 63%<br/>- K1-K4 분류 정확도 83%]
+    
+    %% 개선 단계
+    Improve[시스템 개선]
+    Improve1[기술적 개선<br/>✅ 컨텍스트 유지 강화<br/>✅ 서버 성능 3배 향상<br/>✅ OCR 수식 입력]
+    Improve2[프롬프트 개선<br/>✅ 부드러운 톤<br/>✅ 이모지 활용<br/>✅ 명료화 3회 제한]
+    Improve3[K1-K4 분류 개선<br/>✅ 정확도 83→91%]
+    
+    %% 본 실험 준비
+    Ready[본 실험 준비 완료<br/>2025.10.20 시작]
+    Ready1[✅ 기술적 안정성<br/>✅ 교육적 타당성<br/>✅ 사용성 검증]
+    
+    End([베타테스트 완료<br/>본 실험 시작])
+    
+    %% 연결
+    Start --> Participants
+    Participants --> Stage1
+    
+    Stage1 --> Stage1_1
+    Stage1_1 --> Stage1_2
+    Stage1_2 --> Stage1_3
+    Stage1_3 --> Stage1_4
+    Stage1_4 --> Stage2
+    
+    Stage2 --> Stage2_1
+    Stage2_1 --> Stage2_2
+    Stage2_2 -->|Yes| Stage2_3
+    Stage2_2 -->|No| Stage2_1
+    
+    Stage2_3 --> Clarify1
+    Clarify1 --> Clarify2
+    Clarify2 --> Clarify3
+    Clarify3 -->|No| Clarify1
+    Clarify3 -->|Yes| Clarify4
+    Clarify4 --> DataCollect
+    DataCollect --> Stage2_2
+    
+    Stage2 -.평균 9.7회/인 반복.-> Stage3
+    
+    Stage3 --> Stage3_1
+    Stage3 --> Stage3_2
+    Stage3_1 --> Analysis
+    Stage3_2 --> Analysis
+    
+    Analysis --> Analysis1
+    Analysis --> Analysis2
+    
+    Analysis1 --> Improve
+    Analysis2 --> Improve
+    
+    Improve --> Improve1
+    Improve --> Improve2
+    Improve --> Improve3
+    
+    Improve1 --> Ready
+    Improve2 --> Ready
+    Improve3 --> Ready
+    
+    Ready --> Ready1
+    Ready1 --> End
+    
+    %% 스타일
+    classDef stageClass fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    classDef processClass fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    classDef problemClass fill:#ffccbc,stroke:#d84315,stroke-width:2px
+    classDef improveClass fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    classDef readyClass fill:#b2dfdb,stroke:#00695c,stroke-width:3px
+    
+    class Stage1,Stage2,Stage3 stageClass
+    class Stage2_3,Clarify1,Clarify2,Clarify3,Clarify4 processClass
+    class Analysis1,Analysis2 problemClass
+    class Improve1,Improve2,Improve3 improveClass
+    class Ready,Ready1 readyClass
+

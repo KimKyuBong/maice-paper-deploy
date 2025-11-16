@@ -1,0 +1,81 @@
+flowchart TB
+    subgraph P1["1단계: 문제 분석 및 탐색"]
+        P1A["예비조사<br/>(2024.5)<br/>385건 질문 분석"]
+        P1B["문제 확인<br/>질문 품질 저하<br/>72.3% 맥락 부재"]
+        P1C["이론 탐색<br/>Dewey 반성적 사고<br/>Bloom 분류학"]
+        P1A --> P1B --> P1C
+    end
+
+    subgraph P2["2단계: 설계 및 구축"]
+        P2A["MAICE 시스템 개발<br/>5개 AI 에이전트"]
+        P2B["QAC 루브릭 개발<br/>8개 항목, 40점"]
+        P2C["A/B 테스트 설계<br/>무작위 배정"]
+        P2A --> P2B --> P2C
+    end
+
+    subgraph P3["3단계: 현장 실험 (2024.10.21~11.1)"]
+        direction LR
+        P3A["<b>연구 대상</b><br/>고2 학생 58명<br/>특수목적고<br/>부산광역시"]
+        
+        P3B["<b>무작위 배정</b><br/>UserModeService<br/>50:50 자동 배정"]
+        
+        P3C["<b>Agent 모드</b><br/>28명<br/>명료화 질문 유도"]
+        P3D["<b>Freepass 모드</b><br/>30명<br/>즉시 답변 제공"]
+        
+        P3A --> P3B
+        P3B --> P3C
+        P3B --> P3D
+    end
+
+    subgraph P4["학습 과정"]
+        P4A["수학적 귀납법<br/>개념 학습"]
+        P4B["5개 수리논술 과제<br/>단계적 부여"]
+        P4C["MAICE 활용<br/>수업+쉬는시간"]
+        P4D["총 284개 세션<br/>(Agent 118, Free 162)"]
+        P4A --> P4B --> P4C --> P4D
+    end
+
+    subgraph P5["4단계: 다각도 평가"]
+        P5A["<b>AI 3개 모델 채점</b><br/>Gemini 2.5 Flash<br/>Claude 4.5 Haiku<br/>GPT-5 mini"]
+        P5B["<b>교사 평가</b><br/>수학교사 2명<br/>100개 세션<br/>독립 평가"]
+        P5C["<b>학생 설문</b><br/>38명 응답<br/>(65.5%)"]
+        
+        P5A -.상관분석.-> P5B
+        P5B -.삼각검증.-> P5C
+    end
+
+    subgraph P6["5단계: 분석 및 검증"]
+        P6A["<b>통계 분석</b><br/>t-검정, Cohen's d<br/>수준별 효과"]
+        P6B["<b>신뢰도 검증</b><br/>ICC, Cronbach α<br/>AI-교사 일치도"]
+        P6C["<b>질적 분석</b><br/>주제분석<br/>Braun & Clarke"]
+        
+        P6A --> P6B
+        P6B --> P6C
+    end
+
+    subgraph P7["6단계: 설계 원리 도출"]
+        P7A["질문 명료화<br/>효과성 확인"]
+        P7B["학습자 수준별<br/>차별적 효과"]
+        P7C["시스템 개선<br/>방향 제시"]
+        P7A --> P7B --> P7C
+    end
+
+    P1 ==> P2
+    P2 ==> P3
+    P3 ==> P4
+    P4 ==> P5
+    P5 ==> P6
+    P6 ==> P7
+    P7 -.반복적 개선.-> P2
+
+    style P1 fill:#e3f2fd
+    style P2 fill:#f3e5f5
+    style P3 fill:#fff3e0
+    style P4 fill:#e8f5e9
+    style P5 fill:#fce4ec
+    style P6 fill:#f1f8e9
+    style P7 fill:#e0f2f1
+    
+    style P3C fill:#bbdefb,stroke:#1976d2,stroke-width:3px
+    style P3D fill:#ffccbc,stroke:#f57c00,stroke-width:3px
+

@@ -1,0 +1,25 @@
+flowchart TB
+    Start["과제 부여"]
+    Try["학생 개별 풀이 시도"]
+    MAICE["MAICE 활용<br/>(필요시 언제든지)"]
+    
+    Agent["Agent 모드<br/>명료화 질문 → 문제 구체화 → 맞춤 답변"]
+    Free["Freepass 모드<br/>즉시 답변 제공"]
+    
+    Improve["풀이 과정 개선 및 완성"]
+    Review["교사와 함께 풀이 검토"]
+    Next["다음 과제 진행"]
+    
+    Start --> Try
+    Try --> MAICE
+    MAICE --> Agent
+    MAICE --> Free
+    Agent --> Improve
+    Free --> Improve
+    Improve --> Review
+    Review --> Next
+    Next -.과제 2~5.-> Try
+    
+    style Agent fill:#bbdefb,stroke:#1976d2,stroke-width:2px
+    style Free fill:#ffccbc,stroke:#f57c00,stroke-width:2px
+

@@ -1,0 +1,41 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','fontSize':'16px','fontFamily':'Noto Sans KR, Arial'}}}%%
+sequenceDiagram
+    participant 학생
+    participant 대화화면
+    participant 관리시스템
+    participant Classifier
+    participant QuestionImprovement
+    participant AnswerGenerator
+    
+    학생->>대화화면: "수열 알려줘" 입력
+    대화화면->>관리시스템: 질문 전송
+    관리시스템->>Classifier: 질문 분류 요청
+    
+    alt 질문이 모호함
+        Classifier->>QuestionImprovement: 명료화 필요 판정
+        QuestionImprovement->>관리시스템: "어떤 부분이 궁금한가요?"
+        관리시스템->>대화화면: 명료화 질문 표시
+        대화화면->>학생: 추가 질문 보여줌
+        학생->>대화화면: "수열 공식들" 입력
+        대화화면->>관리시스템: 추가 응답 전송
+        QuestionImprovement->>AnswerGenerator: 명료화 완료
+    else 질문이 명확함
+        Classifier->>AnswerGenerator: 바로 답변 생성
+    end
+    
+    AnswerGenerator->>관리시스템: 답변 전송 (실시간)
+    관리시스템->>대화화면: 답변 스트리밍
+    대화화면->>학생: 답변 표시
+
+
+
+
+
+
+
+
+
+
+
+
+

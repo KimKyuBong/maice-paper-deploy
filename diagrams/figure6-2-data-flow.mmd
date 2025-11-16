@@ -1,0 +1,111 @@
+flowchart TB
+    subgraph S1["데이터 수집 (2024.10.21~11.1)"]
+        S1A["<b>PostgreSQL DB</b><br/>자동 수집"]
+        S1B["원본 세션 데이터<br/>284개 세션<br/>58명 학생<br/>1,407개 메시지"]
+        S1C["Agent: 118개<br/>Freepass: 162개"]
+        S1A --> S1B --> S1C
+    end
+
+    subgraph S2["데이터 필터링 (유효성 검증)"]
+        S2A["<b>필터링 기준</b><br/>✓ 메시지 ≥2개<br/>✓ user & AI 역할 공존<br/>✓ 내용 유효성<br/>✓ 세션 완결성"]
+        S2B["유효 세션<br/>280개<br/>(Agent 118, Free 162)"]
+        S2A --> S2B
+    end
+
+    subgraph S3["AI 배치 채점 (Batch API)"]
+        S3A["<b>Gemini 2.5 Flash</b><br/>284개 세션"]
+        S3B["<b>Claude 4.5 Haiku</b><br/>221개 세션"]
+        S3C["<b>GPT-5 mini</b><br/>284개 세션"]
+        
+        S3D["QAC 체크리스트<br/>40점 만점<br/>8개 항목<br/>32개 요소"]
+        
+        S3A --> S3D
+        S3B --> S3D
+        S3C --> S3D
+    end
+
+    subgraph S4["AI 채점 결과"]
+        S4A["gemini_results<br/>20251105_174045.jsonl"]
+        S4B["anthropic_batch<br/>20251105_171246.jsonl"]
+        S4C["openai_batch<br/>20251105_171235.jsonl"]
+        
+        S4D["<b>Ensemble 평균</b><br/>3개 모델 점수 통합"]
+        
+        S4A --> S4D
+        S4B --> S4D
+        S4C --> S4D
+    end
+
+    subgraph S5["교사 독립 평가"]
+        S5A["<b>평가자 96</b><br/>(수학교사)<br/>100개 세션"]
+        S5B["<b>평가자 97</b><br/>(수학교사)<br/>100개 세션"]
+        S5C["동일 세션<br/>대응 평가<br/>블라인드 처리"]
+        
+        S5A --> S5C
+        S5B --> S5C
+    end
+
+    subgraph S6["학생 설문 조사"]
+        S6A["사후 설문<br/>38명 응답<br/>(65.5%)"]
+        S6B["서술형 문항 5개<br/>✓ 대화 경험<br/>✓ 학습 변화<br/>✓ 방식 선호도<br/>✓ 기억 순간<br/>✓ 개선 제안"]
+        S6A --> S6B
+    end
+
+    subgraph S7["신뢰도 검증"]
+        S7A["<b>AI 모델 간</b><br/>ICC(2,1) = 0.595<br/>Cronbach α = 0.840<br/>Pearson r = 0.649"]
+        S7B["<b>교사 간</b><br/>Pearson r = 0.644"]
+        S7C["<b>AI-교사 일치도</b><br/>Pearson r = 0.771"]
+        
+        S7A --> S7C
+        S7B --> S7C
+    end
+
+    subgraph S8["통계 분석"]
+        S8A["<b>집단 간 비교</b><br/>독립표본 t-검정<br/>Welch's t-test<br/>Mann-Whitney U"]
+        S8B["<b>효과 크기</b><br/>Cohen's d<br/>Hedge's g<br/>Cliff's delta"]
+        S8C["<b>수준별 분석</b><br/>삼분위수<br/>상호작용 효과"]
+        
+        S8A --> S8B --> S8C
+    end
+
+    subgraph S9["질적 분석"]
+        S9A["<b>주제 분석</b><br/>(Braun & Clarke, 2006)"]
+        S9B["1. 데이터 숙지<br/>2. 초기 코딩<br/>3. 테마 탐색<br/>4. 테마 검토<br/>5. 테마 정의<br/>6. 보고서 작성"]
+        S9A --> S9B
+    end
+
+    subgraph S10["삼각검증 (Triangulation)"]
+        S10A["양적 데이터<br/>QAC 점수"]
+        S10B["질적 데이터<br/>설문 응답"]
+        S10C["교차 검증<br/>수렴 분석"]
+        
+        S10A --> S10C
+        S10B --> S10C
+    end
+
+    S1 ==> S2
+    S2 ==> S3
+    S3 ==> S4
+    S2 -.동일 세션.-> S5
+    S2 -.연결.-> S6
+    
+    S4 ==> S7
+    S5 ==> S7
+    
+    S7 ==> S8
+    S6 ==> S9
+    
+    S8 ==> S10
+    S9 ==> S10
+
+    style S1 fill:#e3f2fd
+    style S2 fill:#fff3e0
+    style S3 fill:#f3e5f5
+    style S4 fill:#e8f5e9
+    style S5 fill:#fce4ec
+    style S6 fill:#fff9c4
+    style S7 fill:#e0f2f1
+    style S8 fill:#f1f8e9
+    style S9 fill:#ede7f6
+    style S10 fill:#ffebee
+
