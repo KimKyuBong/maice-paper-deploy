@@ -1,0 +1,35 @@
+{
+  "n_sessions": 263,
+  "n_models": 3,
+  "models": [
+    "Gemini 2.5 Flash",
+    "GPT-5 mini",
+    "Claude 4.5 Haiku"
+  ],
+  "score_items": [
+    "A1_score",
+    "A2_score",
+    "A3_score",
+    "B1_score",
+    "B2_score",
+    "B3_score",
+    "C1_score",
+    "C2_score",
+    "question_total",
+    "answer_total",
+    "context_total",
+    "overall_score"
+  ],
+  "overall_score_stats": {
+    "mean": 25.986058301647653,
+    "std": 4.757055379070081,
+    "min": 9.333333333333334,
+    "max": 34.333333333333336
+  },
+  "c2_learning_support_stats": {
+    "mean": 2.092522179974651,
+    "std": 0.7784027170434165,
+    "min": 1.0,
+    "max": 4.666666666666667
+  }
+}

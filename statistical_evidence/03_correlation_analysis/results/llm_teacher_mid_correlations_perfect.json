@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "n": 100,
+    "pearson_r": 0.6902477234452589,
+    "pearson_p": 1.95362872525675e-15,
+    "significant": true
+  },
+  "A2": {
+    "n": 100,
+    "pearson_r": 0.6018438523823089,
+    "pearson_p": 3.526948653899963e-11,
+    "significant": true
+  },
+  "A3": {
+    "n": 100,
+    "pearson_r": 0.5115483600384445,
+    "pearson_p": 5.355070862517817e-08,
+    "significant": true
+  },
+  "B1": {
+    "n": 100,
+    "pearson_r": 0.7514640311451011,
+    "pearson_p": 2.1220574939627101e-19,
+    "significant": true
+  },
+  "B2": {
+    "n": 100,
+    "pearson_r": 0.7375314311502156,
+    "pearson_p": 2.115231469915996e-18,
+    "significant": true
+  },
+  "B3": {
+    "n": 100,
+    "pearson_r": 0.4617175450694578,
+    "pearson_p": 1.3300402701595242e-06,
+    "significant": true
+  },
+  "C1": {
+    "n": 100,
+    "pearson_r": 0.5919519962910764,
+    "pearson_p": 8.803138675259718e-11,
+    "significant": true
+  },
+  "C2": {
+    "n": 100,
+    "pearson_r": 0.5216470104259221,
+    "pearson_p": 2.6179441291434488e-08,
+    "significant": true
+  }
+}

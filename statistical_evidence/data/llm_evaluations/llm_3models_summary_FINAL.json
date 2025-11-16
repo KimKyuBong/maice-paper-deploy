@@ -1,0 +1,22 @@
+{
+  "generated_at": "2025-11-14T09:51:11.596432",
+  "n_sessions": 178,
+  "n_models": 3,
+  "models": [
+    "gemini-2.5-flash",
+    "claude-haiku-4.5",
+    "gpt-4o-mini"
+  ],
+  "model_files": {
+    "gemini": "gemini_results_20251114.jsonl",
+    "anthropic": "anthropic_haiku45_results_20251114_final.jsonl",
+    "openai": "openai_gpt5mini_results_20251105.jsonl"
+  },
+  "n_score_items": 42,
+  "overall_score_stats": {
+    "mean": 17.028089887640448,
+    "std": 5.315633054871881,
+    "min": 1.3333333333333333,
+    "max": 28.333333333333332
+  }
+}

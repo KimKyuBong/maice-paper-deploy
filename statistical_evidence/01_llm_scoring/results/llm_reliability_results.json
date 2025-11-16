@@ -1,0 +1,36 @@
+{
+  "n_sessions": 284,
+  "n_models": 3,
+  "cronbach_alpha": {
+    "value": 0.8723141044718606,
+    "interpretation": "Good",
+    "paper_value": 0.868,
+    "difference": 0.004314104471860647
+  },
+  "icc": {
+    "value": 0.6562364248422642,
+    "interpretation": "Good",
+    "paper_value": 0.642,
+    "difference": 0.014236424842264173
+  },
+  "pearson_average": {
+    "value": 0.7184780085738507,
+    "interpretation": "Strong",
+    "paper_value": 0.709,
+    "difference": 0.009478008573850727
+  },
+  "pairwise_correlations": {
+    "gemini_anthropic": {
+      "r": 0.7070693062179688,
+      "p": 2.4361996647942267e-44
+    },
+    "gemini_openai": {
+      "r": 0.6219203778634637,
+      "p": 8.584378080603064e-32
+    },
+    "anthropic_openai": {
+      "r": 0.8264443416401197,
+      "p": 2.546161712137185e-72
+    }
+  }
+}

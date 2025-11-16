@@ -1,0 +1,22 @@
+{
+  "question": {
+    "gemini_anthropic": 0.7169404805758984,
+    "gemini_openai": 0.696732629039372,
+    "anthropic_openai": 0.7581633860205874
+  },
+  "answer": {
+    "gemini_anthropic": 0.6601721322381751,
+    "gemini_openai": 0.6420213055083405,
+    "anthropic_openai": 0.8074738586026319
+  },
+  "context": {
+    "gemini_anthropic": 0.417745337963357,
+    "gemini_openai": 0.2888848040704227,
+    "anthropic_openai": 0.5495951644542323
+  },
+  "overall": {
+    "gemini_anthropic": 0.7070693062179699,
+    "gemini_openai": 0.6219203778634635,
+    "anthropic_openai": 0.8264443416401203
+  }
+}

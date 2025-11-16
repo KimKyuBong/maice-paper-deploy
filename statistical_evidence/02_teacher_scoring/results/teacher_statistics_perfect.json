@@ -1,0 +1,86 @@
+{
+  "question_professionalism": {
+    "mean": 2.995,
+    "std": 1.0671755414942925,
+    "median": 3.5,
+    "min": 1.0,
+    "max": 5.0
+  },
+  "question_structuring": {
+    "mean": 3.27,
+    "std": 1.358512258154322,
+    "median": 3.5,
+    "min": 1.0,
+    "max": 5.0
+  },
+  "question_context": {
+    "mean": 1.515,
+    "std": 0.5571164939927626,
+    "median": 1.5,
+    "min": 1.0,
+    "max": 4.0
+  },
+  "answer_customization": {
+    "mean": 3.18,
+    "std": 1.1966282597027333,
+    "median": 3.5,
+    "min": 1.0,
+    "max": 5.0
+  },
+  "answer_systematicity": {
+    "mean": 3.13,
+    "std": 1.1798390576770215,
+    "median": 3.5,
+    "min": 1.0,
+    "max": 5.0
+  },
+  "answer_expandability": {
+    "mean": 1.55,
+    "std": 0.6609604276117346,
+    "median": 1.5,
+    "min": 1.0,
+    "max": 4.0
+  },
+  "context_dialogue": {
+    "mean": 3.18,
+    "std": 1.2319812408384219,
+    "median": 3.5,
+    "min": 1.0,
+    "max": 5.0
+  },
+  "context_support": {
+    "mean": 1.785,
+    "std": 0.8234412884690417,
+    "median": 1.5,
+    "min": 1.0,
+    "max": 4.0
+  },
+  "question_total": {
+    "mean": 7.78,
+    "std": 2.713899873844377,
+    "median": 8.0,
+    "min": 3.0,
+    "max": 12.5
+  },
+  "answer_total": {
+    "mean": 7.86,
+    "std": 2.69031183653081,
+    "median": 8.5,
+    "min": 3.0,
+    "max": 13.0
+  },
+  "context_total": {
+    "mean": 4.965,
+    "std": 1.7883672933034689,
+    "median": 5.0,
+    "min": 2.0,
+    "max": 9.0
+  },
+  "overall": {
+    "mean": 20.605,
+    "std": 6.522027555472565,
+    "median": 22.0,
+    "min": 8.0,
+    "max": 31.5
+  }
+}

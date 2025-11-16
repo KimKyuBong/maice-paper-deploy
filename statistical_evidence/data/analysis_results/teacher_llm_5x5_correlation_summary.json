@@ -1,0 +1,84 @@
+{
+  "n_sessions": 100,
+  "n_evaluators": 5,
+  "evaluators": [
+    "Teacher_93",
+    "Teacher_96",
+    "Gemini",
+    "Anthropic",
+    "OpenAI"
+  ],
+  "n_items": 8,
+  "overall_avg": {
+    "all_pairs": 0.45126600216118534,
+    "teacher_teacher": 0.3608519908979657,
+    "llm_llm": 0.6071612059178495,
+    "teacher_llm": 0.3883874021600565
+  },
+  "by_item": [
+    {
+      "item": "q1",
+      "category": "A1",
+      "avg_correlation": 0.5852592463490167,
+      "teacher_teacher_r": 0.5892905050119095,
+      "llm_llm_avg_r": 0.7175632966332532,
+      "teacher_llm_avg_r": 0.5184353447630831
+    },
+    {
+      "item": "q2",
+      "category": "A2",
+      "avg_correlation": 0.47755615075558533,
+      "teacher_teacher_r": 0.5446892338308367,
+      "llm_llm_avg_r": 0.6432564613967128,
+      "teacher_llm_avg_r": 0.3835171482558131
+    },
+    {
+      "item": "q3",
+      "category": "A3",
+      "avg_correlation": 0.3133473902018025,
+      "teacher_teacher_r": 0.12516633988740913,
+      "llm_llm_avg_r": 0.49894501559057164,
+      "teacher_llm_avg_r": 0.2519120858931502
+    },
+    {
+      "item": "r1",
+      "category": "B1",
+      "avg_correlation": 0.5358701421489167,
+      "teacher_teacher_r": 0.43137300630506514,
+      "llm_llm_avg_r": 0.600050767416349,
+      "teacher_llm_avg_r": 0.5211960188225091
+    },
+    {
+      "item": "r2",
+      "category": "B2",
+      "avg_correlation": 0.6440402077850379,
+      "teacher_teacher_r": 0.562535287836613,
+      "llm_llm_avg_r": 0.8098704364689585,
+      "teacher_llm_avg_r": 0.5747092467678151
+    },
+    {
+      "item": "r3",
+      "category": "B3",
+      "avg_correlation": 0.35684537594482746,
+      "teacher_teacher_r": 0.17089362633157665,
+      "llm_llm_avg_r": 0.6728032530183125,
+      "teacher_llm_avg_r": 0.22985839567696012
+    },
+    {
+      "item": "c1",
+      "category": "C1",
+      "avg_correlation": 0.43533915647252475,
+      "teacher_teacher_r": 0.3934494338631477,
+      "llm_llm_avg_r": 0.496152587159523,
+      "teacher_llm_avg_r": 0.41191406156392185
+    },
+    {
+      "item": "c2",
+      "category": "C2",
+      "avg_correlation": 0.26187034763177125,
+      "teacher_teacher_r": 0.06941849411716834,
+      "llm_llm_avg_r": 0.4186478296591158,
+      "teacher_llm_avg_r": 0.21555691553719947
+    }
+  ]
+}

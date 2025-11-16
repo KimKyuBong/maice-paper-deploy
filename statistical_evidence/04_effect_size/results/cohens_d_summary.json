@@ -1,0 +1,35 @@
+{
+  "cohen_d_criteria": {
+    "small": 0.2,
+    "medium": 0.5,
+    "large": 0.8
+  },
+  "paper_effects": [
+    {
+      "name": "C2 학습 지원 (LLM, 전체)",
+      "cohens_d": 0.376,
+      "interpretation": "작은 효과 (Small)"
+    },
+    {
+      "name": "Q1 하위권 (LLM)",
+      "cohens_d": 0.511,
+      "interpretation": "중간 효과 (Medium)"
+    },
+    {
+      "name": "전체 점수 (교사)",
+      "cohens_d": 0.307,
+      "interpretation": "작은 효과 (Small)"
+    },
+    {
+      "name": "응답 영역 (교사)",
+      "cohens_d": 0.38,
+      "interpretation": "작은 효과 (Small)"
+    },
+    {
+      "name": "Q1 하위권 (교사)",
+      "cohens_d": 1.117,
+      "interpretation": "큰 효과 (Large)"
+    }
+  ],
+  "reference": "Cohen, J. (1988). Statistical Power Analysis for the Behavioral Sciences (2nd ed.). Lawrence Erlbaum Associates."
+}

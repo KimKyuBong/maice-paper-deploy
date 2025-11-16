@@ -1,0 +1,27 @@
+{
+  "calculation_date": "2025-11-13",
+  "total_sessions": 284,
+  "quartile_method": "Student midterm score based quartile",
+  "tables": {
+    "V-5": {
+      "name": "Quartile별 C2 비교",
+      "file": "TABLE_V5_FINAL.csv",
+      "rows": 4
+    },
+    "V-6": {
+      "name": "Quartile별 전체 점수",
+      "file": "TABLE_V6_FINAL.csv",
+      "rows": 4
+    },
+    "V-7": {
+      "name": "반복 사용 효과",
+      "file": "TABLE_V7_FINAL.csv",
+      "rows": 2
+    },
+    "V-10": {
+      "name": "교사 평가 Quartile별",
+      "file": "TABLE_V10_FINAL.csv",
+      "rows": 4
+    }
+  }
+}

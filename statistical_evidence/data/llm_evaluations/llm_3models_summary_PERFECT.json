@@ -1,0 +1,20 @@
+{
+  "generated_at": "2025-11-14T09:54:02.369302",
+  "n_sessions": 284,
+  "n_models": 3,
+  "source_files": {
+    "gemini": "gemini_results_20251105_174045.jsonl (283개) + gemini_results_20251114.jsonl (377번)",
+    "anthropic": "anthropic_haiku45_results_20251114_final.jsonl (max_tokens=8192)",
+    "openai": "openai_gpt5mini_results_20251105.jsonl"
+  },
+  "overall_score_stats": {
+    "mean": 24.576291079812208,
+    "std": 4.391434502792801,
+    "min": 9.333333333333334,
+    "max": 36.333333333333336
+  },
+  "C2_stats": {
+    "mean": 2.10093896713615,
+    "std": 0.774028196635521
+  }
+}

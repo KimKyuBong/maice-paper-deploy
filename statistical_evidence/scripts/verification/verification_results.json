@@ -1,0 +1,75 @@
+{
+  "execution_time": "2025-11-13T15:26:10.106548",
+  "scripts": {
+    "1_llm_processing": {
+      "status": "error",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/opt/homebrew/lib/python3.14/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    return self._engine.get_loc(casted_key)\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"pandas/_libs/index.pyx\", line 167, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/index.pyx\", line 196, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'A3_learning_context_A3-3. difficulty_specification'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/hwansi/Library/CloudStorage/SynologyDrive-MAC/Drive/6_PrivateFolder/common/obsidian/MyReport/maice-paper-deploy/statistical_evidence/01_llm_scoring/llm_score_processing.py\", line 243, in <module>\n    claude_scores = dfs['claude'].set_index('session_id')[col]\n                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"/opt/homebrew/lib/python3.14/site-packages/pandas/core/frame.py\", line 4113, in __getitem__\n    indexer = self.columns.get_loc(key)\n  File \"/opt/homebrew/lib/python3.14/site-packages/pandas/core/indexes/base.py\", line 3819, in get_loc\n    raise KeyError(key) from err\nKeyError: 'A3_learning_context_A3-3. difficulty_specification'\n"
+    },
+    "2_llm_reliability": {
+      "status": "error",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/hwansi/Library/CloudStorage/SynologyDrive-MAC/Drive/6_PrivateFolder/common/obsidian/MyReport/maice-paper-deploy/statistical_evidence/01_llm_scoring/llm_reliability_analysis.py\", line 22, in <module>\n    from sklearn.metrics import cohen_kappa_score\nModuleNotFoundError: No module named 'sklearn'\n"
+    },
+    "3_teacher_processing": {
+      "status": "success",
+      "returncode": 0
+    },
+    "4_teacher_reliability": {
+      "status": "success",
+      "returncode": 0
+    },
+    "5_correlation": {
+      "status": "error",
+      "returncode": 1,
+      "stderr": ""
+    },
+    "6_effect_size": {
+      "status": "success",
+      "returncode": 0
+    }
+  },
+  "summary": {
+    "teacher_reliability": {
+      "pearson_r": 0.6436125485663544,
+      "spearman_rho": 0.5681441980785884
+    },
+    "effect_sizes": [
+      {
+        "name": "C2 학습 지원 (LLM, 전체)",
+        "cohens_d": 0.376,
+        "interpretation": "작은 효과 (Small)"
+      },
+      {
+        "name": "Q1 하위권 (LLM)",
+        "cohens_d": 0.511,
+        "interpretation": "중간 효과 (Medium)"
+      },
+      {
+        "name": "전체 점수 (교사)",
+        "cohens_d": 0.307,
+        "interpretation": "작은 효과 (Small)"
+      },
+      {
+        "name": "응답 영역 (교사)",
+        "cohens_d": 0.38,
+        "interpretation": "작은 효과 (Small)"
+      },
+      {
+        "name": "Q1 하위권 (교사)",
+        "cohens_d": 1.117,
+        "interpretation": "큰 효과 (Large)"
+      }
+    ]
+  },
+  "verification_status": "failed",
+  "comparisons": [
+    {
+      "지표": "Pearson r (교사 간)",
+      "논문": 0.644,
+      "계산": 0.6436125485663544,
+      "차이": 0.00038745143364560253,
+      "일치": "✓"
+    }
+  ]
+}

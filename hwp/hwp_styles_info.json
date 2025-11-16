@@ -1,0 +1,125 @@
+{
+  "used_styles": [
+    {
+      "index": 0,
+      "type": "Para",
+      "name": "바탕글",
+      "engName": "Normal"
+    },
+    {
+      "index": 1,
+      "type": "Para",
+      "name": "차례/참고문헌 제목",
+      "engName": "TOC Ref Title"
+    },
+    {
+      "index": 4,
+      "type": "Para",
+      "name": "차례 표,그림,수식",
+      "engName": null
+    },
+    {
+      "index": 5,
+      "type": "Para",
+      "name": "Ⅰ. 제목",
+      "engName": "Outline 1"
+    },
+    {
+      "index": 6,
+      "type": "Para",
+      "name": "1. 제목",
+      "engName": "Outline 2"
+    },
+    {
+      "index": 7,
+      "type": "Para",
+      "name": "가. 제목",
+      "engName": "Outline 3"
+    },
+    {
+      "index": 8,
+      "type": "Para",
+      "name": "1) 제목",
+      "engName": "Outline 4"
+    },
+    {
+      "index": 9,
+      "type": "Para",
+      "name": "가) 제목",
+      "engName": "Outline 5"
+    },
+    {
+      "index": 10,
+      "type": "Para",
+      "name": "(1) 제목",
+      "engName": "Outline 6"
+    },
+    {
+      "index": 12,
+      "type": "Para",
+      "name": "본문",
+      "engName": "Body"
+    },
+    {
+      "index": 13,
+      "type": "Para",
+      "name": "○ 글머리문단",
+      "engName": null
+    },
+    {
+      "index": 14,
+      "type": "Para",
+      "name": "․ 글머리표",
+      "engName": null
+    },
+    {
+      "index": 16,
+      "type": "Para",
+      "name": "각주",
+      "engName": "Footnote"
+    },
+    {
+      "index": 18,
+      "type": "Para",
+      "name": "표 제목",
+      "engName": "Table Title"
+    },
+    {
+      "index": 20,
+      "type": "Para",
+      "name": "표 중간",
+      "engName": "Table Center"
+    },
+    {
+      "index": 27,
+      "type": "Para",
+      "name": "xl65",
+      "engName": "xl65"
+    },
+    {
+      "index": 28,
+      "type": "Para",
+      "name": "xl66",
+      "engName": "xl66"
+    },
+    {
+      "index": 29,
+      "type": "Para",
+      "name": "xl67",
+      "engName": "xl67"
+    },
+    {
+      "index": 30,
+      "type": "Para",
+      "name": "xl68",
+      "engName": "xl68"
+    },
+    {
+      "index": 31,
+      "type": "Para",
+      "name": "xl69",
+      "engName": "xl69"
+    }
+  ],
+  "all_styles_count": 32
+}

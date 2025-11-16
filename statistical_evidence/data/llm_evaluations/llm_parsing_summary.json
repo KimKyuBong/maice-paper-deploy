@@ -1,0 +1,16 @@
+{
+  "n_sessions": 170,
+  "n_models": 3,
+  "models": [
+    "gemini",
+    "anthropic",
+    "openai"
+  ],
+  "n_score_items": 42,
+  "overall_score_stats": {
+    "mean": 16.792156862745095,
+    "std": 5.311958268459939,
+    "min": 1.3333333333333333,
+    "max": 26.333333333333332
+  }
+}

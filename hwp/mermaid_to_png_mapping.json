@@ -1,0 +1,50 @@
+[
+  {
+    "chapter": "Ⅲ. 시스템 설계",
+    "figure_num": "3-2",
+    "png_file": "figure3-2-architecture.png",
+    "caption": "예비조사 발견에서 MAICE 설계로의 반영**"
+  },
+  {
+    "chapter": "Ⅲ. 시스템 설계",
+    "figure_num": "3-1",
+    "png_file": "figure3-1-pipeline.png",
+    "caption": "MAICE 질문 처리 파이프라인**"
+  },
+  {
+    "chapter": "Ⅲ. 시스템 설계",
+    "figure_num": "3-3",
+    "png_file": "figure3-3-sequence.png",
+    "caption": "MAICE 3계층 아키텍처**"
+  },
+  {
+    "chapter": "Ⅲ. 시스템 설계",
+    "figure_num": "3-4",
+    "png_file": "figure3-4-gating.png",
+    "caption": "질문 처리 시퀀스**"
+  },
+  {
+    "chapter": "Ⅲ. 시스템 설계",
+    "figure_num": "3-5",
+    "png_file": "figure3-5-clarification.png",
+    "caption": "QC 3단계 게이팅**"
+  },
+  {
+    "chapter": "Ⅲ. 시스템 설계",
+    "figure_num": "3-6",
+    "png_file": "figure3-6-ocr.png",
+    "caption": "명료화 프로세스 흐름**"
+  },
+  {
+    "chapter": "Ⅴ. 연구 방법",
+    "figure_num": "6-1",
+    "png_file": "figure6-1-research-design.png",
+    "caption": "DBR 3차 사이클 및 반복적 개선 과정**"
+  },
+  {
+    "chapter": "Ⅴ. 연구 방법",
+    "figure_num": "6-3",
+    "png_file": "figure6-3-learning-process.png",
+    "caption": "MAICE 활용 패턴**"
+  }
+]

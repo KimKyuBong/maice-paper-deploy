@@ -1,0 +1,14 @@
+{
+  "n_total": 284,
+  "n_agent": 115,
+  "n_freepass": 169,
+  "agent_mean": 27.36521739130435,
+  "agent_std": 6.7399443419829685,
+  "freepass_mean": 26.857988165680474,
+  "freepass_std": 6.41547223699617,
+  "diff": 0.507229225623874,
+  "t_stat": 0.6407525799877946,
+  "p_value": 0.5222037856821833,
+  "cohens_d": 0.0774563916176381,
+  "note": "final_full_analysis.csv의 overall_score 기준"
+}

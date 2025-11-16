@@ -3,28 +3,28 @@
 ---
 
 Anderson, L. W., & Krathwohl, D. R. (Eds.). (2001). *A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives* (Complete ed.). Addison Wesley Longman.
-  > **인용**: 2장 이론적 배경 (Bloom 개정 분류, 4가지 지식 차원: Factual, Conceptual, Procedural, Metacognitive), 3장 시스템 설계 (K1-K4 질문 분류 시스템 설계)
+  > **인용**: II장 이론적 배경 (Bloom 개정 분류, 4가지 지식 차원: Factual, Conceptual, Procedural, Metacognitive), III장 시스템 설계 (K1-K4 질문 분류 시스템 설계)
 
 Bloom, B. S. (Ed.). (1956). *Taxonomy of educational objectives: The classification of educational goals. Handbook I: Cognitive domain*. New York: David McKay.
   > **인용**: 2장 이론적 배경 (교육목표분류학, Anderson & Krathwohl을 통한 간접 인용)
 
 Braun, V., & Clarke, V. (2006). Using thematic analysis in psychology. *Qualitative Research in Psychology*, 3(2), 77-101. https://doi.org/10.1191/1478088706qp063oa
-  > **인용**: 6장 연구 방법 (주제 분석 절차), 8장 질적 분석 (실제 학생 세션 분석)
+  > **인용**: IV장 연구 방법 (주제 분석 절차), V장 질적 분석 (실제 학생 세션 분석)
 
 Cohen, J. (1988). *Statistical power analysis for the behavioral sciences* (2nd ed.). Lawrence Erlbaum Associates.
-  > **인용**: 6장 연구 방법 (효과 크기 해석 기준: d=0.2 작은 효과, 0.5 중간 효과, 0.8 큰 효과), 7장 연구 결과 (Cohen's d 계산 및 해석)
+  > **인용**: IV장 연구 방법 (효과 크기 해석 기준: d=0.2 작은 효과, 0.5 중간 효과, 0.8 큰 효과), V장 연구 결과 (Cohen's d 계산 및 해석)
 
 Collins, A., Joseph, D., & Bielaczyc, K. (2004). Design research: Theoretical and methodological issues. *Journal of the Learning Sciences*, *13*(1), 15-42. https://doi.org/10.1207/s15327809jls1301_2
-  > **인용**: 6장 연구 방법론 (설계 기반 연구 DBR의 정의 및 특징), 9장 논의 (방법론적 의의)
+  > **인용**: IV장 연구 방법론 (설계 기반 연구 DBR의 정의 및 특징), VI장 논의 (방법론적 의의)
 
 Dewey, J. (1910). *How we think*. D.C. Heath & Co. https://doi.org/10.1037/10903-000
-  > **인용**: 2장 이론적 배경 (반성적 사고 5단계, 명료화 프로세스의 철학적 기반), 3장 시스템 설계 (Question Improver 설계)
+  > **인용**: II장 이론적 배경 (반성적 사고 5단계, 명료화 프로세스의 철학적 기반), III장 시스템 설계 (Question Improver 설계)
 
 Graesser, A. C., & Person, N. K. (1994). Question asking during tutoring. *American Educational Research Journal*, *31*(1), 104-137. https://doi.org/10.3102/00028312031001104
   > **인용**: 2장 이론적 배경 (튜터링 과정의 질문 유형 분류, 효과적인 질문의 특징)
 
 Hattie, J. (2009). *Visible learning: A synthesis of over 800 meta-analyses relating to achievement*. Routledge. https://doi.org/10.4324/9780203887332
-  > **인용**: 6장 연구 방법 (교육 개입의 평균 효과크기 d=0.4, 힌지 포인트)
+  > **인용**: IV장 연구 방법 (교육 개입의 평균 효과크기 d=0.4, 힌지 포인트)
 
 Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of Educational Research*, *77*(1), 81-112. https://doi.org/10.3102/003465430298487
   > **인용**: 2장 이론적 배경 (효과적 피드백의 교육적 효과, 메타분석 결과 효과 크기 d=0.79)
@@ -45,7 +45,7 @@ Degen, B. (2025). Resurrecting Socrates in the Age of AI: A study protocol for e
   > **인용**: 2장 이론적 배경 (Orchestrated Multi-Agent System, AI 소크라테스 튜터)
 
 Wang, F., & Hannafin, M. J. (2005). Design-based research and technology-enhanced learning environments. *Educational Technology Research and Development*, *53*(4), 5-23. https://doi.org/10.1007/BF02504682
-  > **인용**: 6장 연구 방법론 (DBR의 6가지 특징: 실용성, 이론기반, 상호작용, 반복성, 유연성, 통합성), 9장 논의 (DBR 방법론적 가치)
+  > **인용**: IV장 연구 방법론 (DBR의 6가지 특징: 실용성, 이론기반, 상호작용, 반복성, 유연성, 통합성), VI장 논의 (DBR 방법론적 가치)
 
 Wooldridge, M., & Jennings, N. R. (1995). Intelligent agents: Theory and practice. *The Knowledge Engineering Review*, *10*(2), 115-152. https://doi.org/10.1017/S0269888900008122
   > **인용**: 2장 이론적 배경 (멀티 에이전트 시스템, agent의 4가지 특성: 자율성, 사회성, 반응성, 능동성)
