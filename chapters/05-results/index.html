@@ -1,0 +1,4182 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로">
+      
+      
+        <meta name="author" content="김규봉 (부산대학교 AI융합교육전공, 202373389)">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>V. 연구 결과 - 수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#v" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" class="md-header__button md-logo" aria-label="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              V. 연구 결과
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/YOUR_USERNAME/maice-paper" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MAICE-논문
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../00-abstract-korean/" class="md-tabs__link">
+          
+  
+  
+  논문 초록
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+  
+  논문 내용
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../부록_A_루브릭_상세설명서.md" class="md-tabs__link">
+          
+  
+  
+  부록
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/overview/" class="md-tabs__link">
+          
+  
+  
+  문서
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../MAICE_%EC%82%AC%ED%9B%84%EC%84%A4%EB%AC%B8%EC%A7%80/" class="md-tabs__link">
+          
+  
+  
+  설문 자료
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  피드백
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../print_page/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  PDF로 출력
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" class="md-nav__button md-logo" aria-label="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/YOUR_USERNAME/maice-paper" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MAICE-논문
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    논문 초록
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    논문 초록
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-abstract-korean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    국문 초록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-abstract-english/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    영문 초록 (Abstract)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-table-of-contents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    목차
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-list-of-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    표 차례
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-list-of-figures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    그림 차례
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    논문 내용
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    논문 내용
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1장. 서론
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-theoretical-background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2장. 이론적 배경
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-system-design.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3장. MAICE 교육 시스템 아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-system-implementation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4장. MAICE 시스템 구현
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-beta-test.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5장. 베타 테스트
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-research-methods.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6장. 연구 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-results.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7장. 연구 결과 (정량·질적 통합)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-discussion-conclusion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8장. 논의 및 결론
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-references.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9장. 참고문헌
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    부록
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    부록
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_A_루브릭_상세설명서.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    루브릭 상세설명서
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_B_AI채점_결과_샘플.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI채점 결과 샘플
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_C_통계분석_상세표.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    통계분석 상세표
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_D_연구_신뢰성_체크리스트.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연구 신뢰성 체크리스트
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_E_서술형응답_정성분석.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    서술형응답 정성분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_F_학생ID_익명화_매핑.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    학생ID 익명화 매핑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_G_루브릭_타당도분석.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    루브릭 타당도 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_H_교사평가_잠정결과.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    교사평가 잠정결과
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_I_평가루브릭_개발과정.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    평가 루브릭 개발 과정
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_J_LLM채점_프롬프트_전문.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM채점 프롬프트 전문
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    문서
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    문서
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시스템 문서
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    시스템 문서
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/agent-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent 시스템
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    백엔드 아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프론트엔드 아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 문서
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API 문서
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/maice-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAICE API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    인증
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    설문 자료
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    설문 자료
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MAICE_%EC%82%AC%ED%9B%84%EC%84%A4%EB%AC%B8%EC%A7%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사후 설문지
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%95%99%EC%83%9D_%EC%84%A4%EB%AC%B8%EC%A1%B0%EC%82%AC%EC%A7%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    학생 설문조사지
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../설문지_개선사항_요약.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    설문지 개선사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    피드백
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF로 출력
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/YOUR_USERNAME/maice-paper/edit/main/docs/chapters/05-results.md" title="이 페이지를 편집" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/YOUR_USERNAME/maice-paper/raw/main/docs/chapters/05-results.md" title="페이지소스 보기" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="v">V. 연구 결과<a class="headerlink" href="#v" title="Permanent link">&para;</a></h1>
+<p>본 연구는 고등학교 2학년 수학적 귀납법 단원을 대상으로 질문 명료화를 지원하는 AI 에이전트 시스템 MAICE를 설계·개발하여 실제 교육 현장에 배포하였다. 연구 대상은 2학년 수학 과목 수강생 58명(자퇴생 제외)이며, 이 중 55명(Agent 모드 27명, Freepass 모드 28명)이 MAICE를 실제로 이용하였다. 3주간 A/B 테스트를 통해 이들 55명 학생이 생성한 유효 세션 284개(Agent 115개, Freepass 169개)를 수집하였으며, 방법론적 한계를 상호 보완하기 위해 **LLM 평가(3개 모델)와 교사 평가를 병행**하여 명료화 효과를 검증하였다.</p>
+<hr />
+<h2 id="1">1. 연구 실행 및 데이터 수집<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="_1">가. 시스템 배포<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>MAICE 시스템을 실제 고등학교에 배포하였다 (3주, N=58, 시스템 가동률 99.2%).</p>
+<h3 id="_2">나. 데이터 수집 현황<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><strong>[표Ⅴ-1] 수집 데이터 현황</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th style="text-align: center;">Agent</th>
+<th style="text-align: center;">Freepass</th>
+<th style="text-align: center;">전체</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>세션 수</td>
+<td style="text-align: center;">115</td>
+<td style="text-align: center;">169</td>
+<td style="text-align: center;">284</td>
+</tr>
+<tr>
+<td>학생 수</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">55</td>
+</tr>
+<tr>
+<td>1인당 평균</td>
+<td style="text-align: center;">4.3</td>
+<td style="text-align: center;">6.0</td>
+<td style="text-align: center;">5.2</td>
+</tr>
+</tbody>
+</table>
+<p>주: LLM 3개 모델 평가 공통 세션 기준. 등록 학생 58명 중 유효 세션 소유자 55명.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/05_chapter5_evidence/ch5_1_n_data_collection.py</code> (5장 1절 나항, 표Ⅴ-1)
+- 데이터 파일: <code>statistical_evidence/data/session_data/full_sessions_with_scores.csv</code>
+- 결과 파일: <code>statistical_evidence/05_chapter5_evidence/results/ch5_1_n_data_collection.json</code></p>
+<h3 id="_3">다. 사전 동질성 검증<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>두 집단 간 중간고사 성적 차이 없음 (총점: t=0.95, p=0.345).</p>
+<p><strong>주의사항</strong>: 
+- Agent 모드 평균 56.59점 (SD=16.99, n=27), Freepass 모드 평균 52.11점 (SD=17.86, n=28)으로 4.49점 차이가 있었으나 통계적으로 유의하지 않음(p=0.345)
+- 이 차이가 결과에 미친 영향을 완전히 배제할 수 없으므로, 해석 시 주의가 필요함</p>
+<h3 id="_4">라. 명료화 프로세스 작동 확인<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Agent 모드 115개 세션 중 88개(76.5%)에서 명료화 질문이 수행되었다.</p>
+<p><strong>[표Ⅴ-2] 명료화 수행 현황</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th style="text-align: center;">세션 수</th>
+<th style="text-align: center;">비율</th>
+<th style="text-align: center;">평균 메시지 수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>명료화 수행</td>
+<td style="text-align: center;">88</td>
+<td style="text-align: center;">76.5%</td>
+<td style="text-align: center;">4.8개</td>
+</tr>
+<tr>
+<td>명료화 미수행</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">23.5%</td>
+<td style="text-align: center;">0.0개</td>
+</tr>
+</tbody>
+</table>
+<p>명료화가 수행된 세션은 평균 4.8개의 메시지로 구성되었다.</p>
+<hr />
+<h2 id="2-llm-">2. 명료화 효과: LLM-교사 이중 평가<a class="headerlink" href="#2-llm-" title="Permanent link">&para;</a></h2>
+<h3 id="_5">가. 이중 평가 설계의 논리<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>본 연구는 평가 방법의 한계를 상호 보완하기 위해 LLM 평가와 교사 평가를 병행하였다.</p>
+<p><strong>[표Ⅴ-3] LLM-교사 이중 평가 설계</strong></p>
+<table>
+<thead>
+<tr>
+<th>평가 방법</th>
+<th>역할</th>
+<th style="text-align: center;">표본</th>
+<th style="text-align: center;">평가자</th>
+<th>강점</th>
+<th>한계</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LLM 평가</strong></td>
+<td>패턴 탐색</td>
+<td style="text-align: center;">N=284</td>
+<td style="text-align: center;">3개 모델</td>
+<td>대규모, 객관적</td>
+<td>교육적 타당성 확인 필요</td>
+</tr>
+<tr>
+<td><strong>교사 평가</strong></td>
+<td>타당성 검증</td>
+<td style="text-align: center;">N=100</td>
+<td style="text-align: center;">2명</td>
+<td>골드 스탠다드</td>
+<td>표본 작아 재현 필요</td>
+</tr>
+<tr>
+<td><strong>상호 검증</strong></td>
+<td>신뢰성 확보</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>서로 약점 보완</td>
+<td>r=0.754 높은 일치</td>
+</tr>
+</tbody>
+</table>
+<p><strong>평가 전략</strong>:
+1. LLM으로 전체 284개 세션에서 <strong>효과 패턴 탐색</strong>
+2. 교사가 100개 세션에서 <strong>교육적 타당성 검증</strong>
+3. 두 평가의 일치도 확인하여 <strong>상호 검증</strong></p>
+<h3 id="llm-n284">나. LLM 평가 결과 (N=284)<a class="headerlink" href="#llm-n284" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">(1) 평가 신뢰도<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<p><strong>QAC 체크리스트</strong> (40점, 상세: II장 8절): 3개 AI 모델 평가 (Gemini, Claude, GPT-5)
+- <strong>신뢰도</strong>: Cronbach's α=0.872, ICC=0.656, Pearson r=0.718
+- <strong>결과</strong>: 3개 모델 평균값 제시</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/01_llm_scoring/llm_reliability_analysis.py</code> (실행 시각: 최신)
+- 데이터 파일: <code>statistical_evidence/data/llm_evaluations/llm_3models_284_PERFECT_FINAL.csv</code>
+- 결과 파일: <code>statistical_evidence/01_llm_scoring/results/llm_reliability_results.json</code></p>
+<h4 id="2">(2) 전체 모드 효과<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p><strong>[표Ⅴ-4] 세부 항목별 모드 비교 (LLM 평가, N=284)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: center;">Agent</th>
+<th style="text-align: center;">Freepass</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">t</th>
+<th style="text-align: center;">p</th>
+<th style="text-align: center;">d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C2 학습 지원</strong></td>
+<td style="text-align: center;"><strong>2.32</strong></td>
+<td style="text-align: center;"><strong>2.05</strong></td>
+<td style="text-align: center;"><strong>+0.28</strong></td>
+<td style="text-align: center;">2.86</td>
+<td style="text-align: center;"><strong>0.004*</strong></td>
+<td style="text-align: center;"><strong>0.353</strong></td>
+</tr>
+<tr>
+<td>A1 수학 전문성</td>
+<td style="text-align: center;">3.80</td>
+<td style="text-align: center;">3.70</td>
+<td style="text-align: center;">+0.10</td>
+<td style="text-align: center;">0.98</td>
+<td style="text-align: center;">0.330</td>
+<td style="text-align: center;">0.120</td>
+</tr>
+<tr>
+<td>A2 질문 구조화</td>
+<td style="text-align: center;">4.50</td>
+<td style="text-align: center;">4.57</td>
+<td style="text-align: center;">-0.06</td>
+<td style="text-align: center;">-0.66</td>
+<td style="text-align: center;">0.511</td>
+<td style="text-align: center;">-0.078</td>
+</tr>
+<tr>
+<td>A3 학습 맥락</td>
+<td style="text-align: center;">1.26</td>
+<td style="text-align: center;">1.47</td>
+<td style="text-align: center;">-0.21</td>
+<td style="text-align: center;">-3.41</td>
+<td style="text-align: center;"><strong>0.001*</strong></td>
+<td style="text-align: center;">-0.425</td>
+</tr>
+<tr>
+<td>B1 학습자 맞춤도</td>
+<td style="text-align: center;">3.66</td>
+<td style="text-align: center;">3.52</td>
+<td style="text-align: center;">+0.14</td>
+<td style="text-align: center;">1.19</td>
+<td style="text-align: center;">0.233</td>
+<td style="text-align: center;">0.145</td>
+</tr>
+<tr>
+<td>B2 설명 체계성</td>
+<td style="text-align: center;">4.56</td>
+<td style="text-align: center;">4.61</td>
+<td style="text-align: center;">-0.05</td>
+<td style="text-align: center;">-0.40</td>
+<td style="text-align: center;">0.692</td>
+<td style="text-align: center;">-0.047</td>
+</tr>
+<tr>
+<td>B3 학습 확장성</td>
+<td style="text-align: center;">1.97</td>
+<td style="text-align: center;">1.74</td>
+<td style="text-align: center;">+0.22</td>
+<td style="text-align: center;">2.05</td>
+<td style="text-align: center;">0.041*</td>
+<td style="text-align: center;">0.245</td>
+</tr>
+<tr>
+<td>C1 대화 일관성</td>
+<td style="text-align: center;">4.41</td>
+<td style="text-align: center;">4.47</td>
+<td style="text-align: center;">-0.06</td>
+<td style="text-align: center;">-0.64</td>
+<td style="text-align: center;">0.524</td>
+<td style="text-align: center;">-0.076</td>
+</tr>
+</tbody>
+</table>
+<p>주: *p&lt;0.05, **p&lt;0.01. LLM 3개 모델(Gemini 2.5 Flash, Claude 4.5 Haiku, GPT-5 mini) 평균값.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/mode_quartile_analysis_perfect.py</code> (5장 2절 나항 (2) 전체 모드 효과, 표Ⅴ-4)
+- 데이터 파일: <code>statistical_evidence/01_llm_scoring/results/llm_3models_averaged_perfect.csv</code>, <code>statistical_evidence/data/session_data/full_sessions_with_scores.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/mode_comparison_perfect.json</code></p>
+<p><strong>핵심 발견</strong>: 
+- <strong>C2(학습 지원)</strong>: Agent 우수 (p=0.004, d=0.353) - 사고 과정 유도, 이해도 확인에서 강점
+- <strong>B3(학습 확장성)</strong>: Agent 우수 (p=0.041, d=0.248) - 추가 질문, 심화 학습 유도
+- <strong>A3(학습 맥락)</strong>: Freepass 우수 (p=0.001, d=-0.411) - 학습 목표, 수준 반영</p>
+<p>명료화 모드는 학습 과정 지원에서 차별적 강점을 가지나, 학습 맥락 파악에서는 즉시 답변 모드가 다소 우수.</p>
+<h4 id="3">(3) 성적 수준별 차별적 효과<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>중간고사 성적 기준 Quartile별로 C2(학습 지원) 효과를 분석하였다.</p>
+<p><strong>[표Ⅴ-5] Quartile별 C2(학습 지원) 비교 (LLM 평가)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Quartile</th>
+<th style="text-align: center;">n</th>
+<th style="text-align: center;">Agent</th>
+<th style="text-align: center;">Freepass</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">p</th>
+<th style="text-align: center;">Cohen's d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Q1 (하위)</strong></td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">2.24</td>
+<td style="text-align: center;">1.73</td>
+<td style="text-align: center;"><strong>+0.51</strong></td>
+<td style="text-align: center;"><strong>&lt;0.001*</strong></td>
+<td style="text-align: center;"><strong>0.855</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">Q2 (중하위)</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">2.30</td>
+<td style="text-align: center;">2.25</td>
+<td style="text-align: center;">+0.05</td>
+<td style="text-align: center;">0.839</td>
+<td style="text-align: center;">0.052</td>
+</tr>
+<tr>
+<td style="text-align: center;">Q3 (중상위)</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">2.31</td>
+<td style="text-align: center;">2.01</td>
+<td style="text-align: center;">+0.30</td>
+<td style="text-align: center;">0.238</td>
+<td style="text-align: center;">0.369</td>
+</tr>
+<tr>
+<td style="text-align: center;">Q4 (상위)</td>
+<td style="text-align: center;">86</td>
+<td style="text-align: center;">2.42</td>
+<td style="text-align: center;">2.29</td>
+<td style="text-align: center;">+0.13</td>
+<td style="text-align: center;">0.471</td>
+<td style="text-align: center;">0.160</td>
+</tr>
+</tbody>
+</table>
+<p>주: ***p&lt;0.001, LLM 3개 모델(Gemini, Claude, GPT-5) 평균값</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/mode_quartile_analysis_perfect.py</code> (5장 2절 나항 (3) 성적 수준별 차별적 효과, 표Ⅴ-5)
+- 데이터 파일: <code>statistical_evidence/01_llm_scoring/results/llm_3models_averaged_perfect.csv</code>, <code>statistical_evidence/data/session_data/full_sessions_with_scores.csv</code>, <code>statistical_evidence/data/session_data/midterm_scores_with_quartile.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/quartile_analysis_perfect.json</code></p>
+<p><strong>핵심 발견</strong>: Q1 하위권에서 통계적으로 매우 유의 (p&lt;0.001, d=0.855). 명료화 프로세스는 <strong>학습에 어려움을 겪는 학생에게 특히 효과적</strong>.</p>
+<p>전체 점수 기준:</p>
+<p><strong>[표Ⅴ-6] Quartile별 전체 점수 (LLM 평가)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Quartile (n)</th>
+<th style="text-align: center;">Agent</th>
+<th style="text-align: center;">Freepass</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">p</th>
+<th style="text-align: center;">d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Q1 (85)</strong></td>
+<td style="text-align: center;"><strong>26.52</strong></td>
+<td style="text-align: center;"><strong>24.26</strong></td>
+<td style="text-align: center;"><strong>+2.26</strong></td>
+<td style="text-align: center;"><strong>0.032*</strong></td>
+<td style="text-align: center;"><strong>0.499</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">Q2 (61)</td>
+<td style="text-align: center;">27.08</td>
+<td style="text-align: center;">27.07</td>
+<td style="text-align: center;">+0.01</td>
+<td style="text-align: center;">0.989</td>
+<td style="text-align: center;">0.004</td>
+</tr>
+<tr>
+<td style="text-align: center;">Q3 (52)</td>
+<td style="text-align: center;">25.50</td>
+<td style="text-align: center;">26.88</td>
+<td style="text-align: center;">-1.38</td>
+<td style="text-align: center;">0.345</td>
+<td style="text-align: center;">-0.251</td>
+</tr>
+<tr>
+<td style="text-align: center;">Q4 (86)</td>
+<td style="text-align: center;">26.30</td>
+<td style="text-align: center;">27.00</td>
+<td style="text-align: center;">-0.70</td>
+<td style="text-align: center;">0.531</td>
+<td style="text-align: center;">-0.133</td>
+</tr>
+</tbody>
+</table>
+<p>주: *p&lt;0.05, 40점 만점, LLM 3개 모델 평균값</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/mode_quartile_analysis_perfect.py</code> (5장 2절 나항 (3) 성적 수준별 차별적 효과, 표Ⅴ-6)
+- 데이터 파일: <code>statistical_evidence/01_llm_scoring/results/llm_3models_averaged_perfect.csv</code>, <code>statistical_evidence/data/session_data/full_sessions_with_scores.csv</code>, <code>statistical_evidence/data/session_data/midterm_scores_with_quartile.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/quartile_analysis_perfect.json</code></p>
+<p>하위권 학생은 명료화 모드에서 <strong>2.26점 더 높은 평가</strong> (40점 만점 중 5.6% 차이, p=0.032*).</p>
+<h4 id="4">(4) 반복 사용 효과<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<p><strong>[표Ⅴ-7] 세션 증가에 따른 항목별 점수 변화 (LLM 평가)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: center;">Agent 첫</th>
+<th style="text-align: center;">Agent 마지막</th>
+<th style="text-align: center;">Agent 변화</th>
+<th style="text-align: center;">Agent p</th>
+<th style="text-align: center;">Freepass 첫</th>
+<th style="text-align: center;">Freepass 마지막</th>
+<th style="text-align: center;">Freepass 변화</th>
+<th style="text-align: center;">Freepass p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 수학 전문성</td>
+<td style="text-align: center;">3.49</td>
+<td style="text-align: center;">4.06</td>
+<td style="text-align: center;">+0.57</td>
+<td style="text-align: center;">0.006**</td>
+<td style="text-align: center;">3.49</td>
+<td style="text-align: center;">3.85</td>
+<td style="text-align: center;">+0.36</td>
+<td style="text-align: center;">0.180</td>
+</tr>
+<tr>
+<td>A2 질문 구조화</td>
+<td style="text-align: center;">4.23</td>
+<td style="text-align: center;">4.94</td>
+<td style="text-align: center;">+0.71</td>
+<td style="text-align: center;">0.003**</td>
+<td style="text-align: center;">4.21</td>
+<td style="text-align: center;">4.74</td>
+<td style="text-align: center;">+0.53</td>
+<td style="text-align: center;">0.023*</td>
+</tr>
+<tr>
+<td>A3 학습 맥락</td>
+<td style="text-align: center;">1.19</td>
+<td style="text-align: center;">1.22</td>
+<td style="text-align: center;">+0.03</td>
+<td style="text-align: center;">0.799</td>
+<td style="text-align: center;">1.36</td>
+<td style="text-align: center;">1.48</td>
+<td style="text-align: center;">+0.12</td>
+<td style="text-align: center;">0.454</td>
+</tr>
+<tr>
+<td>B1 학습자 맞춤도</td>
+<td style="text-align: center;">3.17</td>
+<td style="text-align: center;">4.10</td>
+<td style="text-align: center;">+0.93</td>
+<td style="text-align: center;">0.001***</td>
+<td style="text-align: center;">3.23</td>
+<td style="text-align: center;">3.60</td>
+<td style="text-align: center;">+0.37</td>
+<td style="text-align: center;">0.106</td>
+</tr>
+<tr>
+<td>B2 설명 체계성</td>
+<td style="text-align: center;">4.07</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">+0.93</td>
+<td style="text-align: center;">0.015*</td>
+<td style="text-align: center;">4.48</td>
+<td style="text-align: center;">4.81</td>
+<td style="text-align: center;">+0.33</td>
+<td style="text-align: center;">0.250</td>
+</tr>
+<tr>
+<td>B3 학습 확장성</td>
+<td style="text-align: center;">2.32</td>
+<td style="text-align: center;">1.78</td>
+<td style="text-align: center;">-0.54</td>
+<td style="text-align: center;">0.074</td>
+<td style="text-align: center;">1.88</td>
+<td style="text-align: center;">1.57</td>
+<td style="text-align: center;">-0.31</td>
+<td style="text-align: center;">0.139</td>
+</tr>
+<tr>
+<td>C1 대화 일관성</td>
+<td style="text-align: center;">4.13</td>
+<td style="text-align: center;">4.77</td>
+<td style="text-align: center;">+0.64</td>
+<td style="text-align: center;">0.010**</td>
+<td style="text-align: center;">4.20</td>
+<td style="text-align: center;">4.62</td>
+<td style="text-align: center;">+0.42</td>
+<td style="text-align: center;">0.031*</td>
+</tr>
+<tr>
+<td>C2 학습 지원</td>
+<td style="text-align: center;">2.14</td>
+<td style="text-align: center;">2.33</td>
+<td style="text-align: center;">+0.19</td>
+<td style="text-align: center;">0.396</td>
+<td style="text-align: center;">2.02</td>
+<td style="text-align: center;">2.00</td>
+<td style="text-align: center;">-0.02</td>
+<td style="text-align: center;">0.911</td>
+</tr>
+<tr>
+<td><strong>전체</strong></td>
+<td style="text-align: center;"><strong>24.75</strong></td>
+<td style="text-align: center;"><strong>28.20</strong></td>
+<td style="text-align: center;"><strong>+3.45</strong></td>
+<td style="text-align: center;"><strong>0.016*</strong></td>
+<td style="text-align: center;"><strong>24.88</strong></td>
+<td style="text-align: center;"><strong>26.68</strong></td>
+<td style="text-align: center;"><strong>+1.80</strong></td>
+<td style="text-align: center;"><strong>0.154</strong></td>
+</tr>
+</tbody>
+</table>
+<p>주: 복수 세션 참여 학생 (Agent n=23, Freepass n=27), paired t-test, *p&lt;0.05, **p&lt;0.01, ***p&lt;0.001</p>
+<p><strong>[그림Ⅴ-1] 세션 순서에 따른 항목별 점수 변화 추이</strong></p>
+<p>세션 순서(session_order)별로 각 항목과 총점의 평균 점수 변화 추이를 오차 막대 그래프로 시각화하였다.</p>
+<p><img alt="그림Ⅴ-1: 세션 순서에 따른 항목별 점수 변화 추이" src="statistical_evidence/04_effect_size/results/figure_v1_session_order_trends_mean.png" /></p>
+<p>그림Ⅴ-1의 오차 막대는 표준 오차(standard error, SEM)를 나타내며, 각 세션 순서에서 점수의 변동성을 보여준다. 각 점은 해당 세션 순서에서 Agent 또는 Freepass 모드의 평균 점수를 나타내고, 오차 막대의 길이는 해당 세션 순서에서 점수의 분산 크기를 의미한다. Agent 모드는 실선, Freepass 모드는 점선으로 구분하였다.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/create_figure_v1_session_trends.py</code> (5장 2절 나항 (4) 반복 사용 효과, 그림Ⅴ-1)
+- 데이터 파일: <code>statistical_evidence/01_llm_scoring/results/llm_3models_averaged_perfect.csv</code>, <code>statistical_evidence/data/session_data/full_sessions_with_scores.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/figure_v1_session_order_trends_mean.png</code>, <code>statistical_evidence/04_effect_size/results/figure_v1_session_order_trends.json</code></p>
+<p><strong>핵심 발견</strong>:
+- <strong>Agent 모드</strong>: 9개 항목 중 6개(66.7%)에서 유의한 변화
+  - B1 학습자 맞춤도(+0.93, p=0.001), B2 설명 체계성(+0.93, p=0.015), A2 질문 구조화(+0.71, p=0.003), C1 대화 일관성(+0.64, p=0.010), A1 수학 전문성(+0.57, p=0.006), 전체 점수(+3.45, p=0.016)
+  - C2는 유의하지 않음(+0.19, p=0.396)
+- <strong>Freepass 모드</strong>: 9개 항목 중 2개(22.2%)에서만 유의
+  - A2(+0.53, p=0.023), C1(+0.42, p=0.031)
+  - 전체 점수는 1.80점 증가하였으나 유의하지 않음(p=0.154)
+  - C2는 거의 변화 없음(-0.02, p=0.911)</p>
+<p>명료화 모드는 반복 사용 시 대부분의 항목에서 점수가 증가하는 반면, 즉시 답변 모드는 일부 항목에서만 소폭 증가하여 대조적 패턴을 보임.</p>
+<h4 id="5-llm">(5) LLM 평가 소결<a class="headerlink" href="#5-llm" title="Permanent link">&para;</a></h4>
+<p><strong>발견된 패턴</strong> (N=284):
+1. C2(학습 지원)에서 명료화 우수 (Q1: p&lt;0.001, d=0.855, 매우 큰 효과)
+2. Q1 하위권에서 매우 큰 효과 (C2: +0.51, d=0.855) 및 중간 효과 (전체: +2.26, d=0.499, p=0.032 유의)
+3. 반복 사용 시 효과 증가 (Agent +3.45점, Freepass +1.80점, 차이 +1.65점)
+4. 세션 순서별 점수 변화 추이 (그림Ⅴ-1, 오차 막대 기준): 
+   - <strong>Agent 모드</strong>: 전체 점수가 초기 세션(1-3회차) 26.27점에서 후기 세션 29.22점으로 +2.95점 증가 (평균 SEM=1.243). 대부분의 항목(A1, A2, B1, B2, C1, C2)에서 증가 추이를 보였으나, A3(학습 맥락)와 B3(학습 확장성)에서는 감소
+   - <strong>Freepass 모드</strong>: 전체 점수가 초기 26.01점에서 후기 26.89점으로 +0.88점 소폭 증가 (평균 SEM=1.239). 일부 항목(A1, A2, B2, C2)에서만 소폭 증가, C1에서는 거의 변화 없음(+0.09점)
+   - Agent 모드가 Freepass 모드보다 더 큰 증가폭을 보이며, 오차 막대 크기(SEM)는 두 모드에서 비슷하여 안정적인 추이를 나타냄</p>
+<p>*참고: LLM 평가 방법론의 한계(순환 논리 위험, 학습 맥락 파악 등)에 대한 상세한 논의는 VI장에서 다룬다.</p>
+<h3 id="n100">다. 교사 평가 (N=100)<a class="headerlink" href="#n100" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">(1) 평가 설계<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<p>연구 객관성 확보를 위해 연구자를 제외하고, 외부 수학 교사 2명이 100개 세션을 독립 평가하였다.</p>
+<p><strong>[표Ⅴ-8] 교사 평가 설계</strong></p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>평가자</td>
+<td>외부 수학 교사 2명 (평가자 96, 97)</td>
+</tr>
+<tr>
+<td>평가 세션</td>
+<td>100개 (Agent 50, Freepass 50)</td>
+</tr>
+<tr>
+<td>평가 방식</td>
+<td>동일 세션 독립 평가 (완전한 대응 설계)</td>
+</tr>
+<tr>
+<td>평가 도구</td>
+<td>QAC 체크리스트 (LLM과 동일)</td>
+</tr>
+<tr>
+<td>총 레코드</td>
+<td>200개 (100×2)</td>
+</tr>
+<tr>
+<td><strong>표집 방법</strong></td>
+<td><strong>계층적 목적 표집 (Stratified Purposive Sampling)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>100개 세션 선별</strong>: LLM이 평가한 284개 세션 중 교사 검증용 100개를 다음 4가지 전략으로 선별하였다:</p>
+<p>◯ <strong>전략 1. AI 모델 간 불일치도 기반 (20개)</strong></p>
+<p>● 검증 목적: 3개 모델 간 채점 차이가 큰 세션의 정답 기준 확립, 평가자 간 신뢰도(Inter-rater Reliability) 검증</p>
+<p>● 선별 방법: Gemini, Claude, GPT-5 총점의 표준편차 계산 → 상위 30개 중 Agent/Freepass 균형 유지하며 우선 선택</p>
+<p>● 결과 (100개 전체 기준): 평균 불일치도 2.47점(40점 만점 대비 6.2%), 최대 9.67점(24%), 불일치도 &gt;5점 세션 4개</p>
+<p>◯ <strong>전략 2. 성적 구간별 계층 표집 (64개)</strong></p>
+<p>● 검증 목적: 학습자 수준별 AI 채점 정확도 편향 검증 (하위권/상위권 공정성 확인)</p>
+<p>● 선별 방법: 중간고사 총점으로 Quartile 분류(Q1~Q4) → 각 Quartile × Mode 조합에서 균등 표집 시도</p>
+<p>● 결과: Q1(하위) 26개, Q2 26개, Q3 24개, Q4(상위) 24개 - 전 성적대 거의 균등 분포</p>
+<p>◯ <strong>전략 3. 루브릭 패턴 특이 케이스 (10개)</strong></p>
+<p>● 검증 목적: 루브릭 항목별 편향성 검증 (특정 항목만 극단적 점수인 경우의 타당성 확인)</p>
+<p>● 선별 방법: 8개 항목(A1~C2) 점수의 표준편차 계산 → 패턴 분산이 큰 세션 우선 선별</p>
+<p>● 결과: Agent/Freepass 균형 유지</p>
+<p>◯ <strong>전략 4. 세션 길이 다양성 (6개)</strong></p>
+<p>● 검증 목적: 대화 길이에 따른 AI 채점 일관성 검증
+   - 짧은 세션: 정보 부족 → 과소평가 가능성
+   - 긴 세션: 맥락 추적 오류 가능성</p>
+<p>● 선별 방법: 짧은(≤5턴), 중간(6-15턴), 긴(&gt;15턴) 세션 포함</p>
+<p>● 결과: 실제 분포 반영 (짧은 64%, 중간 30%, 긴 6%)</p>
+<p><strong>최종 균형 조정</strong>: 4가지 전략을 우선순위 순으로 적용한 후, Agent/Freepass 모드 균형을 위해 세션 일부 교체 → 최종 Agent 50개, Freepass 50개 (50:50) 완벽한 균형 달성</p>
+<p><strong>[표Ⅴ-8] 교사 평가자 간 신뢰도 (N=100)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">측정 방법</th>
+<th style="text-align: center;">전체 점수</th>
+<th style="text-align: center;">질문 영역</th>
+<th style="text-align: center;">응답 영역</th>
+<th style="text-align: center;">맥락 영역</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>ICC(2,k)</strong></td>
+<td style="text-align: center;"><strong>0.716*</strong></td>
+<td style="text-align: center;">0.720***</td>
+<td style="text-align: center;">0.671***</td>
+<td style="text-align: center;">0.408***</td>
+</tr>
+<tr>
+<td style="text-align: center;">Pearson r</td>
+<td style="text-align: center;">0.644***</td>
+<td style="text-align: center;">0.578***</td>
+<td style="text-align: center;">0.573***</td>
+<td style="text-align: center;">0.392***</td>
+</tr>
+<tr>
+<td style="text-align: center;">Spearman ρ</td>
+<td style="text-align: center;">0.568***</td>
+<td style="text-align: center;">0.629***</td>
+<td style="text-align: center;">0.466***</td>
+<td style="text-align: center;">0.417***</td>
+</tr>
+<tr>
+<td style="text-align: center;">일치도 수준</td>
+<td style="text-align: center;">양호-높음</td>
+<td style="text-align: center;">양호-높음</td>
+<td style="text-align: center;">양호</td>
+<td style="text-align: center;">중간</td>
+</tr>
+</tbody>
+</table>
+<p>주: ***p&lt;0.001. 외부 교사 2명(평가자 96, 97) 독립 평가 결과. ICC(2,k)는 평균 측정값 기준 급내상관계수(Intraclass Correlation Coefficient, Two-way random effects, average measures).</p>
+<p><strong>해석</strong>:
+- <strong>ICC(2,k) = 0.716*</strong>(p&lt;0.001, 95% CI [0.56, 0.82])로 <strong>양호한 신뢰도</strong> (Koo &amp; Li, 2016 기준: &gt;0.60 양호, &gt;0.75 우수)
+- 전체 점수 기준 Pearson r=0.644***(p&lt;0.001), Spearman ρ=0.568***(p&lt;0.001)로 <strong>중간-높은 일치도</strong>
+- 질문 영역(ICC=0.720***)과 응답 영역(ICC=0.671***)에서 높은 일치도를 보인 반면, 맥락 영역(ICC=0.408***)은 상대적으로 낮은 일치도
+- 모든 영역에서 통계적으로 매우 유의한 상관관계(p&lt;0.001)
+- <strong>QAC 체크리스트가 일관된 평가 도구로 기능함을 확인</strong></p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/02_teacher_scoring/calculate_icc.py</code> (표V-8 전용, ICC(2,k) + Pearson + Spearman)
+- 데이터 파일: <code>statistical_evidence/data/teacher_evaluations/latest_evaluations.json</code> (교사 96, 97의 100개 세션 평가)
+- 결과 파일: <code>statistical_evidence/02_teacher_scoring/results/table_v8_teacher_icc.json</code></p>
+<p><strong>[표Ⅴ-9] 표본 100개의 대표성 검증</strong></p>
+<table>
+<thead>
+<tr>
+<th>검증 항목</th>
+<th style="text-align: center;">전체 집단 (N=284)</th>
+<th style="text-align: center;">표본 (N=100)</th>
+<th>검증 결과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>모드별 균형</strong></td>
+<td style="text-align: center;">Agent 115 (40.5%)<br>Freepass 169 (59.5%)</td>
+<td style="text-align: center;">Agent 50 (50%)<br>Freepass 50 (50%)</td>
+<td>의도적 균형 표집</td>
+</tr>
+<tr>
+<td><strong>중간고사 평균</strong></td>
+<td style="text-align: center;">54.3점 (SD=18.7)</td>
+<td style="text-align: center;">54.9점 (SD=17.5)</td>
+<td>t=-0.28, p=0.758<br>유의한 차이 없음</td>
+</tr>
+<tr>
+<td><strong>Quartile 분포</strong></td>
+<td style="text-align: center;">Q1 26.4%, Q2 25.0%<br>Q3 25.4%, Q4 23.2%</td>
+<td style="text-align: center;">Q1 26%, Q2 26%<br>Q3 24%, Q4 24%</td>
+<td>균등 분포</td>
+</tr>
+</tbody>
+</table>
+<p>주: 중간고사 점수는 100점 만점 기준. 모드별 균형은 표집 전략의 목적상 의도적으로 50:50으로 조정. 세션 길이 정보는 현재 데이터에서 확인 불가.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/02_teacher_scoring/inter_rater_reliability.py</code> (실행 시각: 최신)
+- 데이터 파일: <code>statistical_evidence/data/teacher_evaluations/latest_evaluations.json</code>
+- 결과 파일: <code>statistical_evidence/02_teacher_scoring/results/teacher_correlations_perfect.json</code></p>
+<h4 id="2_1">(2) 전체 모드 효과<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<p><strong>[표Ⅴ-10] 모드별 점수 비교 (교사 평가, N=100)</strong></p>
+<table>
+<thead>
+<tr>
+<th>영역</th>
+<th style="text-align: center;">Agent (n=50)</th>
+<th style="text-align: center;">Freepass (n=50)</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">t</th>
+<th style="text-align: center;">p</th>
+<th style="text-align: center;">d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>전체</td>
+<td style="text-align: center;">21.73 (5.86)</td>
+<td style="text-align: center;">19.48 (7.00)</td>
+<td style="text-align: center;">+2.25</td>
+<td style="text-align: center;">1.74</td>
+<td style="text-align: center;">0.085</td>
+<td style="text-align: center;">0.349</td>
+</tr>
+<tr>
+<td>질문</td>
+<td style="text-align: center;">8.02 (2.52)</td>
+<td style="text-align: center;">7.54 (2.90)</td>
+<td style="text-align: center;">+0.48</td>
+<td style="text-align: center;">0.88</td>
+<td style="text-align: center;">0.379</td>
+<td style="text-align: center;">0.177</td>
+</tr>
+<tr>
+<td><strong>응답</strong></td>
+<td style="text-align: center;"><strong>8.50 (2.49)</strong></td>
+<td style="text-align: center;"><strong>7.22 (2.75)</strong></td>
+<td style="text-align: center;"><strong>+1.28</strong></td>
+<td style="text-align: center;">2.44</td>
+<td style="text-align: center;"><strong>0.017*</strong></td>
+<td style="text-align: center;"><strong>0.488</strong></td>
+</tr>
+<tr>
+<td>맥락</td>
+<td style="text-align: center;">5.21 (1.67)</td>
+<td style="text-align: center;">4.72 (1.88)</td>
+<td style="text-align: center;">+0.49</td>
+<td style="text-align: center;">1.38</td>
+<td style="text-align: center;">0.172</td>
+<td style="text-align: center;">0.275</td>
+</tr>
+</tbody>
+</table>
+<p>주: 평균(표준편차). *p&lt;0.05, **p&lt;0.01. 평가자 96, 97만 사용.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/teacher_mode_comparison_perfect.py</code> (5장 2절 다항 (2) 전체 모드 효과, 표Ⅴ-10)
+- 데이터 파일: <code>statistical_evidence/02_teacher_scoring/results/teacher_averaged_scores_perfect.csv</code>, <code>statistical_evidence/data/session_data/full_sessions_with_scores.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/teacher_mode_comparison_perfect.json</code></p>
+<p>교사 평가에서 명료화 모드는 전체적으로 경계적 유의 (p=0.085)를 보였으며, 특히 **응답 영역**에서 유의한 차이 (p=0.017, d=0.488)를 나타냈다.</p>
+<h4 id="3_1">(3) 하위권 효과 (교사 평가)<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<p><strong>[표Ⅴ-11] Quartile별 전체 점수 (교사 평가, N=100)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Quartile (n)</th>
+<th style="text-align: center;">Agent</th>
+<th style="text-align: center;">Freepass</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">p</th>
+<th style="text-align: center;">d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Q1 (29)</strong></td>
+<td style="text-align: center;"><strong>20.79 (6.52)</strong></td>
+<td style="text-align: center;"><strong>14.47 (6.22)</strong></td>
+<td style="text-align: center;"><strong>+6.32</strong></td>
+<td style="text-align: center;"><strong>0.013*</strong></td>
+<td style="text-align: center;"><strong>0.992</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">Q2 (23)</td>
+<td style="text-align: center;">22.12 (5.20)</td>
+<td style="text-align: center;">21.80 (5.60)</td>
+<td style="text-align: center;">+0.32</td>
+<td style="text-align: center;">0.890</td>
+<td style="text-align: center;">0.058</td>
+</tr>
+<tr>
+<td style="text-align: center;">Q3 (22)</td>
+<td style="text-align: center;">21.89 (5.66)</td>
+<td style="text-align: center;">20.58 (6.94)</td>
+<td style="text-align: center;">+1.31</td>
+<td style="text-align: center;">0.644</td>
+<td style="text-align: center;">0.207</td>
+</tr>
+<tr>
+<td style="text-align: center;">Q4 (26)</td>
+<td style="text-align: center;">22.21 (6.40)</td>
+<td style="text-align: center;">22.62 (6.29)</td>
+<td style="text-align: center;">-0.41</td>
+<td style="text-align: center;">0.871</td>
+<td style="text-align: center;">-0.065</td>
+</tr>
+</tbody>
+</table>
+<p>주: 평균(표준편차). *p&lt;0.05. 평가자 96, 97만 사용. n 값은 해당 Quartile의 전체 세션 수이다.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/teacher_mode_comparison_perfect.py</code> (5장 2절 다항 (3) 하위권 효과, 표Ⅴ-11)
+- 데이터 파일: <code>statistical_evidence/02_teacher_scoring/results/teacher_averaged_scores_perfect.csv</code>, <code>statistical_evidence/data/session_data/full_sessions_with_scores.csv</code>, <code>statistical_evidence/data/session_data/midterm_scores_with_quartile.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/teacher_quartile_analysis_perfect.json</code></p>
+<p><strong>핵심 발견</strong>: Q1 하위권에서 유의한 효과 (p=0.013, d=0.992). LLM 평가 결과(p=0.032, d=0.499)와 방향성 일치.</p>
+<p><strong>한계</strong>: Q1 표본 작음 (n=29, Agent n=14, Freepass n=15) → 해석 신중 필요</p>
+<h3 id="llm-">라. LLM-교사 평가 일치도<a class="headerlink" href="#llm-" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">(1) 전체 점수 상관관계<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<p><strong>[표Ⅴ-14] LLM-교사 평가 상관관계 (N=100)</strong></p>
+<table>
+<thead>
+<tr>
+<th>비교</th>
+<th style="text-align: center;">Pearson r</th>
+<th style="text-align: center;">p-value</th>
+<th style="text-align: center;">Spearman ρ</th>
+<th style="text-align: center;">해석</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3모델 평균 ↔ 교사 평균</strong></td>
+<td style="text-align: center;"><strong>0.754*</strong></td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">0.622***</td>
+<td style="text-align: center;">강한 상관</td>
+</tr>
+</tbody>
+</table>
+<p>주: <strong><em>p&lt;0.001. N=100. 전체 점수(40점 만점) 기준. LLM 3개 모델(Gemini 2.5 Flash, Claude 4.5 Haiku, GPT-5-mini) 평균과 교사 2명 평균 간 상관계수는 r=0.754</em></strong> (p&lt;0.001)로 강한 양의 상관관계를 보였다. 이는 LLM 평가가 전문가(교사) 평가와 높은 일치도를 가지며, 대규모 평가 도구로서의 타당성을 확보하였음을 의미한다.</p>
+<p><strong>[표Ⅴ-12] LLM-교사 평가 항목별 상관계수 (N=100)</strong></p>
+<table>
+<thead>
+<tr>
+<th>평가 항목</th>
+<th style="text-align: center;">Pearson r</th>
+<th style="text-align: center;">p</th>
+<th style="text-align: center;">일치도 수준</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>전체 점수</strong></td>
+<td style="text-align: center;"><strong>0.754*</strong></td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">높음</td>
+</tr>
+<tr>
+<td><strong>B1 학습자 맞춤도</strong></td>
+<td style="text-align: center;"><strong>0.751*</strong></td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">매우 높음</td>
+</tr>
+<tr>
+<td><strong>B2 설명 체계성</strong></td>
+<td style="text-align: center;"><strong>0.738*</strong></td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">높음</td>
+</tr>
+<tr>
+<td>A1 수학 전문성</td>
+<td style="text-align: center;">0.690***</td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">높음</td>
+</tr>
+<tr>
+<td>A2 질문 구조화</td>
+<td style="text-align: center;">0.602***</td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">중간-높음</td>
+</tr>
+<tr>
+<td>C1 대화 일관성</td>
+<td style="text-align: center;">0.592***</td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">중간-높음</td>
+</tr>
+<tr>
+<td>C2 학습 지원</td>
+<td style="text-align: center;">0.522***</td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">중간</td>
+</tr>
+<tr>
+<td>A3 학습 맥락</td>
+<td style="text-align: center;">0.512***</td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">중간</td>
+</tr>
+<tr>
+<td>B3 학습 확장성</td>
+<td style="text-align: center;">0.462***</td>
+<td style="text-align: center;">&lt;0.001</td>
+<td style="text-align: center;">중간</td>
+</tr>
+</tbody>
+</table>
+<p>주: ***p&lt;0.001. 교사 평가자 96, 97 (2명) 평균 vs LLM 3개 모델(Gemini, Claude, GPT-5) 평균. 모든 항목에서 통계적으로 매우 유의한 정적 상관관계.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/03_correlation_analysis/llm_teacher_correlation_perfect.py</code> (5장 2절 라항 (1) 전체 점수 상관관계, 표Ⅴ-12)
+- 데이터 파일: <code>statistical_evidence/01_llm_scoring/results/llm_3models_averaged_perfect.csv</code>, <code>statistical_evidence/02_teacher_scoring/results/teacher_averaged_scores_perfect.csv</code>
+- 결과 파일: <code>statistical_evidence/03_correlation_analysis/results/llm_teacher_correlations_perfect.json</code>, <code>statistical_evidence/03_correlation_analysis/results/correlation_summary_perfect.json</code></p>
+<p><strong>주요 발견</strong>: 전체 점수 상관계수 r=0.754*** (p&lt;0.001, 높은 일치). 항목별로는 B1(학습자 맞춤도) r=0.751, B2(설명 체계성) r=0.738로 매우 높은 일치를 보인 반면, C2(학습 지원) r=0.522, B3(학습 확장성) r=0.462로 상대적으로 낮은 일치를 보임. 이는 명시적 특징(맞춤도, 체계성)은 LLM과 교사가 유사하게 평가하나, 교육적 의도와 효과(학습 지원, 확장성)는 평가 관점 차이가 있음을 시사.</p>
+<p><strong>[표Ⅴ-15] LLM-교사 평가 항목별 점수 비교 (N=100)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: center;">LLM 3모델</th>
+<th style="text-align: center;">교사 2명</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">Pearson r</th>
+<th style="text-align: center;">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1 수학전문성</td>
+<td style="text-align: center;">3.63 (0.86)</td>
+<td style="text-align: center;">3.00 (1.07)</td>
+<td style="text-align: center;">+0.64</td>
+<td style="text-align: center;">0.690***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td>A2 질문구조화</td>
+<td style="text-align: center;">4.35 (0.90)</td>
+<td style="text-align: center;">3.27 (1.36)</td>
+<td style="text-align: center;">+1.08</td>
+<td style="text-align: center;">0.602***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td>A3 학습맥락</td>
+<td style="text-align: center;">1.40 (0.52)</td>
+<td style="text-align: center;">1.52 (0.56)</td>
+<td style="text-align: center;">-0.12</td>
+<td style="text-align: center;">0.512***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td>B1 학습자맞춤</td>
+<td style="text-align: center;">3.44 (1.01)</td>
+<td style="text-align: center;">3.18 (1.20)</td>
+<td style="text-align: center;">+0.26</td>
+<td style="text-align: center;">0.751***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td>B2 설명체계성</td>
+<td style="text-align: center;">4.46 (1.14)</td>
+<td style="text-align: center;">3.13 (1.18)</td>
+<td style="text-align: center;">+1.33</td>
+<td style="text-align: center;">0.738***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td>B3 학습확장성</td>
+<td style="text-align: center;">2.00 (0.98)</td>
+<td style="text-align: center;">1.55 (0.66)</td>
+<td style="text-align: center;">+0.45</td>
+<td style="text-align: center;">0.462***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td>C1 대화일관성</td>
+<td style="text-align: center;">4.28 (0.89)</td>
+<td style="text-align: center;">3.18 (1.23)</td>
+<td style="text-align: center;">+1.10</td>
+<td style="text-align: center;">0.592***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td>C2 학습지원</td>
+<td style="text-align: center;">2.25 (0.82)</td>
+<td style="text-align: center;">1.78 (0.82)</td>
+<td style="text-align: center;">+0.47</td>
+<td style="text-align: center;">0.522***</td>
+<td style="text-align: center;">5점</td>
+</tr>
+<tr>
+<td><strong>전체</strong></td>
+<td style="text-align: center;"><strong>25.81 (5.09)</strong></td>
+<td style="text-align: center;"><strong>20.60 (6.52)</strong></td>
+<td style="text-align: center;"><strong>+5.20</strong></td>
+<td style="text-align: center;"><strong>0.754*</strong></td>
+<td style="text-align: center;">40점</td>
+</tr>
+</tbody>
+</table>
+<p>주: 평균(표준편차). ***p&lt;0.001. LLM은 Gemini 2.5 Flash, Claude 4.5 Haiku, GPT-5-mini 평균, 교사는 평가자 96, 97 평균. N=100 공통 세션.</p>
+<p><strong>해석</strong>: LLM이 전체적으로 교사보다 5.20점 높게 평가(과대평가 경향). 특히 B2 설명 체계성(+1.33), C1 대화 일관성(+1.10), A2 질문 구조화(+1.08)에서 큰 차이. 항목별 상관계수는 B1 학습자 맞춤(r=0.751)이 가장 높고, B3 학습 확장성(r=0.462)이 가장 낮음. A3 학습 맥락은 유일하게 교사가 더 높게 평가(-0.12).</p>
+<p><strong>[표Ⅴ-16] LLM-교사 평가 중분류별 상관관계 (N=100)</strong></p>
+<table>
+<thead>
+<tr>
+<th>중분류</th>
+<th style="text-align: center;">LLM 평균</th>
+<th style="text-align: center;">교사 평균</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">Pearson r</th>
+<th style="text-align: center;">해석</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. 질문 (/15)</strong></td>
+<td style="text-align: center;">9.54 (1.90)</td>
+<td style="text-align: center;">7.78 (2.71)</td>
+<td style="text-align: center;">+1.76</td>
+<td style="text-align: center;"><strong>0.682*</strong></td>
+<td style="text-align: center;">강한 상관</td>
+</tr>
+<tr>
+<td><strong>B. 답변 (/15)</strong></td>
+<td style="text-align: center;">9.93 (2.73)</td>
+<td style="text-align: center;">7.86 (2.69)</td>
+<td style="text-align: center;">+2.07</td>
+<td style="text-align: center;"><strong>0.735*</strong></td>
+<td style="text-align: center;">강한 상관</td>
+</tr>
+<tr>
+<td><strong>C. 맥락 (/10)</strong></td>
+<td style="text-align: center;">6.60 (1.40)</td>
+<td style="text-align: center;">4.96 (1.79)</td>
+<td style="text-align: center;">+1.63</td>
+<td style="text-align: center;"><strong>0.653*</strong></td>
+<td style="text-align: center;">강한 상관</td>
+</tr>
+<tr>
+<td><strong>전체 (/40)</strong></td>
+<td style="text-align: center;">26.06 (5.40)</td>
+<td style="text-align: center;">20.61 (6.52)</td>
+<td style="text-align: center;">+5.46</td>
+<td style="text-align: center;"><strong>0.754*</strong></td>
+<td style="text-align: center;">강한 상관</td>
+</tr>
+</tbody>
+</table>
+<p>주: 평균(표준편차). ***p&lt;0.001. LLM은 Gemini, Claude, GPT-5 평균, 교사는 A, B 평균. N=100 공통 세션.</p>
+<p><strong>해석</strong>: 중분류별로도 모두 강한 양의 상관관계를 보였다. 특히 B. 답변 영역에서 가장 높은 상관(r=0.735***)을, C. 맥락 영역에서 가장 낮은 상관(r=0.653***)을 보였다. LLM은 모든 영역에서 교사보다 높게 평가하는 경향을 보였으며, 특히 답변 영역에서 과대평가 경향(+2.07점)이 가장 컸다.</p>
+<h4 id="2-q1">(2) Q1 하위권 효과의 수렴<a class="headerlink" href="#2-q1" title="Permanent link">&para;</a></h4>
+<p><strong>[표Ⅴ-17] Q1(하위권) Agent 우위 폭 비교</strong></p>
+<table>
+<thead>
+<tr>
+<th>평가자</th>
+<th style="text-align: center;">Agent</th>
+<th style="text-align: center;">Freepass</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">일치도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>교사(2명 평균)</strong></td>
+<td style="text-align: center;">20.79</td>
+<td style="text-align: center;">14.47</td>
+<td style="text-align: center;"><strong>+6.32</strong></td>
+<td style="text-align: center;">기준</td>
+</tr>
+<tr>
+<td><strong>LLM(3모델 평균)</strong></td>
+<td style="text-align: center;">25.24</td>
+<td style="text-align: center;">22.60</td>
+<td style="text-align: center;"><strong>+2.64</strong></td>
+<td style="text-align: center;">방향 일치 ✅</td>
+</tr>
+</tbody>
+</table>
+<p>주: 교사 N=29 (Q1), LLM N=29 (Q1, 교사 평가 100개와 겹치는 세션). LLM은 Gemini 2.5 Flash, Claude 4.5 Haiku, GPT-5-mini 3개 모델의 평균값.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/mode_quartile_analysis_perfect.py</code>, <code>statistical_evidence/04_effect_size/teacher_mode_comparison_perfect.py</code> (5장 2절 라항 (2) Q1 하위권 효과의 수렴, 표Ⅴ-17)
+- 데이터 파일: <code>statistical_evidence/data/llm_evaluations/llm_3models_284_PERFECT_FINAL.csv</code>, <code>statistical_evidence/data/teacher_evaluations/latest_evaluations.json</code>, <code>statistical_evidence/data/session_data/midterm_scores_with_quartile.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/quartile_analysis_perfect.json</code>, <code>statistical_evidence/04_effect_size/results/teacher_quartile_analysis_perfect.json</code></p>
+<p><strong>핵심 발견</strong>: 
+- 모든 평가자가 Q1에서 Agent 우위 방향성 일치
+- 교사가 더 큰 효과 감지 (+6.32 vs +2.64)
+- LLM 평가 패턴의 교육적 타당성 확인</p>
+<h3 id="_6">마. 상호 검증된 핵심 발견<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>LLM 평가와 교사 평가의 일치 분석 결과, 다음의 핵심 발견이 **상호 검증**되었다.</p>
+<p><strong>[표Ⅴ-18] LLM-교사 평가 수렴 요약</strong></p>
+<table>
+<thead>
+<tr>
+<th>핵심 발견</th>
+<th style="text-align: center;">LLM (N=284)</th>
+<th style="text-align: center;">교사 (N=100)</th>
+<th style="text-align: center;">일치도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>전체 Agent 우위</strong></td>
+<td style="text-align: center;">경향성</td>
+<td style="text-align: center;">+2.25점</td>
+<td style="text-align: center;">방향 일치</td>
+</tr>
+<tr>
+<td><strong>하위권(Q1) 효과</strong></td>
+<td style="text-align: center;">+2.26점 (d=0.499)</td>
+<td style="text-align: center;">+6.32점 (d=0.993)</td>
+<td style="text-align: center;">방향 일치</td>
+</tr>
+<tr>
+<td><strong>학습 지원(C2)</strong></td>
+<td style="text-align: center;">+0.28점 (p=0.004)</td>
+<td style="text-align: center;">응답 영역 유의 (p=0.017)</td>
+<td style="text-align: center;">영역 일치</td>
+</tr>
+<tr>
+<td><strong>상관계수</strong></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">r=0.754***</td>
+<td style="text-align: center;">강한 상관</td>
+</tr>
+</tbody>
+</table>
+<p><strong>상호 검증의 의미</strong>:</p>
+<p>◯ <strong>LLM → 교사 검증</strong>:
+- LLM이 발견한 패턴 (C2 학습 지원 효과, Q1 하위권 큰 효과)
+- 교사 평가에서도 동일 패턴 관찰</p>
+<p>◯ <strong>교사 → LLM 확장</strong>:
+- 교사가 100개에서 발견한 효과
+- LLM이 284개에서 재현</p>
+<p>◯ <strong>상호 보완</strong>:
+- LLM의 순환 논리 우려 → 교사가 검증
+- 교사의 표본 부족 → LLM이 확장</p>
+<p><strong>종합</strong>: 명료화 프로세스는 학습 지원을 향상시키며(LLM p=0.004), 특히 학습에 어려움을 겪는 하위권 학생에게 교육적 효과를 보인다(LLM d=0.499, 교사 d=0.993 방향 일치). LLM 평가와 교사 평가는 강한 상관관계(r=0.754***)를 보여 평가 도구의 타당성이 확보되었다.</p>
+<hr />
+<h2 id="3_2">3. 학습자 자기 평가 및 증거의 수렴<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h2>
+<h3 id="n47">가. 학습자 자기 평가 (N=47)<a class="headerlink" href="#n47" title="Permanent link">&para;</a></h3>
+<p>사후 설문조사(리커트 5점 척도 15문항, 개방형 5문항)를 통해 학습 효과와 시스템 만족도를 측정하였다(부록 C). 전체 47명의 응답을 분석하였다.</p>
+<p><strong>[표Ⅴ-19] 학습자 자기 평가 결과 (N=47)</strong></p>
+<table>
+<thead>
+<tr>
+<th>카테고리</th>
+<th style="text-align: center;">문항 수</th>
+<th style="text-align: center;">평균</th>
+<th style="text-align: center;">SD</th>
+<th>주요 문항 및 점수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B. AI 상호작용 품질</strong></td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4.37</td>
+<td style="text-align: center;">0.84</td>
+<td>뭘 모르는지 알게 됨(4.43), AI 도움 충분(4.57), 다음 질문 알게 됨(4.43)</td>
+</tr>
+<tr>
+<td><strong>C. 질문 능력</strong></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4.22</td>
+<td style="text-align: center;">0.99</td>
+<td>분명하게 말함(4.34), 상황 설명(4.11)</td>
+</tr>
+<tr>
+<td><strong>D. 개념 이해</strong></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4.39</td>
+<td style="text-align: center;">0.78</td>
+<td>귀납 가정 이해(4.57), 귀납법 구조(4.51)</td>
+</tr>
+<tr>
+<td><strong>E. 시스템 만족도</strong></td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4.62</td>
+<td style="text-align: center;">0.65</td>
+<td>사용 쉬움(4.81), 도움됨(4.55), 계속 사용(4.49)</td>
+</tr>
+</tbody>
+</table>
+<p>주: 5점 리커트 척도 (1=전혀 그렇지 않다, 5=매우 그렇다). 설문지 전문은 부록 C 참조. N=47 전체 응답자 기준.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/05_student_survey/analyze_survey_47_by_mode_final.py</code> (실행 시각: 최신)
+- 데이터 파일: <code>statistical_evidence/data/MAICE 사용 설문조사 (2025학년도 2학년 수학)(1-47).csv</code>
+- 결과 파일: <code>statistical_evidence/05_student_survey/results/survey_47_statistics.csv</code>, <code>statistical_evidence/05_student_survey/results/survey_47_mode_comparison_final.csv</code></p>
+<p><strong>주요 결과</strong>: 
+- AI 상호작용 품질 4.37/5.0, 개념 이해 4.39/5.0, 질문 능력 4.22/5.0
+- "뭘 모르는지 알게 됨" 4.43/5.0, "다음 질문 알게 됨" 4.43/5.0
+- 시스템 만족도 4.62/5.0 (최고점)
+- 사용 쉬움 4.81/5.0 (개별 문항 최고점)</p>
+<h3 id="_7">나. 모드 선호도 및 이유<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><strong>[표Ⅴ-20] 명료화 방식 선호도 (N=44, 불명확 제외)</strong></p>
+<table>
+<thead>
+<tr>
+<th>선호 방식</th>
+<th style="text-align: center;">전체</th>
+<th style="text-align: center;">비율</th>
+<th style="text-align: center;">Agent 모드 (N=20)</th>
+<th style="text-align: center;">Freepass 모드 (N=23)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B 방식 (질문 유도형)</strong></td>
+<td style="text-align: center;">26명</td>
+<td style="text-align: center;">59.1%</td>
+<td style="text-align: center;">14명 (70.0%)</td>
+<td style="text-align: center;">12명 (52.2%)</td>
+</tr>
+<tr>
+<td><strong>A 방식 (즉시 답변형)</strong></td>
+<td style="text-align: center;">12명</td>
+<td style="text-align: center;">27.3%</td>
+<td style="text-align: center;">4명 (20.0%)</td>
+<td style="text-align: center;">8명 (34.8%)</td>
+</tr>
+<tr>
+<td><strong>혼합</strong></td>
+<td style="text-align: center;">5명</td>
+<td style="text-align: center;">11.4%</td>
+<td style="text-align: center;">2명 (10.0%)</td>
+<td style="text-align: center;">3명 (13.0%)</td>
+</tr>
+<tr>
+<td><strong>합계</strong></td>
+<td style="text-align: center;">44명</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">20명 (100%)</td>
+<td style="text-align: center;">23명 (100%)</td>
+</tr>
+</tbody>
+</table>
+<p>주: 전체 47명 중 A/B 선호도가 불명확한 응답 3명 제외. B 방식 선호 비율(A+B만 기준): 전체 68.4%, Agent 모드 77.8%, Freepass 모드 60.0%.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/05_student_survey/analyze_survey_47_by_mode_final.py</code> (실행 시각: 최신)
+- 데이터 파일: <code>statistical_evidence/data/MAICE 사용 설문조사 (2025학년도 2학년 수학)(1-47).csv</code>
+- 결과 파일: <code>statistical_evidence/05_student_survey/results/survey_47_mode_preference_final.csv</code></p>
+<p><strong>모드별 선호도 분석</strong>:
+- <strong>전체</strong>: 68.4%가 B 방식 선호 (A+B만 기준)
+- <strong>Agent 모드</strong>: 77.8%가 B 방식 선호 - 자신이 사용한 명료화 방식을 더 높이 평가
+- <strong>Freepass 모드</strong>: 60.0%가 B 방식 선호 - 즉시 답변을 경험했음에도 명료화 방식의 교육적 가치 인식</p>
+<p><strong>질적 분석 결과</strong>:
+- B 방식 선호 이유: "생각하는 힘이 길러진다"(42%), "오래 남는다"(25%), "모르는 부분을 생각해보는 시간"(17%)
+- A 방식 선호 이유: "빠른 답을 원한다"(44%), "효율적이다"(31%), "고민해도 안 나와서"(25%)
+- Agent 모드 사용자도 B 방식을 더 선호 (Agent 77.8%, Freepass 60.0%)</p>
+<p><strong>점수 항목별 모드 비교</strong> (N=47):
+모든 설문 점수 항목(15개)에서 Agent 모드와 Freepass 모드 간 통계적으로 유의한 차이는 없었다(p&gt;0.05). 그러나 경향성 분석 결과, Agent 모드가 메타인지 효과(4.42 vs 4.22, +0.20)와 시스템 만족도(4.72 vs 4.54, +0.18)에서 약간 높은 경향을 보였고, Freepass 모드가 자기조절 학습(4.15 vs 3.98, +0.17)과 질문 능력(4.26 vs 4.18, +0.09)에서 약간 높은 경향을 보였다. 효과 크기는 모두 작거나 무시 가능한 수준이었다(|d|&lt;0.3).</p>
+<p><strong>학습자 변화 인식</strong> (설문 Part 2: 학습 방식 변화):
+- "질문의 질이 처음에는 뭉툭했는데, 이제는 명확하게 표현하면 더 좋은 답변이 온다는 걸 깨달았다" (학생 ID 09)
+- "질문 방식이 구체적으로 바뀌었다" (학생 ID 40)
+- "모호한 질문을 더 구체적으로 바꾸는 방법을 배웠다" (평균 4.23/5.0)</p>
+<p>*참고: 학생 설문의 응답 편향 가능성(사회적 바람직성 편향 등)에 대한 상세한 논의는 VI장에서 다룬다.</p>
+<h3 id="_8">다. 수렴적 증거: 다중 관점의 일치<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>[표Ⅴ-21] 네 가지 독립 증거의 수렴</strong></p>
+<table>
+<thead>
+<tr>
+<th>증거 유형</th>
+<th>방법</th>
+<th style="text-align: center;">표본</th>
+<th>핵심 발견</th>
+<th style="text-align: center;">효과 크기</th>
+<th style="text-align: center;">신뢰도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>객관적 평가</strong></td>
+<td>LLM (QAC)</td>
+<td style="text-align: center;">N=284</td>
+<td>Agent 우수<br>C2: +0.28점, p=0.004**</td>
+<td style="text-align: center;">d=0.353**</td>
+<td style="text-align: center;">ICC=0.656***</td>
+</tr>
+<tr>
+<td><strong>전문가 평가</strong></td>
+<td>교사 (QAC)</td>
+<td style="text-align: center;">N=100</td>
+<td>Agent 경향<br>전체: +2.25점, p=0.085</td>
+<td style="text-align: center;">d=0.349</td>
+<td style="text-align: center;">ICC=0.716***</td>
+</tr>
+<tr>
+<td><strong>학습자 평가</strong></td>
+<td>설문 (자기평가)</td>
+<td style="text-align: center;">N=47</td>
+<td>AI 상호작용 4.37<br>개념 이해 4.39<br>질문 능력 4.22</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">높은 만족도<br>(평균 4.33/5.0)</td>
+</tr>
+<tr>
+<td><strong>질적 증거</strong></td>
+<td>서술형 응답</td>
+<td style="text-align: center;">N=44</td>
+<td>"사고력 향상"(42%)<br>"깊은 이해"(25%)<br>"자기주도"(17%)</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">일관된 선호<br>B 방식 68.4%<br>Agent 77.8%<br>Freepass 60.0%</td>
+</tr>
+</tbody>
+</table>
+<p>주: **p&lt;0.01, ***p&lt;0.001. LLM은 3개 모델(Gemini, Claude, GPT-5) 평균. 학생 설문 N=47 전체 응답자. 교사 평가는 경계적 유의(p=0.085). ICC는 평가자 간 급내상관계수.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/mode_quartile_analysis_perfect.py</code>, <code>statistical_evidence/02_teacher_scoring/process_teacher_perfect.py</code>, <code>statistical_evidence/05_student_survey/analyze_survey_47_by_mode_final.py</code> (실행 시각: 최신)
+- 데이터 파일: <code>statistical_evidence/01_llm_scoring/results/llm_3models_averaged_perfect.csv</code>, <code>statistical_evidence/02_teacher_scoring/results/teacher_averaged_scores_perfect.csv</code>, <code>statistical_evidence/data/MAICE 사용 설문조사 (2025학년도 2학년 수학)(1-47).csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/mode_quartile_summary_perfect.json</code>, <code>statistical_evidence/05_student_survey/results/survey_47_mode_comparison_final.csv</code></p>
+<p><strong>[표Ⅴ-22] 하위권(Q1) 학생 효과의 수렴</strong></p>
+<table>
+<thead>
+<tr>
+<th>평가 방법</th>
+<th style="text-align: center;">Agent</th>
+<th style="text-align: center;">Freepass</th>
+<th style="text-align: center;">차이</th>
+<th style="text-align: center;">p</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">일치도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LLM 평가</strong></td>
+<td style="text-align: center;">26.52</td>
+<td style="text-align: center;">24.26</td>
+<td style="text-align: center;"><strong>+2.26</strong></td>
+<td style="text-align: center;">0.032*</td>
+<td style="text-align: center;">0.499</td>
+<td style="text-align: center;">유의 ✓</td>
+</tr>
+<tr>
+<td><strong>교사 평가</strong></td>
+<td style="text-align: center;">20.79</td>
+<td style="text-align: center;">14.47</td>
+<td style="text-align: center;"><strong>+6.32</strong></td>
+<td style="text-align: center;">0.013*</td>
+<td style="text-align: center;">0.992</td>
+<td style="text-align: center;">매우 큰 효과 ✓✓</td>
+</tr>
+</tbody>
+</table>
+<p>주: *p&lt;0.05. 두 평가 모두 하위권에서 Agent 모드 우위 확인. Q1은 중간고사 점수 하위 25%. LLM 평가는 유의(p=0.032). 평가자 96, 97만 사용.</p>
+<p><strong>근거 자료</strong> (Python 스크립트 실행 결과):
+- 계산 파일: <code>statistical_evidence/04_effect_size/mode_quartile_analysis_perfect.py</code>, <code>statistical_evidence/04_effect_size/teacher_mode_comparison_perfect.py</code> (실행 시각: 최신)
+- 데이터 파일: <code>statistical_evidence/01_llm_scoring/results/llm_3models_averaged_perfect.csv</code>, <code>statistical_evidence/02_teacher_scoring/results/teacher_averaged_scores_perfect.csv</code>, <code>statistical_evidence/data/session_data/midterm_scores_with_quartile.csv</code>
+- 결과 파일: <code>statistical_evidence/04_effect_size/results/quartile_analysis_perfect.json</code>, <code>statistical_evidence/04_effect_size/results/teacher_quartile_analysis_perfect.json</code></p>
+<p><strong>수렴 패턴</strong>:
+1. <strong>정량적 수렴</strong>: 
+   - LLM과 교사 평가 모두 Agent 모드 우수 (r=0.754 상관)
+   - 학생 자기 평가에서도 높은 학습 효과 체감 (4.13~4.38/5.0)</p>
+<ol>
+<li><strong>정성적 수렴</strong>: </li>
+<li>학생 서술형 응답에서 "사고력 향상"(42%), "깊은 이해"(25%), "오래 남음"(25%) 반복 언급</li>
+<li>68.4%가 질문 유도형 방식 선호 (이유: 학습 효과)</li>
+<li>
+<p>Agent 모드 사용자(77.8%)가 Freepass 모드 사용자(60.0%)보다 더 높은 선호도</p>
+</li>
+<li>
+<p><strong>하위권 효과 수렴</strong>: </p>
+</li>
+<li>객관적 평가(LLM +2.26점 d=0.499, 교사 +6.32점 d=0.992) 모두 하위권 학생에게 매우 큰 효과</li>
+<li>
+<p>학생 응답에서도 "혼자 풀 수 있게 됨"(4.23) 높은 점수</p>
+</li>
+<li>
+<p><strong>메타인지 발달 수렴</strong>:</p>
+</li>
+<li>객관적 평가: C2(학습 지원) +0.28점, p=0.004</li>
+<li>학습자 평가: "뭘 모르는지 알게 됨" 4.38/5.0</li>
+<li>질적 증거: "질문 방식이 구체적으로 바뀌었다" (ID 40)</li>
+</ol>
+<p><strong>수렴 패턴 요약</strong>:
+- 객관적 측정(LLM·교사 QAC)과 주관적 체감(학생 자기 평가)의 방향성 일치
+- 양적 증거(QAC 점수, 설문 점수)와 질적 증거(서술형 응답)가 같은 방향 지지
+- 하위권 학생에 대한 효과가 주요 증거에서 일관되게 확인</p>
+<hr />
+<h2 id="4-bloom-dewey">4. 피드백 내용의 질적 분석: Bloom-Dewey 이론 실증<a class="headerlink" href="#4-bloom-dewey" title="Permanent link">&para;</a></h2>
+<p>본 절에서는 2절의 정량적 발견을 질적으로 심화하기 위해, 실제 학생-MAICE 대화 로그 1,589건을 분석하였다. 특히 LLM 평가점수와 연계하여 **'왜 점수가 높은가/낮은가'**를 Bloom 교육 목표 분류와 Dewey 반성적 사고 이론으로 해석하였다.</p>
+<h3 id="_9">가. 분석 방법론<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h4 id="1_4">(1) 데이터 출처 및 규모<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h4>
+<p><strong>DB 대화 로그</strong> (maice_agent 데이터베이스):
+- <strong>총 프롬프트-응답 로그</strong>: 1,589건
+- <strong>분석 기간</strong>: 2025-10-27 ~ 2025-11-11 (16일)
+- <strong>고유 세션</strong>: 229개
+- <strong>에이전트별 분류</strong>:
+  - answer_generator_llm: 237건 (교육적 답변 생성)
+  - classifier_llm: 278건 (질문 분류 K1~K4)
+  - observer_llm: 255건 (학습 과정 요약)
+  - freetalker_llm: 628건 (자유 대화)
+  - 기타: 191건</p>
+<p><strong>통합 데이터셋</strong>:
+- LLM 평가점수: 283개 세션
+- 세션 ID 매칭: 6개 샘플 세션 (대화1-6)
+- 점수 구간: 모두 우수(30-34점)</p>
+<h4 id="2_2">(2) 분석 틀<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<p>본 연구의 질적 분석에서는 II장에서 제시한 이론적 배경을 분석 틀로 사용하였다:</p>
+<p><strong>Dewey (1910) 반성적 사고 5단계</strong>: 문제 인식 → 문제 정의 → 가설 형성 → 추론 전개 → 검증 (II장 3절)</p>
+<p><strong>Bloom의 지식 차원 분류 (K1-K4)</strong>: K1(사실적 지식) → K2(개념적 지식) → K3(절차적 지식) → K4(메타인지적 지식) (II장 2절)</p>
+<p>질적 분석에서는 대화 흐름을 Dewey의 반성적 사고 단계로 추적하고, 학생 질문과 AI 답변의 지식 차원(K1-K4)을 분류하여 분석하였다.</p>
+<h4 id="3_3">(3) 코딩 절차<a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h4>
+<ol>
+<li>지식 차원(K1-K4) 분류: 학생 질문과 AI 답변의 지식 차원 분류 (237건 답변)</li>
+<li>Dewey 단계 추적: 대화 흐름을 Dewey 반성적 사고 5단계로 추적</li>
+<li>점수 연계 분석: 지식 차원 분류 및 Dewey 단계와 LLM 평가점수 간 연관성 분석</li>
+</ol>
+<h4 id="4_1">(4) 사례 선택 기준<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h4>
+<p>본 절의 질적 분석 사례(대화1-6)는 <strong>LLM 평가점수 기준 최상위 세션</strong> 중에서 선택하였다:</p>
+<ul>
+<li><strong>선택 기준</strong>: </li>
+<li><strong>LLM 평가 최상위권</strong> (상위 0.4%~4.2%) 세션 중 선택</li>
+<li>충분한 대화 턴수 (5턴 이상 선호, 최소 2턴)</li>
+<li>실제 학습 질문이 있는 세션 (증명만 제시한 세션 제외)</li>
+<li>
+<p>다양한 교육적 특징 (지식 차원 상승, 오류 교정, 단계별 지원, 전략 제시)</p>
+</li>
+<li>
+<p><strong>선택된 사례</strong>: </p>
+</li>
+<li><strong>대화1</strong>: 막연한 어려움 구체화, 지식 차원 상승 (K2 → K3 → K4)</li>
+<li><strong>대화2</strong>: 오류 교정, Hattie 피드백 수준</li>
+<li><strong>대화3</strong>: 특정 단계 맞춤 지원, 명료화 질문 시도</li>
+<li><strong>대화4</strong>: 문제 해결 전략 제시</li>
+<li><strong>대화5</strong>: 논리적 설명 요구, 메타인지적 지식(K4) 도달</li>
+<li><strong>대화6</strong>: Dewey 5단계 완전 구현</li>
+</ul>
+<blockquote>
+<p>📝 <strong>주</strong>: 교사 평가는 100개 샘플에 대한 타당성 검증 목적이며, 질적 분석 사례 선택의 주 기준은 LLM 평가임. 교사 평가 상위 세션은 대화 턴수가 1-2턴으로 너무 짧아 질적 분석에 부적합. LLM-교사 평가 불일치 사례는 VI장 3절 나항에서 논의함.</p>
+</blockquote>
+<hr />
+<h3 id="dewey">나. Dewey 반성적 사고와 지식 차원 분류 기반 실증 사례<a class="headerlink" href="#dewey" title="Permanent link">&para;</a></h3>
+<h4 id="1-dewey">(1) 막연한 어려움 구체화: Dewey 단계 체계적 진행<a class="headerlink" href="#1-dewey" title="Permanent link">&para;</a></h4>
+<p><strong>대화1 (세션 156)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 평가점수</td>
+<td>34.33점 (Gemini: 34, Claude: 35, GPT-5: 34)</td>
+</tr>
+<tr>
+<td>LLM 순위</td>
+<td>284개 중 1등 (상위 0.4%)</td>
+</tr>
+<tr>
+<td>대화 턴수</td>
+<td>5턴 (총 10개 메시지)</td>
+</tr>
+<tr>
+<td>지식 차원 진행</td>
+<td>K2(개념적) → K3(절차적) → K4(메타인지적)</td>
+</tr>
+<tr>
+<td>Dewey 단계</td>
+<td>문제 인식 → 문제 정의(명료화 3회) → 해결 및 검증</td>
+</tr>
+<tr>
+<td>학습 주제</td>
+<td>수학적 귀납법 전반적 이해</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[표Ⅴ-23] 대화1 (세션 156) 막연한 어려움의 구체화 과정</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">메시지</th>
+<th>발화자</th>
+<th>대화 내용</th>
+<th>지식 차원</th>
+<th>Dewey 단계</th>
+<th>교육적 기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[0]</td>
+<td>학생</td>
+<td>"수학적 귀납법을 지난 시간에 배웠는데도 감이 잘 안와요"</td>
+<td>-</td>
+<td>1. 문제 인식</td>
+<td>막연한 어려움 표현</td>
+</tr>
+<tr>
+<td style="text-align: center;">[1]</td>
+<td>MAICE</td>
+<td>"핵심은 '도미노 효과'로 생각하는 것... 기초 사례 → 귀납 가정 → 귀납 단계"</td>
+<td>K2</td>
+<td>2. 문제 정의</td>
+<td>개념 구조화<br/>직관 제공</td>
+</tr>
+<tr>
+<td style="text-align: center;">[2]</td>
+<td>학생</td>
+<td>"고등학교 수준에서의 귀납법, 그냥 증명하는 과정 프로세스를 잘 못 알아먹은 것 같아서 처음부터 막막하기만 해"</td>
+<td>-</td>
+<td>2. 문제 정의</td>
+<td>구체적 어려움 표현</td>
+</tr>
+<tr>
+<td style="text-align: center;">[3]</td>
+<td>MAICE</td>
+<td>"무엇을 쓰고, 왜 그 단계가 필요한지... (템플릿 제시)"</td>
+<td>K3</td>
+<td>3-5. 해결 및 검증</td>
+<td>절차적 지식</td>
+</tr>
+<tr>
+<td style="text-align: center;">[4]</td>
+<td>학생</td>
+<td>"그렇게 하자"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>실행 의지</td>
+</tr>
+<tr>
+<td style="text-align: center;">[5]</td>
+<td>MAICE</td>
+<td>"어느 문제로 같이 차근차근 증명해볼까요?"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>선택지 제시</td>
+</tr>
+<tr>
+<td style="text-align: center;">[6]</td>
+<td>학생</td>
+<td>"팩토리얼과 거듭제곱"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>문제 선택</td>
+</tr>
+<tr>
+<td style="text-align: center;">[7]</td>
+<td>MAICE</td>
+<td>"<span class="arithmatex">\(n! \ge 2^{n-1}\)</span> 증명을 단계별로... "왜 하는가?" 설명 포함</td>
+<td>K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>메타인지적 설명</td>
+</tr>
+</tbody>
+</table>
+<p>주: 본 분석은 [0-7] 메시지만 포함하며, [8]에서 주제가 극한 함수로 전환된 부분은 별도 분석 대상으로 제외함.</p>
+<p><strong>지식 차원 진행 패턴</strong>: 막연한 표현(K1 이전) → K2(개념적 지식) → K3(절차적 지식) → K4(메타인지적 지식)
+<strong>Dewey 단계 진행</strong>: 문제 인식 → 문제 정의(명료화를 통한 구체화) → 해결 및 검증</p>
+<h4 id="2-hattie">(2) 오류 교정: Hattie 피드백 수준<a class="headerlink" href="#2-hattie" title="Permanent link">&para;</a></h4>
+<p><strong>대화2 (세션 150)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 평가점수</td>
+<td>33.00점 (Gemini: 30, Claude: 35, GPT-5: 34)</td>
+</tr>
+<tr>
+<td>LLM 순위</td>
+<td>284개 중 6등 (상위 2.1%)</td>
+</tr>
+<tr>
+<td>대화 턴수</td>
+<td>2턴 (총 4개 메시지)</td>
+</tr>
+<tr>
+<td>학습 주제</td>
+<td>등비급수 합 공식 오류 교정</td>
+</tr>
+<tr>
+<td>지식 차원</td>
+<td>K2(개념적) → K4(메타인지적) (오류 발견 및 교정)</td>
+</tr>
+<tr>
+<td>Dewey 단계</td>
+<td>문제 인식 → 해결 및 검증 (Hattie 피드백 수준)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[표Ⅴ-20] 대화2 (세션 150) 대화 흐름 및 오류 교정 과정</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">메시지</th>
+<th>발화자</th>
+<th>대화 내용</th>
+<th>지식 차원</th>
+<th>Dewey 단계</th>
+<th>Hattie 피드백</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[0]</td>
+<td>학생</td>
+<td>"기저단계, 귀납단계가 무엇인지"</td>
+<td>K2</td>
+<td>1. 문제 인식</td>
+<td>개념 질문</td>
+</tr>
+<tr>
+<td style="text-align: center;">[1]</td>
+<td>학생</td>
+<td>"<span class="arithmatex">\(1+2+2^2+...+2^{n-1}=2^n\)</span>"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>❌ 틀린 공식 제시</td>
+</tr>
+<tr>
+<td style="text-align: center;">[2]</td>
+<td>MAICE</td>
+<td>"기저단계: 시작점에서 명제 참 확인<br/>귀납단계: <span class="arithmatex">\(P(k)\)</span> 가정 → <span class="arithmatex">\(P(k+1)\)</span> 증명"</td>
+<td>K2</td>
+<td>3-5. 해결 및 검증</td>
+<td>개념 설명</td>
+</tr>
+<tr>
+<td style="text-align: center;">[3]</td>
+<td>MAICE</td>
+<td>"주어진 식은 틀립니다. 올바른 공식: <span class="arithmatex">\(2^n-1\)</span><br/><br/><strong>자주 하는 실수</strong>:<br/>- 오른쪽에 <span class="arithmatex">\(-1\)</span>이 빠져 있는 것이 흔한 실수<br/>- 시작 인덱스가 <span class="arithmatex">\(0\)</span>인지 <span class="arithmatex">\(1\)</span>인지 확인 필요<br/>- 귀납가정에서 증명하려는 것을 암묵적으로 쓰지 않도록 주의"</td>
+<td>K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>Task(무엇이 틀렸나)<br/>Process(왜 틀렸나)<br/>Self-regulation(어떻게 할 것인가)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hattie &amp; Timperley(2007) 피드백 수준 구조 확인</strong>:
+- <strong>Task 수준</strong>: "오른쪽에 <span class="arithmatex">\(-1\)</span>이 빠져 있는 것이 흔한 실수" (무엇이 틀렸는지)
+- <strong>Process 수준</strong>: "시작 인덱스가 <span class="arithmatex">\(0\)</span>인지 <span class="arithmatex">\(1\)</span>인지 확인 필요" (왜 틀렸는지)
+- <strong>Self-regulation 수준</strong>: "귀납가정에서 증명하려는 것을 암묵적으로 쓰지 않도록 주의" (앞으로 어떻게 할 것인가)</p>
+<h4 id="3_4">(3) 특정 단계 맞춤 지원: 단계별 지원<a class="headerlink" href="#3_4" title="Permanent link">&para;</a></h4>
+<p><strong>대화3 (세션 73)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 평가점수</td>
+<td>33.00점 (Gemini: 34, Claude: 35, GPT-5: 34)</td>
+</tr>
+<tr>
+<td>LLM 순위</td>
+<td>284개 중 4등 (상위 1.4%)</td>
+</tr>
+<tr>
+<td>대화 턴수</td>
+<td>6턴 (총 14개 메시지)</td>
+</tr>
+<tr>
+<td>학습 주제</td>
+<td>귀납 단계(<span class="arithmatex">\(n=k+1\)</span>) 이해</td>
+</tr>
+<tr>
+<td>지식 차원</td>
+<td>K2(개념적) → K3(절차적) → K4(메타인지적)</td>
+</tr>
+<tr>
+<td>Dewey 단계</td>
+<td>문제 인식 → 문제 정의(명료화) → 해결 및 검증</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[표Ⅴ-21] 대화3 (세션 73) 특정 단계 질문에 대한 맞춤 지원</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">메시지</th>
+<th>발화자</th>
+<th>대화 내용</th>
+<th>지식 차원</th>
+<th>Dewey 단계</th>
+<th>지원 기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[0]</td>
+<td>학생</td>
+<td>"수학적 귀납법 할 때 n=k+1 부터 모르겠어"</td>
+<td>-</td>
+<td>1. 문제 인식</td>
+<td>특정 단계 질문</td>
+</tr>
+<tr>
+<td style="text-align: center;">[2]</td>
+<td>MAICE</td>
+<td>"n=k+1 단계가 어려운 게, 식을 어떻게 전개해야 할지 몰라서인가요? 아니면 가정 부분을 어떻게 써야 할지 헷갈리신 건가요?"</td>
+<td>-</td>
+<td>2. 문제 정의</td>
+<td>명료화 질문</td>
+</tr>
+<tr>
+<td style="text-align: center;">[3]</td>
+<td>학생</td>
+<td>"둘 다"</td>
+<td>-</td>
+<td>2. 문제 정의</td>
+<td>수동적 응답</td>
+</tr>
+<tr>
+<td style="text-align: center;">[4]</td>
+<td>MAICE</td>
+<td>"수학적 귀납법에서 <span class="arithmatex">\(n=k+1\)</span> 단계 전개 방법. 수식 전개 순서와 가정 활용 방법을 이해하는 것이 핵심"</td>
+<td>K2</td>
+<td>3-5. 해결 및 검증</td>
+<td>어려움 원인 진단</td>
+</tr>
+<tr>
+<td style="text-align: center;">[5]</td>
+<td>학생</td>
+<td>"<span class="arithmatex">\(1\cdot2 + 2\cdot3 + 3\cdot4 + \cdots + n(n+1) = \frac{n(n+1)(n+2)}{3}\)</span> (단, n은 자연수) 이거는..?"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>구체적 문제 제시</td>
+</tr>
+<tr>
+<td style="text-align: center;">[6]</td>
+<td>MAICE</td>
+<td>"<span class="arithmatex">\(1\cdot2 + 2\cdot3 + 3\cdot4 + \cdots + n(n+1) = \frac{n(n+1)(n+2)}{3}\)</span> 증명 단계별 설명"</td>
+<td>K3</td>
+<td>3-5. 해결 및 검증</td>
+<td>절차 시연</td>
+</tr>
+<tr>
+<td style="text-align: center;">[7]</td>
+<td>학생</td>
+<td>"그럼 <span class="arithmatex">\(1+2+2^2+\cdots+2^{n-1}=2^n-1\)</span> 은?"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>다른 문제 제시</td>
+</tr>
+<tr>
+<td style="text-align: center;">[8]</td>
+<td>MAICE</td>
+<td>"<span class="arithmatex">\(1+2+2^2+\cdots+2^{n-1}=2^n-1\)</span> 증명 단계별 설명"</td>
+<td>K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>패턴 분석</td>
+</tr>
+<tr>
+<td style="text-align: center;">[9]</td>
+<td>학생</td>
+<td>"<span class="arithmatex">\(n \ge 4\)</span>인 모든 자연수 <span class="arithmatex">\(n\)</span>에 대해 부등식 <span class="arithmatex">\(n! &gt; 2^n\)</span> 이 성립함을 수학적 귀납법으로 증명하시오"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>또 다른 문제 제시</td>
+</tr>
+<tr>
+<td style="text-align: center;">[10]</td>
+<td>MAICE</td>
+<td>"<span class="arithmatex">\(n! &gt; 2^n\)</span> (단, <span class="arithmatex">\(n \ge 4\)</span>) 증명 단계별 설명"</td>
+<td>K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>패턴 분석</td>
+</tr>
+<tr>
+<td style="text-align: center;">[11]</td>
+<td>학생</td>
+<td>"아 너무 어려워.."</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>어려움 표현</td>
+</tr>
+<tr>
+<td style="text-align: center;">[13]</td>
+<td>MAICE</td>
+<td>"수학적 귀납법의 어떤 부분이 가장 어렵게 느껴지셨나요? 예를 들어 가정 세우는 부분인지, 식을 전개하는 부분인지 알려주실 수 있을까요?"</td>
+<td>-</td>
+<td>2. 문제 정의</td>
+<td>재명료화 시도</td>
+</tr>
+</tbody>
+</table>
+<p><strong>맞춤 지원 전략</strong>:
+1. 어려움 특정 (n=k+1 단계)
+2. 핵심 원리 설명 (변형 필요성)
+3. 구체적 예시 적용
+4. 여러 문제 제시 및 설명 (학생이 다양한 문제를 제시하여 학습 범위 확장 시도)</p>
+<p><strong>맞춤 지원 패턴</strong>: 어려움 특정 → 핵심 원리 설명 → 구체적 예시 적용 → 여러 문제 제시</p>
+<p><strong>사례 분석</strong>: 학생의 수동적 응답("둘 다", [3])과 최종 어려움 표현("아 너무 어려워", [11])이 관찰됨. 이 사례의 의미는 VI장에서 논의함.</p>
+<h4 id="4_2">(4) 절차적 지원을 통한 단계별 이해 지원<a class="headerlink" href="#4_2" title="Permanent link">&para;</a></h4>
+<p><strong>대화4 (세션 111)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 평가점수</td>
+<td>32.00점 (Gemini: 33, Claude: 34, GPT-5: 33)</td>
+</tr>
+<tr>
+<td>LLM 순위</td>
+<td>284개 중 11등 (상위 3.9%)</td>
+</tr>
+<tr>
+<td>대화 턴수</td>
+<td>6턴 (총 12개 메시지)</td>
+</tr>
+<tr>
+<td>학습 주제</td>
+<td>등비급수 귀납법 증명 전략</td>
+</tr>
+<tr>
+<td>지식 차원</td>
+<td>K2(개념적) → K3(절차적) (절차적 지원)</td>
+</tr>
+<tr>
+<td>Dewey 단계</td>
+<td>문제 인식 → 해결 및 검증 (반복적 이해 확인)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[표Ⅴ-22] 대화4 (세션 111) 절차적 지원을 통한 단계별 이해 지원</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">메시지</th>
+<th>발화자</th>
+<th>대화 내용</th>
+<th>지식 차원</th>
+<th>Dewey 단계</th>
+<th>교육적 기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[0]</td>
+<td>학생</td>
+<td>"<span class="arithmatex">\(1+2+4+\cdots+2^{n-1} = 2^n - 1\)</span> 증명... 어떻게 접근해야 할지 모르겠어. 기저 단계까지는 했어"</td>
+<td>-</td>
+<td>1. 문제 인식</td>
+<td>접근 방법 질문</td>
+</tr>
+<tr>
+<td style="text-align: center;">[1]</td>
+<td>MAICE</td>
+<td>"기저 단계 완료 ✓<br/>귀납 가정: <span class="arithmatex">\(P(k)\)</span> 참 가정<br/>목표: <span class="arithmatex">\(P(k+1)\)</span> 증명"</td>
+<td>K2</td>
+<td>3-5. 해결 및 검증</td>
+<td>전체 구조 확인</td>
+</tr>
+<tr>
+<td style="text-align: center;">[2]</td>
+<td>학생</td>
+<td>"왜 <span class="arithmatex">\((2^k-1)+2^k\)</span> 로 바뀐거야"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>이해 확인 질문</td>
+</tr>
+<tr>
+<td style="text-align: center;">[3]</td>
+<td>MAICE</td>
+<td>"귀납 가정 적용 설명"</td>
+<td>K2</td>
+<td>3-5. 해결 및 검증</td>
+<td>귀납 가정 적용 설명</td>
+</tr>
+<tr>
+<td style="text-align: center;">[4]</td>
+<td>학생</td>
+<td>"그럼 양변에 뭘 더한거야?"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>반복 질문</td>
+</tr>
+<tr>
+<td style="text-align: center;">[5]</td>
+<td>MAICE</td>
+<td>"양변에 <span class="arithmatex">\(2^k\)</span> 더하기 설명"</td>
+<td>K3</td>
+<td>3-5. 해결 및 검증</td>
+<td>절차적 설명</td>
+</tr>
+<tr>
+<td style="text-align: center;">[6]</td>
+<td>학생</td>
+<td>"아니 2^k를 더한거라고? 그럼 2^(k+1)이 아니여야 되는거 아니야"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>혼란 표현</td>
+</tr>
+<tr>
+<td style="text-align: center;">[7]</td>
+<td>MAICE</td>
+<td>"<span class="arithmatex">\(2^k\)</span>와 <span class="arithmatex">\(2^{k+1}\)</span> 관계 설명"</td>
+<td>K3</td>
+<td>3-5. 해결 및 검증</td>
+<td>관계 설명</td>
+</tr>
+<tr>
+<td style="text-align: center;">[8]</td>
+<td>학생</td>
+<td>"아니 왜 2^k를 더한게 저게 되는지 아직 이해가 안가"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>지속적 혼란</td>
+</tr>
+<tr>
+<td style="text-align: center;">[9]</td>
+<td>MAICE</td>
+<td>"계산 과정 상세 설명"</td>
+<td>K3</td>
+<td>3-5. 해결 및 검증</td>
+<td>절차적 지원</td>
+</tr>
+<tr>
+<td style="text-align: center;">[10]</td>
+<td>학생</td>
+<td>"어 맞아"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>최종 이해</td>
+</tr>
+</tbody>
+</table>
+<p><strong>절차적 지원 패턴</strong>: 전체 구조 파악 → 핵심 전략 제시 → 학생 반복 질문에 대한 단계별 설명. 학생의 최종 이해 확인("어 맞아").</p>
+<h4 id="5">(5) 논리적 설명 요구: 메타인지적 사고 시도<a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
+<p><strong>대화5 (세션 125)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 평가점수</td>
+<td>32.00점 (Gemini: 32, Claude: 32, GPT-5: 32)</td>
+</tr>
+<tr>
+<td>LLM 순위</td>
+<td>284개 중 10등 (상위 3.5%)</td>
+</tr>
+<tr>
+<td>대화 턴수</td>
+<td>5턴 (총 10개 메시지)</td>
+</tr>
+<tr>
+<td>학습 주제</td>
+<td>논리적 증명 설명</td>
+</tr>
+<tr>
+<td>지식 차원</td>
+<td>K2(개념적) → K4(메타인지적)</td>
+</tr>
+<tr>
+<td>Dewey 단계</td>
+<td>문제 인식 → 해결 및 검증 (메타인지적 사고 시도)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[표Ⅴ-23] 대화5 (세션 125) 논리적 설명 요구와 응답</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">메시지</th>
+<th>발화자</th>
+<th>대화 내용</th>
+<th>지식 차원</th>
+<th>Dewey 단계</th>
+<th>교육 효과</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">[0]</td>
+<td>학생</td>
+<td>"증명 문제를 낼건데, 특히 귀납단계를 **논리적으로 잘 설명**해줘"</td>
+<td>-</td>
+<td>1. 문제 인식</td>
+<td>논리적 설명 요구</td>
+</tr>
+<tr>
+<td style="text-align: center;">[1]</td>
+<td>MAICE</td>
+<td>"기저: <span class="arithmatex">\(n=1\)</span> 확인<br/>귀납 가정: <span class="arithmatex">\(P(k)\)</span> 가정<br/>귀납 단계: <strong>왜 이렇게 하는지</strong> 설명 포함"</td>
+<td>K2/K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>메타인지적 설명</td>
+</tr>
+<tr>
+<td style="text-align: center;">[2]</td>
+<td>MAICE</td>
+<td>"모든 자연수 <span class="arithmatex">\(n \ge 4\)</span>에 대하여 <span class="arithmatex">\(n! &gt; 2^n\)</span> 임을 증명하시오" (다른 문제 제시)</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>문제 전환</td>
+</tr>
+<tr>
+<td style="text-align: center;">[3]</td>
+<td>학생</td>
+<td>"4 이상의 모든 자연수 n에 대해, n! &gt; 2^n임을 수학적 귀납법을 이용하여 증명하시오"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>문제 확인</td>
+</tr>
+<tr>
+<td style="text-align: center;">[4]</td>
+<td>학생</td>
+<td>"귀납 단계 더 자세히 설명좀"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>깊이 요구</td>
+</tr>
+<tr>
+<td style="text-align: center;">[5]</td>
+<td>MAICE</td>
+<td>"귀납 단계만 더 논리적으로 자세히 풀어 설명하겠습니다. 귀납 가정: <span class="arithmatex">\(k! &gt; 2^k\)</span> 가정 → 목표: <span class="arithmatex">\((k+1)! &gt; 2^{k+1}\)</span> 보이기"</td>
+<td>K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>논리 구조 분석</td>
+</tr>
+<tr>
+<td style="text-align: center;">[6]</td>
+<td>학생</td>
+<td>"&lt;==&gt; 이런 기호 쓰지마"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>표현 방식 피드백</td>
+</tr>
+<tr>
+<td style="text-align: center;">[7]</td>
+<td>MAICE</td>
+<td>"기호 없이 설명"</td>
+<td>K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>설명 방식 조정</td>
+</tr>
+<tr>
+<td style="text-align: center;">[8]</td>
+<td>학생</td>
+<td>"&lt;==&gt; 이 기호를 뭐고 뭐로 바꿔 쓸 수 있는지 설명해"</td>
+<td>-</td>
+<td>3-5. 해결 및 검증</td>
+<td>메타인지적 질문</td>
+</tr>
+<tr>
+<td style="text-align: center;">[9]</td>
+<td>MAICE</td>
+<td>"논리적 동치 기호 설명"</td>
+<td>K4</td>
+<td>3-5. 해결 및 검증</td>
+<td>기호 의미 분석</td>
+</tr>
+</tbody>
+</table>
+<p>주: [2]에서 MAICE가 다른 문제를 제시한 것은 학생의 논리적 설명 요구에 대한 응답의 일환으로, 구체적 예시를 통해 설명을 명확히 하려는 시도로 해석됨.</p>
+<p><strong>메타인지적 사고 시도</strong>: 학생의 "논리적으로 설명" 요구와 기호에 대한 질문이 관찰됨. K4(메타인지적 지식) 수준의 사고가 요구되는 질문과 답변이 확인됨.</p>
+<h4 id="6">(6) 지식 차원 분류 종합<a class="headerlink" href="#6" title="Permanent link">&para;</a></h4>
+<p>질적 분석 대상 6개 세션(LLM 평가 32-34점)은 모두 K4(메타인지적 지식), K3(절차적 지식), K2(개념적 지식) 수준의 질문과 답변을 포함하고 있었다. 이는 고득점 세션이 단순한 사실적 지식(K1) 교환을 넘어, 개념 이해, 절차 적용, 메타인지적 성찰에 이르는 **다층적 학습 과정**을 거쳤음을 의미한다.</p>
+<hr />
+<h3 id="dewey-5">다. Dewey 반성적 사고 5단계 구현 실증<a class="headerlink" href="#dewey-5" title="Permanent link">&para;</a></h3>
+<h4 id="1-6-75-dewey-5">(1) 대화6 (세션 75): Dewey 5단계 모두 진행 사례<a class="headerlink" href="#1-6-75-dewey-5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 평가점수</td>
+<td>34.0점 (Gemini: 32, Claude: 35, GPT-5: 35)</td>
+</tr>
+<tr>
+<td>LLM 순위</td>
+<td>284개 중 2등 (상위 0.7%)</td>
+</tr>
+<tr>
+<td>대화 턴수</td>
+<td>11턴 (총 25개 메시지)</td>
+</tr>
+<tr>
+<td>Dewey 단계 진행</td>
+<td>5단계 모두 시도 (단, 최종 검증 단계에서 학생이 여전히 혼란을 표함)</td>
+</tr>
+<tr>
+<td>명료화 횟수</td>
+<td>3회</td>
+</tr>
+<tr>
+<td>지식 차원</td>
+<td>K1(사실적), K2(개념적), K3(절차적)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[표Ⅴ-25] 대화6 (세션 75) Dewey 5단계 추적</strong></p>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>실제 대화</th>
+<th>턴</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 문제 인식</td>
+<td>"(k+1)! 을 다르게 나타낼 방법이 있어?"</td>
+<td>0</td>
+<td>문제 제기</td>
+</tr>
+<tr>
+<td>2. 문제 정의</td>
+<td>명료화: "곱셈식으로 전개? k!으로 표현?"</td>
+<td>4</td>
+<td>명료화 질문</td>
+</tr>
+<tr>
+<td>3. 가설 형성</td>
+<td>학생: "k!로 표현하는 방법" 탐색</td>
+<td>5-18</td>
+<td>여러 문제 제시 및 탐색</td>
+</tr>
+<tr>
+<td>4. 추론 전개</td>
+<td>"(k+1)*k! &gt; (k+1)*2^k 관계 확인"</td>
+<td>17-22</td>
+<td>부등식 관계 확인</td>
+</tr>
+<tr>
+<td>5. 검증</td>
+<td>"(k+1)*k! &gt; (k+1)*2^k가 어떻게 (k+1)*2<sup>k&gt;2</sup>(k+1)이 되는거야"</td>
+<td>23</td>
+<td><strong>학생 혼란 지속</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dewey 5단계 진행</strong>: 11턴 대화를 통해 5단계 모두 시도됨. 명료화 3회가 문제 정의 → 가설 형성 → 추론 → 검증 과정을 촉진.</p>
+<p><strong>사례 분석</strong>: 학생의 마지막 질문[23]에서 여전히 혼란이 관찰됨. Dewey 5단계가 모두 시도되었으나 최종 검증의 완전한 성공은 확인되지 않음.</p>
+<hr />
+<h3 id="_10">라. 질적 분석 종합<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h4 id="1_5">(1) 교육적 특성<a class="headerlink" href="#1_5" title="Permanent link">&para;</a></h4>
+<p>질적 분석 대상 6개 세션(32-34점)의 공통 특징:
+- <strong>지식 차원</strong>: 모두 K2(개념적) → K3(절차적) → K4(메타인지적) 수준 포함
+- <strong>대화 깊이</strong>: 평균 7.2턴 (5-11턴)
+- <strong>명료화</strong>: 대화1, 대화6에서 명료화 질문 3회로 문제 정의 촉진</p>
+<h4 id="2-llm">(2) LLM 평가의 타당성<a class="headerlink" href="#2-llm" title="Permanent link">&para;</a></h4>
+<p>LLM 평가는 <strong>교사 평가와 강한 상관</strong>(r=0.754, p&lt;0.001)을 보여, 객관적 평가 지표로서의 타당성을 입증하였다. 질적 분석은 고득점 세션이 단순한 정답 제시를 넘어 **개념적·절차적·메타인지적 학습**을 거쳤음을 확인하였다.</p>
+<h4 id="3_5">(3) 하위권 효과의 질적 메커니즘<a class="headerlink" href="#3_5" title="Permanent link">&para;</a></h4>
+<p>교사 평가에서 확인된 Q1 하위권 효과(Agent +6.32점, 표Ⅴ-12)의 메커니즘을 대화1(세션 156)을 통해 규명하였다:</p>
+<p><strong>대화1 (Q1 하위권, 34.33점, 상위 0.4%)</strong>:
+- 막연한 질문 → 명료화 3회 → 지식 차원 상승 (K2 → K3 → K4)
+- 5턴 대화를 통해 개념 이해, 절차 적용, 메타인지적 성찰 달성
+- <strong>메커니즘</strong>: 명료화 → 질문 구체화 → 맞춤 지원 → 지식 차원 고단계 도달</p>
+<hr />
+<p><strong>4절 요약</strong>:</p>
+<p>질적 분석 대상 6개 세션의 특징:
+- 모두 K2 → K3 → K4 지식 차원 상승 경로 포함
+- 대화1, 대화6에서 명료화가 문제 정의 촉진
+- LLM 평가는 교사 평가와 강한 상관(r=0.754)
+- 하위권(Q1) 효과의 질적 메커니즘 규명 (대화1)</p>
+<hr />
+<p><strong>V장 전체 요약</strong>: </p>
+<p>본 장에서는 MAICE 명료화 프로세스의 효과를 **4가지 증거를 통해 다각도로 검증**하였다.</p>
+<p><strong>1. 객관적 평가 (LLM, N=284)</strong>:
+- 전체 효과: C2(학습 지원) Agent 우수 (+0.28점, p=0.004, d=0.353)
+- 하위권(Q1) 효과: +2.26점, p=0.032, d=0.499 (중간 효과, 유의)
+- 3개 모델 평균, 높은 평가자 간 일치도 (ICC=0.656***)</p>
+<p><strong>2. 전문가 평가 (교사, N=100)</strong>:
+- 전체 효과: Agent 경향 (+2.25점, p=0.085, d=0.349, 경계적 유의)
+- 하위권(Q1) 효과: +6.32점, p=0.013, d=0.992 (매우 큰 효과)
+- LLM과 강한 상관 (r=0.754, p&lt;0.001)</p>
+<p><strong>3. 학습자 자기 평가 (설문, N=47)</strong>:
+- AI 상호작용 품질: 4.37/5.0, 개념 이해: 4.39/5.0, 질문 능력: 4.22/5.0
+- 68.4%가 질문 유도형(B 방식) 선호 (이유: "사고력 향상"(42%), "깊은 이해"(25%))
+- 시스템 만족도: 4.62/5.0 (최고점)</p>
+<p><strong>4. 질적 분석 (6개 우수 세션)</strong>:
+- <strong>지식 차원</strong>: 모두 K2(개념적) → K3(절차적) → K4(메타인지적) 수준 포함
+- <strong>Dewey 반성적 사고</strong>: 대화6은 5단계 모두 시도 (단, 최종 검증에서 학생 혼란 지속)
+- <strong>하위권 메커니즘</strong>: 대화1(Q1 하위권)에서 명료화 → 지식 차원 상승 (K2 → K3 → K4) → 고득점
+- <strong>LLM 평가 타당성</strong>: 교사 평가와 강한 상관(r=0.754***)으로 객관성 입증</p>
+<p><strong>수렴 패턴</strong>:
+- 양적 증거(LLM·교사 점수)와 질적 증거(지식 차원 분석)가 일관
+- 객관적 평가와 주관적 체감(학생 설문)이 수렴
+- 특히 **하위권 효과**가 모든 증거에서 일관 (LLM +2.26점, 교사 +6.32점, 대화1에서 K2→K3→K4)</p>
+<p>다음 VI장에서는 이러한 결과의 교육적 의미, 시사점, 연구의 제한점을 논의한다.</p>
+<hr />
+<p><strong>이전</strong>: [[chapters/06-research-methods]] | <strong>다음</strong>: [[chapters/08-discussion-conclusion]]</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="마지막 업데이트">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025년 11월 18일 12:32:36 KST">2025년 11월 18일 12:32:36</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="작성일">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025년 11월 18일 12:32:36 KST">2025년 11월 18일 12:32:36</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 김규봉 (부산대학교 AI융합교육전공)
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "toc.integrate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2615 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로">
+      
+      
+        <meta name="author" content="김규봉 (부산대학교 AI융합교육전공, 202373389)">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>루브릭 평가와 프롬프트 설계의 연관관계 분석 - 수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XXXXXXXXXX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" class="md-header__button md-logo" aria-label="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              루브릭 평가와 프롬프트 설계의 연관관계 분석
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="공유" aria-label="공유" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/YOUR_USERNAME/maice-paper" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MAICE-논문
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/00-abstract-korean/" class="md-tabs__link">
+          
+  
+  
+  논문 초록
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/01-introduction/" class="md-tabs__link">
+          
+  
+  
+  논문 내용
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../부록_A_루브릭_상세설명서.md" class="md-tabs__link">
+          
+  
+  
+  부록
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/overview/" class="md-tabs__link">
+          
+  
+  
+  문서
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../MAICE_%EC%82%AC%ED%9B%84%EC%84%A4%EB%AC%B8%EC%A7%80/" class="md-tabs__link">
+          
+  
+  
+  설문 자료
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  피드백
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../print_page/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  PDF로 출력
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" class="md-nav__button md-logo" aria-label="수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    수학 학습에서 질문 명료화를 지원하는 AI에이전트 설계 및 개발: 고등학교 2학년 수학적 귀납법 단원 중심으로
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/YOUR_USERNAME/maice-paper" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MAICE-논문
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    논문 초록
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    논문 초록
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/00-abstract-korean/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    국문 초록
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/00-abstract-english/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    영문 초록 (Abstract)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/00-table-of-contents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    목차
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/00-list-of-tables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    표 차례
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/00-list-of-figures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    그림 차례
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    논문 내용
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    논문 내용
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1장. 서론
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/02-theoretical-background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2장. 이론적 배경
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/03-system-design.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3장. MAICE 교육 시스템 아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/04-system-implementation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4장. MAICE 시스템 구현
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/05-beta-test.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5장. 베타 테스트
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/06-research-methods.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6장. 연구 방법
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/07-results.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7장. 연구 결과 (정량·질적 통합)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/08-discussion-conclusion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8장. 논의 및 결론
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/09-references.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9장. 참고문헌
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    부록
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    부록
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_A_루브릭_상세설명서.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    루브릭 상세설명서
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_B_AI채점_결과_샘플.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI채점 결과 샘플
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_C_통계분석_상세표.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    통계분석 상세표
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_D_연구_신뢰성_체크리스트.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연구 신뢰성 체크리스트
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_E_서술형응답_정성분석.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    서술형응답 정성분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_F_학생ID_익명화_매핑.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    학생ID 익명화 매핑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_G_루브릭_타당도분석.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    루브릭 타당도 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_H_교사평가_잠정결과.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    교사평가 잠정결과
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_I_평가루브릭_개발과정.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    평가 루브릭 개발 과정
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../부록_J_LLM채점_프롬프트_전문.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM채점 프롬프트 전문
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    문서
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    문서
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시스템 문서
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    시스템 문서
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    개요
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/agent-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent 시스템
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    백엔드 아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프론트엔드 아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 문서
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API 문서
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/maice-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MAICE API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    인증
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    설문 자료
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    설문 자료
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MAICE_%EC%82%AC%ED%9B%84%EC%84%A4%EB%AC%B8%EC%A7%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    사후 설문지
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%95%99%EC%83%9D_%EC%84%A4%EB%AC%B8%EC%A1%B0%EC%82%AC%EC%A7%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    학생 설문조사지
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../설문지_개선사항_요약.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    설문지 개선사항
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    피드백
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF로 출력
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/YOUR_USERNAME/maice-paper/edit/main/docs/prompts/RUBRIC_PROMPT_CORRELATION.md" title="이 페이지를 편집" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/YOUR_USERNAME/maice-paper/raw/main/docs/prompts/RUBRIC_PROMPT_CORRELATION.md" title="페이지소스 보기" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">루브릭 평가와 프롬프트 설계의 연관관계 분석<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">📊 분석 개요<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>본 문서는 AI 자동 채점 루브릭 결과와 MAICE Agent 프롬프트 설계 간의 연관관계를 체계적으로 분석합니다.</p>
+<h3 id="_3">분석 데이터<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>전체 세션</strong>: 177개 (Agent 68개, Freepass 109개)</li>
+<li><strong>실험 설계</strong>: <strong>A/B 테스트 - 무작위 배정</strong></li>
+<li>학생들은 자신이 어떤 모드를 사용하는지 알지 못함</li>
+<li>선택 편향(selection bias) 없음</li>
+<li>두 그룹의 초기 조건 동일</li>
+<li><strong>루브릭 평가</strong>: 3개 영역 15점 만점</li>
+<li>질문 점수 (0-5점)</li>
+<li>답변 점수 (1-5점)</li>
+<li>학습 지원 점수 (1-5점)</li>
+<li><strong>프롬프트</strong>: 5개 Agent의 설계 원칙 및 구조</li>
+</ul>
+<hr />
+<h2 id="1-question-score">1️⃣ 질문 점수 (Question Score) 분석<a class="headerlink" href="#1-question-score" title="Permanent link">&para;</a></h2>
+<h3 id="_4">이론적 근거<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><strong>질문 생성 이론의 4가지 품질 기준</strong>:
+1. 맥락 제공 (Context)
+2. 명확성 (Clarity)
+3. 적절성 (Relevance)
+4. 학습 관련성 (Educational Value)</p>
+<h3 id="_5">프롬프트 설계 연관<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><strong>Classifier Agent</strong>:
+- 듀이의 반성적 사고 5단계 질문 전략 적용
+- 명료화 질문 생성 규칙:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1. 문제 인식: &quot;어떤 부분이 가장 어렵거나 궁금하셨나요? 🤔&quot;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2. 문제 정의: &quot;이해한 부분과 헷갈리는 부분을 나누어볼까요?&quot;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>3. 연결 탐색: &quot;이미 알고 있는 개념과 비교하면?&quot;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>4. 사고 전개: &quot;왜 이 부분이 궁금하신지 설명해주실 수 있나요?&quot;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>5. 이해 검증: &quot;어디까지 이해했고, 어디서부터 막히셨나요?&quot;
+</span></code></pre></div></p>
+<p><strong>Question Improvement Agent</strong>:
+- 명료화 완료 평가 (PASS/NEED_MORE)
+- 최종 질문 생성 시 4가지 품질 기준 충족 확인</p>
+<h3 id="_6">결과 분석<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>Agent</th>
+<th>Freepass</th>
+<th>차이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>평균 점수</td>
+<td>3.41</td>
+<td>3.76</td>
+<td>-0.35점</td>
+</tr>
+<tr>
+<td>표준편차</td>
+<td>1.21</td>
+<td>1.39</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5점 비율</td>
+<td>26.5%</td>
+<td>45.9%</td>
+<td>-19.4%p</td>
+</tr>
+<tr>
+<td>3점 비율</td>
+<td>48.5%</td>
+<td>27.5%</td>
+<td>+21.0%p</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_7">점수 분포<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>5점 (우수): ████████████ Agent 26.5%  vs  Freepass 45.9% ███████████████████████
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>4점 (양호): ████ Agent 11.8%  vs  Freepass 11.9% ████
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>3점 (보통): █████████████████████████ Agent 48.5%  vs  Freepass 27.5% ████████████
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2점 (미흡): █ Agent 2.9%  vs  Freepass 1.8% █
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>1점 (부적절): ████ Agent 10.3%  vs  Freepass 12.8% █████
+</span></code></pre></div>
+<h3 id="freepass-5">🔍 심층 분석: 왜 Freepass가 5점 비율이 더 높은가?<a class="headerlink" href="#freepass-5" title="Permanent link">&para;</a></h3>
+<p><strong>⚠️ 중요</strong>: Agent/Freepass 모드는 <strong>A/B 테스트로 무작위 배정**되었으며, 학생들은 자신이 어떤 모드를 사용하는지 알지 못했습니다. 따라서 **선택 편향(selection bias)은 존재하지 않습니다.</strong></p>
+<h4 id="1">가설 1: 명료화 과정의 평가 방식 차이<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Agent 모드</strong>: 불명확한 질문 → 명료화 질문 제시 → 학생 답변 → 최종 질문 평가</li>
+<li>루브릭은 **최종 명료화된 질문**이 아닌 **원본 질문**을 평가</li>
+<li>명료화 과정이 있었다는 것 자체가 원본 질문이 불명확했음을 의미</li>
+<li>
+<p>결과: 3점 비율 높음 (48.5%)</p>
+</li>
+<li>
+<p><strong>Freepass 모드</strong>: 불명확한 질문 → 명료화 없이 즉시 답변 → 원본 질문 그대로 평가</p>
+</li>
+<li>동일하게 불명확한 질문이라도 명료화 과정이 없어서 판단 근거 없음</li>
+<li>AI가 답변을 생성했다면 "답변 가능한 질문"으로 간주될 가능성</li>
+<li>결과: 5점 비율 높음 (45.9%)</li>
+</ul>
+<h4 id="2-ai">가설 2: AI 채점자의 평가 기준 차이<a class="headerlink" href="#2-ai" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Agent 모드</strong>: 명료화 대화 이력이 포함되어 평가</li>
+<li>
+<p>AI 채점자가 "명료화가 필요했다" → "원본 질문 불명확" → 낮은 점수</p>
+</li>
+<li>
+<p><strong>Freepass 모드</strong>: 원본 질문과 답변만 평가</p>
+</li>
+<li>AI 채점자가 답변이 생성되었으면 "충분히 명확한 질문"으로 판단 가능성</li>
+</ul>
+<h4 id="agent">중요한 발견: <strong>세션 점수 증가폭에서는 Agent가 우수</strong><a class="headerlink" href="#agent" title="Permanent link">&para;</a></h4>
+<p>이전 분석 결과:
+- <strong>전체 비교</strong>: Agent 평균 증가폭 &gt; Freepass
+- <strong>Q1-Q2 (하위권)</strong>: Agent가 질문 점수에서 특히 효과적
+  - Q1: Agent +0.110 vs Freepass -0.169
+  - Q2: Agent +0.085 vs Freepass -0.214</p>
+<p><strong>해석 (A/B 테스트 - 무작위 배정)</strong>:
+- 단일 세션: Freepass가 5점 비율 높음
+  - <strong>이유</strong>: AI 채점자가 명료화 이력을 보고 원본 질문을 더 엄격히 평가
+  - Agent는 명료화 과정 자체가 "원본 질문 불명확" 신호로 작용
+  - Freepass는 명료화 없어서 상대적으로 관대한 평가
+- 학습 진행: <strong>Agent가 점수 증가폭에서 우수</strong>
+  - 명료화 프로세스가 학생의 질문 능력 자체를 향상시킴
+  - <strong>지속적인 질문 품질 개선에 기여</strong></p>
+<hr />
+<h2 id="2-answer-score">2️⃣ 답변 점수 (Answer Score) 분석<a class="headerlink" href="#2-answer-score" title="Permanent link">&para;</a></h2>
+<h3 id="_8">이론적 근거<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>서론에서 식별된 AI 답변의 4가지 문제점</strong>:
+1. 개념 오해 (맥락 파악 실패)
+2. 수준 불일치 (학생 수준 미고려)
+3. 비표준 용어 (교과서 용어 미사용)
+4. 인지 과부하 (과도한 정보량)</p>
+<p><strong>루브릭의 명료화 처리 원칙</strong>:
+- 5점: 불명확 시 명료화 후 전제·범위 명시
+- 3점: 불명확 질문에 추가 확인 없이 일반 설명
+- 2점: 모호 상황에서 명료화 없이 백과사전식 답변
+- 1점: 모호 상황에서 장문 일반 설명으로 인지 과부하</p>
+<h3 id="_9">프롬프트 설계 연관<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p><strong>Answer Generator Agent</strong>:
+- Bloom의 K1-K4 분류를 실제 답변 구조로 구현
+  - K1 (즉답형): 핵심 내용 → 핵심 공식 → 예시 → 보충
+  - K2 (설명형): 개념 정리 → 연결고리 → 차이점 → 주의점
+  - K3 (적용형): 단계별 절차 → 적용 시기 → 연습 → 실수 방지
+  - K4 (문제해결형): 문제 분석 → 다양한 접근법 → 점검 → 대안</p>
+<p><strong>교육적 원칙</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>- 대상: 고등학교 2학년 학생
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>- 언어: 한국어, 존댓말 필수
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>- 용어: 2015 개정 교육과정 표준 용어 사용
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  ✓ 부등식 (O) / 불등식 (X)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  ✓ 함수 (O) / 함수식 (X)
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  ✓ 미분 (O) / 도함수 (O)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>- 인지 부하 관리: 한 번에 한 가지 개념만
+</span></code></pre></div></p>
+<p><strong>LaTeX 수식 작성 규칙</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>✅ 올바른 예시: $P(k)$가 참이면 $P(k+1)$도 참
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>❌ 잘못된 예시: $$P(k)가 참 \Rightarrow P(k+1)도 참$$
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>(수식 구분자 안에 한글 포함 금지)
+</span></code></pre></div></p>
+<h3 id="_10">결과 분석<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>Agent</th>
+<th>Freepass</th>
+<th>차이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>평균 점수</td>
+<td>4.28</td>
+<td>4.31</td>
+<td>-0.03점</td>
+</tr>
+<tr>
+<td>표준편차</td>
+<td>1.21</td>
+<td>1.25</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5점 비율</td>
+<td>69.1%</td>
+<td>71.6%</td>
+<td>-2.4%p</td>
+</tr>
+<tr>
+<td>3점 이하 비율</td>
+<td>25.0%</td>
+<td>22.0%</td>
+<td>+3.0%p</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">점수 분포<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>5점 (우수): █████████████████████████████████ Agent 69.1%  vs  Freepass 71.6% ███████████████████████████████████
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>4점 (양호): ██ Agent 5.9%  vs  Freepass 6.4% ███
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>3점 (보통): █████ Agent 13.2%  vs  Freepass 11.9% ████
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>2점 (미흡): ███ Agent 7.4%  vs  Freepass 1.8% █
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>1점 (불량): █ Agent 4.4%  vs  Freepass 8.3% ███
+</span></code></pre></div>
+<h3 id="_12">🔍 심층 분석: 답변 점수의 유사성<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">발견 1: 두 모드 모두 높은 답변 품질<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Agent: 69.1% 우수 답변 (5점)</li>
+<li>Freepass: 71.6% 우수 답변 (5점)</li>
+<li><strong>두 모드 간 차이 미미 (-2.4%p)</strong></li>
+</ul>
+<h4 id="2">발견 2: 불명확 질문 처리의 차이<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>3점 이하 비율</strong> (불명확 질문 처리 미흡):</li>
+<li>Agent: 25.0%</li>
+<li>Freepass: 22.0%</li>
+<li><strong>Freepass가 3.0%p 적음</strong></li>
+</ul>
+<p><strong>해석</strong>:
+- Answer Generator와 FreeTalker 모두 동일한 LLM 모델 (gemini-2.5-flash-lite) 사용
+- 답변 생성 자체의 품질은 유사
+- 차이는 **명료화 과정의 유무**에서 발생</p>
+<h4 id="3-agent">발견 3: 세션 점수 증가폭에서는 Agent가 우수<a class="headerlink" href="#3-agent" title="Permanent link">&para;</a></h4>
+<p>이전 분석 결과 (답변 점수 증가폭):
+- <strong>전체</strong>: Agent +0.371 (Cohen's d) vs Freepass
+- <strong>Q1-Q2 (하위권)</strong>: 
+  - Q1: Agent +0.083 vs Freepass -0.241
+  - Q2: Agent +0.089 vs Freepass -0.087</p>
+<p><strong>해석</strong>:
+- 단일 세션에서는 두 모드 간 답변 품질 차이 미미
+- 하지만 <strong>학습 진행에 따른 답변 품질 향상**에서는 Agent가 우수
+- **명료화를 통한 맥락 파악이 지속적인 답변 품질 개선에 기여</strong></p>
+<hr />
+<h2 id="3-context-score">3️⃣ 학습 지원 점수 (Context Score) 분석<a class="headerlink" href="#3-context-score" title="Permanent link">&para;</a></h2>
+<h3 id="_13">이론적 근거<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p><strong>Dewey의 반성적 사고 5단계</strong>:
+1. 문제 상황 인식 (Felt Difficulty)
+2. <strong>문제의 명료화 (Problem Clarification)</strong> ← <strong>Agent 핵심 기능</strong>
+3. 가설 형성 (Hypothesis Formation)
+4. 가설의 논리적 전개 (Reasoning)
+5. 검증 및 결론 (Verification)</p>
+<p><strong>루브릭 평가 기준</strong>:
+- 5점: 명료화 질문 + 맥락 파악 + 단계적 접근 + 사고 확장 + 검증/피드백
+- 4점: 명료화 수행 + 3가지 제공
+- 3점: 맥락 파악 + 일부 안내
+- 2점: 최소한의 맥락만 제공
+- 1점: 맥락 없이 일반 답변</p>
+<h3 id="_14">프롬프트 설계 연관<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p><strong>Classifier Agent</strong>:
+- needs_clarify 판정 시 명료화 질문 생성
+- 듀이의 5단계 질문 전략 직접 구현</p>
+<p><strong>Question Improvement Agent</strong>:
+- PASS/NEED_MORE 평가
+- 명료화 생략 기준:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>1. 원본 질문이 이미 충분히 구체적인 경우
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>2. 학생이 구체적인 답변을 한 경우
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>3. 맥락이 명확한 경우
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>4. 최대 명료화 횟수(3회)에 가까워진 경우
+</span></code></pre></div></p>
+<h3 id="_15">결과 분석<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>Agent</th>
+<th>Freepass</th>
+<th>차이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>평균 점수</td>
+<td>3.53</td>
+<td>3.46</td>
+<td>+0.07점</td>
+</tr>
+<tr>
+<td>표준편차</td>
+<td>1.43</td>
+<td>1.55</td>
+<td>-</td>
+</tr>
+<tr>
+<td>5점 비율</td>
+<td>42.6%</td>
+<td>45.9%</td>
+<td>-3.2%p</td>
+</tr>
+<tr>
+<td>4-5점 비율</td>
+<td>51.5%</td>
+<td>51.4%</td>
+<td>+0.1%p</td>
+</tr>
+<tr>
+<td>1-2점 비율</td>
+<td>36.8%</td>
+<td>41.3%</td>
+<td>-4.5%p</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_16">점수 분포<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>5점 (체계적): ████████████████████ Agent 42.6%  vs  Freepass 45.9% ██████████████████████
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>4점 (양호): ████ Agent 8.8%  vs  Freepass 5.5% ██
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>3점 (보통): ████ Agent 11.8%  vs  Freepass 7.3% ███
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2점 (최소): ███████████████ Agent 32.4%  vs  Freepass 31.2% ██████████████
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>1점 (없음): █ Agent 4.4%  vs  Freepass 10.1% ████
+</span></code></pre></div>
+<h3 id="_17">🔍 심층 분석: 명료화 수행의 영향<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">발견 1: 명료화 수행 비율 유사<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>4-5점 비율</strong> (명료화 수행):</li>
+<li>Agent: 51.5%</li>
+<li>Freepass: 51.4%</li>
+<li><strong>거의 동일 (+0.1%p)</strong></li>
+</ul>
+<p><strong>의문</strong>: 왜 Agent와 Freepass의 명료화 수행 비율이 유사한가?</p>
+<h4 id="2_1">발견 2: 학습 지원 미흡 비율 차이<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>1점 비율</strong> (학습 지원 없음):</li>
+<li>Agent: 4.4%</li>
+<li>Freepass: 10.1%</li>
+<li><strong>Agent가 5.7%p 적음</strong></li>
+</ul>
+<p><strong>해석</strong>:
+- Agent는 최소한의 맥락이라도 제공하는 경향
+- Freepass는 맥락 없이 즉답하는 경우가 더 많음</p>
+<h4 id="3-agent_1">발견 3: 세션 점수 증가폭에서는 Agent가 우수<a class="headerlink" href="#3-agent_1" title="Permanent link">&para;</a></h4>
+<p>이전 분석 결과 (맥락 점수 증가폭):
+- <strong>전체</strong>: Agent +0.390 (Cohen's d) vs Freepass
+- <strong>Q1-Q2 (하위권)</strong>:
+  - Q1: Agent +0.141 vs Freepass +0.059
+  - Q2: Agent +0.099 vs Freepass -0.017</p>
+<p><strong>해석</strong>:
+- 단일 세션에서는 명료화 수행 비율 유사
+- 하지만 <strong>학습 진행에 따른 맥락 파악 능력 향상**에서는 Agent가 우수
+- **체계적인 명료화 프로세스가 지속적인 학습 지원 개선에 기여</strong></p>
+<hr />
+<h2 id="4-total-score">4️⃣ 총점 (Total Score) 분석<a class="headerlink" href="#4-total-score" title="Permanent link">&para;</a></h2>
+<h3 id="_18">결과 분석<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>지표</th>
+<th>Agent</th>
+<th>Freepass</th>
+<th>차이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>평균 총점</td>
+<td>11.22</td>
+<td>11.53</td>
+<td>-0.31점</td>
+</tr>
+<tr>
+<td>표준편차</td>
+<td>2.85</td>
+<td>3.51</td>
+<td>-</td>
+</tr>
+<tr>
+<td>12점 이상 비율</td>
+<td>44.1%</td>
+<td>52.3%</td>
+<td>-8.2%p</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_19">🔍 종합 분석<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">발견 1: 단일 세션 점수는 유사<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>전체 평균 차이: -0.31점 (미미한 차이)</li>
+<li>우수 세션 비율: Agent 44.1% vs Freepass 52.3%</li>
+</ul>
+<h4 id="2-agent">발견 2: 세션 점수 증가폭에서는 Agent가 우수<a class="headerlink" href="#2-agent" title="Permanent link">&para;</a></h4>
+<p>이전 분석 결과 (총점 증가폭):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>전체 비교:
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>지표              Agent        Freepass     t       df      Cohen&#39;s d    p
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>원점수 증가량     0.45(3.28)   -0.39(3.65)  0.752   34.48   0.240        p&gt;.05
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>천장효과 보정     -0.137(1.08) -0.101(1.22) -0.098  34.68   -0.031       p&gt;.05
+</span></code></pre></div></p>
+<p><strong>세부 기준별 증가폭 (Cohen's d)</strong>:
+- 질문 점수: +0.387 (중간 효과 크기)
+- 답변 점수: +0.371 (중간 효과 크기)
+- 맥락 점수: +0.390 (중간 효과 크기)</p>
+<p><strong>해석</strong>:
+- 단일 세션 점수: Agent ≈ Freepass
+- <strong>학습 진행에 따른 점수 증가</strong>: <strong>Agent &gt; Freepass</strong>
+- <strong>3가지 세부 기준 모두에서 Agent가 긍정적 증가 보임</strong></p>
+<hr />
+<h2 id="_20">🔗 루브릭과 프롬프트 설계의 연관관계 종합<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<h3 id="1-classifier-agent">1. 질문 점수 ↔ Classifier Agent 프롬프트<a class="headerlink" href="#1-classifier-agent" title="Permanent link">&para;</a></h3>
+<h4 id="_21">프롬프트 설계 원칙<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>듀이의 반성적 사고 5단계 질문 전략</li>
+<li>학생에게 직접 묻는 자연스러운 질문 형태</li>
+<li>닫힌 질문(❌) → 열린 탐색 질문(✅)</li>
+</ul>
+<h4 id="_22">루브릭 평가 결과<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>단일 세션</strong>: Freepass가 5점 비율 높음 (45.9% vs 26.5%)</li>
+<li><strong>학습 진행</strong>: Agent가 질문 점수 증가폭 우수 (Cohen's d = 0.387)</li>
+<li><strong>하위권 효과</strong>: Q1-Q2에서 Agent가 특히 효과적</li>
+</ul>
+<h4 id="_23">연관관계<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>명료화 프롬프트가 지속적인 질문 품질 향상에 기여</strong>
+- 단일 세션에서는 명확한 질문 선택 편향 가능성
+- 학습 진행에 따라 Agent 모드 사용자의 질문 품질이 개선됨
+- 듀이의 5단계 전략이 학생의 사고 과정을 촉진</p>
+<h3 id="2-answer-generator-agent">2. 답변 점수 ↔ Answer Generator Agent 프롬프트<a class="headerlink" href="#2-answer-generator-agent" title="Permanent link">&para;</a></h3>
+<h4 id="_24">프롬프트 설계 원칙<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Bloom의 K1-K4 분류를 실제 답변 구조로 구현</li>
+<li>표준 용어 준수: 2015 개정 교육과정</li>
+<li>인지 부하 관리: 한 번에 한 가지 개념만</li>
+<li>LaTeX 수식 작성 규칙: 한글과 수식 분리</li>
+</ul>
+<h4 id="_25">루브릭 평가 결과<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>단일 세션</strong>: 두 모드 간 답변 품질 유사 (69.1% vs 71.6% 우수)</li>
+<li><strong>학습 진행</strong>: Agent가 답변 점수 증가폭 우수 (Cohen's d = 0.371)</li>
+<li><strong>하위권 효과</strong>: Q1-Q2에서 Agent가 특히 효과적</li>
+</ul>
+<h4 id="_26">연관관계<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>K1-K4 맞춤형 프롬프트가 답변 품질 향상에 기여</strong>
+- 두 모드 모두 동일 LLM 모델 사용으로 기본 품질 유사
+- 명료화를 통한 맥락 파악이 답변 품질 개선에 기여
+- 표준 용어 준수와 인지 부하 관리가 이해도 향상에 기여</p>
+<h3 id="3">3. 학습 지원 점수 ↔ 명료화 프로세스 프롬프트<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<h4 id="_27">프롬프트 설계 원칙<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Dewey의 2단계 "문제의 명료화" 직접 구현</li>
+<li>needs_clarify 판정 시 명료화 질문 생성</li>
+<li>PASS/NEED_MORE 평가로 명료화 완료 여부 판단</li>
+<li>최대 3회 명료화로 과도한 질문 방지</li>
+</ul>
+<h4 id="_28">루브릭 평가 결과<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>단일 세션</strong>: 명료화 수행 비율 유사 (51.5% vs 51.4%)</li>
+<li><strong>학습 진행</strong>: Agent가 맥락 점수 증가폭 우수 (Cohen's d = 0.390)</li>
+<li><strong>하위권 효과</strong>: Q1-Q2에서 Agent가 특히 효과적</li>
+</ul>
+<h4 id="_29">연관관계<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<p>✅ <strong>명료화 프로세스 프롬프트가 학습 지원 개선에 기여</strong>
+- 단일 세션에서는 명료화 수행 비율 유사
+- 학습 진행에 따라 맥락 파악 능력이 개선됨
+- Dewey의 이론이 실제 학습 지원에 효과적으로 작동</p>
+<hr />
+<h2 id="_30">💡 핵심 발견 및 논문 활용<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h2>
+<h3 id="1-ab">1. 프롬프트 설계의 교육적 효과 (A/B 테스트 검증)<a class="headerlink" href="#1-ab" title="Permanent link">&para;</a></h3>
+<p><strong>⚠️ 연구 설계의 강점</strong>: Agent/Freepass 모드는 **무작위 배정(A/B 테스트)**으로 할당되어 선택 편향이 없으며, 학생들은 자신이 어떤 모드를 사용하는지 알지 못했습니다. 따라서 관찰된 차이는 순수하게 **프롬프트 설계의 효과**입니다.</p>
+<p><strong>단일 세션 vs 학습 진행의 차이</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>측면</th>
+<th>단일 세션 점수</th>
+<th>학습 진행 (점수 증가폭)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>질문 점수</strong></td>
+<td>Freepass &gt; Agent</td>
+<td><strong>Agent &gt; Freepass</strong> ✓</td>
+</tr>
+<tr>
+<td><strong>답변 점수</strong></td>
+<td>Agent ≈ Freepass</td>
+<td><strong>Agent &gt; Freepass</strong> ✓</td>
+</tr>
+<tr>
+<td><strong>맥락 점수</strong></td>
+<td>Agent ≈ Freepass</td>
+<td><strong>Agent &gt; Freepass</strong> ✓</td>
+</tr>
+<tr>
+<td><strong>총점</strong></td>
+<td>Agent ≈ Freepass</td>
+<td><strong>Agent &gt; Freepass</strong> ✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>해석 (무작위 배정 기반)</strong>:
+- ✅ <strong>단일 세션 차이</strong>: AI 채점자의 평가 방식 차이 (명료화 이력 → 엄격한 평가)
+- ✅ <strong>학습 진행 차이</strong>: 프롬프트 설계가 실제 학습 능력 향상에 기여
+- ✅ <strong>인과관계 확립</strong>: 무작위 배정으로 프롬프트 → 학습 효과 인과관계 입증
+- ✅ <strong>하위권 효과</strong>: 학습 지원이 필요한 학생들에게 특히 효과적</p>
+<h3 id="2_2">2. 이론과 실제의 연결<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
+<p><strong>듀이의 반성적 사고 5단계</strong>:
+- 프롬프트 설계: Classifier Agent의 명료화 질문 전략
+- 루브릭 평가: 학습 지원 점수의 5점 기준
+- 실제 효과: 명료화 수행 비율 51.5%, 맥락 점수 증가폭 0.390 (Cohen's d)</p>
+<p><strong>Bloom의 학습 목표 분류학</strong>:
+- 프롬프트 설계: Answer Generator의 K1-K4 맞춤형 구조
+- 루브릭 평가: 답변 점수의 수준 일치 기준
+- 실제 효과: 답변 우수 비율 69.1%, 답변 점수 증가폭 0.371 (Cohen's d)</p>
+<h3 id="3_1">3. 논문 작성 시사점<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h3>
+<h4 id="3_2">시스템 설계 (3장)<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>프롬프트 설계의 이론적 근거 명시</li>
+<li>듀이, Bloom 이론이 실제 프롬프트 구조로 구현된 과정 설명</li>
+<li>각 Agent의 프롬프트가 루브릭 평가 기준과 연결됨을 강조</li>
+</ul>
+<h4 id="6">결과 분석 (6장)<a class="headerlink" href="#6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>단일 세션 점수보다 **학습 진행에 따른 점수 증가폭**에 초점</li>
+<li>프롬프트 설계가 3가지 세부 기준 모두에서 긍정적 영향</li>
+<li>하위권 학생들에게 특히 효과적임을 강조</li>
+</ul>
+<h4 id="_31">연구 신뢰성 (부록)<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<ul>
+<li>루브릭과 프롬프트 설계가 동일한 이론적 기반 공유</li>
+<li>평가 기준과 시스템 설계가 일관성 있게 연결됨</li>
+<li>재현 가능하고 투명한 연구 설계</li>
+</ul>
+<hr />
+<h2 id="_32">📈 통계적 유의성<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<h3 id="_33">세션 점수 증가폭 비교 (천장효과 보정)<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<p><strong>전체 비교</strong>:
+- 질문 점수: Cohen's d = 0.387 (중간 효과 크기)
+- 답변 점수: Cohen's d = 0.371 (중간 효과 크기)
+- 맥락 점수: Cohen's d = 0.390 (중간 효과 크기)</p>
+<p><strong>하위권(Q1-Q2) 효과</strong>:
+- Q1 질문 점수: Agent +0.110 vs Freepass -0.169
+- Q1 답변 점수: Agent +0.083 vs Freepass -0.241
+- Q1 맥락 점수: Agent +0.141 vs Freepass +0.059</p>
+<p><strong>해석</strong>:
+- ✅ 3가지 세부 기준 모두에서 Agent가 긍정적 증가
+- ✅ 하위권 학생들에게 특히 효과적
+- ✅ 프롬프트 설계가 학습 효과 개선에 실질적 기여</p>
+<hr />
+<h2 id="_34">🎓 결론<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h2>
+<h3 id="_35">프롬프트 설계와 루브릭 평가의 일관성<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>이론적 기반 공유</strong>:</li>
+<li>듀이의 반성적 사고 → Classifier Agent + 학습 지원 점수</li>
+<li>Bloom의 분류학 → Answer Generator + 답변 점수</li>
+<li>
+<p>질문 생성 이론 → Question Improvement + 질문 점수</p>
+</li>
+<li>
+<p><strong>실제 효과 검증</strong>:</p>
+</li>
+<li>단일 세션: Agent ≈ Freepass</li>
+<li><strong>학습 진행: Agent &gt; Freepass (3가지 기준 모두)</strong></li>
+<li>
+<p><strong>하위권: Agent &gt; Freepass (특히 효과적)</strong></p>
+</li>
+<li>
+<p><strong>연구 설계의 우수성</strong>:</p>
+</li>
+<li>루브릭과 프롬프트가 동일한 교육학 이론 기반</li>
+<li>평가 기준과 시스템 설계가 일관성 있게 연결</li>
+<li>재현 가능하고 투명한 연구 방법론</li>
+</ol>
+<h3 id="_36">논문 활용 핵심 메시지<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>"MAICE의 프롬프트 설계는 듀이와 Bloom의 교육학 이론을 실제 시스템으로 구현했으며, A/B 테스트(무작위 배정)를 통해 선택 편향 없이 프롬프트 설계의 순수한 효과를 측정했다. 루브릭 평가 결과는 단일 세션에서는 두 모드가 유사했으나, 학습 진행에 따른 점수 증가폭 분석에서 Agent 모드가 질문, 답변, 맥락 점수 모두에서 중간 효과 크기(Cohen's d ≈ 0.38)의 개선을 보였다. 이는 명료화 프로세스가 학생의 실제 학습 능력을 향상시키며, 특히 하위권 학생들에게 효과적임을 실증적으로 검증했다. 무작위 배정으로 인과관계가 확립되어, 프롬프트 설계가 학습 효과 개선에 직접 기여함을 입증했다."</strong></p>
+</blockquote>
+<hr />
+<p><strong>작성일</strong>: 2025년 11월 1일<br />
+<strong>버전</strong>: 1.0<br />
+<strong>작성자</strong>: [김규봉]<br />
+<strong>참고</strong>: 본 문서는 177개 세션의 루브릭 평가 결과와 프롬프트 설계 원칙을 비교 분석하였습니다.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="마지막 업데이트">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025년 11월 18일 12:32:36 KST">2025년 11월 18일 12:32:36</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="작성일">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2025년 11월 18일 12:32:36 KST">2025년 11월 18일 12:32:36</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 김규봉 (부산대학교 AI융합교육전공)
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "toc.integrate", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

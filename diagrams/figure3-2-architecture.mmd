@@ -1,0 +1,45 @@
+%%{init: {'theme':'neutral', 'themeVariables': {'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','fontSize':'16px','fontFamily':'Noto Sans KR, Arial'}}}%%
+flowchart TB
+    subgraph Layer1["계층 1: 대화 인터페이스"]
+        UI[학생이 보는 채팅 화면]
+        MathInput[수식 입력 도구]
+        Streaming[실시간 답변 표시]
+    end
+    
+    subgraph Layer2["계층 2: 관리 시스템"]
+        API[대화 관리 서버]
+        DB[(대화 기록<br/>저장소)]
+        Dashboard[교사<br/>대시보드]
+    end
+    
+    subgraph Layer3["계층 3: 에이전트 시스템"]
+        Classifier[Classifier<br/>질문 분류]
+        QI[Question<br/>Improvement<br/>명료화]
+        AG[Answer<br/>Generator<br/>답변 생성]
+        Obs[Observer<br/>학습 관찰]
+        FT[FreeTalker<br/>대조군]
+    end
+    
+    UI -->|질문 전송| API
+    API -->|질문 전달| Classifier
+    Classifier -->|명료화 필요| QI
+    Classifier -->|바로 답변| AG
+    QI -->|명료화 완료| AG
+    AG -->|답변 생성| API
+    AG -->|학습 데이터| Obs
+    Obs -->|요약 저장| DB
+    API -->|실시간 답변| Streaming
+    DB -->|학습 분석| Dashboard
+
+
+
+
+
+
+
+
+
+
+
+
+
