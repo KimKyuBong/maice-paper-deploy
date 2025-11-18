@@ -1,0 +1,33 @@
+{
+  "table": "표Ⅴ-23, Ⅴ-25, Ⅴ-26",
+  "title": "Bloom-Dewey 이론 실증 분석 원본 데이터",
+  "note": "질적 코딩 기반 분석. DB 로그를 수동으로 Bloom/Dewey 단계 코딩 필요",
+  "db_logs_summary": {
+    "prompt_logs": 1671,
+    "response_logs": 1581,
+    "total_logs": 3252,
+    "unique_sessions_in_logs": 418,
+    "common_sessions_with_llm": 229
+  },
+  "agent_distribution": {
+    "freetalker_llm": 662,
+    "classifier_llm": 289,
+    "observer_llm": 266,
+    "answer_generator_llm": 247,
+    "question_improvement_llm": 116,
+    "answer_generator": 35,
+    "question_classifier": 32,
+    "question_improvement": 24
+  },
+  "data_files": {
+    "prompt_logs": "data/db_exports/public_llm_prompt_logs_full.csv",
+    "response_logs": "data/db_exports/public_llm_response_logs_full.csv",
+    "llm_scores": "01_llm_scoring/results/llm_3models_averaged_perfect.csv",
+    "session_metadata": "data/session_data/full_sessions_with_scores.csv"
+  },
+  "analysis_note": {
+    "bloom_coding": "237건 답변(answer_generator_llm)을 Bloom 단계로 수동 코딩",
+    "dewey_tracking": "대화 흐름을 Dewey 5단계로 추적 (278건 명료화 질문)",
+    "score_matching": "LLM 평가점수와 대화 로그 매칭하여 점수 구간별 분석"
+  }
+}

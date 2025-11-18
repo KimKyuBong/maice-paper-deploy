@@ -1,0 +1,20 @@
+{
+  "table": "표Ⅴ-1",
+  "title": "수집 데이터 현황",
+  "session_counts": {
+    "agent": 115,
+    "freepass": 169,
+    "total": 284
+  },
+  "student_counts": {
+    "agent": 27,
+    "freepass": 28,
+    "total": 55
+  },
+  "average_sessions_per_student": {
+    "agent": 4.3,
+    "freepass": 6.0,
+    "total": 5.2
+  },
+  "data_file": "data/session_data/full_sessions_with_scores.csv"
+}

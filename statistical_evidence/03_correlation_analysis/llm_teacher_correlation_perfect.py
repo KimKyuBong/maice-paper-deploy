@@ -36,8 +36,22 @@ df_teacher = pd.read_csv(TEACHER_FILE)
 print(f"✓ LLM: {len(df_llm)}개 세션")
 print(f"✓ 교사: {len(df_teacher)}개 세션\n")
 
-# [2] 데이터 병합
-print("[2] 데이터 병합...")
+# [2] LLM 데이터에 영역별 합계 추가
+print("[2] LLM 영역별 합계 계산...")
+
+# 질문 영역 (A1, A2, A3)
+df_llm['avg_question_total'] = df_llm['avg_A1_total'] + df_llm['avg_A2_total'] + df_llm['avg_A3_total']
+
+# 답변 영역 (B1, B2, B3)
+df_llm['avg_answer_total'] = df_llm['avg_B1_total'] + df_llm['avg_B2_total'] + df_llm['avg_B3_total']
+
+# 맥락 영역 (C1, C2)
+df_llm['avg_context_total'] = df_llm['avg_C1_total'] + df_llm['avg_C2_total']
+
+print(f"✓ 영역별 합계 계산 완료\n")
+
+# [3] 데이터 병합
+print("[3] 데이터 병합...")
 
 # 세션 ID로 병합
 df_merged = pd.merge(
@@ -54,8 +68,8 @@ if len(df_merged) == 0:
     print("⚠️  공통 세션이 없습니다!")
     exit(1)
 
-# [3] 매핑 정의
-print("[3] 상관관계 분석...")
+# [4] 매핑 정의
+print("[4] 상관관계 분석...")
 
 # LLM-교사 매핑
 mappings = {
@@ -137,8 +151,8 @@ for key, mapping in mappings.items():
 
 print(f"✓ {len(correlations)}개 카테고리 상관분석 완료\n")
 
-# [4] 중분류 상관분석
-print("[4] 중분류 상관분석...")
+# [5] 중분류 상관분석
+print("[5] 중분류 상관분석...")
 
 # LLM 중분류
 llm_mid_cats = {
@@ -184,8 +198,8 @@ for cat_code in llm_mid_cats.keys():
 
 print(f"✓ {len(mid_correlations)}개 중분류 상관분석 완료\n")
 
-# [5] 결과 저장
-print("[5] 결과 저장...")
+# [6] 결과 저장
+print("[6] 결과 저장...")
 
 # 대분류 상관
 corr_file = RESULTS_DIR / "llm_teacher_correlations_perfect.json"

@@ -20,6 +20,7 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 # 소스 파일
 LLM_AVG = BASE_DIR / "01_llm_scoring" / "results" / "llm_3models_averaged_perfect.csv"
 SESSION_DATA = BASE_DIR / "data" / "session_data" / "full_sessions_with_scores.csv"
+STUDENT_INFO = BASE_DIR / "data" / "session_data" / "midterm_scores_with_quartile.csv"
 
 print(f"{'='*80}")
 print(f"모드별 & Quartile별 분석")
@@ -29,20 +30,39 @@ print(f"{'='*80}\n")
 print("[1] 데이터 로드...")
 df_llm = pd.read_csv(LLM_AVG)
 df_session = pd.read_csv(SESSION_DATA)
+df_student = pd.read_csv(STUDENT_INFO)
 
 print(f"✓ LLM 평균: {len(df_llm)}개")
-print(f"✓ 세션 메타: {len(df_session)}개\n")
+print(f"✓ 세션 메타: {len(df_session)}개")
+print(f"✓ 학생 정보: {len(df_student)}개\n")
 
 # [2] 데이터 병합
 print("[2] 데이터 병합...")
 
-# session_id로 병합
+# session_id로 LLM과 세션 병합
 df = pd.merge(
     df_llm,
     df_session,
     on='session_id',
     how='inner'
 )
+
+# username으로 학생 정보(Quartile) 병합
+if 'username' in df.columns and 'username' in df_student.columns:
+    # username 정규화: @ 제거, . 제거 (24.010@bssm.hs.kr -> 24010)
+    df['username_clean'] = df['username'].astype(str).str.replace('@bssm.hs.kr', '', regex=False).str.replace('.', '', regex=False)
+    df_student['username_clean'] = df_student['username'].astype(str).str.replace('@bssm.hs.kr', '', regex=False).str.replace('.', '', regex=False)
+    
+    df = pd.merge(
+        df,
+        df_student[['username_clean', 'quartile', 'midterm_total']].rename(columns={'username_clean': 'username_clean'}),
+        on='username_clean',
+        how='left'
+    )
+    print(f"✓ Quartile 정보 병합 완료")
+    print(f"  - Quartile 정보 있는 세션: {df['quartile'].notna().sum()}개")
+else:
+    print(f"⚠️  username 컬럼이 없어 Quartile 병합 실패")
 
 print(f"✓ 병합 완료: {len(df)}개 세션")
 print(f"✓ Agent: {len(df[df['mode']=='agent'])}개")

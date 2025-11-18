@@ -20,7 +20,7 @@ plt.rcParams['axes.unicode_minus'] = False
 
 # 데이터 로드
 survey_path = Path(__file__).parent.parent / "data" / "MAICE 사용 설문조사 (2025학년도 2학년 수학)(1-47).csv"
-session_path = Path(__file__).parent.parent / "data" / "llm_evaluations" / "llm_284sessions_complete_UPDATED.csv"
+session_path = Path(__file__).parent.parent / "data" / "session_data" / "full_sessions_with_scores.csv"
 
 survey_df = pd.read_csv(survey_path)
 session_df = pd.read_csv(session_path)
@@ -31,11 +31,16 @@ print("불명확한 응답 제외")
 print("="*100)
 
 # 세션 데이터에서 학생별 모드 정보 추출
-student_mode = session_df.groupby('student_name')['assigned_mode'].first().reset_index()
-student_mode.columns = ['전자 메일', 'assigned_mode']
+# username 컬럼 사용 (전자 메일 형식: 24.001@bssm.hs.kr)
+session_df['username_clean'] = session_df['username'].astype(str).str.split('@').str[0]
+student_mode = session_df.groupby('username_clean')['mode'].first().reset_index()
+student_mode.columns = ['username_clean', 'assigned_mode']
+
+# 설문 데이터의 전자 메일에서 username 추출
+survey_df['username_clean'] = survey_df['전자 메일'].astype(str).str.split('@').str[0]
 
 # 설문 데이터와 모드 정보 병합
-survey_with_mode = survey_df.merge(student_mode, on='전자 메일', how='left')
+survey_with_mode = survey_df.merge(student_mode, on='username_clean', how='left')
 
 # 수동 분류 매핑 (불명확 제외)
 preference_mapping = {
@@ -342,6 +347,7 @@ print(f"✓ 모드 비교 결과 저장: {comparison_path}")
 print("\n" + "="*100)
 print("분석 완료!")
 print("="*100)
+
 
 
 

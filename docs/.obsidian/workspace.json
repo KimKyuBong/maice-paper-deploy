@@ -11,10 +11,14 @@
             "id": "3bf01869c25de00f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "chapters/02-theoretical-background.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "02-theoretical-background"
             }
           }
         ]

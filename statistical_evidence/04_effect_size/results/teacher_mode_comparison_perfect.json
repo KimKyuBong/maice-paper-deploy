@@ -1,0 +1,50 @@
+{
+  "overall": {
+    "agent_mean": 21.73,
+    "agent_std": 5.860808957187826,
+    "agent_n": 50,
+    "freepass_mean": 19.48,
+    "freepass_std": 7.000699673487454,
+    "freepass_n": 50,
+    "difference": 2.25,
+    "t_stat": 1.7425754498972013,
+    "p_value": 0.0845447282283453,
+    "cohens_d": 0.3485150899794403
+  },
+  "question": {
+    "agent_mean": 8.02,
+    "agent_std": 2.517206096173344,
+    "agent_n": 50,
+    "freepass_mean": 7.54,
+    "freepass_std": 2.9029190094644743,
+    "freepass_n": 50,
+    "difference": 0.47999999999999954,
+    "t_stat": 0.8833545032004857,
+    "p_value": 0.37920662928780113,
+    "cohens_d": 0.17667090064009713
+  },
+  "answer": {
+    "agent_mean": 8.5,
+    "agent_std": 2.4948927423675684,
+    "agent_n": 50,
+    "freepass_mean": 7.22,
+    "freepass_std": 2.7500649342983055,
+    "freepass_n": 50,
+    "difference": 1.2800000000000002,
+    "t_stat": 2.437556100247017,
+    "p_value": 0.01658928252504951,
+    "cohens_d": 0.48751122004940356
+  },
+  "context": {
+    "agent_mean": 5.21,
+    "agent_std": 1.6723745796602738,
+    "agent_n": 50,
+    "freepass_mean": 4.72,
+    "freepass_std": 1.8821394686876518,
+    "freepass_n": 50,
+    "difference": 0.4900000000000002,
+    "t_stat": 1.3761346150988432,
+    "p_value": 0.17191650430020455,
+    "cohens_d": 0.27522692301976864
+  }
+}

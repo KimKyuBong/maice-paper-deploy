@@ -1,0 +1,23 @@
+{
+  "table": "표Ⅴ-2 (사전 동질성)",
+  "title": "사전 동질성 검증",
+  "agent": {
+    "mean": 56.59,
+    "std": 16.99,
+    "n": 27
+  },
+  "freepass": {
+    "mean": 52.11,
+    "std": 17.86,
+    "n": 28
+  },
+  "difference": 4.49,
+  "t_stat": 0.95,
+  "p_value": 0.345,
+  "equal_variance": true,
+  "levene_p": 0.8275293933256183,
+  "data_files": [
+    "data/session_data/full_sessions_with_scores.csv",
+    "data/session_data/midterm_scores_with_quartile.csv"
+  ]
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "item":"A1 수학 전문성",
+    "mode":"agent",
+    "n":23,
+    "first_mean":3.4927536232,
+    "last_mean":4.0579710145,
+    "change":0.5652173913,
+    "p_value":0.0056700748
+  },
+  {
+    "item":"A1 수학 전문성",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":3.4938271605,
+    "last_mean":3.8518518519,
+    "change":0.3580246914,
+    "p_value":0.1796344288
+  },
+  {
+    "item":"A2 질문 구조화",
+    "mode":"agent",
+    "n":23,
+    "first_mean":4.231884058,
+    "last_mean":4.9420289855,
+    "change":0.7101449275,
+    "p_value":0.0025681697
+  },
+  {
+    "item":"A2 질문 구조화",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":4.2098765432,
+    "last_mean":4.7407407407,
+    "change":0.5308641975,
+    "p_value":0.0225058154
+  },
+  {
+    "item":"A3 학습 맥락",
+    "mode":"agent",
+    "n":23,
+    "first_mean":1.1884057971,
+    "last_mean":1.2173913043,
+    "change":0.0289855072,
+    "p_value":0.7993945653
+  },
+  {
+    "item":"A3 학습 맥락",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":1.3580246914,
+    "last_mean":1.4814814815,
+    "change":0.1234567901,
+    "p_value":0.4535259338
+  },
+  {
+    "item":"B1 학습자 맞춤도",
+    "mode":"agent",
+    "n":23,
+    "first_mean":3.1739130435,
+    "last_mean":4.1014492754,
+    "change":0.9275362319,
+    "p_value":0.0008028772
+  },
+  {
+    "item":"B1 학습자 맞춤도",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":3.2345679012,
+    "last_mean":3.6049382716,
+    "change":0.3703703704,
+    "p_value":0.105795206
+  },
+  {
+    "item":"B2 설명 체계성",
+    "mode":"agent",
+    "n":23,
+    "first_mean":4.0724637681,
+    "last_mean":5.0,
+    "change":0.9275362319,
+    "p_value":0.0146267429
+  },
+  {
+    "item":"B2 설명 체계성",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":4.4814814815,
+    "last_mean":4.8148148148,
+    "change":0.3333333333,
+    "p_value":0.2495219327
+  },
+  {
+    "item":"B3 학습 확장성",
+    "mode":"agent",
+    "n":23,
+    "first_mean":2.3188405797,
+    "last_mean":1.7826086957,
+    "change":-0.5362318841,
+    "p_value":0.0737706202
+  },
+  {
+    "item":"B3 학습 확장성",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":1.8765432099,
+    "last_mean":1.5679012346,
+    "change":-0.3086419753,
+    "p_value":0.1386435433
+  },
+  {
+    "item":"C1 대화 일관성",
+    "mode":"agent",
+    "n":23,
+    "first_mean":4.1304347826,
+    "last_mean":4.768115942,
+    "change":0.6376811594,
+    "p_value":0.009558563
+  },
+  {
+    "item":"C1 대화 일관성",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":4.1975308642,
+    "last_mean":4.6172839506,
+    "change":0.4197530864,
+    "p_value":0.0307081523
+  },
+  {
+    "item":"C2 학습 지원",
+    "mode":"agent",
+    "n":23,
+    "first_mean":2.1449275362,
+    "last_mean":2.3333333333,
+    "change":0.1884057971,
+    "p_value":0.3959477946
+  },
+  {
+    "item":"C2 학습 지원",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":2.024691358,
+    "last_mean":2.0,
+    "change":-0.024691358,
+    "p_value":0.9106320026
+  },
+  {
+    "item":"전체",
+    "mode":"agent",
+    "n":23,
+    "first_mean":24.7536231884,
+    "last_mean":28.2028985507,
+    "change":3.4492753623,
+    "p_value":0.0158335902
+  },
+  {
+    "item":"전체",
+    "mode":"freepass",
+    "n":27,
+    "first_mean":24.8765432099,
+    "last_mean":26.6790123457,
+    "change":1.8024691358,
+    "p_value":0.1540896632
+  }
+]

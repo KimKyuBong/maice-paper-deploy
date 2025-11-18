@@ -1,0 +1,37 @@
+flowchart TB
+    Start([학생 질문]):::startNode
+    QC[QC: classifier_llm<br/>질문 분류]:::orangeNode
+    Start --> QC
+    
+    QC -->|needs_clarify<br/>missing_fields 발견| ClarifyGen[명료화 질문 생성<br/>Dewey 5단계 기반]:::purpleNode
+    QC -->|answerable<br/>K1-K4 결정| AnswerGen[AG: answer_generator_llm<br/>답변 생성]:::purpleNode
+    QC -->|unanswerable<br/>수학 외| GuideMsg[안내 메시지<br/>세션 종료]:::purpleNode
+    
+    GuideMsg --> End([세션 종료]):::endNode
+    
+    ClarifyGen --> WaitResp[학생 응답 대기]:::purpleNode
+    WaitResp --> QI[QI: question_improvement_llm<br/>명료화 평가]:::orangeNode
+    
+    QI -->|NEED_MORE<br/>정보 부족| CheckCount{명료화 횟수 확인}:::purpleDiamond
+    CheckCount -->|&lt;3회| AddClarify[추가 명료화 질문]:::purpleNode
+    AddClarify --> WaitResp
+    CheckCount -->|&gt;= 3회| FinalQ[최종 질문 생성]:::purpleNode
+    
+    QI -->|PASS<br/>충분한 정보| FinalQ
+    FinalQ --> AnswerGen
+    
+    AnswerGen --> AnswerMarkdown[교육적 답변<br/>마크다운]:::purpleNode
+    AnswerMarkdown --> LO[LO: observer_llm<br/>학습 요약]:::greenNode
+    
+    LO --> Summary[학습 요약<br/>200자]:::purpleNode
+    LO --> Title[세션 제목<br/>15자]:::purpleNode
+    Summary --> End
+    Title --> End
+    
+    classDef startNode fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000
+    classDef endNode fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#000
+    classDef orangeNode fill:#FFF3E0,stroke:#F57C00,stroke-width:2px,color:#000
+    classDef purpleNode fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#000
+    classDef greenNode fill:#E8F5E9,stroke:#388E3C,stroke-width:2px,color:#000
+    classDef purpleDiamond fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#000
+

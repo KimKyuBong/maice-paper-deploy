@@ -1,0 +1,38 @@
+{
+  "table": "표Ⅴ-12",
+  "title": "Q1(하위권) Agent 우위 폭 비교",
+  "results": {
+    "teacher": {
+      "agent": 20.79,
+      "freepass": 14.47,
+      "difference": 6.32
+    },
+    "claude_4.5_haiku": {
+      "agent": 27.41,
+      "freepass": 23.85,
+      "difference": 3.56,
+      "agent_n": 32,
+      "freepass_n": 53
+    },
+    "gpt_5_mini": {
+      "agent": 27.12,
+      "freepass": 25.36,
+      "difference": 1.77,
+      "agent_n": 32,
+      "freepass_n": 53
+    },
+    "gemini_2.5_flash": {
+      "agent": 25.03,
+      "freepass": 23.58,
+      "difference": 1.45,
+      "agent_n": 32,
+      "freepass_n": 53
+    }
+  },
+  "data_files": [
+    "data/llm_evaluations/llm_3models_284_PERFECT_FINAL.csv",
+    "02_teacher_scoring/results/teacher_averaged_scores_perfect.csv",
+    "data/session_data/full_sessions_with_scores.csv",
+    "data/session_data/midterm_scores_with_quartile.csv"
+  ]
+}

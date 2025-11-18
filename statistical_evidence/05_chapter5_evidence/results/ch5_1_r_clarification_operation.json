@@ -1,0 +1,20 @@
+{
+  "table": "표Ⅴ-2",
+  "title": "명료화 수행 현황",
+  "agent_total_sessions": 115,
+  "clarification_performed": {
+    "count": 88,
+    "percentage": 76.5,
+    "avg_messages": 4.8
+  },
+  "clarification_not_performed": {
+    "count": 27,
+    "percentage": 23.5,
+    "avg_messages": 0.0
+  },
+  "data_files": [
+    "data/db_exports/public_llm_prompt_logs_full.csv",
+    "data/session_data/full_sessions_with_scores.csv"
+  ],
+  "method": "DB 로그(llm_prompt_logs)에서 classifier_llm/question_improver_llm 호출 여부로 판단"
+}

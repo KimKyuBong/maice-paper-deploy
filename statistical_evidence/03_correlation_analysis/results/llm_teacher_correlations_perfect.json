@@ -1,15 +1,57 @@
 {
   "question": {
     "name": "질문 (A)",
-    "error": "컬럼 없음: LLM:avg_question_total"
+    "n": 100,
+    "pearson": {
+      "r": 0.6821702487881873,
+      "p": 5.516072535074245e-15,
+      "significant": true
+    },
+    "spearman": {
+      "r": 0.5855499973477232,
+      "p": 1.565460179124568e-10,
+      "significant": true
+    },
+    "llm_mean": 9.536666666666667,
+    "llm_std": 1.9003780118974367,
+    "teacher_mean": 7.78,
+    "teacher_std": 2.713899873844377
   },
   "answer": {
     "name": "답변 (B)",
-    "error": "컬럼 없음: LLM:avg_answer_total"
+    "n": 100,
+    "pearson": {
+      "r": 0.7354656223535838,
+      "p": 2.938006790507151e-18,
+      "significant": true
+    },
+    "spearman": {
+      "r": 0.6348609259309453,
+      "p": 1.3102165019720687e-12,
+      "significant": true
+    },
+    "llm_mean": 9.926666666666668,
+    "llm_std": 2.7276610273519473,
+    "teacher_mean": 7.86,
+    "teacher_std": 2.69031183653081
   },
   "context": {
     "name": "맥락 (C)",
-    "error": "컬럼 없음: LLM:avg_context_total"
+    "n": 100,
+    "pearson": {
+      "r": 0.6527003651982499,
+      "p": 1.8657746733841432e-13,
+      "significant": true
+    },
+    "spearman": {
+      "r": 0.63878143366323,
+      "p": 8.630569909835074e-13,
+      "significant": true
+    },
+    "llm_mean": 6.599999999999999,
+    "llm_std": 1.3998556924183148,
+    "teacher_mean": 4.965,
+    "teacher_std": 1.7883672933034689
   },
   "overall": {
     "name": "전체",

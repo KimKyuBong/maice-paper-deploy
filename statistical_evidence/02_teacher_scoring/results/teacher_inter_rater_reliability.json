@@ -1,0 +1,128 @@
+{
+  "n_teachers": 2,
+  "teacher_ids": [
+    96,
+    97
+  ],
+  "n_sessions": 100,
+  "overall_score": {
+    "pearson_r": 0.6436125485663544,
+    "pearson_p": 5.11709159388174e-13,
+    "spearman_rho": 0.5681441980785884,
+    "spearman_p": 7.040247946314932e-10,
+    "paper_pearson": 0.644,
+    "paper_spearman": 0.571,
+    "pearson_diff": 0.00038745143364560253,
+    "spearman_diff": 0.0028558019214115493
+  },
+  "all_items": [
+    {
+      "항목": "질문 영역",
+      "항목코드": "question_total_score",
+      "Pearson_r": 0.578455405313346,
+      "Pearson_p": 2.9202075465621277e-10,
+      "Spearman_ρ": 0.6285609812626989,
+      "Spearman_p": 2.531281420785001e-12,
+      "n": 100
+    },
+    {
+      "항목": "응답 영역",
+      "항목코드": "response_total_score",
+      "Pearson_r": 0.5729518150039339,
+      "Pearson_p": 4.68859873386681e-10,
+      "Spearman_ρ": 0.46583487829773396,
+      "Spearman_p": 1.0393796572239303e-06,
+      "n": 100
+    },
+    {
+      "항목": "맥락 영역",
+      "항목코드": "context_total_score",
+      "Pearson_r": 0.3916707475884392,
+      "Pearson_p": 5.5849487695683324e-05,
+      "Spearman_ρ": 0.4165894187969565,
+      "Spearman_p": 1.623731504549127e-05,
+      "n": 100
+    },
+    {
+      "항목": "종합 점수",
+      "항목코드": "overall_score",
+      "Pearson_r": 0.6436125485663544,
+      "Pearson_p": 5.11709159388174e-13,
+      "Spearman_ρ": 0.5681441980785884,
+      "Spearman_p": 7.040247946314932e-10,
+      "n": 100
+    },
+    {
+      "항목": "A1 수학 전문성",
+      "항목코드": "question_professionalism_score",
+      "Pearson_r": 0.5264379880396647,
+      "Pearson_p": 1.8489896303109564e-08,
+      "Spearman_ρ": 0.5137440075600793,
+      "Spearman_p": 4.5924652499502235e-08,
+      "n": 100
+    },
+    {
+      "항목": "A2 질문 구조화",
+      "항목코드": "question_structuring_score",
+      "Pearson_r": 0.4824340913705693,
+      "Pearson_p": 3.7203179874196427e-07,
+      "Spearman_ρ": 0.5319065263810996,
+      "Spearman_p": 1.2349954350794432e-08,
+      "n": 100
+    },
+    {
+      "항목": "A3 학습 맥락",
+      "항목코드": "question_context_application_score",
+      "Pearson_r": 0.3671501197795886,
+      "Pearson_p": 0.0001716526056524699,
+      "Spearman_ρ": 0.2576567787415613,
+      "Spearman_p": 0.009652759284095128,
+      "n": 100
+    },
+    {
+      "항목": "B1 학습자 맞춤도",
+      "항목코드": "answer_customization_score",
+      "Pearson_r": 0.5055964555602004,
+      "Pearson_p": 8.07758256365154e-08,
+      "Spearman_ρ": 0.40519976629723475,
+      "Spearman_p": 2.8909434677219997e-05,
+      "n": 100
+    },
+    {
+      "항목": "B2 설명 체계성",
+      "항목코드": "answer_systematicity_score",
+      "Pearson_r": 0.5635224479935939,
+      "Pearson_p": 1.0343236802315544e-09,
+      "Spearman_ρ": 0.4934055520384014,
+      "Spearman_p": 1.8301580940820378e-07,
+      "n": 100
+    },
+    {
+      "항목": "B3 학습 확장성",
+      "항목코드": "answer_expandability_score",
+      "Pearson_r": 0.3611421507599313,
+      "Pearson_p": 0.0002230111792080499,
+      "Spearman_ρ": 0.3171854680272215,
+      "Spearman_p": 0.0013024897791589101,
+      "n": 100
+    },
+    {
+      "항목": "C1 대화 일관성",
+      "항목코드": "context_dialogue_coherence_score",
+      "Pearson_r": 0.4426344882316789,
+      "Pearson_p": 4.002998039373362e-06,
+      "Spearman_ρ": 0.4515693299863538,
+      "Spearman_p": 2.409536029022657e-06,
+      "n": 100
+    },
+    {
+      "항목": "C2 학습 지원",
+      "항목코드": "context_learning_support_score",
+      "Pearson_r": 0.11893705122065118,
+      "Pearson_p": 0.23855508029352598,
+      "Spearman_ρ": 0.08379913569107492,
+      "Spearman_p": 0.40715247031169177,
+      "n": 100
+    }
+  ]
+}

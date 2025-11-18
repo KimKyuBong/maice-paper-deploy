@@ -1,0 +1,65 @@
+{
+  "export_date": "2025-11-16 22:56:19",
+  "database": "maice_agent",
+  "host": "192.168.1.110",
+  "schemas": [
+    "public"
+  ],
+  "total_tables_found": 10,
+  "extracted_tables": {
+    "public.llm_prompt_logs": {
+      "rows": 1671,
+      "total_rows_in_db": 1671,
+      "columns": [
+        "id",
+        "timestamp",
+        "tool_name",
+        "provider",
+        "model",
+        "max_tokens",
+        "stream",
+        "temperature",
+        "timeout",
+        "max_retries",
+        "input_prompt",
+        "input_tokens",
+        "output_tokens",
+        "total_tokens",
+        "response_time_ms",
+        "success",
+        "error_message",
+        "session_id",
+        "user_id",
+        "created_at",
+        "agent_name"
+      ],
+      "output_file": "data/db_exports/public_llm_prompt_logs_full.csv"
+    },
+    "public.llm_response_logs": {
+      "rows": 1581,
+      "total_rows_in_db": 1581,
+      "columns": [
+        "id",
+        "timestamp",
+        "tool_name",
+        "provider",
+        "model",
+        "prompt_id",
+        "response_content",
+        "response_tokens",
+        "response_time_ms",
+        "success",
+        "error_message",
+        "session_id",
+        "user_id",
+        "created_at",
+        "agent_name"
+      ],
+      "output_file": "data/db_exports/public_llm_response_logs_full.csv"
+    }
+  },
+  "export_summary": {
+    "total_rows": 3252,
+    "total_tables_exported": 2
+  }
+}

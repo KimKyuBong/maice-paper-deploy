@@ -38,7 +38,10 @@ print("[2] 데이터 변환...")
 
 records = []
 for item in data:
-    if item.get('evaluation_status') == 'completed' and item.get('overall_score') is not None:
+    # 평가자 96, 97만 사용
+    if (item.get('evaluation_status') == 'completed' 
+        and item.get('overall_score') is not None
+        and item.get('evaluated_by') in [96, 97]):
         record = {
             'id': item['id'],
             'session_id': item['conversation_session_id'],
@@ -257,6 +260,7 @@ print(f"  • ICC (전체): {icc_results['overall']:.3f}")
 print(f"  • 평균 상관: {correlations.get('overall', 0):.3f}")
 print(f"\n결과 위치: {RESULTS_DIR}")
 print(f"{'='*80}\n")
+
 
 
 
